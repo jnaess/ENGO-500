@@ -1,0 +1,18184 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1021
+  9
+$ACADMAINTVER
+ 70
+    50
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+700667.753
+ 20
+5662626.861
+ 30
+1100.000
+  9
+$EXTMAX
+ 10
+700730.754
+ 20
+5662809.002
+ 30
+1103.735
+  9
+$LIMMIN
+ 10
+700667.753
+ 20
+5662626.861
+  9
+$LIMMAX
+ 10
+700730.754
+ 20
+5662809.002
+  9
+$ORTHOMODE
+ 70
+     0
+  9
+$REGENMODE
+ 70
+     1
+  9
+$FILLMODE
+ 70
+     1
+  9
+$QTEXTMODE
+ 70
+     0
+  9
+$MIRRTEXT
+ 70
+     1
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+     0
+  9
+$TEXTSIZE
+ 40
+0.2
+  9
+$TRACEWID
+ 40
+0.05
+  9
+$TEXTSTYLE
+  7
+MONOTEXT
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DISPSILH
+ 70
+     0
+  9
+$DIMSCALE
+ 40
+1.0
+  9
+$DIMASZ
+ 40
+0.18
+  9
+$DIMEXO
+ 40
+0.0625
+  9
+$DIMDLI
+ 40
+0.38
+  9
+$DIMRND
+ 40
+0.0
+  9
+$DIMDLE
+ 40
+0.0
+  9
+$DIMEXE
+ 40
+0.18
+  9
+$DIMTP
+ 40
+0.0
+  9
+$DIMTM
+ 40
+0.0
+  9
+$DIMTXT
+ 40
+0.18
+  9
+$DIMCEN
+ 40
+0.09
+  9
+$DIMTSZ
+ 40
+0.0
+  9
+$DIMTOL
+ 70
+     0
+  9
+$DIMLIM
+ 70
+     0
+  9
+$DIMTIH
+ 70
+     1
+  9
+$DIMTOH
+ 70
+     1
+  9
+$DIMSE1
+ 70
+     0
+  9
+$DIMSE2
+ 70
+     0
+  9
+$DIMTAD
+ 70
+     0
+  9
+$DIMZIN
+ 70
+     0
+  9
+$DIMBLK
+  1
+
+  9
+$DIMASO
+ 70
+     1
+  9
+$DIMSHO
+ 70
+     0
+  9
+$DIMPOST
+  1
+
+  9
+$DIMAPOST
+  1
+
+  9
+$DIMALT
+ 70
+     0
+  9
+$DIMALTD
+ 70
+     2
+  9
+$DIMALTF
+ 40
+25.4
+  9
+$DIMLFAC
+ 40
+1.0
+  9
+$DIMTOFL
+ 70
+     0
+  9
+$DIMTVP
+ 40
+0.0
+  9
+$DIMTIX
+ 70
+     0
+  9
+$DIMSOXD
+ 70
+     0
+  9
+$DIMSAH
+ 70
+     0
+  9
+$DIMBLK1
+  1
+
+  9
+$DIMBLK2
+  1
+
+  9
+$DIMSTYLE
+  2
+STANDARD
+  9
+$DIMCLRD
+ 70
+     0
+  9
+$DIMCLRE
+ 70
+     0
+  9
+$DIMCLRT
+ 70
+     0
+  9
+$DIMTFAC
+ 40
+1.0
+  9
+$DIMGAP
+ 40
+0.09
+  9
+$DIMJUST
+ 70
+     0
+  9
+$DIMSD1
+ 70
+     0
+  9
+$DIMSD2
+ 70
+     0
+  9
+$DIMTOLJ
+ 70
+     1
+  9
+$DIMTZIN
+ 70
+     0
+  9
+$DIMALTZ
+ 70
+     0
+  9
+$DIMALTTZ
+ 70
+     0
+  9
+$DIMUPT
+ 70
+     0
+  9
+$DIMDEC
+ 70
+     4
+  9
+$DIMTDEC
+ 70
+     4
+  9
+$DIMALTU
+ 70
+     2
+  9
+$DIMALTTD
+ 70
+     2
+  9
+$DIMTXSTY
+  7
+MONOTEXT
+  9
+$DIMAUNIT
+ 70
+     1
+  9
+$DIMADEC
+ 70
+     0
+  9
+$DIMALTRND
+ 40
+0.0
+  9
+$DIMAZIN
+ 70
+     0
+  9
+$DIMDSEP
+ 70
+     0
+  9
+$DIMATFIT
+ 70
+     3
+  9
+$DIMFRAC
+ 70
+     0
+  9
+$DIMLDRBLK
+  1
+
+  9
+$DIMLUNIT
+ 70
+     2
+  9
+$DIMLWD
+ 70
+     0
+  9
+$DIMLWE
+ 70
+     0
+  9
+$DIMTMOVE
+ 70
+     0
+  9
+$LUNITS
+ 70
+     6
+  9
+$LUPREC
+ 70
+     4
+  9
+$SKETCHINC
+ 40
+0.1
+  9
+$FILLETRAD
+ 40
+0.0
+  9
+$AUNITS
+ 70
+     1
+  9
+$AUPREC
+ 70
+     0
+  9
+$MENU
+  1
+ACAD
+  9
+$ELEVATION
+ 40
+0.0
+  9
+$PELEVATION
+ 40
+0.0
+  9
+$THICKNESS
+ 40
+0.0
+  9
+$LIMCHECK
+ 70
+     0
+  9
+$CHAMFERA
+ 40
+0.0
+  9
+$CHAMFERB
+ 40
+0.0
+  9
+$CHAMFERC
+ 40
+0.0
+  9
+$CHAMFERD
+ 40
+0.0
+  9
+$SKPOLY
+ 70
+     0
+  9
+$TDCREATE
+ 40
+2455610.837581
+  9
+$TDUCREATE
+ 40
+0.000000000
+  9
+$TDUPDATE
+ 40
+0.000000000
+  9
+$TDUUPDATE
+ 40
+2455610.837581
+  9
+$TDINDWG
+ 40
+0.000000000
+  9
+$TDUSRTIMER
+ 40
+0.000000000
+  9
+$USRTIMER
+ 70
+     1
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+     0
+  9
+$PDMODE
+ 70
+     0
+  9
+$PDSIZE
+ 40
+0.0
+  9
+$PLINEWID
+ 40
+0.0
+  9
+$SPLFRAME
+ 70
+     0
+  9
+$SPLINETYPE
+ 70
+     6
+  9
+$SPLINESEGS
+ 70
+     8
+  9
+$HANDSEED
+  5
+2000000
+  9
+$SURFTAB1
+ 70
+     6
+  9
+$SURFTAB2
+ 70
+     6
+  9
+$SURFTYPE
+ 70
+     6
+  9
+$SURFU
+ 70
+     6
+  9
+$SURFV
+ 70
+     6
+  9
+$UCSBASE
+  2
+
+  9
+$UCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$UCSORTHOREF
+  2
+
+  9
+$UCSORTHOVIEW
+ 70
+     0
+  9
+$UCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSBASE
+  2
+
+  9
+$PUCSNAME
+  2
+
+  9
+$PUCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$PUCSORTHOREF
+  2
+
+  9
+$PUCSORTHOVIEW
+ 70
+     0
+  9
+$PUCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$USERI1
+ 70
+     0
+  9
+$USERI2
+ 70
+     0
+  9
+$USERI3
+ 70
+     0
+  9
+$USERI4
+ 70
+     0
+  9
+$USERI5
+ 70
+     0
+  9
+$USERR1
+ 40
+0.0
+  9
+$USERR2
+ 40
+0.0
+  9
+$USERR3
+ 40
+0.0
+  9
+$USERR4
+ 40
+0.0
+  9
+$USERR5
+ 40
+0.0
+  9
+$WORLDVIEW
+ 70
+     1
+  9
+$SHADEDGE
+ 70
+     3
+  9
+$SHADEDIF
+ 70
+    70
+  9
+$TILEMODE
+ 70
+     1
+  9
+$MAXACTVP
+ 70
+    16
+  9
+$PINSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PLIMCHECK
+ 70
+     0
+  9
+$PEXTMIN
+ 10
+1.000000E+20
+ 20
+1.000000E+20
+ 30
+1.000000E+20
+  9
+$PEXTMAX
+ 10
+-1.000000E+20
+ 20
+-1.000000E+20
+ 30
+-1.000000E+20
+  9
+$PLIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$PLIMMAX
+ 10
+12.0
+ 20
+9.0
+  9
+$UNITMODE
+ 70
+     0
+  9
+$VISRETAIN
+ 70
+     0
+  9
+$PLINEGEN
+ 70
+     1
+  9
+$PSLTSCALE
+ 70
+     1
+  9
+$TREEDEPTH
+ 70
+  3020
+  9
+$CMLSTYLE
+  2
+STANDARD
+  9
+$CMLJUST
+ 70
+     0
+  9
+$CMLSCALE
+ 40
+1.0
+  9
+$PROXYGRAPHICS
+ 70
+     0
+  9
+$MEASUREMENT
+ 70
+     1
+  9
+$CELWEIGHT
+370
+     0
+  9
+$ENDCAPS
+280
+     0
+  9
+$JOINSTYLE
+280
+     0
+  9
+$LWDISPLAY
+290
+     0
+  9
+$INSUNITS
+ 70
+     6
+  9
+$HYPERLINKBASE
+  1
+
+  9
+$STYLESHEET
+  1
+
+  9
+$XEDIT
+290
+     1
+  9
+$CEPSNTYPE
+380
+     0
+  9
+$PSTYLEMODE
+290
+     1
+  9
+$FINGERPRINTGUID
+  2
+
+  9
+$VERSIONGUID
+  2
+
+  9
+$EXTNAMES
+290
+     1
+  9
+$PSVPSCALE
+ 40
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+LWPOLYLINE
+  2
+AcDbPolyline
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+CLASS
+  1
+IMAGE
+  2
+AcDbRasterImage
+  3
+ISM
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+CLASS
+  1
+OLE2FRAME
+  2
+AcDbOle2Frame
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+CLASS
+  1
+HATCH
+  2
+AcDbHatch
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+CLASS
+  1
+DICTIONARYVAR
+  2
+AcDbDictionaryVar
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+RASTERVARIABLES
+  2
+AcDbRasterVariables
+  3
+ISM
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+IMAGEDEF
+  2
+AcDbRasterImageDef
+  3
+ISM
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+IMAGEDEF_REACTOR
+  2
+AcDbRasterImageDefReactor
+  3
+ISM
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+IDBUFFER
+  2
+AcDbIdBuffer
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SPATIAL_FILTER
+  2
+AcDbSpatialFilter
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+XRECORD
+  2
+AcDbXrecord
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SORTENTSTABLE
+  2
+AcDbSortentsTable
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+LAYER_INDEX
+  2
+AcDbLayerIndex
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SPATIAL_INDEX
+  2
+AcDbSpatialIndex
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+OBJECT_PTR
+  2
+CAseDLPNTableRecord
+  3
+ASE-LPNTableRecord
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+LAYOUT
+  2
+AcDbLayout
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+PLOTSETTINGS
+  2
+AcDbPlotSettings
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+ACDBPLACEHOLDER
+  2
+AcDbPlaceHolder
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+VBA_PROJECT
+  2
+AcDbVbaProject
+  3
+acadvba
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+WIPEOUT
+  2
+AcDbWipeout
+  3
+WipeOut|AutoCAD Express Tool|expresstools@autodesk.com
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+CLASS
+  1
+WIPEOUTVARIABLES
+  2
+AcDbWipeoutVariables
+  3
+WipeOut|AutoCAD Express Tool|expresstools@autodesk.com
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+RTEXT
+  2
+RText
+  3
+RText|AutoCAD Express Tool|expresstools@autodesk.com
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+CLASS
+  1
+ARCALIGNEDTEXT
+  2
+AcDbArcAlignedText
+  3
+ATEXT|AutoCAD Express Tool|expresstools@autodesk.com
+ 90
+        0
+ 91
+        0
+280
+     0
+281
+     1
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+500
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+VPORT
+  5
+501
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*ACTIVE
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+700699.2537
+ 22
+5662717.9317
+ 13
+0.0
+ 23
+0.0
+ 14
+1.0
+ 24
+1.0
+ 15
+0.0
+ 25
+0.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+0.000003
+ 41
+1.852941
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+     0
+ 72
+   100
+ 73
+     1
+ 74
+     1
+ 75
+     0
+ 76
+     0
+ 77
+     0
+ 78
+     0
+281
+     0
+ 65
+     0
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+345
+0
+346
+0
+ 79
+     0
+146
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+502
+100
+AcDbSymbolTable
+ 70
+     3
+  0
+LTYPE
+  5
+503
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+504
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+505
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CONTINUOUS
+ 70
+     0
+  3
+Solid line
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+506
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHED
+ 70
+     0
+  3
+Dashed line
+ 72
+    65
+ 73
+     2
+ 40
+10.0
+ 49
+5.0
+ 74
+     0
+ 49
+-5.0
+ 74
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+507
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+LAYER
+  5
+508
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+     0
+ 62
+     7
+  6
+CONTINUOUS
+290
+     1
+370
+    -3
+390
+25E
+  0
+LAYER
+  5
+509
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Points
+ 70
+     0
+ 62
+     7
+  6
+CONTINUOUS
+290
+     1
+370
+    -3
+390
+25E
+  0
+LAYER
+  5
+510
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Lines
+ 70
+     0
+ 62
+     7
+  6
+CONTINUOUS
+290
+     1
+370
+    -3
+390
+25E
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+511
+100
+AcDbSymbolTable
+ 70
+     2
+  0
+STYLE
+  5
+512
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+STANDARD
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+0.2
+  3
+txt
+  4
+
+  0
+STYLE
+  5
+513
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+MONOTEXT
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+0.2
+  3
+txt
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+514
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+515
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+516
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+APPID
+  5
+517
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+518
+100
+AcDbSymbolTable
+ 70
+     1
+100
+AcDbDimStyleTable
+ 71
+     0
+  0
+DIMSTYLE
+105
+256
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+STANDARD
+ 70
+     0
+  3
+
+  4
+
+ 40
+1.0
+ 41
+0.18
+ 42
+0.0625
+ 43
+0.38
+ 44
+0.18
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 71
+     0
+ 72
+     0
+ 73
+     1
+ 74
+     1
+ 75
+     0
+ 76
+     0
+ 77
+     0
+ 78
+     0
+ 79
+     0
+140
+0.18
+141
+0.09
+142
+0.0
+143
+25.4
+144
+1.0
+145
+0.0
+146
+1.0
+147
+0.09
+148
+0.0
+170
+     0
+171
+     2
+172
+     0
+173
+     0
+174
+     0
+175
+     0
+176
+     0
+177
+     0
+178
+     0
+179
+     0
+271
+     4
+272
+     4
+273
+     2
+274
+     2
+275
+     0
+276
+     0
+277
+     2
+278
+    46
+279
+     0
+280
+     0
+281
+     0
+282
+     0
+283
+     1
+284
+     0
+285
+     0
+286
+     0
+288
+     0
+341
+0
+342
+0
+343
+0
+344
+0
+371
+    -2
+372
+    -2
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+519
+100
+AcDbSymbolTable
+ 70
+     9
+  0
+BLOCK_RECORD
+  5
+520
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*MODEL_SPACE
+  0
+BLOCK_RECORD
+  5
+521
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*PAPER_SPACE
+  0
+BLOCK_RECORD
+  5
+522
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+DOT
+  0
+BLOCK_RECORD
+  5
+523
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+CROSS
+  0
+BLOCK_RECORD
+  5
+524
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+DIAG_CROSS
+  0
+BLOCK_RECORD
+  5
+525
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+CIRCLE
+  0
+BLOCK_RECORD
+  5
+526
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+DOUBLE_CIRCLE
+  0
+BLOCK_RECORD
+  5
+527
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+TRIANGLE
+  0
+BLOCK_RECORD
+  5
+528
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+DOUBLE_TRIANGLE
+  0
+BLOCK_RECORD
+  5
+529
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+STAKED_FLAG
+  0
+BLOCK_RECORD
+  5
+530
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+BOX
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+531
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*MODEL_SPACE
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*MODEL_SPACE
+  1
+
+  0
+ENDBLK
+  5
+532
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+533
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockBegin
+  2
+*PAPER_SPACE
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*PAPER_SPACE
+  1
+
+  0
+ENDBLK
+  5
+534
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+535
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+DOT
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+DOT
+  1
+
+  0
+POINT
+  5
+536
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbPoint
+ 10
+100.0
+ 20
+100.0
+  0
+ENDBLK
+  5
+537
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+538
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+CROSS
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+CROSS
+  1
+
+  0
+LINE
+  5
+539
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+100.0
+ 11
+200.0
+ 21
+100.0
+  0
+LINE
+  5
+540
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+100.0
+ 20
+200.0
+ 11
+100.0
+ 21
+0.0
+  0
+ENDBLK
+  5
+541
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+542
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+DIAG_CROSS
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+DIAG_CROSS
+  1
+
+  0
+LINE
+  5
+543
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+200.0
+ 11
+200.0
+ 21
+0.0
+  0
+LINE
+  5
+544
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 11
+200.0
+ 21
+200.0
+  0
+ENDBLK
+  5
+545
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+546
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+CIRCLE
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+CIRCLE
+  1
+
+  0
+ARC
+  5
+547
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbCircle
+ 10
+100.0
+ 20
+100.0
+ 40
+100.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+548
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbCircle
+ 10
+100.0
+ 20
+100.0
+ 40
+100.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ENDBLK
+  5
+549
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+550
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+DOUBLE_CIRCLE
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+DOUBLE_CIRCLE
+  1
+
+  0
+ARC
+  5
+551
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbCircle
+ 10
+100.0
+ 20
+100.0
+ 40
+100.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+552
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbCircle
+ 10
+100.0
+ 20
+100.0
+ 40
+100.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+553
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbCircle
+ 10
+100.0
+ 20
+100.0
+ 40
+70.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+554
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbCircle
+ 10
+100.0
+ 20
+100.0
+ 40
+70.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ENDBLK
+  5
+555
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+556
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+TRIANGLE
+ 70
+     2
+ 10
+100.0
+ 20
+80.0
+ 30
+0.0
+  3
+TRIANGLE
+  1
+
+  0
+LINE
+  5
+557
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+20.0
+ 11
+200.0
+ 21
+20.0
+  0
+LINE
+  5
+558
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+20.0
+ 11
+100.0
+ 21
+190.0
+  0
+LINE
+  5
+559
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+100.0
+ 20
+190.0
+ 11
+200.0
+ 21
+20.0
+  0
+ENDBLK
+  5
+560
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+561
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+DOUBLE_TRIANGLE
+ 70
+     2
+ 10
+100.0
+ 20
+80.0
+ 30
+0.0
+  3
+DOUBLE_TRIANGLE
+  1
+
+  0
+LINE
+  5
+562
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+100.0
+ 20
+190.0
+ 11
+0.0
+ 21
+20.0
+  0
+LINE
+  5
+563
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+200.0
+ 20
+20.0
+ 11
+100.0
+ 21
+190.0
+  0
+LINE
+  5
+564
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+20.0
+ 11
+200.0
+ 21
+20.0
+  0
+LINE
+  5
+565
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+52.0
+ 20
+50.0
+ 11
+148.0
+ 21
+50.0
+  0
+LINE
+  5
+566
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+52.0
+ 20
+50.0
+ 11
+100.0
+ 21
+134.0
+  0
+LINE
+  5
+567
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+100.0
+ 20
+134.0
+ 11
+148.0
+ 21
+50.0
+  0
+ENDBLK
+  5
+568
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+569
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+STAKED_FLAG
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+STAKED_FLAG
+  1
+
+  0
+LINE
+  5
+570
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+100.0
+ 20
+20.0
+ 11
+100.0
+ 21
+180.0
+  0
+LINE
+  5
+571
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+100.0
+ 20
+180.0
+ 11
+150.0
+ 21
+140.0
+  0
+LINE
+  5
+572
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+150.0
+ 20
+140.0
+ 11
+100.0
+ 21
+100.0
+  0
+ENDBLK
+  5
+573
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+574
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbBlockBegin
+  2
+BOX
+ 70
+     2
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+  3
+BOX
+  1
+
+  0
+LINE
+  5
+575
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 11
+200.0
+ 21
+0.0
+  0
+LINE
+  5
+576
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+200.0
+ 20
+0.0
+ 11
+200.0
+ 21
+200.0
+  0
+LINE
+  5
+577
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+200.0
+ 20
+200.0
+ 11
+0.0
+ 21
+200.0
+  0
+LINE
+  5
+578
+100
+AcDbEntity
+  8
+0
+ 62
+     0
+100
+AcDbLine
+ 10
+0.0
+ 20
+200.0
+ 11
+0.0
+ 21
+0.0
+  0
+ENDBLK
+  5
+579
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+INSERT
+  5
+580
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+CIRCLE
+ 10
+700730.754000
+ 20
+5662809.002000
+ 30
+1100.000000
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+581
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700731.154000
+ 20
+5662809.402000
+ 30
+1100.000000
+ 40
+1.0
+  1
+base
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+582
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700731.154000
+ 20
+5662807.602000
+ 30
+1100.000000
+ 40
+1.0
+  1
+419739
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+583
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700731.154000
+ 20
+5662806.202000
+ 30
+1100.000000
+ 40
+1.0
+  1
+1100.000
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+584
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+585
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700698.790200
+ 20
+5662724.141255
+ 30
+1103.734538
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+586
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.190200
+ 20
+5662724.541255
+ 30
+1103.734538
+ 40
+1.0
+  1
+1000
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+587
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.190200
+ 20
+5662722.741255
+ 30
+1103.734538
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+588
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.190200
+ 20
+5662721.341255
+ 30
+1103.734538
+ 40
+1.0
+  1
+1103.735
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+589
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+590
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700699.056716
+ 20
+5662714.233142
+ 30
+1103.568485
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+591
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.456716
+ 20
+5662714.633142
+ 30
+1103.568485
+ 40
+1.0
+  1
+1001
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+592
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.456716
+ 20
+5662712.833142
+ 30
+1103.568485
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+593
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.456716
+ 20
+5662711.433142
+ 30
+1103.568485
+ 40
+1.0
+  1
+1103.568
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+594
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+595
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700699.273200
+ 20
+5662706.474992
+ 30
+1103.384221
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+596
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.673200
+ 20
+5662706.874992
+ 30
+1103.384221
+ 40
+1.0
+  1
+1002
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+597
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.673200
+ 20
+5662705.074992
+ 30
+1103.384221
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+598
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.673200
+ 20
+5662703.674992
+ 30
+1103.384221
+ 40
+1.0
+  1
+1103.384
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+599
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+600
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700699.438162
+ 20
+5662702.259440
+ 30
+1103.328564
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+601
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.838162
+ 20
+5662702.659440
+ 30
+1103.328564
+ 40
+1.0
+  1
+1003
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+602
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.838162
+ 20
+5662700.859440
+ 30
+1103.328564
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+603
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.838162
+ 20
+5662699.459440
+ 30
+1103.328564
+ 40
+1.0
+  1
+1103.329
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+604
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+605
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700699.787033
+ 20
+5662692.711681
+ 30
+1103.125632
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+606
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.187033
+ 20
+5662693.111681
+ 30
+1103.125632
+ 40
+1.0
+  1
+1004
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+607
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.187033
+ 20
+5662691.311681
+ 30
+1103.125632
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+608
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.187033
+ 20
+5662689.911681
+ 30
+1103.125632
+ 40
+1.0
+  1
+1103.126
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+609
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+610
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700700.282862
+ 20
+5662680.777408
+ 30
+1102.872173
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+611
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.682862
+ 20
+5662681.177408
+ 30
+1102.872173
+ 40
+1.0
+  1
+1005
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+612
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.682862
+ 20
+5662679.377408
+ 30
+1102.872173
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+613
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.682862
+ 20
+5662677.977408
+ 30
+1102.872173
+ 40
+1.0
+  1
+1102.872
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+614
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+615
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700700.776413
+ 20
+5662671.078665
+ 30
+1102.644506
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+616
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.176413
+ 20
+5662671.478665
+ 30
+1102.644506
+ 40
+1.0
+  1
+1006
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+617
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.176413
+ 20
+5662669.678665
+ 30
+1102.644506
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+618
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.176413
+ 20
+5662668.278665
+ 30
+1102.644506
+ 40
+1.0
+  1
+1102.645
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+619
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+620
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700701.068328
+ 20
+5662659.006106
+ 30
+1102.376960
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+621
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.468328
+ 20
+5662659.406106
+ 30
+1102.376960
+ 40
+1.0
+  1
+1007
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+622
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.468328
+ 20
+5662657.606106
+ 30
+1102.376960
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+623
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.468328
+ 20
+5662656.206106
+ 30
+1102.376960
+ 40
+1.0
+  1
+1102.377
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+624
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+625
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700701.391601
+ 20
+5662649.617997
+ 30
+1102.171408
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+626
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.791601
+ 20
+5662650.017997
+ 30
+1102.171408
+ 40
+1.0
+  1
+1008
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+627
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.791601
+ 20
+5662648.217997
+ 30
+1102.171408
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+628
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700701.791601
+ 20
+5662646.817997
+ 30
+1102.171408
+ 40
+1.0
+  1
+1102.171
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+629
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+630
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700701.829689
+ 20
+5662637.712469
+ 30
+1101.977352
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+631
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700702.229689
+ 20
+5662638.112469
+ 30
+1101.977352
+ 40
+1.0
+  1
+1009
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+632
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700702.229689
+ 20
+5662636.312469
+ 30
+1101.977352
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+633
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700702.229689
+ 20
+5662634.912469
+ 30
+1101.977352
+ 40
+1.0
+  1
+1101.977
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+634
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+635
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700702.175940
+ 20
+5662627.974759
+ 30
+1101.905577
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+636
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700702.575940
+ 20
+5662628.374759
+ 30
+1101.905577
+ 40
+1.0
+  1
+1010
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+637
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700702.575940
+ 20
+5662626.574759
+ 30
+1101.905577
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+638
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700702.575940
+ 20
+5662625.174759
+ 30
+1101.905577
+ 40
+1.0
+  1
+1101.906
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+639
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+640
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700699.600535
+ 20
+5662627.906582
+ 30
+1101.881056
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+641
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.000535
+ 20
+5662628.306582
+ 30
+1101.881056
+ 40
+1.0
+  1
+1011
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+642
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.000535
+ 20
+5662626.506582
+ 30
+1101.881056
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+643
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700700.000535
+ 20
+5662625.106582
+ 30
+1101.881056
+ 40
+1.0
+  1
+1101.881
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+644
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+645
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700699.293113
+ 20
+5662637.598657
+ 30
+1101.927324
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+646
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.693113
+ 20
+5662637.998657
+ 30
+1101.927324
+ 40
+1.0
+  1
+1012
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+647
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.693113
+ 20
+5662636.198657
+ 30
+1101.927324
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+648
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.693113
+ 20
+5662634.798657
+ 30
+1101.927324
+ 40
+1.0
+  1
+1101.927
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+649
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+650
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700698.837012
+ 20
+5662649.506148
+ 30
+1102.093124
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+651
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.237012
+ 20
+5662649.906148
+ 30
+1102.093124
+ 40
+1.0
+  1
+1013
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+652
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.237012
+ 20
+5662648.106148
+ 30
+1102.093124
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+653
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700699.237012
+ 20
+5662646.706148
+ 30
+1102.093124
+ 40
+1.0
+  1
+1102.093
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+654
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+655
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700698.505975
+ 20
+5662659.074318
+ 30
+1102.321495
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+656
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.905975
+ 20
+5662659.474318
+ 30
+1102.321495
+ 40
+1.0
+  1
+1014
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+657
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.905975
+ 20
+5662657.674318
+ 30
+1102.321495
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+658
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.905975
+ 20
+5662656.274318
+ 30
+1102.321495
+ 40
+1.0
+  1
+1102.321
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+659
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+660
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700698.193185
+ 20
+5662671.031978
+ 30
+1102.584877
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+661
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.593185
+ 20
+5662671.431978
+ 30
+1102.584877
+ 40
+1.0
+  1
+1015
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+662
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.593185
+ 20
+5662669.631978
+ 30
+1102.584877
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+663
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.593185
+ 20
+5662668.231978
+ 30
+1102.584877
+ 40
+1.0
+  1
+1102.585
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+664
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+665
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700697.700511
+ 20
+5662680.720785
+ 30
+1102.795609
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+666
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.100511
+ 20
+5662681.120785
+ 30
+1102.795609
+ 40
+1.0
+  1
+1016
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+667
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.100511
+ 20
+5662679.320785
+ 30
+1102.795609
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+668
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700698.100511
+ 20
+5662677.920785
+ 30
+1102.795609
+ 40
+1.0
+  1
+1102.796
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+669
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+670
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700697.235458
+ 20
+5662692.668680
+ 30
+1103.049225
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+671
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.635458
+ 20
+5662693.068680
+ 30
+1103.049225
+ 40
+1.0
+  1
+1017
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+672
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.635458
+ 20
+5662691.268680
+ 30
+1103.049225
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+673
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.635458
+ 20
+5662689.868680
+ 30
+1103.049225
+ 40
+1.0
+  1
+1103.049
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+674
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+675
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700696.891509
+ 20
+5662702.236041
+ 30
+1103.248466
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+676
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.291509
+ 20
+5662702.636041
+ 30
+1103.248466
+ 40
+1.0
+  1
+1018
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+677
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.291509
+ 20
+5662700.836041
+ 30
+1103.248466
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+678
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.291509
+ 20
+5662699.436041
+ 30
+1103.248466
+ 40
+1.0
+  1
+1103.248
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+679
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+680
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700696.450384
+ 20
+5662714.226205
+ 30
+1103.499864
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+681
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.850384
+ 20
+5662714.626205
+ 30
+1103.499864
+ 40
+1.0
+  1
+1019
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+682
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.850384
+ 20
+5662712.826205
+ 30
+1103.499864
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+683
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.850384
+ 20
+5662711.426205
+ 30
+1103.499864
+ 40
+1.0
+  1
+1103.500
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+684
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+685
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700696.182485
+ 20
+5662724.030139
+ 30
+1103.668662
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+686
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.582485
+ 20
+5662724.430139
+ 30
+1103.668662
+ 40
+1.0
+  1
+1020
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+687
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.582485
+ 20
+5662722.630139
+ 30
+1103.668662
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+688
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.582485
+ 20
+5662721.230139
+ 30
+1103.668662
+ 40
+1.0
+  1
+1103.669
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+689
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+690
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700693.670013
+ 20
+5662723.851459
+ 30
+1103.616724
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+691
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.070013
+ 20
+5662724.251459
+ 30
+1103.616724
+ 40
+1.0
+  1
+1021
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+692
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.070013
+ 20
+5662722.451459
+ 30
+1103.616724
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+693
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.070013
+ 20
+5662721.051459
+ 30
+1103.616724
+ 40
+1.0
+  1
+1103.617
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+694
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+695
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700693.922469
+ 20
+5662714.114477
+ 30
+1103.436722
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+696
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.322469
+ 20
+5662714.514477
+ 30
+1103.436722
+ 40
+1.0
+  1
+1022
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+697
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.322469
+ 20
+5662712.714477
+ 30
+1103.436722
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+698
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.322469
+ 20
+5662711.314477
+ 30
+1103.436722
+ 40
+1.0
+  1
+1103.437
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+699
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+700
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700694.319760
+ 20
+5662702.113191
+ 30
+1103.178182
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+701
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.719760
+ 20
+5662702.513191
+ 30
+1103.178182
+ 40
+1.0
+  1
+1023
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+702
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.719760
+ 20
+5662700.713191
+ 30
+1103.178182
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+703
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.719760
+ 20
+5662699.313191
+ 30
+1103.178182
+ 40
+1.0
+  1
+1103.178
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+704
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+705
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700694.618071
+ 20
+5662692.564970
+ 30
+1102.993352
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+706
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.018071
+ 20
+5662692.964970
+ 30
+1102.993352
+ 40
+1.0
+  1
+1024
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+707
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.018071
+ 20
+5662691.164970
+ 30
+1102.993352
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+708
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.018071
+ 20
+5662689.764970
+ 30
+1102.993352
+ 40
+1.0
+  1
+1102.993
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+709
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+710
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700695.080327
+ 20
+5662680.667670
+ 30
+1102.734781
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+711
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.480327
+ 20
+5662681.067670
+ 30
+1102.734781
+ 40
+1.0
+  1
+1025
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+712
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.480327
+ 20
+5662679.267670
+ 30
+1102.734781
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+713
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.480327
+ 20
+5662677.867670
+ 30
+1102.734781
+ 40
+1.0
+  1
+1102.735
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+714
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+715
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700695.531156
+ 20
+5662670.910204
+ 30
+1102.522469
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+716
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.931156
+ 20
+5662671.310204
+ 30
+1102.522469
+ 40
+1.0
+  1
+1026
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+717
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.931156
+ 20
+5662669.510204
+ 30
+1102.522469
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+718
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700695.931156
+ 20
+5662668.110204
+ 30
+1102.522469
+ 40
+1.0
+  1
+1102.522
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+719
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+720
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700695.902763
+ 20
+5662658.928624
+ 30
+1102.280142
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+721
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.302763
+ 20
+5662659.328624
+ 30
+1102.280142
+ 40
+1.0
+  1
+1027
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+722
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.302763
+ 20
+5662657.528624
+ 30
+1102.280142
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+723
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.302763
+ 20
+5662656.128624
+ 30
+1102.280142
+ 40
+1.0
+  1
+1102.280
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+724
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+725
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700696.240393
+ 20
+5662649.430530
+ 30
+1102.026122
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+726
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.640393
+ 20
+5662649.830530
+ 30
+1102.026122
+ 40
+1.0
+  1
+1028
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+727
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.640393
+ 20
+5662648.030530
+ 30
+1102.026122
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+728
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700696.640393
+ 20
+5662646.630530
+ 30
+1102.026122
+ 40
+1.0
+  1
+1102.026
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+729
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+730
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700696.666650
+ 20
+5662637.525070
+ 30
+1101.874814
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+731
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.066650
+ 20
+5662637.925070
+ 30
+1101.874814
+ 40
+1.0
+  1
+1029
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+732
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.066650
+ 20
+5662636.125070
+ 30
+1101.874814
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+733
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.066650
+ 20
+5662634.725070
+ 30
+1101.874814
+ 40
+1.0
+  1
+1101.875
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+734
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+735
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700697.003280
+ 20
+5662627.836749
+ 30
+1101.838340
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+736
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.403280
+ 20
+5662628.236749
+ 30
+1101.838340
+ 40
+1.0
+  1
+1030
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+737
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.403280
+ 20
+5662626.436749
+ 30
+1101.838340
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+738
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700697.403280
+ 20
+5662625.036749
+ 30
+1101.838340
+ 40
+1.0
+  1
+1101.838
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+739
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+740
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700694.398008
+ 20
+5662627.720201
+ 30
+1101.787703
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+741
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.798008
+ 20
+5662628.120201
+ 30
+1101.787703
+ 40
+1.0
+  1
+1031
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+742
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.798008
+ 20
+5662626.320201
+ 30
+1101.787703
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+743
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.798008
+ 20
+5662624.920201
+ 30
+1101.787703
+ 40
+1.0
+  1
+1101.788
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+744
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+745
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700694.092990
+ 20
+5662637.397422
+ 30
+1101.813478
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+746
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.492990
+ 20
+5662637.797422
+ 30
+1101.813478
+ 40
+1.0
+  1
+1032
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+747
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.492990
+ 20
+5662635.997422
+ 30
+1101.813478
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+748
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.492990
+ 20
+5662634.597422
+ 30
+1101.813478
+ 40
+1.0
+  1
+1101.813
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+749
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+750
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700693.659375
+ 20
+5662649.378390
+ 30
+1101.963963
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+751
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.059375
+ 20
+5662649.778390
+ 30
+1101.963963
+ 40
+1.0
+  1
+1033
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+752
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.059375
+ 20
+5662647.978390
+ 30
+1101.963963
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+753
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700694.059375
+ 20
+5662646.578390
+ 30
+1101.963963
+ 40
+1.0
+  1
+1101.964
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+754
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+755
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700693.415376
+ 20
+5662658.874506
+ 30
+1102.201378
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+756
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700693.815376
+ 20
+5662659.274506
+ 30
+1102.201378
+ 40
+1.0
+  1
+1034
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+757
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700693.815376
+ 20
+5662657.474506
+ 30
+1102.201378
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+758
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700693.815376
+ 20
+5662656.074506
+ 30
+1102.201378
+ 40
+1.0
+  1
+1102.201
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+759
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+760
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700693.029611
+ 20
+5662670.768408
+ 30
+1102.418350
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+761
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700693.429611
+ 20
+5662671.168408
+ 30
+1102.418350
+ 40
+1.0
+  1
+1035
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+762
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700693.429611
+ 20
+5662669.368408
+ 30
+1102.418350
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+763
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700693.429611
+ 20
+5662667.968408
+ 30
+1102.418350
+ 40
+1.0
+  1
+1102.418
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+764
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+765
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700692.493822
+ 20
+5662680.563819
+ 30
+1102.648052
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+766
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.893822
+ 20
+5662680.963819
+ 30
+1102.648052
+ 40
+1.0
+  1
+1036
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+767
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.893822
+ 20
+5662679.163819
+ 30
+1102.648052
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+768
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.893822
+ 20
+5662677.763819
+ 30
+1102.648052
+ 40
+1.0
+  1
+1102.648
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+769
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+770
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700692.032795
+ 20
+5662692.492811
+ 30
+1102.895571
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+771
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.432795
+ 20
+5662692.892811
+ 30
+1102.895571
+ 40
+1.0
+  1
+1037
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+772
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.432795
+ 20
+5662691.092811
+ 30
+1102.895571
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+773
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.432795
+ 20
+5662689.692811
+ 30
+1102.895571
+ 40
+1.0
+  1
+1102.896
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+774
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+775
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700691.707625
+ 20
+5662702.031475
+ 30
+1103.089418
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+776
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.107625
+ 20
+5662702.431475
+ 30
+1103.089418
+ 40
+1.0
+  1
+1038
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+777
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.107625
+ 20
+5662700.631475
+ 30
+1103.089418
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+778
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.107625
+ 20
+5662699.231475
+ 30
+1103.089418
+ 40
+1.0
+  1
+1103.089
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+779
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+780
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700691.318058
+ 20
+5662713.990484
+ 30
+1103.377078
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+781
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.718058
+ 20
+5662714.390484
+ 30
+1103.377078
+ 40
+1.0
+  1
+1039
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+782
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.718058
+ 20
+5662712.590484
+ 30
+1103.377078
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+783
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.718058
+ 20
+5662711.190484
+ 30
+1103.377078
+ 40
+1.0
+  1
+1103.377
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+784
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+785
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700691.004089
+ 20
+5662723.802392
+ 30
+1103.548881
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+786
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.404089
+ 20
+5662724.202392
+ 30
+1103.548881
+ 40
+1.0
+  1
+1040
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+787
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.404089
+ 20
+5662722.402392
+ 30
+1103.548881
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+788
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.404089
+ 20
+5662721.002392
+ 30
+1103.548881
+ 40
+1.0
+  1
+1103.549
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+789
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+790
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700688.446789
+ 20
+5662723.746420
+ 30
+1103.473422
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+791
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.846789
+ 20
+5662724.146420
+ 30
+1103.473422
+ 40
+1.0
+  1
+1041
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+792
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.846789
+ 20
+5662722.346420
+ 30
+1103.473422
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+793
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.846789
+ 20
+5662720.946420
+ 30
+1103.473422
+ 40
+1.0
+  1
+1103.473
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+794
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+795
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700688.731765
+ 20
+5662713.863040
+ 30
+1103.265556
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+796
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.131765
+ 20
+5662714.263040
+ 30
+1103.265556
+ 40
+1.0
+  1
+1042
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+797
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.131765
+ 20
+5662712.463040
+ 30
+1103.265556
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+798
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.131765
+ 20
+5662711.063040
+ 30
+1103.265556
+ 40
+1.0
+  1
+1103.266
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+799
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+800
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700689.149149
+ 20
+5662702.014106
+ 30
+1102.998612
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+801
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.549149
+ 20
+5662702.414106
+ 30
+1102.998612
+ 40
+1.0
+  1
+1043
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+802
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.549149
+ 20
+5662700.614106
+ 30
+1102.998612
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+803
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.549149
+ 20
+5662699.214106
+ 30
+1102.998612
+ 40
+1.0
+  1
+1102.999
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+804
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+805
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700689.474849
+ 20
+5662692.351653
+ 30
+1102.819318
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+806
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.874849
+ 20
+5662692.751653
+ 30
+1102.819318
+ 40
+1.0
+  1
+1044
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+807
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.874849
+ 20
+5662690.951653
+ 30
+1102.819318
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+808
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.874849
+ 20
+5662689.551653
+ 30
+1102.819318
+ 40
+1.0
+  1
+1102.819
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+809
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+810
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700689.920393
+ 20
+5662680.488733
+ 30
+1102.577296
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+811
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700690.320393
+ 20
+5662680.888733
+ 30
+1102.577296
+ 40
+1.0
+  1
+1045
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+812
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700690.320393
+ 20
+5662679.088733
+ 30
+1102.577296
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+813
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700690.320393
+ 20
+5662677.688733
+ 30
+1102.577296
+ 40
+1.0
+  1
+1102.577
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+814
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+815
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700690.399066
+ 20
+5662670.705088
+ 30
+1102.360682
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+816
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700690.799066
+ 20
+5662671.105088
+ 30
+1102.360682
+ 40
+1.0
+  1
+1046
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+817
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700690.799066
+ 20
+5662669.305088
+ 30
+1102.360682
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+818
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700690.799066
+ 20
+5662667.905088
+ 30
+1102.360682
+ 40
+1.0
+  1
+1102.361
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+819
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+820
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700690.797138
+ 20
+5662658.730558
+ 30
+1102.133910
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+821
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.197138
+ 20
+5662659.130558
+ 30
+1102.133910
+ 40
+1.0
+  1
+1047
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+822
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.197138
+ 20
+5662657.330558
+ 30
+1102.133910
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+823
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.197138
+ 20
+5662655.930558
+ 30
+1102.133910
+ 40
+1.0
+  1
+1102.134
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+824
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+825
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700691.071090
+ 20
+5662649.250852
+ 30
+1101.897165
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+826
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.471090
+ 20
+5662649.650852
+ 30
+1101.897165
+ 40
+1.0
+  1
+1048
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+827
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.471090
+ 20
+5662647.850852
+ 30
+1101.897165
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+828
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.471090
+ 20
+5662646.450852
+ 30
+1101.897165
+ 40
+1.0
+  1
+1101.897
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+829
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+830
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700691.506592
+ 20
+5662637.282735
+ 30
+1101.749260
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+831
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.906592
+ 20
+5662637.682735
+ 30
+1101.749260
+ 40
+1.0
+  1
+1049
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+832
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.906592
+ 20
+5662635.882735
+ 30
+1101.749260
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+833
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700691.906592
+ 20
+5662634.482735
+ 30
+1101.749260
+ 40
+1.0
+  1
+1101.749
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+834
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+835
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700691.849174
+ 20
+5662627.679882
+ 30
+1101.735330
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+836
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.249174
+ 20
+5662628.079882
+ 30
+1101.735330
+ 40
+1.0
+  1
+1050
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+837
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.249174
+ 20
+5662626.279882
+ 30
+1101.735330
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+838
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700692.249174
+ 20
+5662624.879882
+ 30
+1101.735330
+ 40
+1.0
+  1
+1101.735
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+839
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+840
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700689.266196
+ 20
+5662627.581205
+ 30
+1101.678982
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+841
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.666196
+ 20
+5662627.981205
+ 30
+1101.678982
+ 40
+1.0
+  1
+1051
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+842
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.666196
+ 20
+5662626.181205
+ 30
+1101.678982
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+843
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.666196
+ 20
+5662624.781205
+ 30
+1101.678982
+ 40
+1.0
+  1
+1101.679
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+844
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+845
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700688.914128
+ 20
+5662637.222052
+ 30
+1101.715074
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+846
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.314128
+ 20
+5662637.622052
+ 30
+1101.715074
+ 40
+1.0
+  1
+1052
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+847
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.314128
+ 20
+5662635.822052
+ 30
+1101.715074
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+848
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700689.314128
+ 20
+5662634.422052
+ 30
+1101.715074
+ 40
+1.0
+  1
+1101.715
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+849
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+850
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700688.510554
+ 20
+5662649.133641
+ 30
+1101.835222
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+851
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.910554
+ 20
+5662649.533641
+ 30
+1101.835222
+ 40
+1.0
+  1
+1053
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+852
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.910554
+ 20
+5662647.733641
+ 30
+1101.835222
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+853
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.910554
+ 20
+5662646.333641
+ 30
+1101.835222
+ 40
+1.0
+  1
+1101.835
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+854
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+855
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700688.201912
+ 20
+5662658.659731
+ 30
+1102.060608
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+856
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.601912
+ 20
+5662659.059731
+ 30
+1102.060608
+ 40
+1.0
+  1
+1054
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+857
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.601912
+ 20
+5662657.259731
+ 30
+1102.060608
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+858
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.601912
+ 20
+5662655.859731
+ 30
+1102.060608
+ 40
+1.0
+  1
+1102.061
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+859
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+860
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700687.799413
+ 20
+5662670.569225
+ 30
+1102.289469
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+861
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.199413
+ 20
+5662670.969225
+ 30
+1102.289469
+ 40
+1.0
+  1
+1055
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+862
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.199413
+ 20
+5662669.169225
+ 30
+1102.289469
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+863
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700688.199413
+ 20
+5662667.769225
+ 30
+1102.289469
+ 40
+1.0
+  1
+1102.289
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+864
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+865
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700687.346037
+ 20
+5662680.364407
+ 30
+1102.516125
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+866
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.746037
+ 20
+5662680.764407
+ 30
+1102.516125
+ 40
+1.0
+  1
+1056
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+867
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.746037
+ 20
+5662678.964407
+ 30
+1102.516125
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+868
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.746037
+ 20
+5662677.564407
+ 30
+1102.516125
+ 40
+1.0
+  1
+1102.516
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+869
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+870
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700686.855585
+ 20
+5662692.244358
+ 30
+1102.741404
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+871
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.255585
+ 20
+5662692.644358
+ 30
+1102.741404
+ 40
+1.0
+  1
+1057
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+872
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.255585
+ 20
+5662690.844358
+ 30
+1102.741404
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+873
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.255585
+ 20
+5662689.444358
+ 30
+1102.741404
+ 40
+1.0
+  1
+1102.741
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+874
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+875
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700686.521951
+ 20
+5662701.911090
+ 30
+1102.928731
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+876
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.921951
+ 20
+5662702.311090
+ 30
+1102.928731
+ 40
+1.0
+  1
+1058
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+877
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.921951
+ 20
+5662700.511090
+ 30
+1102.928731
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+878
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.921951
+ 20
+5662699.111090
+ 30
+1102.928731
+ 40
+1.0
+  1
+1102.929
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+879
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+880
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700686.108043
+ 20
+5662713.793271
+ 30
+1103.208206
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+881
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.508043
+ 20
+5662714.193271
+ 30
+1103.208206
+ 40
+1.0
+  1
+1059
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+882
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.508043
+ 20
+5662712.393271
+ 30
+1103.208206
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+883
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.508043
+ 20
+5662710.993271
+ 30
+1103.208206
+ 40
+1.0
+  1
+1103.208
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+884
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+885
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700685.909372
+ 20
+5662723.638842
+ 30
+1103.411854
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+886
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.309372
+ 20
+5662724.038842
+ 30
+1103.411854
+ 40
+1.0
+  1
+1060
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+887
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.309372
+ 20
+5662722.238842
+ 30
+1103.411854
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+888
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.309372
+ 20
+5662720.838842
+ 30
+1103.411854
+ 40
+1.0
+  1
+1103.412
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+889
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+890
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700683.259362
+ 20
+5662723.565955
+ 30
+1103.322833
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+891
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.659362
+ 20
+5662723.965955
+ 30
+1103.322833
+ 40
+1.0
+  1
+1061
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+892
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.659362
+ 20
+5662722.165955
+ 30
+1103.322833
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+893
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.659362
+ 20
+5662720.765955
+ 30
+1103.322833
+ 40
+1.0
+  1
+1103.323
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+894
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+895
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700683.567968
+ 20
+5662713.753459
+ 30
+1103.131262
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+896
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.967968
+ 20
+5662714.153459
+ 30
+1103.131262
+ 40
+1.0
+  1
+1062
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+897
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.967968
+ 20
+5662712.353459
+ 30
+1103.131262
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+898
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.967968
+ 20
+5662710.953459
+ 30
+1103.131262
+ 40
+1.0
+  1
+1103.131
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+899
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+900
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700683.927144
+ 20
+5662701.748698
+ 30
+1102.836865
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+901
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.327144
+ 20
+5662702.148698
+ 30
+1102.836865
+ 40
+1.0
+  1
+1063
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+902
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.327144
+ 20
+5662700.348698
+ 30
+1102.836865
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+903
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.327144
+ 20
+5662698.948698
+ 30
+1102.836865
+ 40
+1.0
+  1
+1102.837
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+904
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+905
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700684.256425
+ 20
+5662692.193193
+ 30
+1102.669655
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+906
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.656425
+ 20
+5662692.593193
+ 30
+1102.669655
+ 40
+1.0
+  1
+1064
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+907
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.656425
+ 20
+5662690.793193
+ 30
+1102.669655
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+908
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.656425
+ 20
+5662689.393193
+ 30
+1102.669655
+ 40
+1.0
+  1
+1102.670
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+909
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+910
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700684.722934
+ 20
+5662680.239680
+ 30
+1102.428792
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+911
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700685.122934
+ 20
+5662680.639680
+ 30
+1102.428792
+ 40
+1.0
+  1
+1065
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+912
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700685.122934
+ 20
+5662678.839680
+ 30
+1102.428792
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+913
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700685.122934
+ 20
+5662677.439680
+ 30
+1102.428792
+ 40
+1.0
+  1
+1102.429
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+914
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+915
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700685.280994
+ 20
+5662670.466928
+ 30
+1102.239753
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+916
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700685.680994
+ 20
+5662670.866928
+ 30
+1102.239753
+ 40
+1.0
+  1
+1066
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+917
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700685.680994
+ 20
+5662669.066928
+ 30
+1102.239753
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+918
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700685.680994
+ 20
+5662667.666928
+ 30
+1102.239753
+ 40
+1.0
+  1
+1102.240
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+919
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+920
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700685.632411
+ 20
+5662658.611033
+ 30
+1101.985994
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+921
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.032411
+ 20
+5662659.011033
+ 30
+1101.985994
+ 40
+1.0
+  1
+1067
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+922
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.032411
+ 20
+5662657.211033
+ 30
+1101.985994
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+923
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.032411
+ 20
+5662655.811033
+ 30
+1101.985994
+ 40
+1.0
+  1
+1101.986
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+924
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+925
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700685.903128
+ 20
+5662649.039728
+ 30
+1101.765616
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+926
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.303128
+ 20
+5662649.439728
+ 30
+1101.765616
+ 40
+1.0
+  1
+1068
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+927
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.303128
+ 20
+5662647.639728
+ 30
+1101.765616
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+928
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.303128
+ 20
+5662646.239728
+ 30
+1101.765616
+ 40
+1.0
+  1
+1101.766
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+929
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+930
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700686.311120
+ 20
+5662637.116086
+ 30
+1101.653993
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+931
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.711120
+ 20
+5662637.516086
+ 30
+1101.653993
+ 40
+1.0
+  1
+1069
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+932
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.711120
+ 20
+5662635.716086
+ 30
+1101.653993
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+933
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700686.711120
+ 20
+5662634.316086
+ 30
+1101.653993
+ 40
+1.0
+  1
+1101.654
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+934
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+935
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700686.670273
+ 20
+5662627.382857
+ 30
+1101.623021
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+936
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.070273
+ 20
+5662627.782857
+ 30
+1101.623021
+ 40
+1.0
+  1
+1070
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+937
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.070273
+ 20
+5662625.982857
+ 30
+1101.623021
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+938
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700687.070273
+ 20
+5662624.582857
+ 30
+1101.623021
+ 40
+1.0
+  1
+1101.623
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+939
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+940
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700684.097076
+ 20
+5662627.343611
+ 30
+1101.549556
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+941
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.497076
+ 20
+5662627.743611
+ 30
+1101.549556
+ 40
+1.0
+  1
+1071
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+942
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.497076
+ 20
+5662625.943611
+ 30
+1101.549556
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+943
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.497076
+ 20
+5662624.543611
+ 30
+1101.549556
+ 40
+1.0
+  1
+1101.550
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+944
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+945
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700683.765411
+ 20
+5662637.021291
+ 30
+1101.601869
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+946
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.165411
+ 20
+5662637.421291
+ 30
+1101.601869
+ 40
+1.0
+  1
+1072
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+947
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.165411
+ 20
+5662635.621291
+ 30
+1101.601869
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+948
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700684.165411
+ 20
+5662634.221291
+ 30
+1101.601869
+ 40
+1.0
+  1
+1101.602
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+949
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+950
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700683.352007
+ 20
+5662648.995686
+ 30
+1101.694848
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+951
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.752007
+ 20
+5662649.395686
+ 30
+1101.694848
+ 40
+1.0
+  1
+1073
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+952
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.752007
+ 20
+5662647.595686
+ 30
+1101.694848
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+953
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.752007
+ 20
+5662646.195686
+ 30
+1101.694848
+ 40
+1.0
+  1
+1101.695
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+954
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+955
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700683.027817
+ 20
+5662658.448498
+ 30
+1101.937571
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+956
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.427817
+ 20
+5662658.848498
+ 30
+1101.937571
+ 40
+1.0
+  1
+1074
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+957
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.427817
+ 20
+5662657.048498
+ 30
+1101.937571
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+958
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.427817
+ 20
+5662655.648498
+ 30
+1101.937571
+ 40
+1.0
+  1
+1101.938
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+959
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+960
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700682.676361
+ 20
+5662670.370056
+ 30
+1102.169252
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+961
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.076361
+ 20
+5662670.770056
+ 30
+1102.169252
+ 40
+1.0
+  1
+1075
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+962
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.076361
+ 20
+5662668.970056
+ 30
+1102.169252
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+963
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700683.076361
+ 20
+5662667.570056
+ 30
+1102.169252
+ 40
+1.0
+  1
+1102.169
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+964
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+965
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700682.180254
+ 20
+5662680.211300
+ 30
+1102.348315
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+966
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700682.580254
+ 20
+5662680.611300
+ 30
+1102.348315
+ 40
+1.0
+  1
+1076
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+967
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700682.580254
+ 20
+5662678.811300
+ 30
+1102.348315
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+968
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700682.580254
+ 20
+5662677.411300
+ 30
+1102.348315
+ 40
+1.0
+  1
+1102.348
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+969
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+970
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700681.643970
+ 20
+5662692.094558
+ 30
+1102.581686
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+971
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700682.043970
+ 20
+5662692.494558
+ 30
+1102.581686
+ 40
+1.0
+  1
+1077
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+972
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700682.043970
+ 20
+5662690.694558
+ 30
+1102.581686
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+973
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700682.043970
+ 20
+5662689.294558
+ 30
+1102.581686
+ 40
+1.0
+  1
+1102.582
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+974
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+975
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700681.316606
+ 20
+5662701.700329
+ 30
+1102.761278
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+976
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.716606
+ 20
+5662702.100329
+ 30
+1102.761278
+ 40
+1.0
+  1
+1078
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+977
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.716606
+ 20
+5662700.300329
+ 30
+1102.761278
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+978
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.716606
+ 20
+5662698.900329
+ 30
+1102.761278
+ 40
+1.0
+  1
+1102.761
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+979
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+980
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700680.962880
+ 20
+5662713.579972
+ 30
+1103.064414
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+981
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.362880
+ 20
+5662713.979972
+ 30
+1103.064414
+ 40
+1.0
+  1
+1079
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+982
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.362880
+ 20
+5662712.179972
+ 30
+1103.064414
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+983
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.362880
+ 20
+5662710.779972
+ 30
+1103.064414
+ 40
+1.0
+  1
+1103.064
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+984
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+985
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700680.687604
+ 20
+5662723.435334
+ 30
+1103.262354
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+986
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.087604
+ 20
+5662723.835334
+ 30
+1103.262354
+ 40
+1.0
+  1
+1080
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+987
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.087604
+ 20
+5662722.035334
+ 30
+1103.262354
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+988
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.087604
+ 20
+5662720.635334
+ 30
+1103.262354
+ 40
+1.0
+  1
+1103.262
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+989
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+990
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700678.068059
+ 20
+5662723.344307
+ 30
+1103.176594
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+991
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.468059
+ 20
+5662723.744307
+ 30
+1103.176594
+ 40
+1.0
+  1
+1081
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+992
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.468059
+ 20
+5662721.944307
+ 30
+1103.176594
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+993
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.468059
+ 20
+5662720.544307
+ 30
+1103.176594
+ 40
+1.0
+  1
+1103.177
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+994
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+995
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700678.335669
+ 20
+5662713.515164
+ 30
+1102.982769
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+996
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.735669
+ 20
+5662713.915164
+ 30
+1102.982769
+ 40
+1.0
+  1
+1082
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+997
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.735669
+ 20
+5662712.115164
+ 30
+1102.982769
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+998
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.735669
+ 20
+5662710.715164
+ 30
+1102.982769
+ 40
+1.0
+  1
+1102.983
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+999
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1000
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700678.755011
+ 20
+5662701.616672
+ 30
+1102.703759
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1001
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.155011
+ 20
+5662702.016672
+ 30
+1102.703759
+ 40
+1.0
+  1
+1083
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1002
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.155011
+ 20
+5662700.216672
+ 30
+1102.703759
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1003
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.155011
+ 20
+5662698.816672
+ 30
+1102.703759
+ 40
+1.0
+  1
+1102.704
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1004
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1005
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700679.098084
+ 20
+5662692.017453
+ 30
+1102.533356
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1006
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.498084
+ 20
+5662692.417453
+ 30
+1102.533356
+ 40
+1.0
+  1
+1084
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1007
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.498084
+ 20
+5662690.617453
+ 30
+1102.533356
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1008
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.498084
+ 20
+5662689.217453
+ 30
+1102.533356
+ 40
+1.0
+  1
+1102.533
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1009
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1010
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700679.587171
+ 20
+5662680.119131
+ 30
+1102.299715
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1011
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.987171
+ 20
+5662680.519131
+ 30
+1102.299715
+ 40
+1.0
+  1
+1085
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1012
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.987171
+ 20
+5662678.719131
+ 30
+1102.299715
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1013
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.987171
+ 20
+5662677.319131
+ 30
+1102.299715
+ 40
+1.0
+  1
+1102.300
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1014
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1015
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700680.012683
+ 20
+5662670.236745
+ 30
+1102.096129
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1016
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700680.412683
+ 20
+5662670.636745
+ 30
+1102.096129
+ 40
+1.0
+  1
+1086
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1017
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700680.412683
+ 20
+5662668.836745
+ 30
+1102.096129
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1018
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700680.412683
+ 20
+5662667.436745
+ 30
+1102.096129
+ 40
+1.0
+  1
+1102.096
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1019
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1020
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700680.477224
+ 20
+5662658.432982
+ 30
+1101.866780
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1021
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700680.877224
+ 20
+5662658.832982
+ 30
+1101.866780
+ 40
+1.0
+  1
+1087
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1022
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700680.877224
+ 20
+5662657.032982
+ 30
+1101.866780
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1023
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700680.877224
+ 20
+5662655.632982
+ 30
+1101.866780
+ 40
+1.0
+  1
+1101.867
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1024
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1025
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700680.746847
+ 20
+5662648.894365
+ 30
+1101.656720
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1026
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.146847
+ 20
+5662649.294365
+ 30
+1101.656720
+ 40
+1.0
+  1
+1088
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1027
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.146847
+ 20
+5662647.494365
+ 30
+1101.656720
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1028
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.146847
+ 20
+5662646.094365
+ 30
+1101.656720
+ 40
+1.0
+  1
+1101.657
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1029
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1030
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700681.184061
+ 20
+5662636.958645
+ 30
+1101.535938
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1031
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.584061
+ 20
+5662637.358645
+ 30
+1101.535938
+ 40
+1.0
+  1
+1089
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1032
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.584061
+ 20
+5662635.558645
+ 30
+1101.535938
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1033
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.584061
+ 20
+5662634.158645
+ 30
+1101.535938
+ 40
+1.0
+  1
+1101.536
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1034
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1035
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700681.513347
+ 20
+5662627.228999
+ 30
+1101.500823
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1036
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.913347
+ 20
+5662627.628999
+ 30
+1101.500823
+ 40
+1.0
+  1
+1090
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1037
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.913347
+ 20
+5662625.828999
+ 30
+1101.500823
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1038
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700681.913347
+ 20
+5662624.428999
+ 30
+1101.500823
+ 40
+1.0
+  1
+1101.501
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1039
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1040
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700678.970361
+ 20
+5662627.160403
+ 30
+1101.441905
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1041
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.370361
+ 20
+5662627.560403
+ 30
+1101.441905
+ 40
+1.0
+  1
+1091
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1042
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.370361
+ 20
+5662625.760403
+ 30
+1101.441905
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1043
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.370361
+ 20
+5662624.360403
+ 30
+1101.441905
+ 40
+1.0
+  1
+1101.442
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1044
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1045
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700678.612404
+ 20
+5662636.823256
+ 30
+1101.477604
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1046
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.012404
+ 20
+5662637.223256
+ 30
+1101.477604
+ 40
+1.0
+  1
+1092
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1047
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.012404
+ 20
+5662635.423256
+ 30
+1101.477604
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1048
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700679.012404
+ 20
+5662634.023256
+ 30
+1101.477604
+ 40
+1.0
+  1
+1101.478
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1049
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1050
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700678.177600
+ 20
+5662648.762993
+ 30
+1101.604200
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1051
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.577600
+ 20
+5662649.162993
+ 30
+1101.604200
+ 40
+1.0
+  1
+1093
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1052
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.577600
+ 20
+5662647.362993
+ 30
+1101.604200
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1053
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.577600
+ 20
+5662645.962993
+ 30
+1101.604200
+ 40
+1.0
+  1
+1101.604
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1054
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1055
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700677.883859
+ 20
+5662658.305799
+ 30
+1101.791331
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1056
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.283859
+ 20
+5662658.705799
+ 30
+1101.791331
+ 40
+1.0
+  1
+1094
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1057
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.283859
+ 20
+5662656.905799
+ 30
+1101.791331
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1058
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700678.283859
+ 20
+5662655.505799
+ 30
+1101.791331
+ 40
+1.0
+  1
+1101.791
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1059
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1060
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700677.445401
+ 20
+5662670.182235
+ 30
+1102.035415
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1061
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700677.845401
+ 20
+5662670.582235
+ 30
+1102.035415
+ 40
+1.0
+  1
+1095
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1062
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700677.845401
+ 20
+5662668.782235
+ 30
+1102.035415
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1063
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700677.845401
+ 20
+5662667.382235
+ 30
+1102.035415
+ 40
+1.0
+  1
+1102.035
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1064
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1065
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700676.966387
+ 20
+5662680.018208
+ 30
+1102.206790
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1066
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700677.366387
+ 20
+5662680.418208
+ 30
+1102.206790
+ 40
+1.0
+  1
+1096
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1067
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700677.366387
+ 20
+5662678.618208
+ 30
+1102.206790
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1068
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700677.366387
+ 20
+5662677.218208
+ 30
+1102.206790
+ 40
+1.0
+  1
+1102.207
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1069
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1070
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700676.488388
+ 20
+5662691.907200
+ 30
+1102.445766
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1071
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.888388
+ 20
+5662692.307200
+ 30
+1102.445766
+ 40
+1.0
+  1
+1097
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1072
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.888388
+ 20
+5662690.507200
+ 30
+1102.445766
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1073
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.888388
+ 20
+5662689.107200
+ 30
+1102.445766
+ 40
+1.0
+  1
+1102.446
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1074
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1075
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700676.262743
+ 20
+5662701.531443
+ 30
+1102.610979
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1076
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.662743
+ 20
+5662701.931443
+ 30
+1102.610979
+ 40
+1.0
+  1
+1098
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1077
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.662743
+ 20
+5662700.131443
+ 30
+1102.610979
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1078
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.662743
+ 20
+5662698.731443
+ 30
+1102.610979
+ 40
+1.0
+  1
+1102.611
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1079
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1080
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700675.782637
+ 20
+5662713.458955
+ 30
+1102.921971
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1081
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.182637
+ 20
+5662713.858955
+ 30
+1102.921971
+ 40
+1.0
+  1
+1099
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1082
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.182637
+ 20
+5662712.058955
+ 30
+1102.921971
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1083
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.182637
+ 20
+5662710.658955
+ 30
+1102.921971
+ 40
+1.0
+  1
+1102.922
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1084
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1085
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700675.466268
+ 20
+5662723.243885
+ 30
+1103.080638
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1086
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.866268
+ 20
+5662723.643885
+ 30
+1103.080638
+ 40
+1.0
+  1
+1100
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1087
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.866268
+ 20
+5662721.843885
+ 30
+1103.080638
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1088
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.866268
+ 20
+5662720.443885
+ 30
+1103.080638
+ 40
+1.0
+  1
+1103.081
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1089
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1090
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700672.882959
+ 20
+5662723.186456
+ 30
+1103.006285
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1091
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.282959
+ 20
+5662723.586456
+ 30
+1103.006285
+ 40
+1.0
+  1
+1101
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1092
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.282959
+ 20
+5662721.786456
+ 30
+1103.006285
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1093
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.282959
+ 20
+5662720.386456
+ 30
+1103.006285
+ 40
+1.0
+  1
+1103.006
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1094
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1095
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700673.162018
+ 20
+5662713.350012
+ 30
+1102.834550
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1096
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.562018
+ 20
+5662713.750012
+ 30
+1102.834550
+ 40
+1.0
+  1
+1102
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1097
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.562018
+ 20
+5662711.950012
+ 30
+1102.834550
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1098
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.562018
+ 20
+5662710.550012
+ 30
+1102.834550
+ 40
+1.0
+  1
+1102.835
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1099
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1100
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700673.581390
+ 20
+5662701.400360
+ 30
+1102.527443
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1101
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.981390
+ 20
+5662701.800360
+ 30
+1102.527443
+ 40
+1.0
+  1
+1103
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1102
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.981390
+ 20
+5662700.000360
+ 30
+1102.527443
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1103
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.981390
+ 20
+5662698.600360
+ 30
+1102.527443
+ 40
+1.0
+  1
+1102.527
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1104
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1105
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700673.896635
+ 20
+5662691.820808
+ 30
+1102.374557
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1106
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.296635
+ 20
+5662692.220808
+ 30
+1102.374557
+ 40
+1.0
+  1
+1104
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1107
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.296635
+ 20
+5662690.420808
+ 30
+1102.374557
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1108
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.296635
+ 20
+5662689.020808
+ 30
+1102.374557
+ 40
+1.0
+  1
+1102.375
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1109
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1110
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700674.388678
+ 20
+5662679.885433
+ 30
+1102.125265
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1111
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.788678
+ 20
+5662680.285433
+ 30
+1102.125265
+ 40
+1.0
+  1
+1105
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1112
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.788678
+ 20
+5662678.485433
+ 30
+1102.125265
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1113
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.788678
+ 20
+5662677.085433
+ 30
+1102.125265
+ 40
+1.0
+  1
+1102.125
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1114
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1115
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700674.903329
+ 20
+5662670.118006
+ 30
+1101.993690
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1116
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.303329
+ 20
+5662670.518006
+ 30
+1101.993690
+ 40
+1.0
+  1
+1106
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1117
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.303329
+ 20
+5662668.718006
+ 30
+1101.993690
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1118
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.303329
+ 20
+5662667.318006
+ 30
+1101.993690
+ 40
+1.0
+  1
+1101.994
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1119
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1120
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700675.238336
+ 20
+5662658.108705
+ 30
+1101.731500
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1121
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.638336
+ 20
+5662658.508705
+ 30
+1101.731500
+ 40
+1.0
+  1
+1107
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1122
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.638336
+ 20
+5662656.708705
+ 30
+1101.731500
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1123
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.638336
+ 20
+5662655.308705
+ 30
+1101.731500
+ 40
+1.0
+  1
+1101.732
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1124
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1125
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700675.577959
+ 20
+5662648.691698
+ 30
+1101.534313
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1126
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.977959
+ 20
+5662649.091698
+ 30
+1101.534313
+ 40
+1.0
+  1
+1108
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1127
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.977959
+ 20
+5662647.291698
+ 30
+1101.534313
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1128
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700675.977959
+ 20
+5662645.891698
+ 30
+1101.534313
+ 40
+1.0
+  1
+1101.534
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1129
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1130
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700676.032870
+ 20
+5662636.748070
+ 30
+1101.404224
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1131
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.432870
+ 20
+5662637.148070
+ 30
+1101.404224
+ 40
+1.0
+  1
+1109
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1132
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.432870
+ 20
+5662635.348070
+ 30
+1101.404224
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1133
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.432870
+ 20
+5662633.948070
+ 30
+1101.404224
+ 40
+1.0
+  1
+1101.404
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1134
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1135
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700676.325061
+ 20
+5662627.081571
+ 30
+1101.350154
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1136
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.725061
+ 20
+5662627.481571
+ 30
+1101.350154
+ 40
+1.0
+  1
+1110
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1137
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.725061
+ 20
+5662625.681571
+ 30
+1101.350154
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1138
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700676.725061
+ 20
+5662624.281571
+ 30
+1101.350154
+ 40
+1.0
+  1
+1101.350
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1139
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1140
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700673.819237
+ 20
+5662626.921992
+ 30
+1101.277617
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1141
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.219237
+ 20
+5662627.321992
+ 30
+1101.277617
+ 40
+1.0
+  1
+1111
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1142
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.219237
+ 20
+5662625.521992
+ 30
+1101.277617
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1143
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700674.219237
+ 20
+5662624.121992
+ 30
+1101.277617
+ 40
+1.0
+  1
+1101.278
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1144
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1145
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700673.413538
+ 20
+5662636.663053
+ 30
+1101.336029
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1146
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.813538
+ 20
+5662637.063053
+ 30
+1101.336029
+ 40
+1.0
+  1
+1112
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1147
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.813538
+ 20
+5662635.263053
+ 30
+1101.336029
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1148
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.813538
+ 20
+5662633.863053
+ 30
+1101.336029
+ 40
+1.0
+  1
+1101.336
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1149
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1150
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700673.031776
+ 20
+5662648.613388
+ 30
+1101.513201
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1151
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.431776
+ 20
+5662649.013388
+ 30
+1101.513201
+ 40
+1.0
+  1
+1113
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1152
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.431776
+ 20
+5662647.213388
+ 30
+1101.513201
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1153
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.431776
+ 20
+5662645.813388
+ 30
+1101.513201
+ 40
+1.0
+  1
+1101.513
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1154
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1155
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700672.692727
+ 20
+5662658.030691
+ 30
+1101.680917
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1156
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.092727
+ 20
+5662658.430691
+ 30
+1101.680917
+ 40
+1.0
+  1
+1114
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1157
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.092727
+ 20
+5662656.630691
+ 30
+1101.680917
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1158
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700673.092727
+ 20
+5662655.230691
+ 30
+1101.680917
+ 40
+1.0
+  1
+1101.681
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1159
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1160
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700672.286583
+ 20
+5662670.047118
+ 30
+1101.923419
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1161
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700672.686583
+ 20
+5662670.447118
+ 30
+1101.923419
+ 40
+1.0
+  1
+1115
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1162
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700672.686583
+ 20
+5662668.647118
+ 30
+1101.923419
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1163
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700672.686583
+ 20
+5662667.247118
+ 30
+1101.923419
+ 40
+1.0
+  1
+1101.923
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1164
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1165
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700671.775683
+ 20
+5662679.816194
+ 30
+1102.072681
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1166
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700672.175683
+ 20
+5662680.216194
+ 30
+1102.072681
+ 40
+1.0
+  1
+1116
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1167
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700672.175683
+ 20
+5662678.416194
+ 30
+1102.072681
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1168
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700672.175683
+ 20
+5662677.016194
+ 30
+1102.072681
+ 40
+1.0
+  1
+1102.073
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1169
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1170
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700671.325652
+ 20
+5662691.782953
+ 30
+1102.280482
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1171
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.725652
+ 20
+5662692.182953
+ 30
+1102.280482
+ 40
+1.0
+  1
+1117
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1172
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.725652
+ 20
+5662690.382953
+ 30
+1102.280482
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1173
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.725652
+ 20
+5662688.982953
+ 30
+1102.280482
+ 40
+1.0
+  1
+1102.280
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1174
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1175
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700671.000467
+ 20
+5662701.311848
+ 30
+1102.446677
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1176
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.400467
+ 20
+5662701.711848
+ 30
+1102.446677
+ 40
+1.0
+  1
+1118
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1177
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.400467
+ 20
+5662699.911848
+ 30
+1102.446677
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1178
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.400467
+ 20
+5662698.511848
+ 30
+1102.446677
+ 40
+1.0
+  1
+1102.447
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1179
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1180
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700670.623017
+ 20
+5662713.214886
+ 30
+1102.750496
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1181
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.023017
+ 20
+5662713.614886
+ 30
+1102.750496
+ 40
+1.0
+  1
+1119
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1182
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.023017
+ 20
+5662711.814886
+ 30
+1102.750496
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1183
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.023017
+ 20
+5662710.414886
+ 30
+1102.750496
+ 40
+1.0
+  1
+1102.750
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1184
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1185
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700670.321354
+ 20
+5662722.994179
+ 30
+1102.923941
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1186
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.721354
+ 20
+5662723.394179
+ 30
+1102.923941
+ 40
+1.0
+  1
+1120
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1187
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.721354
+ 20
+5662721.594179
+ 30
+1102.923941
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1188
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.721354
+ 20
+5662720.194179
+ 30
+1102.923941
+ 40
+1.0
+  1
+1102.924
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1189
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1190
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700667.753330
+ 20
+5662722.943343
+ 30
+1102.834228
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1191
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.153330
+ 20
+5662723.343343
+ 30
+1102.834228
+ 40
+1.0
+  1
+1121
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1192
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.153330
+ 20
+5662721.543343
+ 30
+1102.834228
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1193
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.153330
+ 20
+5662720.143343
+ 30
+1102.834228
+ 40
+1.0
+  1
+1102.834
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1194
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1195
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700668.045264
+ 20
+5662713.157378
+ 30
+1102.656220
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1196
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.445264
+ 20
+5662713.557378
+ 30
+1102.656220
+ 40
+1.0
+  1
+1122
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1197
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.445264
+ 20
+5662711.757378
+ 30
+1102.656220
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1198
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.445264
+ 20
+5662710.357378
+ 30
+1102.656220
+ 40
+1.0
+  1
+1102.656
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1199
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1200
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700668.439197
+ 20
+5662701.182250
+ 30
+1102.384355
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1201
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.839197
+ 20
+5662701.582250
+ 30
+1102.384355
+ 40
+1.0
+  1
+1123
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1202
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.839197
+ 20
+5662699.782250
+ 30
+1102.384355
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1203
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700668.839197
+ 20
+5662698.382250
+ 30
+1102.384355
+ 40
+1.0
+  1
+1102.384
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1204
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1205
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700668.722503
+ 20
+5662691.669265
+ 30
+1102.188358
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1206
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700669.122503
+ 20
+5662692.069265
+ 30
+1102.188358
+ 40
+1.0
+  1
+1124
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1207
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700669.122503
+ 20
+5662690.269265
+ 30
+1102.188358
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1208
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700669.122503
+ 20
+5662688.869265
+ 30
+1102.188358
+ 40
+1.0
+  1
+1102.188
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1209
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1210
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700669.245549
+ 20
+5662679.697284
+ 30
+1101.999282
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1211
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700669.645549
+ 20
+5662680.097284
+ 30
+1101.999282
+ 40
+1.0
+  1
+1125
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1212
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700669.645549
+ 20
+5662678.297284
+ 30
+1101.999282
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1213
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700669.645549
+ 20
+5662676.897284
+ 30
+1101.999282
+ 40
+1.0
+  1
+1101.999
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1214
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1215
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700669.681613
+ 20
+5662669.885056
+ 30
+1101.836474
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1216
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.081613
+ 20
+5662670.285056
+ 30
+1101.836474
+ 40
+1.0
+  1
+1126
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1217
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.081613
+ 20
+5662668.485056
+ 30
+1101.836474
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1218
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.081613
+ 20
+5662667.085056
+ 30
+1101.836474
+ 40
+1.0
+  1
+1101.836
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1219
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1220
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700670.092726
+ 20
+5662657.939503
+ 30
+1101.632054
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1221
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.492726
+ 20
+5662658.339503
+ 30
+1101.632054
+ 40
+1.0
+  1
+1127
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1222
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.492726
+ 20
+5662656.539503
+ 30
+1101.632054
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1223
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.492726
+ 20
+5662655.139503
+ 30
+1101.632054
+ 40
+1.0
+  1
+1101.632
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1224
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1225
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700670.434989
+ 20
+5662648.484045
+ 30
+1101.408657
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1226
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.834989
+ 20
+5662648.884045
+ 30
+1101.408657
+ 40
+1.0
+  1
+1128
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1227
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.834989
+ 20
+5662647.084045
+ 30
+1101.408657
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1228
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700670.834989
+ 20
+5662645.684045
+ 30
+1101.408657
+ 40
+1.0
+  1
+1101.409
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1229
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1230
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700670.873895
+ 20
+5662636.573919
+ 30
+1101.266897
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1231
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.273895
+ 20
+5662636.973919
+ 30
+1101.266897
+ 40
+1.0
+  1
+1129
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1232
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.273895
+ 20
+5662635.173919
+ 30
+1101.266897
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1233
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.273895
+ 20
+5662633.773919
+ 30
+1101.266897
+ 40
+1.0
+  1
+1101.267
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1234
+100
+AcDbEntity
+  8
+Points
+  0
+INSERT
+  5
+1235
+100
+AcDbEntity
+  8
+Points
+100
+AcDbBlockReference
+ 66
+     1
+  2
+DIAG_CROSS
+ 10
+700671.202537
+ 20
+5662626.861352
+ 30
+1101.192888
+ 41
+0.004150
+ 42
+0.004150
+ 43
+0.004150
+  0
+ATTRIB
+  5
+1236
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.602537
+ 20
+5662627.261352
+ 30
+1101.192888
+ 40
+1.0
+  1
+1130
+100
+AcDbAttribute
+  2
+Name
+ 70
+     0
+  0
+ATTRIB
+  5
+1237
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.602537
+ 20
+5662625.461352
+ 30
+1101.192888
+ 40
+1.0
+  1
+ground shot
+100
+AcDbAttribute
+  2
+Code
+ 70
+     0
+  0
+ATTRIB
+  5
+1238
+100
+AcDbEntity
+  8
+Points_Attrib
+100
+AcDbText
+ 10
+700671.602537
+ 20
+5662624.061352
+ 30
+1101.192888
+ 40
+1.0
+  1
+1101.193
+100
+AcDbAttribute
+  2
+Elevation
+ 70
+     0
+  0
+SEQEND
+  5
+1239
+100
+AcDbEntity
+  8
+Points
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+C
+100
+AcDbDictionary
+280
+     0
+281
+     0
+  3
+ACAD_GROUP
+350
+D
+  3
+ACAD_MLINESTYLE
+350
+E
+  3
+ACAD_LAYOUT
+350
+25F
+  3
+ACAD_PLOTSETTINGS
+350
+263
+  3
+ACAD_PLOTSTYLENAME
+350
+260
+  3
+ACAD_WIPEOUT_VARS
+350
+264
+  0
+DICTIONARY
+  5
+D
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+100
+AcDbDictionary
+280
+     0
+281
+     0
+  0
+DICTIONARY
+  5
+E
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+100
+AcDbDictionary
+280
+     0
+281
+     0
+  3
+STANDARD
+350
+1C
+  0
+MLINESTYLE
+  5
+1C
+102
+{ACAD_REACTORS
+330
+E
+102
+}
+100
+AcDbMlineStyle
+  2
+STANDARD
+ 70
+     0
+  3
+
+ 62
+     0
+ 51
+90.0
+ 52
+90.0
+ 71
+     2
+ 49
+0.5
+ 62
+   256
+  6
+ByLayer
+ 49
+-0.5
+ 62
+   256
+  6
+ByLayer
+  0
+ACDBDICTIONARYWDFLT
+  5
+260
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+100
+AcDbDictionary
+281
+     1
+  3
+Normal
+350
+25E
+100
+AcDbDictionaryWithDefault
+  0
+ACDBPLACEHOLDER
+  5
+25E
+102
+{ACAD_REACTORS
+330
+260
+102
+}
+  0
+LAYOUT
+  5
+261
+102
+{ACAD_REACTORS
+330
+25F
+102
+}
+100
+AcDbPlotSettings
+  1
+
+  2
+
+  4
+
+  6
+
+ 40
+0.0
+ 41
+0.0
+ 42
+0.0
+ 43
+0.0
+ 44
+0.0
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+  1024
+ 72
+     0
+ 73
+     0
+ 74
+     0
+  7
+
+ 75
+     0
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+     0
+ 71
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+0.0
+ 21
+0.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+0.0
+ 25
+0.0
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+0.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 76
+     0
+330
+19
+331
+0
+345
+0
+346
+0
+  0
+LAYOUT
+  5
+262
+102
+{ACAD_REACTORS
+330
+25F
+102
+}
+100
+AcDbPlotSettings
+  1
+
+  2
+
+  4
+
+  6
+
+ 40
+0.0
+ 41
+0.0
+ 42
+0.0
+ 43
+0.0
+ 44
+0.0
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+     0
+ 72
+     0
+ 73
+     0
+ 74
+     0
+  7
+
+ 75
+     0
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+     0
+ 71
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+0.0
+ 21
+0.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+0.0
+ 25
+0.0
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+0.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 76
+     0
+330
+16
+331
+0
+345
+0
+346
+0
+  0
+DICTIONARY
+  5
+25F
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+100
+AcDbDictionary
+280
+     0
+281
+     1
+  3
+Layout1
+350
+262
+  3
+Model
+350
+261
+  0
+DICTIONARY
+  5
+263
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+100
+AcDbDictionary
+280
+     0
+281
+     1
+  0
+WIPEOUTVARIABLES
+  5
+264
+100
+AcDbWipeoutVariables
+ 70
+     1
+  0
+ENDSEC
+  0
+EOF
