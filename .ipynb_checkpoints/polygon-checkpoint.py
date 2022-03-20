@@ -1,5 +1,7 @@
 from point import Point
 
+import numpy as np
+
 class Polygon():
     """
     Sets up a polygon and maintains rules to ensure functionality
@@ -17,6 +19,9 @@ class Polygon():
     def is_on_right_side(self, pnt, xy0, xy1):
         """
         Desc:
+            checked whether the point is on the left or right of the line segment
+        Source:
+            https://stackoverflow.com/questions/63527698/determine-if-points-are-within-a-rotated-rectangle-standard-python-2-7-library
         Input:
             pnt, Point() to be checked
             xy0, Point()
@@ -36,6 +41,8 @@ class Polygon():
         """
         Desc:
             tests whether or not a point is within the polygon
+        Source:
+            https://stackoverflow.com/questions/63527698/determine-if-points-are-within-a-rotated-rectangle-standard-python-2-7-library
         Input:
             self.vertices
             pnt, Point() of the desired point to be checked
@@ -48,3 +55,26 @@ class Polygon():
         all_right = all(is_right)
         
         return all_left or all_right
+    
+    def get_intersect(self, a1 = Point(0,0), a2 = Point (3,3), b1 = Point(0,3), b2 = Point(2,0)):
+        """ 
+        Desc:
+            Returns the point of intersection of the lines passing through a2,a1 and b2,b1.
+        Source:
+            https://stackoverflow.com/questions/3252194/numpy-and-line-intersections
+        Input:
+            a1: Point() a point on the first line
+            a2: Point() another point on the first line
+            b1: Point() a point on the second line
+            b2: Point() another point on the second line
+        Output:
+            
+        """
+        s = np.vstack([a1.twoD(),a2.twoD(),b1.twoD(),b2.twoD()])        # s for stacked
+        h = np.hstack((s, np.ones((4, 1)))) # h for homogeneous
+        l1 = np.cross(h[0], h[1])           # get first line
+        l2 = np.cross(h[2], h[3])           # get second line
+        x, y, z = np.cross(l1, l2)          # point of intersection
+        if z == 0:                          # lines are parallel
+            return (float('inf'), float('inf'))
+        return (x/z, y/z)
