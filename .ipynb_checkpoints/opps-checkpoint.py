@@ -48,7 +48,7 @@ class Opps(Base):
             b, Point()
             e, Point()
         Output:
-            returns --> Point()
+            returns --> Point() but is actually just a store of a vector (slopes and direction)
         """
         x,y,z = b.threeD()
         X,Y,Z = e.threeD()
