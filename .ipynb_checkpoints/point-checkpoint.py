@@ -26,6 +26,14 @@ class Point():
         self.inProj = inProj
         self.outProj = outProj
     
+    def __repr__(self):
+        """
+        Desc:
+        Input:
+        Output:
+        """
+        return str([self.E(), self.N()])
+        
     def H(self):
         """
         Desc:
