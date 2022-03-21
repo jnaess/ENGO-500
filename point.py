@@ -5,7 +5,7 @@ class Point():
     Class contains all parameters to convert between coordinates and store coordiante values
     """
     
-    def __init__(self, e, n, h = 0, std = [1,1], inProj = "E_N", outProj = "E_N"):
+    def __init__(self, e, n, h = 0, std = [1,1], inProj = "E_N", outProj = "E_N", name = "N/A"):
         """
         Desc:
         Input:
@@ -25,6 +25,7 @@ class Point():
         self.std = std
         self.inProj = inProj
         self.outProj = outProj
+        self.name = name
     
     def __repr__(self):
         """

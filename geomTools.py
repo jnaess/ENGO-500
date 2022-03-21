@@ -1,9 +1,10 @@
 from point import Point
+from opps import Opps
 
 import numpy as np
 import math as m
 
-class GeomTools():
+class GeomTools(Opps):
     """
     Contains functions to ain in geometry functions"""
     
@@ -11,6 +12,7 @@ class GeomTools():
         """
         Desc:
         """
+        Opps.__init__(self)
         return
         
     def get_intersect(self, a1 = Point(0,0), a2 = Point (3,3), b1 = Point(0,3), b2 = Point(2,0)):
@@ -60,4 +62,5 @@ class GeomTools():
         a2.append(a.N() + offset * (a.E()-b.E()) / L)
         b2.append(b.N() + offset * (a.E()-b.E()) / L)
 
-        return [Point(a2[0],a2[1]), Point(a2[0],a2[1])]
+        return [Point(a2[0],a2[1]), Point(b2[0],b2[1])]
+    
