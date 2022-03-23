@@ -30,6 +30,7 @@ class Data(GNSS_Headers):
     def read_in(self):
         """
         Desc:
+            reads in from the ASC file
         Input:
             self.file_name
         Output:
