@@ -38,6 +38,8 @@ class PathFollower(Vector):
         self.vect = self.unit(self.vector(self.start, self.end))
         self.increments = int(self.dist / self.interval)
         self.remainder = self.dist % self.interval
+        
+        self.segment()
     
     def __str__(self):
         """
@@ -51,8 +53,10 @@ class PathFollower(Vector):
         Desc:
             Breaks the ideal path into a list of points, with the final point filling in the remainder
         Input:
+            self.start
+            self.increments
         Output:
-
+            self.segments
         """
         
         self.segments = [self.start]

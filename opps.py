@@ -44,9 +44,10 @@ class Opps(Base):
     def vector(self, b,e):
         """
         Desc:
+            e-->b
         Input:
-            b, Point()
-            e, Point()
+            b, Point() start
+            e, Point() end
         Output:
             returns --> Point() but is actually just a store of a vector (slopes and direction)
         """

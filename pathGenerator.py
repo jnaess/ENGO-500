@@ -15,10 +15,11 @@ class PathGenerator(Polygon):
     
     Inherits the polygon functionality to also build upon and reuse those same functions
     """
-    def __init__(self, vertices = [Point(0,0), Point(0,10), Point(10,10), Point(10,0)], tractor_width = 1.5):
+    def __init__(self, vertices = [Point(0,0), Point(10,0), Point(10,10), Point(0,10)], tractor_width = 1.5):
         """
         Desc:
         Input:
+            
             vertices, a list of Points in **clockwise**
             tractor_width (m)
         Output:
@@ -87,6 +88,7 @@ class PathGenerator(Polygon):
             self.low_left, int --> 1
             self.top_left, int --> 2
             self.low_right, int --> 3
+            self.top_right
         """
         self.low_left = 0
 
@@ -155,7 +157,7 @@ class PathGenerator(Polygon):
         """
         #1 to 3
         self.dist_a = self.distance(self.vertices[self.low_left],self.vertices[self.low_right])
-        self.vec_a = self.unit(self.vector(self.vertices[self.low_left],self.vertices[self.low_right]))
+        self.vec_a = self.unit(self.vector(self.vertices[self.low_left], self.vertices[self.low_right]))
         
         self.temp_a = Point(self.vertices[self.low_left].E()+self.vec_a.E()*self.tractor_width,
                            self.vertices[self.low_left].N()+self.vec_a.N()*self.tractor_width)
@@ -177,17 +179,21 @@ class PathGenerator(Polygon):
             self.dist_b
         Output:
             self.inner, Polygon() the inner polygon
+            self.a, Point()
+            self.b, Point()
+            self.c, Point()
+            self.d, Point()
         """        
-        a = Point(self.temp_b.E(), self.temp_b.N())
+        self.a = Point(self.temp_b.E(), self.temp_b.N())
         
-        b = Point(self.temp_b.E()+self.vec_b.E()*(self.dist_b-2*self.tractor_width),
+        self.b = Point(self.temp_b.E()+self.vec_b.E()*(self.dist_b-2*self.tractor_width),
                            self.temp_b.N()+self.vec_b.N()*(self.dist_b-2*self.tractor_width))
         
-        c = Point(b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
-                           b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
+        self.c = Point(self.b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
+                           self.b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
         
-        d = Point(self.temp_b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
+        self.d = Point(self.temp_b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
                            self.temp_b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
         
         #must be entered clockwise
-        self.inner = Polygon(vertices = [a,b,c,d])
+        self.inner = Polygon(vertices = [self.a,self.b,self.c,self.d])
