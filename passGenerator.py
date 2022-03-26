@@ -11,6 +11,7 @@ from geomTools import GeomTools
 from pathGenerator import PathGenerator
 from positionGenerator import PositionGenerator
 from pathFollower import PathFollower
+from errorSimulator import ErrorSimulator
 
 class PassGenerator(PathGenerator):
     """
@@ -28,6 +29,8 @@ class PassGenerator(PathGenerator):
         PathGenerator.__init__(self, vertices, tractor_width)
                     
         self.interval = interval
+        
+        self.es = ErrorSimulator()
         
         self.passes()
         
@@ -51,15 +54,19 @@ class PassGenerator(PathGenerator):
         self.upper_start = Point(self.b.E()+self.vec_a.E()*(self.tractor_width/2),
                            self.b.N()+self.vec_a.N()*(self.tractor_width/2))
         
+        self.es.is_real = False
+        
         #these are where the tractor will end or start passes on the south side of the field
         self.lower = PathFollower(start = self.lower_start, 
                                   end = self.d, 
                                   interval = self.tractor_width,
-                                 pg = self.pg_true)
+                                 es = self.es)
         
         #these are where the tractor will end or start passes on the north side of the field
-        self.upper = PathFollower(self.upper_start, self.c, self.tractor_width,
-                                 pg = self.pg_true)
+        self.upper = PathFollower(start = self.upper_start, 
+                                  end = self.c, 
+                                  interval = self.tractor_width,
+                                     es = self.es)
         
     def passes(self):
         """
@@ -83,10 +90,19 @@ class PassGenerator(PathGenerator):
             upward = True
             for i in range(len(self.lower.segments)):
                 if upward:
+                    self.es.is_real = False
                     #then go from bottom to top
-                    self.true_passes.append(PathFollower(self.lower.segments[i], self.upper.segments[i], interval = self.interval, pg = self.pg_true))
+                    self.true_passes.append(PathFollower(self.lower.segments[i],
+                                                         self.upper.segments[i], 
+                                                         interval = self.interval,
+                                                        es = self.es))
+                    
                 else:
+                    self.es.is_real = False
                     #then go from top to bottom
-                    self.true_passes.append(PathFollower(self.upper.segments[i], self.lower.segments[i], interval = self.interval, pg = self.pg_true))
+                    self.true_passes.append(PathFollower(self.upper.segments[i], 
+                                                         self.lower.segments[i], 
+                                                         interval = self.interval,
+                                                        es = self.es))
                 #switch direction
                 upward = not upward
