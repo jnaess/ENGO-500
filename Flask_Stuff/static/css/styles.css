@@ -1,30 +1,24 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #F4FDFF;
-  font-family: Arial;
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F4FDFF;
+    font-family: Arial;
+    text-align: center;
 }
+#content{
+    margin: 0;
+    padding: 0;
+    background-color: #F4FDFF;
+    font-family: Arial;
+    text-align: center;
+    }
 
 #map {
-  position: absolute;
-  height: 85vh;
-  width: 85vw;
-  top: 7.5vh;
-  left: 7.5vw;
-  border-radius: 15px;
-  border: 4px solid black;
+  height: 100%;
+  width: 100%;
 }
 
 h3 {
   text-align: center;
 }
 
-#datepicker {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-label {
-  font-size: small;
-}

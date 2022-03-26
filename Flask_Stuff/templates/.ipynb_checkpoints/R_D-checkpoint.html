@@ -1,11 +1,23 @@
 {% extends "layout.html" %}
 {% block head %}
-    {% block title %}Research and Development{% endblock %}
-    <br><br>
+{% block title %}<h1 class = "text-center"> Research and Development</h1>{% endblock %}
+<p class="text-center">
 [<a href = "{{ url_for('index') }}">Home</a> | <a href="{{ url_for('Software_Demo') }}">Software Demo</a> | <a href="{{ url_for('R_D') }}">Research and Development</a>]
+</p>
 {% endblock %}
 
 {% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <p class="text-center">Simulation Software</p>
+    </div>
+    <div class="col">
+        <p class="text-center">Error Decetion Software</p>
+    </div>
+  </div>
+</div>
 
 <br><br>
 Row with two columns [Simulation Software | Error Detection Software]

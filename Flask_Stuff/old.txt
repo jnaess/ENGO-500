@@ -1,0 +1,32 @@
+.columns2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    
+}
+<div class="columns2">
+   <div class="column" style="border: 1px solid black; background-color:#FFB695;">
+       Simulation Software
+    </div>
+    <div class="column" style="border: 1px solid black; background-color:#96D1CD;">
+        Error Dectection Software
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="columns2">
+   <div class="column" style="border: 1px solid black; background-color:#FFB695;">
+       Map
+       <div id="map"></div>
+       
+    </div>
+    <div class="column" style="border: 1px solid black; background-color:#96D1CD;">
+        Analytics
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
