@@ -1,0 +1,11 @@
+cs50
+flask_mail
+flask
+flask_session
+cs50
+flask_mail
+folium
+sodapy
+flask_wtf
+wtforms.fields.html5
+wtforms.validators
