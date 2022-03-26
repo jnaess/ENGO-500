@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block head %}
-    {% block title %}Index{% endblock %}
+    {% block title %}Research and Development{% endblock %}
     <br><br>
-[<a href="Index.html">Index</a> | <a href="Software_Demo.html">Software Demo</a> | <a href="R_D.html">Research and Development</a>]
+[<a href = "{{ url_for('index') }}">Home</a> | <a href="{{ url_for('Software_Demo') }}">Software Demo</a> | <a href="{{ url_for('R_D') }}">Research and Development</a>]
 {% endblock %}
 
 {% block content %}

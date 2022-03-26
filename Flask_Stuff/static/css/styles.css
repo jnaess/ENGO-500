@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4FDFF;
+  font-family: Arial;
+}
+
+#map {
+  position: absolute;
+  height: 85vh;
+  width: 85vw;
+  top: 7.5vh;
+  left: 7.5vw;
+  border-radius: 15px;
+  border: 4px solid black;
+}
+
+h3 {
+  text-align: center;
+}
+
+#datepicker {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+label {
+  font-size: small;
+}
