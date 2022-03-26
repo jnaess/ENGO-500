@@ -17,7 +17,7 @@ class Polygon(GeomTools):
         """
         Desc:
         Input:
-            vertices, a list of Points in **clockwise** --> I think...
+            vertices, a list of Points in **clockwise**
         Output:
             self.pnt, Point() to be evaluated
         """

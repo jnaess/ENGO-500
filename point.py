@@ -5,7 +5,7 @@ class Point():
     Class contains all parameters to convert between coordinates and store coordiante values
     """
     
-    def __init__(self, e, n, h = 0, std = [1,1], inProj = "E_N", outProj = "E_N", name = "N/A"):
+    def __init__(self, e, n, h = 0, std = [.01,.01], inProj = "E_N", outProj = "E_N", name = "N/A", truth=False):
         """
         Desc:
         Input:
@@ -15,6 +15,7 @@ class Point():
             std, the precision in easting, northing which will be used for point generation
             inProj, projection type being input, E_N if more for testing
             outProj, project output type if already known: can be modified
+            truth, True/False as to wether or not this point is considered a true point
         Output:
         """
         Base.__init__(self)
@@ -26,6 +27,7 @@ class Point():
         self.inProj = inProj
         self.outProj = outProj
         self.name = name
+        self.truth = truth
     
     def __repr__(self):
         """
