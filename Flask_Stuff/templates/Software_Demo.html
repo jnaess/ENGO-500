@@ -1,10 +1,6 @@
 {% extends "layout.html" %}
-{% block head %}
-{% block title %}<h1 class="text-center">Software Demo</h1>{% endblock %}
-<p class="text-center">
-[<a href = "{{ url_for('index') }}">Home</a> | <a href="{{ url_for('Software_Demo') }}">Software Demo</a> | <a href="{{ url_for('R_D') }}">Research and Development</a>]
-</p>
-{% endblock %}
+{% block title %}<h1>Software Demo</h1>{% endblock %}
+
 
 {% block content %}
 
@@ -14,17 +10,18 @@
         <p class="text-center">Map</p>
         <div id="map"></div>
         <br><br><br><br><br><br><br><br><br><br>
-    </div>
     <script src = "{{ url_for('static', filename = 'js/map.js') }}"></script>
+    </div>
     <div class="col">
         <p class="text-center">Analytics</p>
     </div>
   </div>
 </div>
 
-<br><br>
+<br><br><br>
 make two columns, left for the leaflet map, right for the analytics and visualization
 
            
 {% endblock %}
            
+

@@ -30,3 +30,10 @@
         <br>
     </div>
 </div>
+
+<p class="text-center">
+[<a href = "{{ url_for('index') }}">Home</a> | <a href="{{ url_for('Software_Demo') }}">Software Demo</a> | <a href="{{ url_for('R_D') }}">Research and Development</a>]
+</p>
+
+
+3rd page, preview downlaod pdf

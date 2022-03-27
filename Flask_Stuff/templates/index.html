@@ -1,17 +1,56 @@
 {% extends "layout.html" %}
-{% block head %}
-{% block title %}<h1 class="text-center">Index</h1>{% endblock %}
-<p class="text-center">
-[<a href = "{{ url_for('index') }}">Home</a> | <a href="{{ url_for('Software_Demo') }}">Software Demo</a> | <a href="{{ url_for('R_D') }}">Research and Development</a>]
-</p>
-{% endblock %}
+
+{% block title %}<h1>Welcome</h1>{% endblock %}
 
 {% block content %}
-
 <br><br>
 Intro to our project
 <br><br>
 Intro to each member
+<!-- Photo Grid -->
+<!--
+<div id = "img-grid">
+    <div class="row">
+        <div class="column">
+            <img src="Images/Img1.jpg" style="width:100%">
+            <img src="Images/Img2.jpg" style="width:100%">
+            <img src="Images/Img3.jpg" style="width:100%">
+            <img src="Images/Img4.jpg" style="width:100%">
+        </div>
+    </div>
+</div>
+-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <img src="Img1.jpg" style="width:100%">
+        <p class = "text-center">Jan Erik Naess</p>
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+      <img src="Images/Img1.jpg" style="width:100%">
+        <p class = "text-center">Jonah Prevost</p>
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+      <img src="Images/Img1.jpg" style="width:100%">
+        <p class = "text-center">Connor Jonhson</p>
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+        <img src="mainHeadshot.jpg" style="width:100%">
+        <p class = "text-center">Evan Prosser</p>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
 <br><br>
 Thank you to people who helped
 
