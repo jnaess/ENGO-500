@@ -1,0 +1,16 @@
+Dark gray #595959
+Light Gray #e9edee
+Turqoiuse #1a9988
+White #ffffff
+Black #1a1a1a
+bby blue #6aa4c8
+orange #eb5600
+Teal #a2ffe8
+dark blue #1c3678
+
+NovAtel:
+Green #a5d867
+dark cyan #155b54
+sea green #249c90
+dark green #1d7e74
+Blue #0097ba
