@@ -27,11 +27,8 @@ def R_D():
 # Software Demo page
 @app.route("/Software_Demo", methods=['POST', 'GET'])
 def Software_Demo():
-    for i in [1, 2, 3, 4, 5]:
-        time.sleep(0.1)
-       # return redirect("/loading")
-       
     return render_template("Software_Demo.html")
+
 
 # Loading page for Software Demo
 @app.route("/loading", methods=['POST', 'GET'])
