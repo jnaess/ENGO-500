@@ -6,7 +6,7 @@ plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
 from polygon import Polygon
-from point import Point
+from point import Coord
 from geomTools import GeomTools
 from positionGenerator import PositionGenerator
 
@@ -20,12 +20,12 @@ class ErrorSimulator():
         Desc:
         Input:
         Output:
-            self.erros = [Point(), ... , Point()] errors in order of how they happened for plotting purposes
-            self.total_error, Point() of the cumulative error
+            self.erros = [Coord(), ... , Coord()] errors in order of how they happened for plotting purposes
+            self.total_error, Coord() of the cumulative error
         """
         self.is_real = False
         self.errors = []
-        self.total_error = Point(0,0)
+        self.total_error = Coord(0,0)
 
     def update_PG(self, pg):
         """
@@ -57,7 +57,7 @@ class ErrorSimulator():
             e = interval*self.pg.unique_pnt.E()
             n = interval*self.pg.unique_pnt.N()
 
-            self.errors.append(Point(e,n))
+            self.errors.append(Coord(e,n))
 
             self.total_error.e = self.total_error.E()+e
             self.total_error.n = self.total_error.N()+n

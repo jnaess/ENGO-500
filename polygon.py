@@ -1,4 +1,4 @@
-from point import Point
+from point import Coord
 from geomTools import GeomTools
 
 import numpy as np
@@ -13,13 +13,13 @@ class Polygon(GeomTools):
     Sets up a polygon and maintains rules to ensure functionality
     """
     
-    def __init__(self, vertices = [Point(0,0), Point(0,10), Point(10,10), Point(10,0)]):
+    def __init__(self, vertices = [Coord(0,0), Coord(0,10), Coord(10,10), Coord(10,0)]):
         """
         Desc:
         Input:
-            vertices, a list of Points in **clockwise**
+            vertices, a list of Coords in **clockwise**
         Output:
-            self.pnt, Point() to be evaluated
+            self.pnt, Coord() to be evaluated
         """
         GeomTools.__init__(self)
         
@@ -33,9 +33,9 @@ class Polygon(GeomTools):
         Source:
             https://stackoverflow.com/questions/63527698/determine-if-points-are-within-a-rotated-rectangle-standard-python-2-7-library
         Input:
-            pnt, Point() to be checked
-            xy0, Point()
-            xy1, Point()
+            pnt, Coord() to be checked
+            xy0, Coord()
+            xy1, Coord()
         Output:
             True is on right side, False if on left side
         """
@@ -55,7 +55,7 @@ class Polygon(GeomTools):
             https://stackoverflow.com/questions/63527698/determine-if-points-are-within-a-rotated-rectangle-standard-python-2-7-library
         Input:
             self.vertices
-            pnt, Point() of the desired point to be checked
+            pnt, Coord() of the desired point to be checked
         Output:
             True/False --> True if point lies inside the polygon
         """
@@ -76,7 +76,7 @@ class Polygon(GeomTools):
         Desc:
             initializes the line and colour variables to be put into the collection
         Input:
-            self.lines [Point(), Point(), ....]
+            self.lines [Coord(), Coord(), ....]
         Output:
             self.lines
         """

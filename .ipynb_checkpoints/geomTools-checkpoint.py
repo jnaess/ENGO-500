@@ -1,4 +1,4 @@
-from point import Point
+from point import Coord
 from opps import Opps
 
 import numpy as np
@@ -15,17 +15,17 @@ class GeomTools(Opps):
         Opps.__init__(self)
         return
         
-    def get_intersect(self, a1 = Point(0,0), a2 = Point (3,3), b1 = Point(0,3), b2 = Point(2,0)):
+    def get_intersect(self, a1 = Coord(0,0), a2 = Coord (3,3), b1 = Coord(0,3), b2 = Coord(2,0)):
         """ 
         Desc:
             Returns the point of intersection of the lines passing through a2,a1 and b2,b1.
         Source:
             https://stackoverflow.com/questions/3252194/numpy-and-line-intersections
         Input:
-            a1: Point() a point on the first line
-            a2: Point() another point on the first line
-            b1: Point() a point on the second line
-            b2: Point() another point on the second line
+            a1: Coord() a point on the first line
+            a2: Coord() another point on the first line
+            b1: Coord() a point on the second line
+            b2: Coord() another point on the second line
         Output:
             
         """
@@ -38,16 +38,16 @@ class GeomTools(Opps):
             return (float('inf'), float('inf'))
         return (x/z, y/z)
     
-    def new_par_line(self, a = Point(0,0), b = Point (3,3), offset = 2):
+    def new_par_line(self, a = Coord(0,0), b = Coord (3,3), offset = 2):
         """
         Desc:
             creates a parallel line a set distance from the input line
         Input:
-            a, Point()
-            b, Point()
+            a, Coord()
+            b, Coord()
             offset, the distance to offset the line by
         Output:
-            [Point(), Point()] of the new parallel line segment
+            [Coord(), Coord()] of the new parallel line segment
         """
         L = m.sqrt((a.E()-b.E())**2+(a.N()-b.N())**2)
 
@@ -62,5 +62,5 @@ class GeomTools(Opps):
         a2.append(a.N() + offset * (a.E()-b.E()) / L)
         b2.append(b.N() + offset * (a.E()-b.E()) / L)
 
-        return [Point(a2[0],a2[1]), Point(b2[0],b2[1])]
+        return [Coord(a2[0],a2[1]), Coord(b2[0],b2[1])]
     

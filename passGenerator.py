@@ -6,7 +6,7 @@ plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
 from polygon import Polygon
-from point import Point
+from point import Coord
 from geomTools import GeomTools
 from pathGenerator import PathGenerator
 from positionGenerator import PositionGenerator
@@ -19,7 +19,7 @@ class PassGenerator(PathGenerator):
     then uses PathFollower to generate center points and direction vectors of each segment
     """
     
-    def __init__(self, interval = 1, vertices = [Point(0,0), Point(10,0), Point(10,10), Point(0,10)], tractor_width = 1.5):
+    def __init__(self, interval = 1, vertices = [Coord(0,0), Coord(10,0), Coord(10,10), Coord(0,10)], tractor_width = 1.5):
         """
         Desc:
         Input:
@@ -40,18 +40,18 @@ class PassGenerator(PathGenerator):
             sets up the 'true' pass points
         Input:
         Output:
-            self.lower_start, Point()
-            self.upper_start, Point
+            self.lower_start, Coord()
+            self.upper_start, Coord
             self.lower, PathFollower() of the lower inner rectangle true pass points
             self.upper, PathFollower() of the upper inner rectangle true pass points
         """
-        self.pg_true = PositionGenerator(mean = Point(0,0, truth = True))
+        self.pg_true = PositionGenerator(mean = Coord(0,0, truth = True))
         
         #slightly off of a and b because of 1/2 of the width of a tractor used up
-        self.lower_start = Point(self.a.E()+self.vec_a.E()*(self.tractor_width/2),
+        self.lower_start = Coord(self.a.E()+self.vec_a.E()*(self.tractor_width/2),
                            self.a.N()+self.vec_a.N()*(self.tractor_width/2))
         
-        self.upper_start = Point(self.b.E()+self.vec_a.E()*(self.tractor_width/2),
+        self.upper_start = Coord(self.b.E()+self.vec_a.E()*(self.tractor_width/2),
                            self.b.N()+self.vec_a.N()*(self.tractor_width/2))
         
         self.es.is_real = False
@@ -76,6 +76,7 @@ class PassGenerator(PathGenerator):
         Output:
             self.true_passes, [PathFollower(), ... , PathFollower()]
             self.real_passes --> incomplete
+            self.pass_count --> int, number of passes
         """        
         self.true_pass_points()
         
@@ -85,11 +86,13 @@ class PassGenerator(PathGenerator):
         self.real_passes = []
         
         self.order = 1
+        
         if len(self.lower.segments) == len(self.upper.segments):
             #then probalby a rectangle as we wanted
+            self.pass_count = len(self.lower.segments)
             
             upward = True
-            for i in range(len(self.lower.segments)):
+            for i in range(self.pass_count):
                 if upward:
                     self.es.is_real = False
                     #then go from bottom to top
@@ -97,7 +100,8 @@ class PassGenerator(PathGenerator):
                                                          self.upper.segments[i], 
                                                          interval = self.interval,
                                                         es = self.es,
-                                                        order = self.order))
+                                                        order = self.order,
+                                                        plan = False))
                     
                 else:
                     self.es.is_real = False
@@ -106,9 +110,11 @@ class PassGenerator(PathGenerator):
                                                          self.lower.segments[i], 
                                                          interval = self.interval,
                                                         es = self.es,
-                                                        order = self.order))
+                                                        order = self.order,
+                                                        plan = False))
                 #increment order
                 self.order = self.order + 1
                 
                 #switch direction
                 upward = not upward
+                

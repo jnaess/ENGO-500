@@ -1,5 +1,5 @@
 #home made classes
-from point import Point
+from point import Coord
 from positionGenerator import PositionGenerator
 from opps import Opps
 from vector import Vector

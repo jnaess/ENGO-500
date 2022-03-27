@@ -6,7 +6,7 @@ plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
 from polygon import Polygon
-from point import Point
+from point import Coord
 from geomTools import GeomTools
 
 class PathGenerator(Polygon):
@@ -15,12 +15,12 @@ class PathGenerator(Polygon):
     
     Inherits the polygon functionality to also build upon and reuse those same functions
     """
-    def __init__(self, vertices = [Point(0,0), Point(10,0), Point(10,10), Point(0,10)], tractor_width = 1.5):
+    def __init__(self, vertices = [Coord(0,0), Coord(10,0), Coord(10,10), Coord(0,10)], tractor_width = 1.5):
         """
         Desc:
         Input:
             
-            vertices, a list of Points in **clockwise**
+            vertices, a list of Coords in **clockwise**
             tractor_width (m)
         Output:
         
@@ -40,7 +40,7 @@ class PathGenerator(Polygon):
         print(f"_____Printing Path Generator Variables____\
                 \n Key Variables \
                 \n Tractor Width: {self.tractor_width} \
-                \n\n Key Points \
+                \n\n Key Coords \
                 \n self.low_left: {self.low_left}   {self.vertices[self.low_left]}\
                 \n self.top_left: {self.top_left}   {self.vertices[self.top_left]}\
                 \n self.low_right: {self.low_right}   {self.vertices[self.low_right]}\
@@ -105,41 +105,43 @@ class PathGenerator(Polygon):
             
         #assign topLeft and bottom right
         if self.low_left > 0 and self.low_left < len(self.vertices)-1:
-            print("a")
+          
             #middle indice value
             self.top_left = self.low_left - 1
             self.low_right = self.low_left + 1
             
         #assign topLeft and bottom right
         elif self.low_left == 0:
-            print("b")
+         
             #middle indice value
             self.top_left = len(self.vertices)-1
             self.low_right = self.low_left + 1
             
         #assign topLeft and bottom right
         elif self.low_left == len(self.vertices)-1:
-            print("c")
+         
             #middle indice value
             self.top_left = self.low_left - 1
             self.low_right = 0
             
         self.top_right = self.low_left - 2
+        
+        #potential to write a check that it is clockwise
     
     def orthog(self, start, end):
         """
         Desc:
             returns a vector that is orgthogonal (perpendicular to the input line segment)
         Input:
-            start, Point() of regular line segment
-            end, Point()
+            start, Coord() of regular line segment
+            end, Coord()
         Output:
         """
         #make a unit vector
         temp = self.unit(self.vector(start,end))
         
         #switch these two around
-        return Point(temp.N(), temp.E())
+        return Coord(temp.N(), temp.E())
     
     def find_temp_b(self):
         """
@@ -152,24 +154,24 @@ class PathGenerator(Polygon):
             self.tractor_width
         Output:
             self.dist_a, float
-            self.vec_a, unit vector contained in a Point()
-            self.temp_a, Point()
+            self.vec_a, unit vector contained in a Coord()
+            self.temp_a, Coord()
             self.dist_b, float
-            self.vec_b, unit vector contained in a Point()
-            self.temp_b, Point()
+            self.vec_b, unit vector contained in a Coord()
+            self.temp_b, Coord()
         """
         #1 to 3
         self.dist_a = self.distance(self.vertices[self.low_left],self.vertices[self.low_right])
         self.vec_a = self.unit(self.vector(self.vertices[self.low_left], self.vertices[self.low_right]))
         
-        self.temp_a = Point(self.vertices[self.low_left].E()+self.vec_a.E()*self.tractor_width,
+        self.temp_a = Coord(self.vertices[self.low_left].E()+self.vec_a.E()*self.tractor_width,
                            self.vertices[self.low_left].N()+self.vec_a.N()*self.tractor_width)
         
         #1 to 2
         self.dist_b = self.distance(self.vertices[self.low_left],self.vertices[self.top_left])
         self.vec_b = self.unit(self.vector(self.vertices[self.low_left],self.vertices[self.top_left]))
         
-        self.temp_b = Point(self.temp_a.E()+self.vec_b.E()*self.tractor_width,
+        self.temp_b = Coord(self.temp_a.E()+self.vec_b.E()*self.tractor_width,
                              self.temp_a.N()+self.vec_b.N()*self.tractor_width)
         
     def label_inner_polygon(self):
@@ -182,20 +184,20 @@ class PathGenerator(Polygon):
             self.dist_b
         Output:
             self.inner, Polygon() the inner polygon
-            self.a, Point()
-            self.b, Point()
-            self.c, Point()
-            self.d, Point()
+            self.a, Coord()
+            self.b, Coord()
+            self.c, Coord()
+            self.d, Coord()
         """        
-        self.a = Point(self.temp_b.E(), self.temp_b.N())
+        self.a = Coord(self.temp_b.E(), self.temp_b.N())
         
-        self.b = Point(self.temp_b.E()+self.vec_b.E()*(self.dist_b-2*self.tractor_width),
+        self.b = Coord(self.temp_b.E()+self.vec_b.E()*(self.dist_b-2*self.tractor_width),
                            self.temp_b.N()+self.vec_b.N()*(self.dist_b-2*self.tractor_width))
         
-        self.c = Point(self.b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
+        self.c = Coord(self.b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
                            self.b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
         
-        self.d = Point(self.temp_b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
+        self.d = Coord(self.temp_b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
                            self.temp_b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
         
         #must be entered clockwise
