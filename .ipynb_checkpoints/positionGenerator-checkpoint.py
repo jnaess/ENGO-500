@@ -1,10 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from setup import Base
 from point import Point
 
-class PositionGenerator(Base):
+class PositionGenerator():
     """
     This class E and N generates positions based on std
     """
@@ -17,14 +16,13 @@ class PositionGenerator(Base):
             mean, [E, N]
             count, the number of points to generate
         """
-        Base.__init__(self)
         
         self.mean = mean
         self.count = count
         
         #generate base set of points
         self.generate_one()
-        self.generate()
+        #self.generate()
     
     def generate_one(self):
         """

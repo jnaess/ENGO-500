@@ -41,10 +41,10 @@ class PathGenerator(Polygon):
                 \n Key Variables \
                 \n Tractor Width: {self.tractor_width} \
                 \n\n Key Points \
-                \n self.low_left: {self.vertices[self.low_left]}\
-                \n self.top_left: {self.vertices[self.top_left]}\
-                \n self.low_right: {self.vertices[self.low_right]}\
-                \n self.top_right: {self.vertices[self.top_right]}\
+                \n self.low_left: {self.low_left}   {self.vertices[self.low_left]}\
+                \n self.top_left: {self.top_left}   {self.vertices[self.top_left]}\
+                \n self.low_right: {self.low_right}   {self.vertices[self.low_right]}\
+                \n self.top_right: {self.top_right}   {self.vertices[self.top_right]}\
                 \n")
         
         
@@ -101,27 +101,32 @@ class PathGenerator(Polygon):
                 
             #must be left most of equally low (lower easting trumps)
             elif self.vertices[self.low_left].N() == pnt.N() and self.vertices[self.low_left].E() > pnt.E():
-                self.low_left = pnt
+                self.low_left = i
             
         #assign topLeft and bottom right
-        if self.low_left > 0 and self.low_left <= len(self.vertices):
+        if self.low_left > 0 and self.low_left < len(self.vertices)-1:
+            print("a")
             #middle indice value
             self.top_left = self.low_left - 1
             self.low_right = self.low_left + 1
             
         #assign topLeft and bottom right
         elif self.low_left == 0:
+            print("b")
             #middle indice value
             self.top_left = len(self.vertices)-1
             self.low_right = self.low_left + 1
             
         #assign topLeft and bottom right
         elif self.low_left == len(self.vertices)-1:
+            print("c")
             #middle indice value
             self.top_left = self.low_left - 1
             self.low_right = 0
             
         self.top_right = self.low_left - 2
+        
+        #potential to write a check that it is clockwise
     
     def orthog(self, start, end):
         """

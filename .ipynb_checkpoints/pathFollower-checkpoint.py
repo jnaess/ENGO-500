@@ -5,7 +5,6 @@ from matplotlib import collections  as mc
 plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
-from setup import Base
 from opps import Opps
 from point import Point
 from vector import Vector
