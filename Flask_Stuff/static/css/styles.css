@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F4FDFF;
+    font-family: Arial;
+    text-align: center;
+}
+#content{
+    margin: 0;
+    padding: 0;
+    background-color: #F4FDFF;
+    font-family: Arial;
+    text-align: center;
+    }
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+}
+
