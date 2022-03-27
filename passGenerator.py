@@ -74,7 +74,7 @@ class PassGenerator(PathGenerator):
             sets up all passes
         Input:
         Output:
-            self.true_passes
+            self.true_passes, [PathFollower(), ... , PathFollower()]
             self.real_passes --> incomplete
         """        
         self.true_pass_points()
@@ -84,6 +84,7 @@ class PassGenerator(PathGenerator):
         #not yet added to functionality
         self.real_passes = []
         
+        self.order = 1
         if len(self.lower.segments) == len(self.upper.segments):
             #then probalby a rectangle as we wanted
             
@@ -95,7 +96,8 @@ class PassGenerator(PathGenerator):
                     self.true_passes.append(PathFollower(self.lower.segments[i],
                                                          self.upper.segments[i], 
                                                          interval = self.interval,
-                                                        es = self.es))
+                                                        es = self.es,
+                                                        order = self.order))
                     
                 else:
                     self.es.is_real = False
@@ -103,6 +105,10 @@ class PassGenerator(PathGenerator):
                     self.true_passes.append(PathFollower(self.upper.segments[i], 
                                                          self.lower.segments[i], 
                                                          interval = self.interval,
-                                                        es = self.es))
+                                                        es = self.es,
+                                                        order = self.order))
+                #increment order
+                self.order = self.order + 1
+                
                 #switch direction
                 upward = not upward
