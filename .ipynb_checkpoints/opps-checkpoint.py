@@ -1,17 +1,19 @@
-import math as m
 import numpy as np
+import matplotlib.pyplot as plt
+import math as m
+from matplotlib import collections  as mc
+plt.style.use('seaborn-whitegrid')
+import pylab as pl
 
 from point import Point
-from setup import Base
 
-class Opps(Base):
+class Opps():
     """
     contains vector operations
     """
     
     def __init__(self):
         """"""
-        Base.__init__(self)
         
         return
         
@@ -44,9 +46,10 @@ class Opps(Base):
     def vector(self, b,e):
         """
         Desc:
+            e-->b
         Input:
-            b, Point()
-            e, Point()
+            b, Point() start
+            e, Point() end
         Output:
             returns --> Point() but is actually just a store of a vector (slopes and direction)
         """
