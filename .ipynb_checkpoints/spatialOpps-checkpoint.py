@@ -22,7 +22,7 @@ class SpatialOpps():
     def setup_gdf(self, passes, tractor_width):
         """
         Desc:
-            Sets up the point, linestring, polygon dataframes from the passes
+            Sets up the point and linestring dataframes
         Input:
             self.passes, [PathFollower(), ... , PathFollower()]
             self.tractor_width --> to generate buffer

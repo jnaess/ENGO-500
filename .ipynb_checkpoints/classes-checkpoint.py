@@ -9,3 +9,5 @@ from pathFollower import PathFollower
 from pathGenerator import PathGenerator
 from passGenerator import PassGenerator
 from errorSimulator import ErrorSimulator
+from spatialOpps import SpatialOpps
+from simulator import Simulator
