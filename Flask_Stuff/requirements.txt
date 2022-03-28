@@ -1,9 +1,2 @@
-cs50
 flask
 flask_session
-cs50
-folium
-sodapy
-flask_wtf
-wtforms.fields.html5
-wtforms.validators
