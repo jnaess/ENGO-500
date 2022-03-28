@@ -6,7 +6,7 @@ plt.style.use('seaborn-whitegrid')
 import pylab as pl
 import pyproj
 
-class Point():
+class Coord():
     """
     Class contains all parameters to convert between coordinates and store coordiante values
     """

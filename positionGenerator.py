@@ -1,14 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from point import Point
+from point import Coord
 
 class PositionGenerator():
     """
     This class E and N generates positions based on std
     """
     
-    def __init__(self, mean=Point(0,0), count = 1000):
+    def __init__(self, mean=Coord(0,0), count = 1000):
         """
         Desc:
             All plots assume normal random distribution
@@ -22,7 +22,6 @@ class PositionGenerator():
         
         #generate base set of points
         self.generate_one()
-        #self.generate()
     
     def generate_one(self):
         """
@@ -31,14 +30,14 @@ class PositionGenerator():
         Input:
             self.mean,
         Output:
-            self.unique_pnt, Point() object of the first of the generated E and N coordinates
+            self.unique_pnt, Coord() object of the first of the generated E and N coordinates
         """        
         if not self.mean.truth:
             #check to make sure that it is a random point, not a true point with no variability
-            self.unique_pnt = Point(np.random.normal(self.mean.E(), self.mean.std[0], 1)[0],
+            self.unique_pnt = Coord(np.random.normal(self.mean.E(), self.mean.std[0], 1)[0],
                                    np.random.normal(self.mean.N(), self.mean.std[1], 1)[0])
         else: 
-            self.unique_pnt = Point(0,0)
+            self.unique_pnt = Coord(0,0)
         
     def generate(self, count = None):
         """
@@ -66,10 +65,12 @@ class PositionGenerator():
         Input:
             self.N
             self.E
-            self.unique_pnt, Point() object of the first of the generated E and N coordinates
+            self.unique_pnt, Coord() object of the first of the generated E and N coordinates
         Output:
             
-        """            
+        """  
+        self.generate()
+        
         #then we highlight and save one of the points
         plt.scatter(self.unique_pnt.E(), self.unique_pnt.N(), color = 'r')
                 

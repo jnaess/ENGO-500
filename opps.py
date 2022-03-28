@@ -5,7 +5,7 @@ from matplotlib import collections  as mc
 plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
-from point import Point
+from point import Coord
 
 class Opps():
     """
@@ -21,8 +21,8 @@ class Opps():
         """
         Desc:
         Input:
-            v, Point()
-            w, Point()
+            v, Coord()
+            w, Coord()
         Output:
             returns --> float value
         """
@@ -35,7 +35,7 @@ class Opps():
         """
         Desc:
         Input:
-            v, Point()
+            v, Coord()
         Output:
             returns --> float value
         """
@@ -48,35 +48,35 @@ class Opps():
         Desc:
             e-->b
         Input:
-            b, Point() start
-            e, Point() end
+            b, Coord() start
+            e, Coord() end
         Output:
-            returns --> Point() but is actually just a store of a vector (slopes and direction)
+            returns --> Coord() but is actually just a store of a vector (slopes and direction)
         """
         x,y,z = b.threeD()
         X,Y,Z = e.threeD()
         
-        return Point(X-x, Y-y, Z-z)
+        return Coord(X-x, Y-y, Z-z)
 
     def unit(self, v):
         """
         Desc:
         Input:
-            v, Point()
+            v, Coord()
         Output:
-            returns --> Point()
+            returns --> Coord()
         """
         x,y,z = v.threeD()
         mag = self.length(v)
         
-        return Point(x/mag, y/mag, z/mag)
+        return Coord(x/mag, y/mag, z/mag)
 
     def distance(self, p0, p1):
         """
         Desc:
         Input:
-            p0, Point()
-            p1, Point()
+            p0, Coord()
+            p1, Coord()
         Output:
             returns --> float value
         """
@@ -86,25 +86,25 @@ class Opps():
         """
         Desc:
         Input:
-            v, Point()
+            v, Coord()
             sc, scale (float value)
         Output:
-            returns --> Point()
+            returns --> Coord()
         """
         x,y,z = v.threeD()
         
-        return Point(x * sc, y * sc, z * sc)
+        return Coord(x * sc, y * sc, z * sc)
 
     def add(self, v,w):
         """
         Desc:
         Input:
-            v, Point()
-            w, Point()
+            v, Coord()
+            w, Coord()
         Output:
-            returns --> Point()
+            returns --> Coord()
         """
         x,y,z = v.threeD()
         X,Y,Z = w.threeD()
         
-        return Point(x+X, y+Y, z+Z)
+        return Coord(x+X, y+Y, z+Z)

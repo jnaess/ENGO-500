@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Leaflet Map</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />  
+</head>
+<body>
+    <div id="map" style="width: 600px; height: 400px"></div>
+</body>
+     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>  
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+
+    <script>
+        
+        var map = L.map('map').setView([40.058841, -75.042164], 10);
+        mapLink = 
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + mapLink + ' Contributors',
+            maxZoom: 18,
+            }).addTo(map);
+
+        L.marker([51.0447, -114.0719], { pmIgnore: true }).addTo(map); 
+        
+        map.pm.addControls({  
+          position: 'topleft',  
+          drawCircle: false,  
+        }); 
+
+        /*map.on('pm:create', ({ layer}) => {  
+                layer.on('pm:edit', e => {
+                    console.log(e);
+                  });
+            });*/
+        
+        map.on('pm:create', function(e) {
+            //var options = {tolerance: 0.01, highQuality: false};
+            //var simplified = turf.simplify(e.layer, options);
+            
+            
+              console.log(e)
+              var layer = e.layer;
+              var id = 123; 
+              layer.properties = {
+                    id,
+                    name: `Zone ${id}`
+              }
+              //console.log(layer);
+
+              // listen to changes on the new layer
+              e.layer.on('pm:edit', function(x) {
+                console.log('edit', x)
+              });
+            });
+        
+        function makePopupContent(feature){
+          return `
+            ${feature.geometry.coordinates}   
+          `;
+        }
+
+        function setPupup(layer) {
+          var feature = layer.toGeoJSON();
+          var coords = makePopupContent(feature);
+          layer.bindPopup(coords);
+            console.log(coords)
+        }
+
+        map.on('pm:create', function(e) {
+          var layer = e.layer;
+          setPupup(layer);
+          layer.on('pm:update', function(e) {
+            setPupup(e.layer);
+          });
+        });
+        
+        var myGeoJSON = {"type": "FeatureCollection", "features": [{"id": "0", "type": "Feature", "properties": {"Lat": 40.058841, "Lon": -75.042164}, "geometry": {"type": "Point", "coordinates": [-75.042164, 40.058841]}}, {"id": "1", "type": "Feature", "properties": {"Lat": 40.202162, "Lon": -74.924594}, "geometry": {"type": "Point", "coordinates": [-74.924594, 40.202162]}}]}
+        
+        L.geoJSON(myGeoJSON).addTo(map)
+    </script>
+</html>
