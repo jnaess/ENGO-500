@@ -5,11 +5,11 @@ from matplotlib import collections  as mc
 plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
-from polygon import Polygon
+from polygon import polygon
 from point import Coord
 from geomTools import GeomTools
 
-class PathGenerator(Polygon):
+class PathGenerator(polygon):
     """
     Generates the path based on the given polygon
     
@@ -25,7 +25,7 @@ class PathGenerator(Polygon):
         Output:
         
         """
-        Polygon.__init__(self, vertices)
+        polygon.__init__(self, vertices)
         
         self.tractor_width = tractor_width
         
@@ -56,12 +56,12 @@ class PathGenerator(Polygon):
             Sets up the outper polygon
         Input:
         Output:
-            self.outer, Polygon() of outer rectangle
+            self.outer, polygon() of outer rectangle
         """
         self.label_corners()
         
         #must be enter clockwise
-        self.outer = Polygon(vertices = [self.vertices[self.low_left],
+        self.outer = polygon(vertices = [self.vertices[self.low_left],
                                          self.vertices[self.top_left],
                                          self.vertices[self.top_right],
                                          self.vertices[self.low_right]])
@@ -183,7 +183,7 @@ class PathGenerator(Polygon):
             self.dist_a
             self.dist_b
         Output:
-            self.inner, Polygon() the inner polygon
+            self.inner, polygon() the inner polygon
             self.a, Coord()
             self.b, Coord()
             self.c, Coord()
@@ -201,4 +201,4 @@ class PathGenerator(Polygon):
                            self.temp_b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
         
         #must be entered clockwise
-        self.inner = Polygon(vertices = [self.a,self.b,self.c,self.d])
+        self.inner = polygon(vertices = [self.a,self.b,self.c,self.d])

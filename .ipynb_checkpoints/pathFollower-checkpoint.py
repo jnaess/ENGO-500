@@ -16,7 +16,7 @@ class PathFollower(Vector):
     Follows a desired path in increments and incorporates simulation errors
     """
     
-    def __init__(self, start, end, interval = 1, es = ErrorSimulator(), order = 1, plan = True):
+    def __init__(self, start, end, interval = 1, es = ErrorSimulator(), order = 1, plan = True, real = False):
         """
         Desc:
         Input
@@ -26,7 +26,7 @@ class PathFollower(Vector):
             es, the error simulator
             order, the order that the pathfollower is in respect to other line strings
             plan, T/F --> True if the plot is for planning, False if the path is for path routing
-            
+            real --> T/F, True if the segment is the real, error prone segment
         Output:
             self.dist, the distance that the path is
             self.vect, the vector to be multiplied by a point to get us to the next segment
@@ -41,8 +41,10 @@ class PathFollower(Vector):
         self.es = es
         self.order = order
         self.plan = plan
+        self.real = real
         
         self.dist = self.distance(self.start, self.end)
+        print(self.dist)
         self.vect = self.unit(self.vector(self.start, self.end))
         
         self.increments = int(self.dist / self.interval + 1)
@@ -92,7 +94,7 @@ class PathFollower(Vector):
             
             self.segments.append(next_Pnt)
             
-        if self.remainder > 0:
+        if self.remainder > 0 or self.real:
             #make next error
             self.es.add_error(self.remainder)
             

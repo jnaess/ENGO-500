@@ -6,14 +6,14 @@ plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
 from opps import Opps
-from point import Point
+from point import Coord
 
 class Vector(Opps):
     """
     sets up a vector with a start point and end point
     """
     
-    def __init__(self, start = Point(5,0,0), end = Point(5,10,0)):
+    def __init__(self, start = Coord(5,0,0), end = Coord(5,10,0)):
         """
         Desc:
         Input:
@@ -25,7 +25,7 @@ class Vector(Opps):
         self.start = start
         self.end = end
         
-    def pnt2line(self, pnt = Point(6,4,0)):
+    def pnt2line(self, pnt = Coord(6,4,0)):
         """
         Desc:
             Finds the nearest point on the vector line that is perpendicular to the desired line.

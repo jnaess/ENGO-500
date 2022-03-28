@@ -5,7 +5,7 @@ from matplotlib import collections  as mc
 plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
-from polygon import Polygon
+from polygon import polygon
 from point import Coord
 from geomTools import GeomTools
 from pathGenerator import PathGenerator
@@ -19,7 +19,7 @@ class PassGenerator(PathGenerator):
     then uses PathFollower to generate center points and direction vectors of each segment
     """
     
-    def __init__(self, interval = 1, vertices = [Coord(0,0), Coord(10,0), Coord(10,10), Coord(0,10)], tractor_width = 1.5):
+    def __init__(self, interval = 1, vertices = [Coord(0,0), Coord(10,0), Coord(10,10), Coord(0,10)], tractor_width = 1.5, es = ErrorSimulator()):
         """
         Desc:
         Input:
@@ -27,10 +27,10 @@ class PassGenerator(PathGenerator):
         Output:
         """
         PathGenerator.__init__(self, vertices, tractor_width)
-                    
+        
         self.interval = interval
         
-        self.es = ErrorSimulator()
+        self.es = es
         
         self.passes()
         
@@ -92,26 +92,66 @@ class PassGenerator(PathGenerator):
             self.pass_count = len(self.lower.segments)
             
             upward = True
+                                
             for i in range(self.pass_count):
+                #set up real start and end points via adding the current total error
+                #added to both because of thinking tractor is currently in correct position and aiming to same vector as if it was
+                real_lower = Coord(self.lower.segments[i].E()+self.es.total_error.E(),
+                                       self.lower.segments[i].N()+self.es.total_error.N())
+                real_upper = Coord(self.upper.segments[i].E()+self.es.total_error.E(),
+                                       self.upper.segments[i].N()+self.es.total_error.N())
+                    
                 if upward:
+                    #will we use errors?
                     self.es.is_real = False
+                    
+                    #tuth pass
                     #then go from bottom to top
                     self.true_passes.append(PathFollower(self.lower.segments[i],
                                                          self.upper.segments[i], 
                                                          interval = self.interval,
                                                         es = self.es,
                                                         order = self.order,
-                                                        plan = False))
+                                                        plan = False,
+                                                        real = self.es.is_real))
+                    
+                    
+                    #will we use errors?
+                    self.es.is_real = True
+                    #real pass
+                    #then go from bottom to top
+                    self.real_passes.append(PathFollower(real_lower,
+                                                         real_upper, 
+                                                         interval = self.interval,
+                                                        es = self.es,
+                                                        order = self.order,
+                                                        plan = False,
+                                                        real = self.es.is_real))
                     
                 else:
+                    #will we use errors?
                     self.es.is_real = False
+                    #truth pass
                     #then go from top to bottom
                     self.true_passes.append(PathFollower(self.upper.segments[i], 
                                                          self.lower.segments[i], 
                                                          interval = self.interval,
                                                         es = self.es,
                                                         order = self.order,
-                                                        plan = False))
+                                                        plan = False,
+                                                        real = self.es.is_real))
+                    
+                    #will we use errors?
+                    self.es.is_real = True
+                    #real pass
+                    #then go from bottom to top
+                    self.real_passes.append(PathFollower(real_upper, 
+                                                         real_lower, 
+                                                         interval = self.interval,
+                                                        es = self.es,
+                                                        order = self.order,
+                                                        plan = False,
+                                                        real = self.es.is_real))
                 #increment order
                 self.order = self.order + 1
                 

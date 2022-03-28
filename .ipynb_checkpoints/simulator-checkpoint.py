@@ -3,12 +3,13 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point 
 from shapely.geometry import LineString
+from shapely.geometry import Polygon
 import numpy as np
 import math as m
 from matplotlib import collections  as mc
 import pylab as pl
 
-from polygon import Polygon
+from polygon import polygon
 from point import Coord
 from geomTools import GeomTools
 from pathGenerator import PathGenerator
@@ -23,7 +24,7 @@ class Simulator(SpatialOpps, PassGenerator):
     Contains and manages the simulation of our data
     """
 
-    def __init__(self, vertices, inProj = 4326, outProj = 3857, to_out = False, interval = 1, tractor_width = 1.5):
+    def __init__(self, vertices, inProj = 4326, outProj = 3857, to_out = False, interval = 1, tractor_width = 1.5, use_drift = False, use_jump=False):
         """
         Desc:
         Input:
@@ -33,15 +34,18 @@ class Simulator(SpatialOpps, PassGenerator):
             to_out, True/False --> it True, then imidiately change coords to the Out projection
         Output:
         """
-        PassGenerator.__init__(self)
+        SpatialOpps.__init__(self)
         
         self.inProj = inProj
         self.outProj = outProj
         self.to_out = to_out
+
         
         self.read_in_vertices(vertices)
         
-        PassGenerator.__init__(self, vertices = self.vertices, tractor_width = tractor_width, interval = interval)
+        PassGenerator.__init__(self, vertices = self.vertices, tractor_width = tractor_width, interval = interval, es = ErrorSimulator(use_drift, use_jump))
+        
+        self.analyze()
 
         
     def read_in_vertices(self, vertices):
@@ -71,5 +75,24 @@ class Simulator(SpatialOpps, PassGenerator):
             self.tractor_width
         Output:
         """
-        self.T_gdf_pt, self.T_gdf_line, self.T_gdf_poly = self.setup_gdf(self.true_passes, self.tractor_width)
+        self.setup_shapes()
     
+    def setup_shapes(self):
+        """
+        Desc:
+            Generates all base shapefiles for our analytics
+        Input:
+            self.true_passes, [PathFollower(), ... , PathFollower()]
+            self.real_passes, [PathFollower(), ... , PathFollower()]
+            self.tractor_width
+        Output:
+        """
+        #generate true pass shapefiles
+        self.T_gdf_pt, self.T_gdf_line, self.T_gdf_poly = self.setup_gdf(self.true_passes, self.tractor_width)
+        
+        #generate real pass shapefiles
+        self.R_gdf_pt, self.R_gdf_line, self.R_gdf_poly = self.setup_gdf(self.real_passes, self.tractor_width)
+        
+        #generate inner and outer field shapes
+        self.inner_gdf = self.gdf_polygon(self.inner)
+        self.outer_gdf = self.gdf_polygon(self.outer)

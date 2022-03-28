@@ -8,7 +8,7 @@ from matplotlib import collections  as mc
 plt.style.use('seaborn-whitegrid')
 import pylab as pl
 
-class Polygon(GeomTools):
+class polygon(GeomTools):
     """
     Sets up a polygon and maintains rules to ensure functionality
     """
@@ -25,7 +25,29 @@ class Polygon(GeomTools):
         
         self.vertices = vertices
         self.pnt = False #until a point is made
+        
+        self.setup_variables()
     
+    def setup_variables(self):
+        """
+        Desc:
+            sets up variables for reference. In specific for spatial opperations
+        Input:
+            self.vertices
+        Output:
+            self.vert_count, number of vertices
+            self.e, np.array()
+            self.n, np.array()
+        """
+        self.vert_count = len(self.vertices)
+        
+        self.e = np.empty(self.vert_count)
+        self.n = np.empty(self.vert_count)
+        
+        for i in range(self.vert_count):
+            self.e[i] = self.vertices[i].E()
+            self.n[i] = self.vertices[i].N() 
+        
     def is_on_right_side(self, pnt, xy0, xy1):
         """
         Desc:

@@ -3,7 +3,10 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point 
 from shapely.geometry import LineString
+from shapely.geometry import Polygon
 import numpy as np
+
+from point import Coord
 
 class SpatialOpps():
     """
@@ -22,7 +25,7 @@ class SpatialOpps():
     def setup_gdf(self, passes, tractor_width):
         """
         Desc:
-            Sets up the point and linestring dataframes
+            Sets up the point, linestring, polygon dataframes from the passes
         Input:
             self.passes, [PathFollower(), ... , PathFollower()]
             self.tractor_width --> to generate buffer
@@ -55,3 +58,29 @@ class SpatialOpps():
         #gdf_poly.plot()
         
         return gdf_pt, gdf_line, gdf_poly
+    
+    def gdf_polygon(self, poly, color='#20873f'):
+        """
+        Desc:
+            Returns the polygon geopandasdataframe of the vertices input
+        Input:
+            poly, polygon()
+            color, colour for the polygon to show up as
+        Output:
+        """
+        lat = poly.e
+        lon = poly.n
+
+        gdf = gpd.GeoDataFrame()
+        gdf['lat'] = lat
+        gdf['lon'] = lon
+
+        polygon_geom = Polygon(zip(lon, lat))
+        gdf_poly = gpd.GeoDataFrame(index=[0], geometry=[polygon_geom]) 
+        
+        #add colour
+        gdf_poly['color'] = [color]
+        
+        return gdf_poly
+    
+    
