@@ -1,14 +1,14 @@
 // Initialize the map
-var this_map = L.map('map').setView([51.0447, -114.0719], 11);
+var this_map = L.map('map').setView([50.64146,-113.64648], 13);
 
 // Add baselayer
-L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=cEgaV9M2KZkGEYF5k2vO',{
-       tileSize: 512,
-       zoomOffset: -1,
-       minZoom: 1,
-       attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-       crossOrigin: true
-     }).addTo(this_map);
+L.tileLayer('https://api.mapbox.com/styles/v1/eprosser88/cl19riul2003215pcc5nlw7b9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZXByb3NzZXI4OCIsImEiOiJja3p5d3FoNm4wNGo1M2tuZmNnaHphc2cxIn0.gguHDZWaDus2L4AW0h97rA', {
+    id: 'satellitestreets',
+    tileSize: 512,
+    zoomOffset: -1,
+    minZoom: 1,
+	attribution: '©  <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="https://www.openstreetmap.org/about/">OpenStreeMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a </strong> © <a href="https://www.maxar.com/">Maxar'
+}).addTo(this_map);
 
 // Add scale
 L.control.scale().addTo(this_map);

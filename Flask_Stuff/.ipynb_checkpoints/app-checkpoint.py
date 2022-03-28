@@ -1,5 +1,6 @@
 import re
 import os
+import time
 
 from flask import Flask, redirect, render_template, request, session, jsonify
 from flask_session import Session
@@ -23,9 +24,17 @@ def index():
 def R_D():
     return render_template("R_D.html")
 
-@app.route("/Software_Demo")
+# Software Demo page
+@app.route("/Software_Demo", methods=['POST', 'GET'])
 def Software_Demo():
     return render_template("Software_Demo.html")
+
+
+# Loading page for Software Demo
+@app.route("/loading", methods=['POST', 'GET'])
+def loading():
+    return render_template("loading.html")
+
 
 
 
