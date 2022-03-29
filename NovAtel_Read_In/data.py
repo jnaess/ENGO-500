@@ -1,7 +1,10 @@
 import numpy as np
-from pyproj import Proj, transform
+from pyproj import Proj, transform, Transformer
+from pyproj.transformer import TransformerGroup
 import pandas as pd
 from gnss_headers import GNSS_Headers
+import sys
+from tqdm import tqdm
         
         
 class Data(GNSS_Headers):
@@ -79,11 +82,38 @@ class Data(GNSS_Headers):
             self.ppp, DataFrame
             self.psr, DataFrame
         """
-        self.rtk = pd.DataFrame(self.rtk_data, columns=self.rtk_cols)
-        self.ppp = pd.DataFrame(self.ppp_data, columns=self.ppp_cols)
-        self.psr = pd.DataFrame(self.psr_data, columns=self.psr_cols)
+        self.rtk = self.clean(pd.DataFrame(self.rtk_data, columns=self.rtk_cols))
         
-    def convert(self, lat, lon, in_proj = "epsg:3780", out_proj = "epsg:32611"):
+        lat, lon = self.convert(self.rtk["lat"],self.rtk["lon"])
+        self.rtk["new_lat"] = lat
+        self.rtk["new_lon"] = lon
+        
+        self.ppp = self.clean(pd.DataFrame(self.ppp_data, columns=self.ppp_cols))
+        
+        lat, lon = self.convert(self.ppp["lat"],self.ppp["lon"])
+        self.ppp["new_lat"] = lat
+        self.ppp["new_lon"] = lon
+        
+        self.psr = self.clean(pd.DataFrame(self.psr_data, columns=self.psr_cols))
+        
+        lat, lon = self.convert(self.psr["lat"],self.psr["lon"])
+        self.psr["new_lat"] = lat
+        self.psr["new_lon"] = lon
+        
+    def clean(self, df):
+        """
+        Desc:
+            cleans the dataframes 
+        Input:
+            dataframe to be cleaned
+        Output:
+        """
+        #remove all insuficient obs
+        df = df.drop(df[df.sol_status == "INSUFFICIENT_OBS"].index)
+        
+        return df
+        
+    def convert(self, lat, lon, in_proj = "epsg:3780", out_proj = "epsg:2955"):
         """
         Desc:
             will return a list of converted coordinates
@@ -96,21 +126,48 @@ class Data(GNSS_Headers):
             returns --> [lat],[lon]
         """
         #reset indeces
-        lat = list(lat)
-        lon = list(lon)
+        lat = np.array(lat)
+        lon = np.array(lon)
         
-        new_lat = []
-        new_lon = []
+        new_lat = np.empty(len(lat))
+        new_lon = np.empty(len(lon))
         
         if len(lat) == len(lon) and len(lat) > 0:
             #then these are conditions that we can convert in
-            inProj = Proj(init=in_proj)
-            outProj = Proj(init=out_proj)
+            #inProj = Proj(init=in_proj)
+            #outProj = Proj(init=out_proj)
             
-            for i in range(len(lat)):
-                x,y = transform(inProj,outProj,lon[i],lat[i])
-                #print(f"{x}, {y}")
-                new_lat.append(x)
-                new_lon.append(y)
+
+            
+            transformer = Transformer.from_crs(in_proj,out_proj)
+            xy = transformer.transform(lat,lon)
+
+            new_lat = xy[0]
+            new_lon = xy[1]
+            
+            """
+            with tqdm(total=len(lat), file=sys.stdout) as pbar:
+                for i in range(len(lat)):
+                    x,y = transformer.transformer[0].transform(lon[i],lat[i])
+                    
+                    new_lat[i] = x
+                    new_lon[i] = y
+                      
+                    pbar.set_description("converted: %d" % (1+i))
+                    pbar.update(1)"""
 
         return new_lat, new_lon
+    
+    def add_to_csv(self):
+        """
+        Desc:
+            converts the three dataframes to a csv file
+        Input:
+            self.rtk,
+            self.ppp,
+            self.psr
+        Output:
+        """
+        self.rtk.to_csv("rtk.csv")
+        self.ppp.to_csv("ppp.csv")
+        self.psr.to_csv("psr.csv")
