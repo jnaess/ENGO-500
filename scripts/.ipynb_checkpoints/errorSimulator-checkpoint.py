@@ -66,6 +66,10 @@ class ErrorSimulator():
             return --> float | default 0
         """        
         if self.is_real:
+            """
+            TODO:
+                Cut increments if the next point excedes the outerfield
+            """
             #then it is real and needs an error to be added
             
             #generate drift error

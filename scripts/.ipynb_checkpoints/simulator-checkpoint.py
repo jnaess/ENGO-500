@@ -96,3 +96,12 @@ class Simulator(SpatialOpps, PassGenerator):
         #generate inner and outer field shapes
         self.inner_gdf = self.gdf_polygon(self.inner)
         self.outer_gdf = self.gdf_polygon(self.outer)
+        
+        #zero_pass
+        self.zero_pass = gpd.overlay(self.T_gdf_poly, self.R_gdf_poly, how='difference')
+
+        #single pass
+        self.single_pass = gpd.overlay(self.T_gdf_poly, self.R_gdf_poly, how="intersection")
+        
+        #double pass
+        

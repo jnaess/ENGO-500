@@ -53,7 +53,8 @@ class SpatialOpps():
         ax = gdf_line.plot();
         ax.set_aspect('equal')
         #ax.set_xticklabels(ax.get_xticklabels(), rotation=90);
-        gdf_poly = gdf_line.buffer(tractor_width/2,cap_style=2)
+        gdf_poly = gdf_line
+        gdf_poly['geometry'] = gdf_line.geometry.buffer(tractor_width/2,cap_style=2)
         #display(gdf_poly)
         #gdf_poly.plot()
         
