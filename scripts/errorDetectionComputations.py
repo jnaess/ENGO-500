@@ -1,14 +1,90 @@
-class ErrorDetectionComputations():
+import pandas as pd
+import numpy as np
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from opps import Opps
+from point import Coord
+from ellipse import Ellipse
+from errorRecorder import ErrorRecorder
+
+class ErrorDetectionComputations(ErrorRecorder):
     """
-    Encapsulates many of the error Dectactor opperations
+    Encapsulates many of the error flag and record functionalities
     """
     
     def __init__(self):
         """
         """
-        return
-        
+        ErrorRecorder.__init__(self)
     
+    def update_epoch(self):
+        """
+        Desc:
+            Updates the current epoch values for running evaluations
+        Input:
+            index, of the values sent in
+            row, of the current dataframe 
+        Output:
+        """        
+        if self.first:
+            self.first_epoch()
+        
+        if self.is_static:
+            self.static_epoch()
+    
+    def first_epoch(self):
+        """
+        Desc:
+            Opperations for updating the first Epoch
+        Input:
+        Output:
+        """
+        #setup the initial coords
+        #of the "real" locations
+        self.prev = Coord(0,0) 
+        self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
+
+            #update epochs
+        self.prev_Epoch = 0
+        self.curr_Epoch = self.row["Epoch"]
+
+            #of the true locations
+        self.prev_True = self.true_coord
+        self.curr_True = self.true_coord
+        
+    def static_epoch(self):
+        """
+        Desc:
+            Opperation to update a static epoch
+        Input
+        Output:
+        """
+                    #update "real" positions
+        self.prev = self.curr
+        self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
+                
+            #epdate epochs
+        self.prev_Epoch = self.curr_Epoch
+        self.curr_Epoch = self.row["Epoch"]
+            
+            #previous real and current real
+        self.dist_to_prev = self.distance(self.prev, self.curr) #float
+            
+            #current real and current true
+        self.dist_to_true = self.distance(self.curr_True, self.curr) #float
+            
+            #current vector to true
+        self.curr_vector_to_true = self.vector(self.curr_True, self.curr) #Coord()
+            
+            #previous vector to true
+        self.prev_vector_to_true = self.vector(self.curr_True, self.prev) #Coord()
+            
+            #change in error **this is what gets recorded**
+        self.error_change = Coord(self.curr_vector_to_true.E() - self.prev_vector_to_true.E(),
+                                     self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()
+        
     def compute_errors(self):
         """
         Desc:
@@ -19,51 +95,7 @@ class ErrorDetectionComputations():
         Output:
             self.track_jump
             self.blunder
-        """
-        self.flag_jump()
-                
-        self.flag_blunder()
-                    
-        #record easting drift
-                
-        #record northing drift
-                
-        #record total drift (absolute value)
-                
-        #record cumulative drift
-            
-    def flag_jump(self):
-        """
-        Desc:
-            Flags for a jump error
-        Input:
-            self.prev, Ellipse()
-            self.curr, Coord() or Ellipse()
-        Output:
-            self.track_jump T/F
-        """
-        #flag for jump
-        if self.prev.in_error_ellipse(self.curr, 3):
-            #not a track jump
-            self.track_jump = False
-        else:
-            #flag for potential track jump
-            self.track_jump = True
-            
-    def flag_blunder(self):
-        """
-        Desc:
-            Flags for a blunder
-        Input:
-            self.curr_True, Ellipse()
-            self.curr, Coord() or Ellipse()
-        Output:
-            self.blunder T/F
-        """
-        #flag for blunder
-        if self.curr_True.in_error_ellipse(self.curr, 3):
-            #not a blunder
-            self.blunder = False
-        else:
-            #flag for blunder
-            self.blunder = True
+        """    
+        self.flag_errors()
+        
+        self.record_error()
