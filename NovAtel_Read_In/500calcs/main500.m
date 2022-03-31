@@ -28,13 +28,13 @@ rtkheightErrorVar = std(rtk(:,11));
 %Jump Detection
 
 %RTK
-JumpRTK = zeros(size(rtk,1),24);
-for i = 1:size(rtk,1)
-    if rtklat(i,1)>(rtklatAve+rtklatErrorAve*3)| rtklat(i,1)<(rtklatAve-rtklatErrorAve*3)|rtklon(i,1)>(rtklonAve+rtklonErrorAve*3)| rtklon(i,1)<(rtklonAve-rtklonErrorAve*1)
-        JumpRTK(i,:) = rtk(i,:);
-    end 
-end
-JumpRTK( all(~JumpRTK,2), : ) = [];
+% JumpRTK = zeros(size(rtk,1),24);
+% for i = 1:size(rtk,1)
+%     if rtklat(i,1)>(rtklatAve+rtklatErrorAve*3)| rtklat(i,1)<(rtklatAve-rtklatErrorAve*3)|rtklon(i,1)>(rtklonAve+rtklonErrorAve*3)| rtklon(i,1)<(rtklonAve-rtklonErrorAve*1)
+%         JumpRTK(i,:) = rtk(i,:);
+%     end 
+% end
+% JumpRTK( all(~JumpRTK,2), : ) = [];
 
 
 %Diff: Lat, Long
