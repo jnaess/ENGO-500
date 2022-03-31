@@ -48,18 +48,20 @@ class Data(GNSS_Headers):
         with open(self.file_name, 'r') as f:
             count = 0
             for line in f:
+                device = line.split(",")[0]
                 data = self.clean_and_split(line)
 
-                if count%3 == 0:
+                if device == '#RTKPOSA':
                     #then rtk
                     self.rtk_data.append(data)
-                elif count%3 == 1:
+                elif device == '#PPPPOSA':
                     #then ppp
                     self.ppp_data.append(data)
-                else:
+                elif device == '#PSRPOSA':
                     #then psr
                     self.psr_data.append(data)
-
+                else:
+                    print(device)
                 count = count + 1
                 
         self.rtk_data = np.array(self.rtk_data)
@@ -84,22 +86,53 @@ class Data(GNSS_Headers):
         """
         self.rtk = self.clean(pd.DataFrame(self.rtk_data, columns=self.rtk_cols))
         
+        self.ppp = self.clean(pd.DataFrame(self.ppp_data, columns=self.ppp_cols))        
+        
+        self.psr = self.clean(pd.DataFrame(self.psr_data, columns=self.psr_cols))
+        
+        
+    def fake_append(self):
+        """
+        Desc:
+            adds the filler zeros fro Jonah
+        Input:
+        Output:
+        """
+        rows = self.rtk.shape[0]
+        fake = np.zeros(rows)
+        self.rtk["new_lat"] = fake
+        self.rtk["new_lon"] = fake
+
+        rows = self.ppp.shape[0]
+        fake = np.zeros(rows)
+        self.ppp["new_lat"] = fake
+        self.ppp["new_lon"] = fake
+        
+        rows = self.psr.shape[0]
+        fake = np.zeros(rows)
+        self.psr["new_lat"] = fake
+        self.psr["new_lon"] = fake
+        
+    def convert_append(self):
+        """
+        Desc:
+            adds the converted coords
+        Input:
+        Output:
+        """
         lat, lon = self.convert(self.rtk["lat"],self.rtk["lon"])
         self.rtk["new_lat"] = lat
         self.rtk["new_lon"] = lon
-        
-        self.ppp = self.clean(pd.DataFrame(self.ppp_data, columns=self.ppp_cols))
         
         lat, lon = self.convert(self.ppp["lat"],self.ppp["lon"])
         self.ppp["new_lat"] = lat
         self.ppp["new_lon"] = lon
         
-        self.psr = self.clean(pd.DataFrame(self.psr_data, columns=self.psr_cols))
-        
         lat, lon = self.convert(self.psr["lat"],self.psr["lon"])
         self.psr["new_lat"] = lat
         self.psr["new_lon"] = lon
         
+    
     def clean(self, df):
         """
         Desc:
