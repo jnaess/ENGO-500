@@ -11,3 +11,9 @@ from passGenerator import PassGenerator
 from errorSimulator import ErrorSimulator
 from spatialOpps import SpatialOpps
 from simulator import Simulator
+from ellipse import Ellipse
+from errorDetector import ErrorDetector
+from errorDetectionComputations import ErrorDetectionComputations
+from errorDetectionInitializer import ErrorDetectionInitializer
+from errorRecorder import ErrorRecorder
+from errorFlagger import ErrorFlagger
