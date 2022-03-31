@@ -23,10 +23,10 @@ class ErrorRecorder(ErrorFlagger):
         self.record_drift()
         
         #record jump
-        self.record_error()
+        self.record_jump()
         
         #record error
-        self.record_jump()
+        self.record_error()
                     
     def record_drift(self):
         """
