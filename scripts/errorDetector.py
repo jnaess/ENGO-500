@@ -59,7 +59,7 @@ class ErrorDetector(Opps, ErrorDetectionInitializer, ErrorCompiler):
             for index, row in self.data.iterrows():  
                 self.i = index
                 
-                print(row)
+                #print(row)
                 #rate = pbar.format_dict["rate"]
                 #remaining = (pbar.total - pbar.n) / rate if rate and pbar.total else 0  # Seconds*
                 
@@ -72,8 +72,8 @@ class ErrorDetector(Opps, ErrorDetectionInitializer, ErrorCompiler):
                 #updated for this epochs values
                 self.update_epoch()
                 
-                if self.i > 2: 
-                    return
+               # if self.i > 2: 
+               #     return
                 
                 if self.first:
                     #skip the first row
