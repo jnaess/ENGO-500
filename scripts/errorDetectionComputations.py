@@ -30,9 +30,10 @@ class ErrorDetectionComputations(ErrorRecorder):
         """        
         if self.first:
             self.first_epoch()
-        
-        if self.is_static:
+            
+        elif self.is_static:
             self.static_epoch()
+            self.compute_errors()
     
     def first_epoch(self):
         """
@@ -85,6 +86,9 @@ class ErrorDetectionComputations(ErrorRecorder):
         self.error_change = Coord(self.curr_vector_to_true.E() - self.prev_vector_to_true.E(),
                                      self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()
         
+        
+        
+        
     def compute_errors(self):
         """
         Desc:
@@ -98,4 +102,25 @@ class ErrorDetectionComputations(ErrorRecorder):
         """    
         self.flag_errors()
         
-        self.record_error()
+        """print(f"\n\t self.prev: {self.prev} \n \
+        self.curr: {self.curr} \n \
+        self.prev_Epoch: {self.prev_Epoch} \n \
+        self.curr_Epoch: {self.curr_Epoch} \n \
+        self.dist_to_prev: {self.dist_to_prev} \n \
+        self.dist_to_true: {self.dist_to_true} \n \
+        self.curr_vector_to_true: {self.curr_vector_to_true} \n \
+        self.prev_vector_to_true: {self.prev_vector_to_true} \n \
+        self.error_change: {self.error_change}")"""
+        
+        self.record_errors()
+        #print(f"drift_status b: {self.drift_status[self.i]}")
+        self.jump_keys = {
+                'Jump_Status': self.drift_individual[self.i], #T/F
+                'Jump_Individual_E': self.drift_individual[self.i,0], #float [E
+                'Jump_Individual_N': self.drift_individual[self.i,1], #float [N]
+                'Jump_Cumulative_E': self.drift_cumulative[self.i,0], #cumulative [E]
+                'Jump_Cumulative_N': self.drift_cumulative[self.i,1], #cumulative [N]
+                'Jump_Absolute_Cumulative_E': self.drift_absolute_cumulative[self.i,0], #absolute cumulative [E]
+                'Jump_Absolute_Cumulative_N': self.jump_absolute_cumulative[self.i,1]} #absolute cumulative [N]
+        
+        #print(self.jump_keys)

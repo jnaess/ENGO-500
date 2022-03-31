@@ -11,20 +11,6 @@ class ErrorRecorder(ErrorFlagger):
         """
         ErrorFlagger.__init__(self)
         
-    
-    def compute_errors(self):
-        """
-        Desc:
-            Checks for and computes errors
-        Input:
-            self.prev
-            self.curr
-        Output:
-            self.track_jump
-            self.blunder
-        """    
-        self.flag_errors()
-        
     def record_errors(self):
         """
         Desc:
@@ -32,6 +18,7 @@ class ErrorRecorder(ErrorFlagger):
         Input:
         Output:
         """
+        #print("recording errors")
         #record drift | total drift (absolute value) | record cumulative drift
         self.record_drift()
         
@@ -49,6 +36,10 @@ class ErrorRecorder(ErrorFlagger):
             self.drift
         Output:
         """
+        #print("recording drift")
+        #print(f"drift_status shape: {self.drift_status[self.i]}")
+        #print(f"drift_status a: {self.drift_status[self.i]}")
+        
         if self.drift:
             #then there was a drift error
             self.drift_status[self.i] = True
@@ -71,6 +62,8 @@ class ErrorRecorder(ErrorFlagger):
             self.drift_absolute_cumulative[self.i,0] = self.drift_absolute_cumulative[self.i-1, 0]
             self.drift_absolute_cumulative[self.i,1] = self.drift_absolute_cumulative[self.i-1, 1]
             
+        #print(f"drift_status c: {self.drift_status[self.i]}")
+            
     def record_jump(self):
         """
         Desc:
@@ -79,6 +72,7 @@ class ErrorRecorder(ErrorFlagger):
             self.track_jump
         Output:
         """
+        #print("recording jump")
         if self.track_jump:
             #then there was a jump error
             self.jump_status[self.i] = True
@@ -110,6 +104,7 @@ class ErrorRecorder(ErrorFlagger):
             self.drift
         Output:
         """
+        #print("recording err")
         if self.track_jump or self.drift:
             #confirm that there was an error
             self.error_status[self.i] = True

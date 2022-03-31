@@ -4,13 +4,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import numpy as np
 
+import sys
+from time import sleep
+from tqdm import tqdm
+
+
+        
 from opps import Opps
 from point import Coord
 from ellipse import Ellipse
 from errorDetectionComputations import ErrorDetectionComputations
 from errorDetectionInitializer import ErrorDetectionInitializer
+from errorCompiler import ErrorCompiler
 
-class ErrorDetector(Opps, ErrorDetectionInitializer):
+class ErrorDetector(Opps, ErrorDetectionInitializer, ErrorCompiler):
     """
     Desc:
         Detects errors from either a static or movind dataset
@@ -33,6 +40,9 @@ class ErrorDetector(Opps, ErrorDetectionInitializer):
         """
         Opps.__init__(self)
         ErrorDetectionInitializer.__init__(self, data, true_east, true_north, tractor_speed, epoch_frequency, rename_keys, is_static, true_std)
+        ErrorCompiler.__init__(self)
+        
+        self.detect_errors()
 
         
     def detect_errors(self):
@@ -44,22 +54,32 @@ class ErrorDetector(Opps, ErrorDetectionInitializer):
         """
         
         self.first = True
-        
-        for index, row in self.data.iterrows():  
-            self.i = index
-            self.row = row
-            
-            #updated for this epochs values
-            self.update_epoch()
 
-            if self.first:
-                #skip the first row
-                self.first = False
+        with tqdm(total=self.rows, file=sys.stdout, smoothing=.1) as pbar:
+            for index, row in self.data.iterrows():  
+                self.i = index
                 
-            else:
-                self.compute_errors()
+                print(row)
+                #rate = pbar.format_dict["rate"]
+                #remaining = (pbar.total - pbar.n) / rate if rate and pbar.total else 0  # Seconds*
                 
-                return
+                #~{int(remaining)} Seconds Remaining | 
+                pbar.set_description(f'Epochs Processed: %d' % (1 + self.i), refresh=True)
+                pbar.update(1)
+                
+                self.row = row
+
+                #updated for this epochs values
+                self.update_epoch()
+                
+                if self.i > 2: 
+                    return
+                
+                if self.first:
+                    #skip the first row
+                    self.first = False
+
+                    #return
                 
 
 
