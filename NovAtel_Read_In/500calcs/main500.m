@@ -25,6 +25,9 @@ rtkheightStd = std(rtk(:,6));
 rtkhieghtErrorAve = mean(rtk(:,11));
 rtkheightErrorVar = std(rtk(:,11));
 
+trueMeanLat = mean(psr(:,23));
+trueMeanLon = mean(psr(:,24));
+trueMeanH = mean(psr(:,6));
 %Jump Detection
 
 %RTK
@@ -41,22 +44,22 @@ rtkheightErrorVar = std(rtk(:,11));
 %PPP
 DiffPPP = zeros(size(ppp,1),2);
 for i = 1:size(ppp,1)
-   DiffPPP(i,1) = ppp(i,23)-rtklatAve; %Lat
-   DiffPPP(i,2) = ppp(i,24)-rtklonAve; %Long
+   DiffPPP(i,1) = ppp(i,23)-trueMeanLat; %Lat
+   DiffPPP(i,2) = ppp(i,24)-trueMeanLon; %Long
 end
 
 %PSR
 DiffPSR = zeros(size(ppp,1),2);
 for i = 1:size(ppp,1)
-   DiffPSR(i,1) = psr(i,23)-rtklatAve; %Lat
-   DiffPSR(i,2) = psr(i,24)-rtklonAve; %Long
+   DiffPSR(i,1) = psr(i,23)-trueMeanLat; %Lat
+   DiffPSR(i,2) = psr(i,24)-trueMeanLon; %Long
 end
 
 %RTK
 DiffRTK = zeros(size(ppp,1),2);
 for i = 1:size(ppp,1)
-   DiffRTK(i,1) = rtk(i,23)-rtklatAve; %Lat
-   DiffRTK(i,2) = rtk(i,24)-rtklonAve; %Long
+   DiffRTK(i,1) = rtk(i,23)-trueMeanLat; %Lat
+   DiffRTK(i,2) = rtk(i,24)-trueMeanLon; %Long
 end
 
 StddiffPPPlat = std(DiffPPP(:,1));
@@ -72,7 +75,7 @@ hold on
 sz = 25;
 c = linspace(1,10,length(rtk(:,24)));
 scatter(rtk(:,24),rtk(:,23),sz,c,'filled')
-scatter(rtklonAve,rtklatAve,sz,'d','MarkerFaceColor',[1 .1 .1])
+scatter(trueMeanLon,trueMeanLat,sz,'d','MarkerFaceColor',[1 .1 .1])
 colorbar('southoutside','Ticks',[1,3,5,7,10],...
          'TickLabels',{'Starting Epoch','','','','Final Epoch'})
 
@@ -88,7 +91,7 @@ hold on
 sz = 25;
 c = linspace(1,10,length(psr(:,24)));
 scatter(psr(:,24),psr(:,23),sz,c,'filled')
-scatter(rtklonAve,rtklatAve,sz,'d','MarkerFaceColor',[1 .1 .1])
+scatter(trueMeanLon,trueMeanLat,sz,'d','MarkerFaceColor',[1 .1 .1])
 colorbar('southoutside','Ticks',[1,3,5,7,10],...
          'TickLabels',{'Starting Epoch','','','','Final Epoch'})
 
@@ -104,7 +107,7 @@ hold on
 sz = 25;
 c = linspace(1,10,length(ppp(:,24)));
 scatter(ppp(:,24),ppp(:,23),sz,c,'filled')
-scatter(rtklonAve,rtklatAve,sz,'d','MarkerFaceColor',[1 .1 .1])
+scatter(trueMeanLon,trueMeanLat,sz,'d','MarkerFaceColor',[1 .1 .1])
 colorbar('southoutside','Ticks',[1,3,5,7,10],...
          'TickLabels',{'Starting Epoch','','','','Final Epoch'})
 
