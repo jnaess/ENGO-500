@@ -2,7 +2,7 @@ clc
 clear
 format longG
 
-%Inputs still required
+
 ppp = readmatrix("ppp.csv");
 psr = readmatrix("psr.csv");
 rtk = readmatrix("rtk.csv");
@@ -80,8 +80,8 @@ colorbar('southoutside','Ticks',[1,3,5,7,10],...
          'TickLabels',{'Starting Epoch','','','','Final Epoch'})
 
 title('RTK measurements vs True Value')
-xlabel('Easting');
-ylabel('Northing');
+xlabel('Easting (m)');
+ylabel('Northing (m)');
 legend('Observed Coordinates','True Coordinates','Location','Best');
 hold off
 
@@ -96,8 +96,8 @@ colorbar('southoutside','Ticks',[1,3,5,7,10],...
          'TickLabels',{'Starting Epoch','','','','Final Epoch'})
 
 title('PSR measurements vs True Value')
-xlabel('Easting');
-ylabel('Northing');
+xlabel('Easting (m)');
+ylabel('Northing (m)');
 legend('Observed Coordinates','True Coordinates','Location','Best');
 hold off
 
@@ -112,8 +112,8 @@ colorbar('southoutside','Ticks',[1,3,5,7,10],...
          'TickLabels',{'Starting Epoch','','','','Final Epoch'})
 
 title('PPP measurements vs True Value')
-xlabel('Easting');
-ylabel('Northing');
+xlabel('Easting (m)');
+ylabel('Northing (m)');
 legend('Observed Coordinates','True Coordinates','Location','Best');
 hold off
 
@@ -146,14 +146,14 @@ for j = 1:LastVals
 end
 PPP15minNorth(97,1) = SumNorth/LastVals;
 PPP15minEast(97,1) = SumEast/LastVals;
-PPPrangeN = max(PPP15minNorth) - min(PPP15minNorth);
-PPPrangeE = max(PPP15minEast) - min(PPP15minEast);
+PPPAcrossRangeN = max(PPP15minNorth) - min(PPP15minNorth);
+PPPAcrossRangeE = max(PPP15minEast) - min(PPP15minEast);
 PPPAcrossSTDN = std(PPP15minNorth);
 PPPAcrossSTDE = std(PPP15minEast);
 PPPAcrossErrN = mean(PPP15minNorth);
 PPPAcrossErrE = mean(PPP15minEast);
-PPPAcrossVarN = PPPAcrossErrN^2;
-PPPAcro
+PPPAcrossVarN = PPPAcrossSTDN^2;
+PPPAcrossVarE = PPPAcrossSTDE^2;
 
 %PSR
 PSR15minNorth = zeros(97,1);
@@ -181,13 +181,14 @@ for j = 1:LastVals
 end
 PSR15minNorth(97,1) = SumNorth/LastVals;
 PSR15minEast(97,1) = SumEast/LastVals;
-PSRrangeN = max(PSR15minNorth) - min(PSR15minNorth);
-PSRrangeE = max(PSR15minEast) - min(PSR15minEast);
+PSRAcrossRangeN = max(PSR15minNorth) - min(PSR15minNorth);
+PSRAcrossRangeE = max(PSR15minEast) - min(PSR15minEast);
 PSRAcrossSTDN = std(PSR15minNorth);
 PSRAcrossSTDE = std(PSR15minEast);
 PSRAcrossErrN = mean(PSR15minNorth);
 PSRAcrossErrE = mean(PSR15minEast);
-
+PSRAcrossVarN = PSRAcrossSTDN^2;
+PSRAcrossVarE = PSRAcrossSTDE^2;
 
 %RTK
 RTK15minNorth = zeros(97,1);
@@ -215,13 +216,14 @@ for j = 1:LastVals
 end
 RTK15minNorth(97,1) = SumNorth/LastVals;
 RTK15minEast(97,1) = SumEast/LastVals;
-RTKrangeN = max(RTK15minNorth) - min(RTK15minNorth);
-RTKrangeE = max(RTK15minEast) - min(RTK15minEast);
+RTKAcrossRangeN = max(RTK15minNorth) - min(RTK15minNorth);
+RTKAcrossRangeE = max(RTK15minEast) - min(RTK15minEast);
 RTKAcrossSTDN = std(RTK15minNorth);
 RTKAcrossSTDE = std(RTK15minEast);
 RTKAcrossErrN = mean(RTK15minNorth);
 RTKAcrossErrE = mean(RTK15minEast);
-
+RTKAcrossVarN = RTKAcrossSTDN^2;
+RTKAcrossVarE = RTKAcrossSTDE^2;
 %Plot Intervals
 figure
 hold on
@@ -230,8 +232,8 @@ plot(x,PPP15minNorth(:,1),'b')
 plot(x,RTK15minNorth(:,1),'r')
 legend('PSR','PPP','RTK')
 title('Northing Across Track Accuracy over time')
-ylabel('Pass to Pass Accuracy')
-xlabel('#15 minute intervals')
+ylabel('Pass to Pass Accuracy (m)')
+xlabel('15 minute intervals')
 hold off
 figure
 hold on
@@ -240,6 +242,65 @@ plot(x,PPP15minEast(:,1),'b')
 plot(x,RTK15minEast(:,1),'r')
 legend('PSR','PPP','RTK')
 title('Easting Across Track Accuracy over time')
-ylabel('Pass to Pass Accuracy')
-xlabel('#15 minute intervals')
+ylabel('Pass to Pass Accuracy (m)')
+xlabel('15 minute intervals')
+hold off
+
+%Position Jumps
+rtkJump = readmatrix('rtk_jump3.csv');
+psrJump = readmatrix('psr_jump.csv');
+pppJump = readmatrix('ppp_jump.csv');
+checkJumps = zeros(1,3); %Holds number of jumps, RTK, PSR, PPP
+%Check number of Jumps
+for i = 1:size(rtkJump,1)
+   if rtkJump(i,2) == 1
+      checkJumps(1,1) = checkJumps(1,1)+1; 
+   end
+end
+for i = 1:size(psrJump,1)
+   if psrJump(i,2) == 1
+      checkJumps(1,2) = checkJumps(1,2)+1; 
+   end
+end
+for i = 1:size(pppJump,1)
+   if pppJump(i,2) == 1
+      checkJumps(1,3) = checkJumps(1,3)+1; 
+   end
+end
+
+indexJumpRTK = zeros(checkJumps(1,1),24);
+indexJumpPSR = zeros(checkJumps(1,2),24);
+indexJumpPPP = zeros(checkJumps(1,3),24);
+for i = 1:size(rtkJump,1)
+   if rtkJump(i,2) == 1
+      indexJumpRTK(i,:) = rtk(i,:);
+   end
+end
+for i = 1:(size(psrJump,1)/2)
+   if psrJump(i,2) == 1
+      indexJumpPSR(i,:) = psr(i,:);
+   end
+end
+for i = 1:(size(pppJump,1))
+   if pppJump(i,2) == 1
+      indexJumpPPP(i,:) = ppp(i,:);
+   end
+end
+
+
+
+figure
+%RTK Jumps
+hold on
+sz = 25;
+c = linspace(1,10,length(rtk(:,24)));
+scatter(rtk(:,24),rtk(:,23),sz,c,'filled')
+scatter(indexJumpRTK(:,24),indexJumpRTK(:,23),sz,'d','MarkerFaceColor',[1 .1 .1])
+colorbar('southoutside','Ticks',[1,3,5,7,10],...
+         'TickLabels',{'Starting Epoch','','','','Final Epoch'})
+
+title('RTK measurements with Jumps')
+xlabel('Easting');
+ylabel('Northing');
+legend('Observed Coordinates','Coordinates Jumps','Location','Best');
 hold off

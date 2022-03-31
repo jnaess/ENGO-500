@@ -15,7 +15,7 @@ class ErrorFlagger():
         Input:
         Output:
         """
-        print("flagging errors")
+        #print("flagging errors")
         self.flag_jump()
                 
         #self.flag_blunder() #we don't yet do anything with this
