@@ -146,14 +146,14 @@ for j = 1:LastVals
 end
 PPP15minNorth(97,1) = SumNorth/LastVals;
 PPP15minEast(97,1) = SumEast/LastVals;
-PPPAcrossRangeN = max(PPP15minNorth) - min(PPP15minNorth);
-PPPAcrossRangeE = max(PPP15minEast) - min(PPP15minEast);
+PPPrangeN = max(PPP15minNorth) - min(PPP15minNorth);
+PPPrangeE = max(PPP15minEast) - min(PPP15minEast);
 PPPAcrossSTDN = std(PPP15minNorth);
 PPPAcrossSTDE = std(PPP15minEast);
 PPPAcrossErrN = mean(PPP15minNorth);
 PPPAcrossErrE = mean(PPP15minEast);
-PPPAcrossVarN = PPPAcrossSTDN^2;
-PPPAcrossVarE = PPPAcrossSTDE^2;
+PPPAcrossVarN = PPPAcrossErrN^2;
+PPPAcro
 
 %PSR
 PSR15minNorth = zeros(97,1);
@@ -181,14 +181,13 @@ for j = 1:LastVals
 end
 PSR15minNorth(97,1) = SumNorth/LastVals;
 PSR15minEast(97,1) = SumEast/LastVals;
-PSRAcrossRangeN = max(PSR15minNorth) - min(PSR15minNorth);
-PSRAcrossRangeE = max(PSR15minEast) - min(PSR15minEast);
+PSRrangeN = max(PSR15minNorth) - min(PSR15minNorth);
+PSRrangeE = max(PSR15minEast) - min(PSR15minEast);
 PSRAcrossSTDN = std(PSR15minNorth);
 PSRAcrossSTDE = std(PSR15minEast);
 PSRAcrossErrN = mean(PSR15minNorth);
 PSRAcrossErrE = mean(PSR15minEast);
-PSRAcrossVarN = PSRAcrossSTDN^2;
-PSRAcrossVarE = PSRAcrossSTDE^2;
+
 
 %RTK
 RTK15minNorth = zeros(97,1);
@@ -216,14 +215,13 @@ for j = 1:LastVals
 end
 RTK15minNorth(97,1) = SumNorth/LastVals;
 RTK15minEast(97,1) = SumEast/LastVals;
-RTKAcrossRangeN = max(RTK15minNorth) - min(RTK15minNorth);
-RTKAcrossRangeE = max(RTK15minEast) - min(RTK15minEast);
+RTKrangeN = max(RTK15minNorth) - min(RTK15minNorth);
+RTKrangeE = max(RTK15minEast) - min(RTK15minEast);
 RTKAcrossSTDN = std(RTK15minNorth);
 RTKAcrossSTDE = std(RTK15minEast);
 RTKAcrossErrN = mean(RTK15minNorth);
 RTKAcrossErrE = mean(RTK15minEast);
-RTKAcrossVarN = RTKAcrossSTDN^2;
-RTKAcrossVarE = RTKAcrossSTDE^2;
+
 %Plot Intervals
 figure
 hold on
