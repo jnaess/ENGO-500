@@ -14,19 +14,22 @@
         </div>
   </div>
     
-  <div class="row" >
+  <div class="row">
     <div class="col border">
         <div id="map"></div>
+<<<<<<< HEAD
     <script src = "{{ url_for('static', filename = 'js/map.js') }}"></script>
     <script> 
         const geo = JSON.parse('{{ geoJSON | tojson }}');
 
         L.geoJSON( geo ).addTo(map)
          </script>
+=======
+        <script src = "{{ url_for('static', filename = 'js/map.js') }}"></script>
+>>>>>>> fd4f5fcc99f72bc458eb3391310fd91d1aa7a924
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
-    <div class="col border">
-    </div>
+
   </div>
 
 

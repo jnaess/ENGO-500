@@ -1,6 +1,6 @@
 /* GENERAL STYLE */
 html{
-    
+    background-color:  #e9edee;
 }
 
 body{
@@ -8,12 +8,12 @@ body{
     padding: 0;
     font-family: Arial;
     text-align: center;
+  
 }
 #content{
-    margin: 10;
-    padding: 10;
     font-family: Arial;
     text-align: center;
+    background-color:  #e9edee;
     }
 
 #title{
@@ -43,26 +43,35 @@ h1, h2, h3 {
     background-color:  #e9edee;
 }
 
-
-/* LOADING SCREEN */
-#loading {
-    background: url('spinner.gif') no-repeat center center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9999999;
+.roles{
+    text-align: left;
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.95em;
 }
 
-
+ul {
+    list-style: none;
+    text-align: center;
+}
 
 /* NAV BAR STLYE */
 .logo {
   float: left;
   left: 0px;
   padding: 10px 0;
-  width: 12.5vw;
+  width: calc(150px + 3vw);
+  min-width: 150 px;
+  height: auto;
+  
+}
+.uc-logo{
+  float: left;
+  left: 0px;
+  padding: 10px 0;
+  width: calc(140px + 3vw);
+  height: auto;
+  min-width: 140 px;
 }
 
 header {
@@ -90,7 +99,6 @@ nav li {
     display: inline-block;
     margin-left: 70px;
     padding-top: 23px;
-
     position: relative;
 }
 
@@ -98,7 +106,7 @@ nav a {
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.75vw;
+    font-size:calc(10px + 0.25vw);
     color: #FFFFFF;
 }
 
@@ -111,14 +119,111 @@ nav a::before {
     display: block;
     height: 5px;
     background-color: #444;
-
     position: absolute;
     top: 0;
     width: 0%;
-
     transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
     width: 100%;
+}
+
+
+/* Footer Style */
+.footer {
+    width: 100%;
+    background-color: #1d7e74;
+    padding: 24px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-gap: 40px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid;
+    text-align: left;
+}
+
+footer .title {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+footer p{
+    font-size: 0.85em;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+footer li {
+    font-size: 0.85em;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: left;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li:hover {
+    color:  #000;
+}
+
+
+footer a {
+    font-size: 1.0em;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+.foot-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ---------   Responsiveness   -------------- */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 24px;
+    }
+
+    .foot-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+        grid-column: 1 / 3;
+    }
+
+    .foot-2 {
+        flex-direction: column;
+    }
+
+    .socials {
+        margin-top: 16px;
+    }
 }

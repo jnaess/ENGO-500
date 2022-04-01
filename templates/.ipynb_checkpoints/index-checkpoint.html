@@ -2,56 +2,155 @@
 
 {% block content %}
 <div class="container">
-<h1>Welcome</h1>
+    
+    
+<h1>About</h1>
 
+<!-- Start Introduction -->
+    <hr/>
 
-<br><br>
-Intro to our project
-<br><br>
-Intro to each member
-
-
+      <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h4 class="text-center">Precision Agriculture</h4>
+    </div>
+        <div class = "col"></div>
+  </div>
+    
+<div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h6 class="text-center">Agriculture is the backbone of society, providing essential necessities for living all over the world, and will continue to be a crucial service far into the future. When it comes to tractor passes over a large field, any overlap in tractor pathing results in wasted resources. Seeding, pesticide distribution, herbicide distribution, and harvesting especially can result in massive costs incurred due to overlapping or underlapping the areas that tractor’s implements pass over.
+        </h6>
+    </div>
+    <div class ="col"></div>
+</div>
+    
+<br>
+<div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h6 class="text-center">While the technology does exist to provide positioning solutions that result in high precision positioning, it is very expensive to implement. Our project explores the possibility of using cheaper equipment to achieve acceptable pass to pass accuracy in agriculture. Our project dealt with the creation of a software package capable of quantifying the various relative accuracy parameters important to broad acre precision agriculture as well as the visualization and analysis of those parameters. 
+            </h6>
+    </div>
+    <div class="col"></div>
+ </div>
+    
+<!-- End Introduction -->   
+    <hr/>
+    
+<!-- Start Solution -->   
+    
+  <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h4 class="text-center">Our Solution</h4>
+    </div>
+        <div class = "col"></div>
+  </div>
+    
+    
+  <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h6 class="text-center">Our project’s software package consists of 2 different suites. 
+The first is error quantification and detection software that calculates and flags drift errors, pass to pass variation and position jumps in precision agriculture data sets.
+The second software suite simulates tractor passes over a user selected area and feeds the positional data back to the error detection software for analysis, Keeping these two suites separate allows them to be used to test the functionality and adaptability of each other. Any assumptions coded in the simulation suite are directly derived from observations made of our two data sets described <a href="{{ url_for('R_D') }}">here</a>.</h6>
+        <br>
+  </div>
+        <div class = "col"></div>
+    </div>
+    
+  <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h6 class="text-center">The data collection was done at the parking lot intersecting CCIT and the ENGG dorms. Points were collected using an R10 RTK sensor at the edges of 13 parking lot line segments. This was done to both calibrate the RTK for our purposes and to provide simulation data for a vehicle’s path. 
+A second set of static GNSS data was provided by our advisor Greg Roesler from one of the static receiver arrays run by NovAtel.</h6>
+        <br>
+    </div>
+    <div class = "col"></div>
+  </div>
+ 
+<!-- End Solution -->
+     <hr/>
+              
+<!-- Start Team -->
+    
+  <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h4 class="text-center">Meet the Team</h4>
+        <br>
+    </div>
+    <div class = "col"></div>
+  </div>
+    
   <div class="row">
     <div class="col">
-    </div>
-    <div class="col">
-        <a href = "https://www.linkedin.com/in/evan-prosser/" target="_blank">
-          <img src="{{ url_for('static', filename = 'Images/Img1.jpg') }}" style="width:100%; border-radius: 50%">
+        <a href = "https://www.linkedin.com/in/jan-erik-naess-32b920198/" target="_blank">
+          <img src="{{ url_for('static', filename = 'Images/JE.png') }}" style="width:60%; border-radius: 50%">
            <p class = "text-center">Jan Erik Naess</p>
         </a>
+        <div class="row">
+            <p class = "text-center">Project Manager<br>Software Lead<br>Research</p>
+        </div>
     </div>
-    <div class="col">
-    </div>
+
     <div class="col">
         <a href = "https://www.linkedin.com/in/evan-prosser/" target="_blank">
-          <img src="{{ url_for('static', filename = 'Images/Img1.jpg') }}" style="width:100%; border-radius: 50%">
+          <img src="{{ url_for('static', filename = 'Images/Jonah.png') }}" style="width:60%; border-radius: 50%">
            <p class = "text-center">Jonah Prevost</p>
         </a>
+        <div class="row">
+            <p class = "text-center">Data Analysis<br>Fieldwork<br>Research</p>
+        </div>
     </div>
+
     <div class="col">
-    </div>
-    <div class="col">
-        <a href = "https://www.linkedin.com/in/evan-prosser/" target="_blank">
-          <img src="{{ url_for('static', filename = 'Images/Img1.jpg') }}" style="width:100%; border-radius: 50%">
+        <a href = "https://www.linkedin.com/in/connor-johnson-3380451b2" target="_blank">
+          <img src="{{ url_for('static', filename = 'Images/Connor.png') }}" style="width:60%; border-radius: 50%">
            <p class = "text-center">Connor Jonhson</p>
         </a>
+        <div class="row">
+            <p class = "text-center">Data Analysis<br>Fieldwork<br>Research</p>
+        </div>
     </div>
-    <div class="col">
-    </div>
+
     <div class="col">
         <a href = "https://www.linkedin.com/in/evan-prosser/" target="_blank">
-          <img src="{{ url_for('static', filename = 'Images/Img1.jpg') }}" style="width:100%; border-radius: 50%">
+          <img src="{{ url_for('static', filename = 'Images/Evan.png') }}" style="width:60%; border-radius: 50%">
            <p class = "text-center">Evan Prosser</p>
         </a>
-    </div>
-    <div class="col">
+        <div class="row">
+            <p class = "text-center">Website Development<br>Fieldwork<br>Research</p>
+        </div>
     </div>
   </div>
 
+<!-- End Team -->
+    
+     <hr/>
+    
+<!-- Start Acknowledments -->
 
-<br><br>
-Thank you to people who helped
+  <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h4 class="text-center">Acknowledgements</h4>
+    </div>
+    <div class = "col"></div>
+  </div>
+    
+  <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h6 class="text-center">This project wouldn’t have been possible without the support and guidance of our mentor and advisor Greg Roesler of Hexagon. From directing our initial problem definition and research to providing detailed static data logs and helping guide us through the nuances of project management and planning, each step of the process wouldn’t have been possible without his assistance and leadership.</h6>
+        <br>
+    </div>
+    <div class = "col"></div>
+  </div>
+    
+<!-- End Acknowledments -->
 
-</div>       
+</div>
 {% endblock %}
-           
