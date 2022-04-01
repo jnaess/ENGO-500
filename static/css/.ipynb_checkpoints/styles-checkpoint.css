@@ -44,10 +44,15 @@ h1, h2, h3 {
 }
 
 .roles{
-  text-align: left;
-  text-decoration: none;
-  color: #000000;
-  
+    text-align: left;
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.95em;
+}
+
+ul {
+    list-style: none;
+    
 }
 
 /* NAV BAR STLYE */
@@ -114,17 +119,16 @@ nav a::before {
     display: block;
     height: 5px;
     background-color: #444;
-
     position: absolute;
     top: 0;
     width: 0%;
-
     transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
     width: 100%;
 }
+
 
 /* Footer Style */
 .footer {
@@ -145,28 +149,50 @@ nav a:hover::before {
     padding-bottom: 24px;
     margin-bottom: 24px;
     border-bottom: 1px solid;
+    text-align: left;
 }
 
-.title {
-    color: #eee;
+footer .title {
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
 
-p,
-li {
+footer p{
     font-size: 0.85em;
     line-height: 22px;
     cursor: pointer;
 }
 
-ul {
+footer li {
+    font-size: 0.85em;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: left;
+    color: #fff;
+}
+
+footer ul {
     list-style: none;
 }
 
-li:hover {
-    color: #eee;
+footer li:hover {
+    color:  #000;
+}
+
+
+footer a {
+    font-size: 1.0em;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #000;
 }
 
 .foot-2 {
@@ -176,26 +202,6 @@ li:hover {
     align-items: center;
 }
 
-.socials a {
-    text-decoration: none;
-    margin: 8px;
-    background-color: #33353b;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.socials a:hover i {
-    color: #eee;
-}
-
-li,
-.socials i {
-    transition: color 0.3s;
-}
 
 /* ---------   Responsiveness   -------------- */
 

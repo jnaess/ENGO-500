@@ -40,36 +40,44 @@
 
        <!-- Footer src: https://github.com/mariofornaroli/y-responsive-footer --> 
        <section class="footer">
+           <footer>
             <div class="foot-1">
                 <section class="about">
-                    <ul>
-                        <li><a href="https://novatel.com/"><img src = "{{ url_for('static', filename = 'Images/NovAtel_Logo.png') }}" target="_blank" alt="logo" class="logo"></a></li>
-                    </ul>
+                    <div class = "row">
+                        <div class = "col">
+                        <ul>
+                            <li><a href="https://novatel.com/"><img src = "{{ url_for('static', filename = 'Images/NovAtel_Logo.png') }}" target="_blank" alt="logo" class="logo"></a></li>
+                             </ul>
+                            </div>
+                    </div>
+                       
+                    <div class = "row">
+                        <div class = "col">
                     <ul>
                         <li><a href="https://schulich.ucalgary.ca/geomatics"><img src = "{{ url_for('static', filename = 'Images/uc-horz.png') }}" target="_blank" alt="logo" class="uc-logo"></a></li>
                     </ul>
+                        </div>
+                    </div>
                 </section>
                 <section>
-                    <div class="title">Categories</div>
+                    <div class="title">Contacts</div>
                     <ul>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li>Javascript</li>
-                        <li>Frameworks</li>
-                        <li>Templates</li>
+                        <li><a href="mailto:naessjanerik@gmail.com">Jan Erik Naess</a></li>
+                        <li><a href="mailto:jonah.prevost722@gmail.com">Jonah Prevost</a></li>
+                        <li><a href="mailto:connor.johnson1@ucalgary.ca">Connor Johnson</a></li>
+                        <li><a href="mailto:evan.prosser@outlook.com">Evan Prosser</a></li>
                     </ul>
                 </section>
                 <section>
-                    <div class="title">Quick Links</div>
+                    <div class="title">Site Map</div>
                     <ul>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
-                        <li>Contribute</li>
-                        <li>Private Policy</li>
-                        <li>Sitemap</li>
+                        <li><a href = "{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('Software_Demo') }}">Software Demo</a></li>
+                        <li><a href="{{ url_for('R_D') }}">Research and Development</a></li>
                     </ul>
                 </section>
             </div>
+           </footer>
         </section>
         
     </body>
