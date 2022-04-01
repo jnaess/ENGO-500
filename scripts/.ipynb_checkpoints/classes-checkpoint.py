@@ -17,3 +17,7 @@ from errorDetectionComputations import ErrorDetectionComputations
 from errorDetectionInitializer import ErrorDetectionInitializer
 from errorRecorder import ErrorRecorder
 from errorFlagger import ErrorFlagger
+from errorCompiler import ErrorCompiler
+from errorCompiler import ErrorCompiler
+from errorDocumentor import ErrorDocumentor
+from errorOutputter import ErrorOutputter

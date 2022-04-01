@@ -9,8 +9,9 @@ from polygon import polygon
 from point import Coord
 from geomTools import GeomTools
 from positionGenerator import PositionGenerator
+from errorDocumentor import ErrorDocumentor
 
-class ErrorSimulator():
+class ErrorSimulator(ErrorDocumentor):
     """
     Simulates the error which is incorporated in pathFollower
     """
@@ -30,6 +31,9 @@ class ErrorSimulator():
             self.easting_drift_const
             self.northing_drift_const
         """
+        ErrorDocumentor.__init__(self)
+        
+        self.jump_happened = False
         self.is_real = False
         self.drift_on = drift_on
         self.jump_on = jump_on
@@ -84,6 +88,8 @@ class ErrorSimulator():
             self.total_error.e = self.total_error.E()+self.drift_e+self.jump_e
             self.total_error.n = self.total_error.N()+self.drift_n+self.jump_n
             
+            self.record_errors()
+            
     def add_drift_error(self, interval):
         """
         Desc:
@@ -128,6 +134,11 @@ class ErrorSimulator():
             #set to zero because probability is not get included
             self.jump_e = 0
             self.jump_n = 0
+            
+            if abs(self.jump_e) > 0 or abs(self.jump_n) > 0:
+                self.jump_happened = True
+            else:
+                self.jump_happened = False
         else:
             #then the error for this is zero
             #generate jump error
