@@ -35,8 +35,8 @@ class TrackRecorder():
         self.true_keys.update(self.es.drift_keys)
         self.true_keys.update(self.es.error_keys)
         
-        for key in self.true_keys:
-            print(f"{key}: {len(self.true_keys[key])}")
+        #for key in self.true_keys:
+            #print(f"{key}: {len(self.true_keys[key])}")
                   
         self.output_tracks = pd.DataFrame(self.true_keys)
         
@@ -82,7 +82,7 @@ class TrackRecorder():
         self.T_N_std = []
         
         for path in self.true_passes:
-            print(path.segments)
+            #print(path.segments)
             for segment in path.segments:
                 a,b,c,d = segment.out_all()
                 self.T_Easting.append(a)
@@ -118,7 +118,7 @@ class TrackRecorder():
         self.R_N_std = []
         
         for path in self.real_passes:
-            print(f'{path.segments}')
+            #print(f'{path.segments}')
 
             for segment in path.segments:
                 a,b,c,d = segment.out_all()

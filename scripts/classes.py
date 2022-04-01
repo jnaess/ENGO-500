@@ -21,3 +21,4 @@ from errorCompiler import ErrorCompiler
 from errorCompiler import ErrorCompiler
 from errorDocumentor import ErrorDocumentor
 from errorOutputter import ErrorOutputter
+from trackRecorder import TrackRecorder

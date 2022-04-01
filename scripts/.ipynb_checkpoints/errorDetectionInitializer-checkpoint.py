@@ -25,7 +25,9 @@ class ErrorDetectionInitializer(ErrorDetectionComputations):
         self.old_df = data
         self.true_east = true_east
         self.true_north = true_north
-        self.true_coord = Ellipse(true_east, true_north, std = true_std)
+        self.true_std = true_std
+        #self.true_coord = Ellipse(true_east, true_north, std = true_std)
+        self.truth_i = 0 #increment for which coord we are refering to as truth
         
         self.initialize_arrays()
         
@@ -37,6 +39,21 @@ class ErrorDetectionInitializer(ErrorDetectionComputations):
         
         #generate the correct dataframe that we will use
         self.clean_data()
+    
+    def true_coord(self):
+        """
+        Desc:
+            Updated the 'true' coord
+        Input:
+        Output:
+        """
+        if self.is_static:
+            return Ellipse(self.true_east[0], self.true_north[0], std = self.true_std)
+        else:
+            #then it is expecting a list for each truth
+            self.truth_i = self.truth_i + 1
+            return Ellipse(self.true_east[self.truth_i-1], self.true_north[self.truth_i-1], std = [self.true_std[0][self.truth_i],self.true_std[1][self.truth_i]])
+        
         
     def initialize_arrays(self):
         """
@@ -50,16 +67,18 @@ class ErrorDetectionInitializer(ErrorDetectionComputations):
         self.rows = len(self.old_df.index)
         
         #track jump stuff
-        self.jump_status = np.zeros(self.rows) #T/F
+        self.jump_status = np.empty(self.rows) #T/F
         self.jump_individual = np.zeros((self.rows,2)) #float [E, N]
         self.jump_cumulative = np.zeros((self.rows,2)) #cumulative [E, N]
         self.jump_absolute_cumulative = np.zeros((self.rows,2)) #absolute cumulative [E, N]
         
-        self.drift_status = np.zeros(self.rows) #T/F
+        self.drift_status = np.empty(self.rows) #T/F
         self.drift_individual = np.zeros((self.rows,2)) #float [E, N]
         self.drift_cumulative = np.zeros((self.rows,2)) #cumulative [E, N]
         self.drift_absolute_cumulative = np.zeros((self.rows,2)) #absolute cumulative [E, N]
         
+        self.error_status = np.empty(self.rows) #T/F
+        self.error_individual = np.zeros((self.rows,2)) #cumulative [E, N]
         self.error_cumulative = np.zeros((self.rows,2)) #cumulative [E, N]
         self.error_absolute_cumulative = np.zeros((self.rows,2)) #absolute cumulative [E, N]
         

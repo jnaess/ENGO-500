@@ -25,7 +25,9 @@ class ErrorDetectionInitializer(ErrorDetectionComputations):
         self.old_df = data
         self.true_east = true_east
         self.true_north = true_north
-        self.true_coord = Ellipse(true_east, true_north, std = true_std)
+        self.true_std = true_std
+        #self.true_coord = Ellipse(true_east, true_north, std = true_std)
+        self.truth_i = 0 #increment for which coord we are refering to as truth
         
         self.initialize_arrays()
         
@@ -37,6 +39,21 @@ class ErrorDetectionInitializer(ErrorDetectionComputations):
         
         #generate the correct dataframe that we will use
         self.clean_data()
+    
+    def true_coord(self, i=0):
+        """
+        Desc:
+            Updated the 'true' coord
+        Input:
+        Output:
+        """
+        if self.is_static:
+            return Ellipse(self.true_east[i], self.true_north[i], std = self.true_std)
+        else:
+            #then it is expecting a list for each truth
+            self.truth_i = self.truth_i + 1
+            return Ellipse(self.true_east[i], self.true_north[i], std = [self.true_std[0][i],self.true_std[1][i]])
+        
         
     def initialize_arrays(self):
         """

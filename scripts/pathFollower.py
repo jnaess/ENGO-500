@@ -90,7 +90,6 @@ class PathFollower(Vector):
         
         if not self.plan and self.real:
             self.es.add_error(0, True)
-            print("hi")
         self.segments = [self.start]
         
         for i in range(1, self.increments):
