@@ -118,3 +118,13 @@ class Coord():
             proj = pyproj.Transformer.from_crs(self.currentProj, self.outProj, always_xy=True)
 
             self.e,self.n = proj.transform(self.e,self.n)
+            
+    def out_all(self):
+        """
+        Desc:
+            outputs the key value of the point
+        Input:
+        Output:
+            self.e, self.n, self.std[0], self.std[1]
+        """
+        return self.e, self.n, self.std[0], self.std[1]

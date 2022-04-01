@@ -118,5 +118,5 @@ class ErrorRecorder(ErrorFlagger):
         self.error_cumulative[self.i,0] = self.jump_cumulative[self.i,0] + self.drift_cumulative[self.i,0] #easting
         self.error_cumulative[self.i,1] = self.jump_cumulative[self.i,1] + self.drift_cumulative[self.i,1]  #northing
         
-        self.error_cumulative[self.i,0] = self.jump_absolute_cumulative[self.i,0] + self.drift_absolute_cumulative[self.i,0] #easting
-        self.error_cumulative[self.i,1] = self.jump_absolute_cumulative[self.i,1] + self.drift_absolute_cumulative[self.i,1]  #northing
+        self.error_absolute_cumulative[self.i,0] = self.jump_absolute_cumulative[self.i,0] + self.drift_absolute_cumulative[self.i,0] #easting
+        self.error_absolute_cumulative[self.i,1] = self.jump_absolute_cumulative[self.i,1] + self.drift_absolute_cumulative[self.i,1]  #northing

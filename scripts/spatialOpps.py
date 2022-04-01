@@ -36,6 +36,7 @@ class SpatialOpps():
         lat = np.empty((0))
         long = np.empty((0))
         for path in passes:
+            
             myid = np.concatenate((myid,path.segment_order))
             myorder = np.concatenate((myorder,path.point_order))
             

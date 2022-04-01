@@ -7,13 +7,15 @@ import pylab as pl
 
 from polygon import polygon
 from point import Coord
+from opps import Opps
 from geomTools import GeomTools
 from pathGenerator import PathGenerator
 from positionGenerator import PositionGenerator
 from pathFollower import PathFollower
 from errorSimulator import ErrorSimulator
+from trackRecorder import TrackRecorder
 
-class PassGenerator(PathGenerator):
+class PassGenerator(PathGenerator, TrackRecorder):
     """
     Generates all start and end points of the paths, 
     then uses PathFollower to generate center points and direction vectors of each segment
@@ -27,6 +29,7 @@ class PassGenerator(PathGenerator):
         Output:
         """
         PathGenerator.__init__(self, vertices, tractor_width)
+        TrackRecorder.__init__(self)
         
         self.interval = interval
         
@@ -68,6 +71,9 @@ class PassGenerator(PathGenerator):
                                   interval = self.tractor_width,
                                      es = self.es)
         
+        #set path follower distance variable
+        PathFollower.dist = self.distance(self.lower.segments[0],self.upper.segments[0])
+        
     def passes(self):
         """
         Desc:
@@ -100,7 +106,10 @@ class PassGenerator(PathGenerator):
                                        self.lower.segments[i].N()+self.es.total_error.N())
                 real_upper = Coord(self.upper.segments[i].E()+self.es.total_error.E(),
                                        self.upper.segments[i].N()+self.es.total_error.N())
+                 
                     
+                #for the true distance when mapping out real path    
+                distance = 7
                 if upward:
                     #will we use errors?
                     self.es.is_real = False

@@ -9,8 +9,9 @@ from polygon import polygon
 from point import Coord
 from geomTools import GeomTools
 from positionGenerator import PositionGenerator
+from errorDocumentor import ErrorDocumentor
 
-class ErrorSimulator():
+class ErrorSimulator(ErrorDocumentor):
     """
     Simulates the error which is incorporated in pathFollower
     """
@@ -30,13 +31,16 @@ class ErrorSimulator():
             self.easting_drift_const
             self.northing_drift_const
         """
+        ErrorDocumentor.__init__(self)
+        
+        self.jump_happened = False
         self.is_real = False
         self.drift_on = drift_on
         self.jump_on = jump_on
         
         
-        self.easting_drift_const = .01 #average drift per meter
-        self.northing_drift_const = .01 #average drift per meter
+        self.easting_drift_const = .1 #average drift per meter
+        self.northing_drift_const = .1 #average drift per meter
         
         self.total_error = Coord(0,0)
         self.errors = []
@@ -55,7 +59,7 @@ class ErrorSimulator():
         """
         self.pg=pg
         
-    def add_error(self, interval):
+    def add_error(self, interval, start = False):
         """
         Desc:
             returns the error to be added either E, N, or H | default value is 0
@@ -64,8 +68,25 @@ class ErrorSimulator():
             pg, PositionGenerator() for the drift error in error per meter travelled by the tractor
         Output:
             return --> float | default 0
-        """        
-        if self.is_real:
+        """   
+        if start:
+            #then it is real and needs an error to be added
+            
+            self.drift_e = 0
+            self.drift_n = 0
+            
+            self.jump_e = 0
+            self.jump_n = 0
+
+            #record total epoch error
+            self.errors.append(Coord(self.drift_e+self.jump_e,self.drift_n+self.jump_n))
+
+            self.total_error.e = self.total_error.E()+self.drift_e+self.jump_e
+            self.total_error.n = self.total_error.N()+self.drift_n+self.jump_n
+            
+            self.record_errors()
+            
+        elif self.is_real:
             """
             TODO:
                 Cut increments if the next point excedes the outerfield
@@ -83,6 +104,8 @@ class ErrorSimulator():
 
             self.total_error.e = self.total_error.E()+self.drift_e+self.jump_e
             self.total_error.n = self.total_error.N()+self.drift_n+self.jump_n
+            
+            self.record_errors()
             
     def add_drift_error(self, interval):
         """
@@ -128,6 +151,11 @@ class ErrorSimulator():
             #set to zero because probability is not get included
             self.jump_e = 0
             self.jump_n = 0
+            
+            if abs(self.jump_e) > 0 or abs(self.jump_n) > 0:
+                self.jump_happened = True
+            else:
+                self.jump_happened = False
         else:
             #then the error for this is zero
             #generate jump error

@@ -27,13 +27,20 @@ class ErrorDetectionComputations(ErrorRecorder):
             index, of the values sent in
             row, of the current dataframe 
         Output:
-        """        
+        """  
+            
+        
         if self.first:
             self.first_epoch()
             
         elif self.is_static:
             self.static_epoch()
             self.compute_errors()
+            
+        else:
+            self.dynamic_epoch()
+            self.compute_errors()
+        
     
     def first_epoch(self):
         """
@@ -50,10 +57,14 @@ class ErrorDetectionComputations(ErrorRecorder):
             #update epochs
         self.prev_Epoch = 0
         self.curr_Epoch = self.row["Epoch"]
-
+        
+        if self.is_static:
             #of the true locations
-        self.prev_True = self.true_coord
-        self.curr_True = self.true_coord
+            self.prev_True = self.true_coord()
+            self.curr_True = self.prev_True
+        else:
+            self.curr_True = self.true_coord()
+        
         
     def static_epoch(self):
         """
@@ -62,6 +73,10 @@ class ErrorDetectionComputations(ErrorRecorder):
         Input
         Output:
         """
+        #of the true locations
+        self.prev_True = self.curr_True
+        self.curr_True = self.true_coord()
+        
                     #update "real" positions
         self.prev = self.curr
         self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
@@ -87,7 +102,40 @@ class ErrorDetectionComputations(ErrorRecorder):
                                      self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()
         
         
+    def dynamic_epoch(self):
+        """
+        Desc:
+            Opperation to update a static epoch
+        Input
+        Output:
+        """
+        #of the true locations
+        self.prev_True = self.curr_True
+        self.curr_True = self.true_coord(self.i)
         
+        #update "real" positions
+        self.prev = self.curr
+        self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
+                
+            #epdate epochs
+        self.prev_Epoch = self.curr_Epoch
+        self.curr_Epoch = self.row["Epoch"]
+            
+            #previous real and current real
+        self.dist_to_prev = self.distance(self.prev, self.curr) #float
+            
+            #current real and current true
+        self.dist_to_true = self.distance(self.curr_True, self.curr) #float
+            
+            #current vector to true
+        self.curr_vector_to_true = self.vector(self.curr_True, self.curr) #Coord()
+            
+            #previous vector to true
+        self.prev_vector_to_true = self.vector(self.prev_True, self.prev) #Coord()
+            
+            #change in error **this is what gets recorded**
+        self.error_change = Coord(self.curr_vector_to_true.E() - self.prev_vector_to_true.E(),
+                                     self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()    
         
     def compute_errors(self):
         """
@@ -113,7 +161,7 @@ class ErrorDetectionComputations(ErrorRecorder):
         self.error_change: {self.error_change}")"""
         
         self.record_errors()
-        #print(f"drift_status b: {self.drift_status[self.i]}")
+        """#print(f"drift_status b: {self.drift_status[self.i]}")
         self.jump_keys = {
                 'Jump_Status': self.drift_individual[self.i], #T/F
                 'Jump_Individual_E': self.drift_individual[self.i,0], #float [E
@@ -123,4 +171,4 @@ class ErrorDetectionComputations(ErrorRecorder):
                 'Jump_Absolute_Cumulative_E': self.drift_absolute_cumulative[self.i,0], #absolute cumulative [E]
                 'Jump_Absolute_Cumulative_N': self.jump_absolute_cumulative[self.i,1]} #absolute cumulative [N]
         
-        #print(self.jump_keys)
+        #print(self.jump_keys)"""

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeoJSON + Flask + MongoDB</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <h1>
+        Let's display some nice maps here!
+    </h1>
+    <div id="map" style="height: 80vh;"></div>
+
+    <script>
+
+        var map = L.map('map').setView([40.058841, -75.042164], 13)
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: 'Open street map'
+        }).addTo(map)
+
+        //L.geoJSON({{geoJSON}}).addTo(map)
+    </script>
+    <script>
+        {% for marker in markers %}
+        L.geoJSON(marker).addTo(map)
+        {% endfor %}
+    </script>
+</body>
+
+</html>

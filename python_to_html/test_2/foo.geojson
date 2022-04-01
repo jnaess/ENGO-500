@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "Lat": 40.058841, "Lon": -75.042164 }, "geometry": { "type": "Point", "coordinates": [ -75.042164, 40.058841 ] } },
+{ "type": "Feature", "properties": { "Lat": 40.202162, "Lon": -74.924594 }, "geometry": { "type": "Point", "coordinates": [ -74.924594, 40.202162 ] } }
+]
+}
