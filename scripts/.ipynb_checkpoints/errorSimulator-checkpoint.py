@@ -39,8 +39,8 @@ class ErrorSimulator(ErrorDocumentor):
         self.jump_on = jump_on
         
         
-        self.easting_drift_const = .01 #average drift per meter
-        self.northing_drift_const = .01 #average drift per meter
+        self.easting_drift_const = .1 #average drift per meter
+        self.northing_drift_const = .1 #average drift per meter
         
         self.total_error = Coord(0,0)
         self.errors = []
@@ -59,7 +59,7 @@ class ErrorSimulator(ErrorDocumentor):
         """
         self.pg=pg
         
-    def add_error(self, interval):
+    def add_error(self, interval, start = False):
         """
         Desc:
             returns the error to be added either E, N, or H | default value is 0
@@ -68,8 +68,25 @@ class ErrorSimulator(ErrorDocumentor):
             pg, PositionGenerator() for the drift error in error per meter travelled by the tractor
         Output:
             return --> float | default 0
-        """        
-        if self.is_real:
+        """   
+        if start:
+            #then it is real and needs an error to be added
+            
+            self.drift_e = 0
+            self.drift_n = 0
+            
+            self.jump_e = 0
+            self.jump_n = 0
+
+            #record total epoch error
+            self.errors.append(Coord(self.drift_e+self.jump_e,self.drift_n+self.jump_n))
+
+            self.total_error.e = self.total_error.E()+self.drift_e+self.jump_e
+            self.total_error.n = self.total_error.N()+self.drift_n+self.jump_n
+            
+            self.record_errors()
+            
+        elif self.is_real:
             """
             TODO:
                 Cut increments if the next point excedes the outerfield

@@ -15,8 +15,9 @@ class PathFollower(Vector):
     """
     Follows a desired path in increments and incorporates simulation errors
     """
+    dist = -1
     
-    def __init__(self, start, end, interval = 1, es = ErrorSimulator(), order = 1, plan = True, real = False):
+    def __init__(self, start, end, interval = 1, es = ErrorSimulator(), order = 1, plan = True, real = False, distance = 0):
         """
         Desc:
         Input
@@ -43,20 +44,23 @@ class PathFollower(Vector):
         self.plan = plan
         self.real = real
         
-        self.dist = self.distance(self.start, self.end)
-        print(self.dist)
+        #print(distance)
+        if self.dist == -1:
+            self.dist = self.distance(self.start, self.end)
+            #else it has been made by the pass generator for passes
+
         self.vect = self.unit(self.vector(self.start, self.end))
         
         self.increments = int(self.dist / self.interval + 1)
-
-        if plan:
-            #then this is an upper or lower bound track
-            self.remainder = self.dist % self.interval
+            
+        self.remainder = self.dist % self.interval
+            
+        if plan:            
             if self.remainder - self.interval / 2 < 0:
                 #then we need to make it equal to less than 0 so that the pass is not incorporated
                 self.remainder = self.remainder - self.interval
-        else:
-            self.remainder = self.dist % self.interval
+            
+            
         
         self.segment()
     
@@ -83,6 +87,10 @@ class PathFollower(Vector):
         #setup lists to be extracted
         self.point_order = np.arange(1,self.increments+1,1)
         self.segment_order = np.ones((self.increments))*self.order
+        
+        if not self.plan and self.real:
+            self.es.add_error(0, True)
+            print("hi")
         self.segments = [self.start]
         
         for i in range(1, self.increments):
@@ -94,7 +102,7 @@ class PathFollower(Vector):
             
             self.segments.append(next_Pnt)
             
-        if self.remainder > 0 or self.real:
+        if self.remainder > 0:
             #make next error
             self.es.add_error(self.remainder)
             

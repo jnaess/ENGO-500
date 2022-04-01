@@ -30,6 +30,7 @@ class ErrorDocumentor(ErrorOutputter):
         self.error_cumulative = [[0],[0]]#[E,N]
         self.error_absolute_cumulative = [[0],[0]]#[E,N]
         
+            
     def record_errors(self):
         """
         Desc:
