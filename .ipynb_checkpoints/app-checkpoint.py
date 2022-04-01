@@ -6,6 +6,13 @@ from flask import Flask, redirect, render_template, request, session, jsonify
 from flask_session import Session
 import requests
 
+import pandas as pd
+from shapely.geometry import Point
+import pkg_resources
+from geopandas import GeoDataFrame
+import json
+    
+
 app = Flask(__name__)
 
 # Configure session to use filesystem
@@ -17,7 +24,8 @@ Session(app)
 # Main page
 @app.route('/')
 def index():
-    return render_template("index.html")
+
+    return render_template('index.html')
 
 # Research and Development page
 @app.route("/R_D")
@@ -27,7 +35,19 @@ def R_D():
 # Software Demo page
 @app.route("/Software_Demo", methods=['POST', 'GET'])
 def Software_Demo():
-    return render_template("Software_Demo.html")
+
+    df = pd.DataFrame({#'zip':[19152,19047],
+                   'Lat':[40.058841,40.202162],
+                   'Lon':[-75.042164,-74.924594]})
+
+    geometry = [Point(xy) for xy in zip(df.Lon, df.Lat)]
+
+    gdf = GeoDataFrame(df, geometry=geometry)
+
+    geoJSON = gdf.to_json()
+    geoJSON = json.loads(geoJSON)
+
+    return render_template("Software_Demo.html", geoJSON = geoJSON)
 
 
 # Loading page for Software Demo
