@@ -1,6 +1,5 @@
 import re
 import os
-import time
 
 from flask import Flask, redirect, render_template, request, session, jsonify
 from flask_session import Session
@@ -34,6 +33,8 @@ def Software_Demo():
 @app.route("/loading", methods=['POST', 'GET'])
 def loading():
     return render_template("loading.html")
+
+
 
 if __name__ == "__main__":
     app.run()
