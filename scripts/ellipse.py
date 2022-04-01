@@ -68,8 +68,10 @@ class Ellipse(Coord):
         if self.rad_cc <= std_out*1.:
             #inside circle
             return True
-        else:
-            return False
+        elif self.rad_cc > .1:
+            return False #track jump error
+        
+        else: return True #not a track jump level
           
     def plot_ellipse_pnt(self):
         """
