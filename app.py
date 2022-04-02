@@ -11,6 +11,9 @@ import pkg_resources
 from geopandas import GeoDataFrame
 import json
 
+import psycopg2
+from sqlalchemy import create_engine
+
 from cs50 import SQL
 #from flask_sqlalchemy import SQLAlchemy
 
@@ -23,6 +26,15 @@ app = Flask(__name__)
 # Configure Database
 db = SQL("postgresql://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr") 
 
+<<<<<<< HEAD
+#db = SQLAlchemy(app)
+
+db = SQL("postgresql://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr") 
+
+#db = SQL("postgres://tdordoxeldwmqu:8f5dd3c7322b6a83fa9279eb76cdc139979adcc7b3c03ace597bac1661d1e696@ec2-34-239-196-254.compute-1.amazonaws.com:5432/dal40v64r9dbnv")
+            
+=======
+>>>>>>> 35f83770a05f4723d6eb7eeb26fafa9bb003bb01
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -32,8 +44,35 @@ Session(app)
 # Main page
 @app.route('/')
 def index():
+<<<<<<< HEAD
+    data = {'bottom_left_e' : [0],
+                   'bottom_left_n' : [0],
+                   'bottom_right_e' : [0],
+                   'bottom_right_n' : [0],
+                   'top_left_e' : [0],
+                   'top_left_n' : [0],
+                   'top_right_e' : [0],
+                   'top_right_n' : [0],
+                   'coord_system' : ["hiii"]}
+
+    df = pd.DataFrame.from_dict(data)
+
+    server = 'ec2-52-3-60-53.compute-1.amazonaws.com' 
+    database = 'd3kr6lkene46qr' 
+    username = 'mnonspcirnraqg' 
+    password = '7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626' 
+
+
+    engine = create_engine(f'postgresql+psycopg2://{username}:{password}@{server}/{database}')
+    con = engine.connect()
+    df.to_sql('simulations', con=con, if_exists='append', index=False)
+    con.close()
+    
+    #df1 = db.execute("SELECT * FROM Simulations")
+=======
     #printer()
     
+>>>>>>> 35f83770a05f4723d6eb7eeb26fafa9bb003bb01
     user = db.execute("SELECT * FROM simulations LIMIT 50")
     
     print(user)
