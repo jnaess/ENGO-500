@@ -1,16 +1,31 @@
 import pandas as pd
-import matplotlib
-#from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, savefig
-from fpdf import FPDF
+import matplotlib.pyplot as plt
+import io
+import base64
+import numpy as np
 
 
 
 def reporter():
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font('Arial', 'B', 16)
-    pdf.cell(40, 10, 'Hello World!')
-    pdf.output('static/PDF/tuto1.pdf', 'F')
+    
+    df = {}
+    
+    # Plot 1
+    data1 = io.BytesIO()
+    plt.plot([1, 2, 3, 4])
+    plt.ylabel('some numbers')
+    plt.savefig(data, format='png', bbox_inches="tight")
+    plt.close()
+    encoded_img_data1 = base64.b64encode(data1.getvalue())
+    
+    # Plot 2
+    data2 = io.BytesIO()
+    plt.plot([5, 6, 7, 8])
+    plt.ylabel('some more numbers')
+    plt.savefig(data, format='png', bbox_inches="tight")
+    plt.close()
+    encoded_img_data2 = base64.b64encode(data2.getvalue())
+
 
 """
 df = pd.DataFrame()

@@ -2,9 +2,8 @@ import re
 import os
 import io
 
+import numpy as np
 
-
-from PIL import Image
 import base64
 
 from flask import Flask, redirect, render_template, request, session, jsonify
@@ -111,21 +110,34 @@ def loading():
     
     data = db.execute("SELECT * FROM simulations LIMIT 50")
     
-    reporter()
+    #reporter()
     return render_template("loading.html", data=data)
 
 @app.route("/report")
 def report():
+
     
-    data = io.BytesIO()
+    # Plot 1
+    data1 = io.BytesIO()
     plt.plot([1, 2, 3, 4])
     plt.ylabel('some numbers')
     plt.savefig(data, format='png', bbox_inches="tight")
     plt.close()
+    encoded_img_data1 = base64.b64encode(data1.getvalue())
+    
+    # Plot 2
+    data2 = io.BytesIO()
+    plt.plot([5, 6, 7, 8])
+    plt.ylabel('some more numbers')
+    plt.savefig(data, format='png', bbox_inches="tight")
+    plt.close()
+    encoded_img_data2 = base64.b64encode(data2.getvalue())
     
     #im = Image.open("static/Images/Evan.png")
-  
-    encoded_img_data = base64.b64encode(data.getvalue())
+    
+    dic = {encoded_img_data1, encoded_img_data2}
+    print(dic)
+    
 
     return render_template("report.html", img_data=encoded_img_data.decode('UTF-8'))
 

@@ -1,16 +1,16 @@
 import pandas as pd
-import matplotlib
-#from pylab import title, figure, xlabel, ylabel, xticks, bar, legend, axis, savefig
-from fpdf import FPDF
+import matplotlib.pyplot as plt
+import io
+import base64
+import numpy as np
 
 
 
 def reporter():
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font('Arial', 'B', 16)
-    pdf.cell(40, 10, 'Hello World!')
-    pdf.output('static/PDF/tuto1.pdf', 'F')
+    
+
+    
+    return(df)
 
 """
 df = pd.DataFrame()

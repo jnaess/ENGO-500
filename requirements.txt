@@ -14,3 +14,4 @@ fpdf
 sqlalchemy
 pillow
 pybase64
+fpdf
