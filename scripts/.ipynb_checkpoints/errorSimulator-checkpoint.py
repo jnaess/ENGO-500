@@ -16,7 +16,9 @@ class ErrorSimulator(ErrorDocumentor):
     Simulates the error which is incorporated in pathFollower
     """
     
-    def __init__(self, drift_on = False, jump_on = False):
+    def __init__(self, drift_on = False, jump_on = False, 
+                 easting_drift_const = .01,
+                northing_drift_const = .01):
         """
         Desc:
         Input:
@@ -39,8 +41,8 @@ class ErrorSimulator(ErrorDocumentor):
         self.jump_on = jump_on
         
         
-        self.easting_drift_const = .1 #average drift per meter
-        self.northing_drift_const = .1 #average drift per meter
+        self.easting_drift_const = easting_drift_const #average drift per meter
+        self.northing_drift_const = northing_drift_const #average drift per meter
         
         self.total_error = Coord(0,0)
         self.errors = []
@@ -123,8 +125,8 @@ class ErrorSimulator(ErrorDocumentor):
             self.pg.generate_one()
 
             #generate drift error
-            self.drift_e = interval*self.pg.unique_pnt.E()*self.easting_drift_const
-            self.drift_n = interval*self.pg.unique_pnt.N()*self.northing_drift_const
+            self.drift_e = interval*self.easting_drift_const+self.pg.unique_pnt.E()
+            self.drift_n = interval*self.northing_drift_const+self.pg.unique_pnt.N()
             
         else:
             #then the error for this is zero

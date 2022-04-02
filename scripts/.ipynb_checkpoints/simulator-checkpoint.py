@@ -24,7 +24,8 @@ class Simulator(SpatialOpps, PassGenerator):
     Contains and manages the simulation of our data
     """
 
-    def __init__(self, vertices, inProj = 4326, outProj = 3857, to_out = False, interval = 1, tractor_width = 1.5, use_drift = False, use_jump=False):
+    def __init__(self, vertices, inProj = 4326, outProj = 3857, to_out = False, interval = 1, tractor_width = 1.5, use_drift = False, use_jump=False, easting_drift_const = .01,
+                northing_drift_const = .01):
         """
         Desc:
         Input:
@@ -43,7 +44,8 @@ class Simulator(SpatialOpps, PassGenerator):
         
         self.read_in_vertices(vertices)
         
-        PassGenerator.__init__(self, vertices = self.vertices, tractor_width = tractor_width, interval = interval, es = ErrorSimulator(use_drift, use_jump))
+        PassGenerator.__init__(self, vertices = self.vertices, tractor_width = tractor_width, interval = interval, es = ErrorSimulator(use_drift, use_jump, easting_drift_const = easting_drift_const,
+                northing_drift_const = northing_drift_const))
         
         self.analyze()
 
