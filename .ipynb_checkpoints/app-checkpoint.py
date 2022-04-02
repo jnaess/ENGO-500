@@ -48,9 +48,8 @@ Session(app)
 @app.route('/')
 def index():
 
-    from manager import Manager
-
     manager = Manager()
+    
     return render_template('index.html')
 
 # Research and Development page
