@@ -3,12 +3,9 @@ requests
 Flask-Session
 pandas
 gunicorn
-matplotlib.patches
+matplotlib
 numpy
-matplotlib.pyplot
-math
-numpy
-time
 tqdm
-pylab
-shapely.geometry
+shapely
+geopandas
+SQLAlchemy
