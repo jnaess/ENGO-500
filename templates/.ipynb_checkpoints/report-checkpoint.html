@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class = "row">
+        <div class = "col">
+            <br>
+            <h5>View the Report Here:</h5>
+            <embed src="{{ url_for('static', filename = 'PDF/tuto1.pdf') }}" width="800px" height="1150px" />
+        </div>
+    </div>
+    
+            
+
+{% endblock %}
