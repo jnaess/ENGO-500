@@ -1,2 +1,14 @@
 flask
-flask_session
+requests
+Flask-Session
+pandas
+gunicorn
+matplotlib.patches
+numpy
+matplotlib.pyplot
+math
+numpy
+time
+tqdm
+pylab
+shapely.geometry
