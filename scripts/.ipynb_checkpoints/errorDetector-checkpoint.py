@@ -13,7 +13,7 @@ from tqdm import tqdm
 from opps import Opps
 from point import Coord
 from ellipse import Ellipse
-from errorDetectionComputations import ErrorDetectionComputations
+#from errorDetectionComputations import ErrorDetectionComputations
 from errorDetectionInitializer import ErrorDetectionInitializer
 from errorCompiler import ErrorCompiler
 

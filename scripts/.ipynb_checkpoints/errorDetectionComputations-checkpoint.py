@@ -97,7 +97,7 @@ class ErrorDetectionComputations(ErrorRecorder):
             #previous vector to true
         self.prev_vector_to_true = self.vector(self.curr_True, self.prev) #Coord()
             
-            #change in error **this is what gets recorded**
+            #change in error *this is what gets recorded*
         self.error_change = Coord(self.curr_vector_to_true.E() - self.prev_vector_to_true.E(),
                                      self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()
         
@@ -133,7 +133,7 @@ class ErrorDetectionComputations(ErrorRecorder):
             #previous vector to true
         self.prev_vector_to_true = self.vector(self.prev_True, self.prev) #Coord()
             
-            #change in error **this is what gets recorded**
+            #change in error *this is what gets recorded*
         self.error_change = Coord(self.curr_vector_to_true.E() - self.prev_vector_to_true.E(),
                                      self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()    
         
