@@ -47,7 +47,7 @@ class Simulator(SpatialOpps, PassGenerator):
         PassGenerator.__init__(self, vertices = self.vertices, tractor_width = tractor_width, interval = interval, es = ErrorSimulator(use_drift, use_jump, easting_drift_const = easting_drift_const,
                 northing_drift_const = northing_drift_const))
         
-        self.analyze()
+        #self.analyze()
 
         
     def read_in_vertices(self, vertices):
