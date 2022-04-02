@@ -39,9 +39,9 @@ def index():
     ED = ErrorDetector(df, tru_E, tru_N, rename_keys = rename_keys, true_std = std, is_static=False)
 
     ED.generate_error_dataframe()
-    ED.drift_df.to_csv("test_analysis_drift.csv")
-    ED.jump_df.to_csv("test_analysis_jump.csv")
-    ED.errors_df.to_csv("test_analysis_errors.csv")
+    ED.drift_df.to_csv("scripts/test_analysis_drift.csv")
+    ED.jump_df.to_csv("scripts/test_analysis_jump.csv")
+    ED.errors_df.to_csv("scripts/test_analysis_errors.csv")
     
     return render_template('index.html')
 
