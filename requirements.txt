@@ -9,3 +9,5 @@ tqdm
 shapely
 geopandas
 cs50
+psycopg2
+fpdf
