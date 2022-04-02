@@ -122,3 +122,43 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+
+
+   <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Zero Pass</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data2 }}">
+            <br>
+            <h6>Zero pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
+    <br>
+    
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Single Pass</h5>
+            <img id="picture" src="data:image/png;base64, {{ img2_data2 }}">
+            <br>
+            <h6>Single pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
+    <br>
+    
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Double Pass</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Double pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
