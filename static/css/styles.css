@@ -33,6 +33,23 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
+
+.report{
+    background-color:  #fff;
+    
+}
+
+.table tr.white-bg{
+  background: white;
+}
+
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+}
+
 .col-md-2per{ 
     width: 2%; 
 }

@@ -1,12 +1,120 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class = "report">    
+    <!-- Heading -->
+    <br>
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h4 class="text-left"><u>Simulation Report</u></h4>
+        </div>
+        <div class = "col"></div>
+    <hr/>
+  </div>
+    
+    <!-- First Page --> 
+   <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Zero Pass</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data2 }}">
+            <br>
+            <h6>Zero pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
+    <br>
+    
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Single Pass</h5>
+            <img id="picture" src="data:image/png;base64, {{ img2_data2 }}">
+            <br>
+            <h6>Single pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
+    <br>
+    
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Double Pass</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Double pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
+    <br>
+    
+      <!-- Table -->
+        <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+                <h5>Pass Summary Table</h5>
+              <thead>
+                <tr class="white-bg">
+                  <th>Pass Type</th>
+                    <th>Area ( m<sup>2</sup> )</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="white-bg">
+                  <td>Zero Pass</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+                <tr class="white-bg">
+                  <td>Single Pass</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+                <tr class="white-bg">
+                  <td>Double Pass</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+              <h6>This table provides a summary of the pass area coverage</h6>
+          </div>
+        </div>
+    <br>
+    
+        <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Pass Summary</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Pass summary graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
 
-<div class = "row">
-    <div class = "col">
-        <img id="picture" src="data:image/png;base64, {{ img_data }}">
-    </div>
+    <!-- Second Page -->
+   <div class="pagebreak"></div>
+    
+        <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Position Drifts</h5>
+            <img id="picture" src="data2:image/png;base64, {{ img2_data }}">
+            <br>
+            <h6>Single pass graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
 </div>
+    
     
     
             

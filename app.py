@@ -20,7 +20,6 @@ import psycopg2
 from sqlalchemy import create_engine
 
 from cs50 import SQL
-#from flask_sqlalchemy import SQLAlchemy
 import matplotlib.pyplot as plt
 
 from reports import reporter
@@ -90,28 +89,25 @@ def report():
 
     
     # Plot 1
-    data1 = io.BytesIO()
+    data = io.BytesIO()
     plt.plot([1, 2, 3, 4])
     plt.ylabel('some numbers')
     plt.savefig(data, format='png', bbox_inches="tight")
     plt.close()
-    encoded_img_data1 = base64.b64encode(data1.getvalue())
+    encoded_img_data = base64.b64encode(data.getvalue())
     
     # Plot 2
-    data2 = io.BytesIO()
-    plt.plot([5, 6, 7, 8])
+    data = io.BytesIO()
+    plt.plot([1, 2, 3, 4])
     plt.ylabel('some more numbers')
     plt.savefig(data, format='png', bbox_inches="tight")
     plt.close()
-    encoded_img_data2 = base64.b64encode(data2.getvalue())
+    encoded_img_data2 = base64.b64encode(data.getvalue())
     
     #im = Image.open("static/Images/Evan.png")
     
-    dic = {encoded_img_data1, encoded_img_data2}
-    print(dic)
-    
 
-    return render_template("report.html", img_data=encoded_img_data.decode('UTF-8'))
+    return render_template("report.html", img_data=encoded_img_data.decode('UTF-8'), img_data2=encoded_img_data2.decode('UTF-8'))
 
 
 if __name__ == "__main__":
