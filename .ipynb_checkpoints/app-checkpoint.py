@@ -10,7 +10,9 @@ from shapely.geometry import Point
 import pkg_resources
 from geopandas import GeoDataFrame
 import json
-    
+
+from classes import *
+from test_folder.test_script import printer
 
 app = Flask(__name__)
 
@@ -23,7 +25,7 @@ Session(app)
 # Main page
 @app.route('/')
 def index():
-
+    printer()
     return render_template('index.html')
 
 # Research and Development page
