@@ -10,8 +10,6 @@ shapely
 geopandas
 cs50
 psycopg2
-fpdf
 sqlalchemy
-pillow
 pybase64
-fpdf
+pygeos
