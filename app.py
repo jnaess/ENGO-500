@@ -48,7 +48,7 @@ Session(app)
 @app.route('/')
 def index():
 
-    manager = Manager()
+    #manager = Manager()
     
     return render_template('index.html')
 
