@@ -19,12 +19,20 @@ class TrackRecorder():
         """
         self.out_file = out_file
     
+<<<<<<< HEAD
     def output_tracks(self):
+=======
+    def generate_output_tracks(self):
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
         """
         Desc:
             Creates a csv of the tracks
         Input:
         Output:
+<<<<<<< HEAD
+=======
+            self.output_tracks, DataFrame
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
         """
         self.prep_tracks()
         
@@ -40,6 +48,16 @@ class TrackRecorder():
                   
         self.output_tracks = pd.DataFrame(self.true_keys)
         
+<<<<<<< HEAD
+=======
+    def track_to_csv(self):
+        """
+        Desc:
+            outputs self.output_tracks to a csv
+        Input:
+        Output:
+        """
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
         self.output_tracks.to_csv(self.out_file)
         
     def dataframe_true_track(self):
@@ -99,10 +117,17 @@ class TrackRecorder():
             self.true_keys
         """
         self.true_keys = {
+<<<<<<< HEAD
             'True_E' : self.T_Easting,
             'True_N' : self.T_Northing,
             'True_E_std' : self.T_E_std,
             'True_N_std' : self.T_N_std}
+=======
+            'true_e' : self.T_Easting,
+            'true_n' : self.T_Northing,
+            'true_e_std' : self.T_E_std,
+            'true_n_std' : self.T_N_std}
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
         
     def record_real_track(self):
         """
@@ -136,7 +161,14 @@ class TrackRecorder():
             self.true_keys
         """
         self.real_keys = {
+<<<<<<< HEAD
             'Real_E' : self.R_Easting,
             'Real_N' : self.R_Northing,
             'Real_E_std' : self.R_E_std,
             'Real_N_std' : self.R_N_std}
+=======
+            'real_e' : self.R_Easting,
+            'real_n' : self.R_Northing,
+            'real_e_std' : self.R_E_std,
+            'real_n_std' : self.R_N_std}
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d

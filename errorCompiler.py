@@ -70,13 +70,13 @@ class ErrorCompiler():
             self.jump_keys
         """
         self.jump_keys = {
-                'Jump_Status': self.jump_status, #T/F
-                'Jump_Individual_E': self.jump_individual[0:,0], #float [E
-                'Jump_Individual_N': self.jump_individual[0:,1], #float [N]
-                'Jump_Cumulative_E': self.jump_cumulative[0:,0], #cumulative [E]
-                'Jump_Cumulative_N': self.jump_cumulative[0:,1], #cumulative [N]
-                'Jump_Absolute_Cumulative_E': self.jump_absolute_cumulative[0:,0], #absolute cumulative [E]
-                'Jump_Absolute_Cumulative_N': self.jump_absolute_cumulative[0:,1]} #absolute cumulative [N]
+                'jump_status': self.jump_status, #T/F
+                'jump_individual_e': self.jump_individual[0:,0], #float [E
+                'jump_individual_n': self.jump_individual[0:,1], #float [N]
+                'jump_cumulative_e': self.jump_cumulative[0:,0], #cumulative [E]
+                'jump_cumulative_n': self.jump_cumulative[0:,1], #cumulative [N]
+                'jump_absolute_cumulative_e': self.jump_absolute_cumulative[0:,0], #absolute cumulative [E]
+                'jump_absolute_cumulative_n': self.jump_absolute_cumulative[0:,1]} #absolute cumulative [N]
 
     def generate_drift_keys(self):
         """
@@ -87,13 +87,13 @@ class ErrorCompiler():
             self.drift_keys
         """
         self.drift_keys = {
-                'Drift_Status': self.drift_status, #T/F
-                'Drift_Individual_E': self.drift_individual[0:,0], #float [E, N]
-                'Drift_Individual_N': self.drift_individual[0:,1], #float [E, N]
-                'Drift_Cumulative_E': self.drift_cumulative[0:,0],  #cumulative [E, N]
-                'Drift_Cumulative_N': self.drift_cumulative[0:,1],  #cumulative [E, N]
-                'Drift_Absolute_Cumulative_E': self.drift_absolute_cumulative[0:,0], #absolute cumulative [E, N]
-                'Drift_Absolute_Cumulative_N': self.drift_absolute_cumulative[0:,1]} #absolute cumulative [E, N]
+                'drift_status': self.drift_status, #T/F
+                'drift_individual_e': self.drift_individual[0:,0], #float [E, N]
+                'drift_individual_n': self.drift_individual[0:,1], #float [E, N]
+                'drift_cumulative_e': self.drift_cumulative[0:,0],  #cumulative [E, N]
+                'drift_cumulative_n': self.drift_cumulative[0:,1],  #cumulative [E, N]
+                'drift_absolute_cumulative_e': self.drift_absolute_cumulative[0:,0], #absolute cumulative [E, N]
+                'drift_absolute_cumulative_n': self.drift_absolute_cumulative[0:,1]} #absolute cumulative [E, N]
 
     def generate_error_keys(self):
         """
@@ -104,13 +104,13 @@ class ErrorCompiler():
             self.error_keys
         """
         self.error_keys = {
-                'Error_Status': self.error_status, #T/F
-                'Error_Individual_E': self.error_individual[0:,0], #cumulative [E, N]
-                'Error_Individual_N': self.error_individual[0:,1], #cumula[0:,0]tive [E, N]
-                'Error_Cumulative_E': self.error_cumulative[0:,0], #cumula[0:,0]tive [E, N]
-                'Error_Cumulative_N': self.error_cumulative[0:,1], #cumulative [E, N]
-                'Error_Absolute_Cumulative_E': self.error_absolute_cumulative[0:,0], #absolute cumulative [E, N]
-                'Error_Absolute_Cumulative_N': self.error_absolute_cumulative[0:,1]} #absolute cumulative [E, N]
+                'error_status': self.error_status, #T/F
+                'error_individual_e': self.error_individual[0:,0], #cumulative [E, N]
+                'error_individual_n': self.error_individual[0:,1], #cumula[0:,0]tive [E, N]
+                'error_cumulative_e': self.error_cumulative[0:,0], #cumula[0:,0]tive [E, N]
+                'error_cumulative_n': self.error_cumulative[0:,1], #cumulative [E, N]
+                'error_absolute_cumulative_e': self.error_absolute_cumulative[0:,0], #absolute cumulative [E, N]
+                'error_absolute_cumulative_n': self.error_absolute_cumulative[0:,1]} #absolute cumulative [E, N]
         
         
             

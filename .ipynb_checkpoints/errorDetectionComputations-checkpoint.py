@@ -52,11 +52,19 @@ class ErrorDetectionComputations(ErrorRecorder):
         #setup the initial coords
         #of the "real" locations
         self.prev = Coord(0,0) 
+<<<<<<< HEAD
         self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
 
             #update epochs
         self.prev_Epoch = 0
         self.curr_Epoch = self.row["Epoch"]
+=======
+        self.curr = Ellipse(self.row["easting"], self.row["northing"], std = [self.row["east_sig"], self.row["north_sig"]])
+
+            #update epochs
+        self.prev_Epoch = 0
+        self.curr_Epoch = self.row["epoch"]
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
         
         if self.is_static:
             #of the true locations
@@ -79,11 +87,19 @@ class ErrorDetectionComputations(ErrorRecorder):
         
                     #update "real" positions
         self.prev = self.curr
+<<<<<<< HEAD
         self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
                 
             #epdate epochs
         self.prev_Epoch = self.curr_Epoch
         self.curr_Epoch = self.row["Epoch"]
+=======
+        self.curr = Ellipse(self.row["easting"], self.row["northing"], std = [self.row["east_sig"], self.row["north_sig"]])
+                
+            #epdate epochs
+        self.prev_Epoch = self.curr_Epoch
+        self.curr_Epoch = self.row["epoch"]
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
             
             #previous real and current real
         self.dist_to_prev = self.distance(self.prev, self.curr) #float
@@ -115,11 +131,19 @@ class ErrorDetectionComputations(ErrorRecorder):
         
         #update "real" positions
         self.prev = self.curr
+<<<<<<< HEAD
         self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
                 
             #epdate epochs
         self.prev_Epoch = self.curr_Epoch
         self.curr_Epoch = self.row["Epoch"]
+=======
+        self.curr = Ellipse(self.row["easting"], self.row["northing"], std = [self.row["east_sig"], self.row["north_sig"]])
+                
+            #epdate epochs
+        self.prev_Epoch = self.curr_Epoch
+        self.curr_Epoch = self.row["epoch"]
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d
             
             #previous real and current real
         self.dist_to_prev = self.distance(self.prev, self.curr) #float
@@ -149,6 +173,7 @@ class ErrorDetectionComputations(ErrorRecorder):
             self.blunder
         """    
         self.flag_errors()
+<<<<<<< HEAD
         
         """print(f"\n\t self.prev: {self.prev} \n \
         self.curr: {self.curr} \n \
@@ -172,3 +197,7 @@ class ErrorDetectionComputations(ErrorRecorder):
                 'Jump_Absolute_Cumulative_N': self.jump_absolute_cumulative[self.i,1]} #absolute cumulative [N]
         
         #print(self.jump_keys)"""
+=======
+
+        self.record_errors()
+>>>>>>> 8a7a57438f2df9d35d87bd8ac1895ff6dde5f40d

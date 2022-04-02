@@ -52,11 +52,11 @@ class ErrorDetectionComputations(ErrorRecorder):
         #setup the initial coords
         #of the "real" locations
         self.prev = Coord(0,0) 
-        self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
+        self.curr = Ellipse(self.row["easting"], self.row["northing"], std = [self.row["east_sig"], self.row["north_sig"]])
 
             #update epochs
         self.prev_Epoch = 0
-        self.curr_Epoch = self.row["Epoch"]
+        self.curr_Epoch = self.row["epoch"]
         
         if self.is_static:
             #of the true locations
@@ -79,11 +79,11 @@ class ErrorDetectionComputations(ErrorRecorder):
         
                     #update "real" positions
         self.prev = self.curr
-        self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
+        self.curr = Ellipse(self.row["easting"], self.row["northing"], std = [self.row["east_sig"], self.row["north_sig"]])
                 
             #epdate epochs
         self.prev_Epoch = self.curr_Epoch
-        self.curr_Epoch = self.row["Epoch"]
+        self.curr_Epoch = self.row["epoch"]
             
             #previous real and current real
         self.dist_to_prev = self.distance(self.prev, self.curr) #float
@@ -115,11 +115,11 @@ class ErrorDetectionComputations(ErrorRecorder):
         
         #update "real" positions
         self.prev = self.curr
-        self.curr = Ellipse(self.row["Easting"], self.row["Northing"], std = [self.row["East_Sig"], self.row["North_Sig"]])
+        self.curr = Ellipse(self.row["easting"], self.row["northing"], std = [self.row["east_sig"], self.row["north_sig"]])
                 
             #epdate epochs
         self.prev_Epoch = self.curr_Epoch
-        self.curr_Epoch = self.row["Epoch"]
+        self.curr_Epoch = self.row["epoch"]
             
             #previous real and current real
         self.dist_to_prev = self.distance(self.prev, self.curr) #float
@@ -149,26 +149,5 @@ class ErrorDetectionComputations(ErrorRecorder):
             self.blunder
         """    
         self.flag_errors()
-        
-        """print(f"\n\t self.prev: {self.prev} \n \
-        self.curr: {self.curr} \n \
-        self.prev_Epoch: {self.prev_Epoch} \n \
-        self.curr_Epoch: {self.curr_Epoch} \n \
-        self.dist_to_prev: {self.dist_to_prev} \n \
-        self.dist_to_true: {self.dist_to_true} \n \
-        self.curr_vector_to_true: {self.curr_vector_to_true} \n \
-        self.prev_vector_to_true: {self.prev_vector_to_true} \n \
-        self.error_change: {self.error_change}")"""
-        
+
         self.record_errors()
-        """#print(f"drift_status b: {self.drift_status[self.i]}")
-        self.jump_keys = {
-                'Jump_Status': self.drift_individual[self.i], #T/F
-                'Jump_Individual_E': self.drift_individual[self.i,0], #float [E
-                'Jump_Individual_N': self.drift_individual[self.i,1], #float [N]
-                'Jump_Cumulative_E': self.drift_cumulative[self.i,0], #cumulative [E]
-                'Jump_Cumulative_N': self.drift_cumulative[self.i,1], #cumulative [N]
-                'Jump_Absolute_Cumulative_E': self.drift_absolute_cumulative[self.i,0], #absolute cumulative [E]
-                'Jump_Absolute_Cumulative_N': self.jump_absolute_cumulative[self.i,1]} #absolute cumulative [N]
-        
-        #print(self.jump_keys)"""
