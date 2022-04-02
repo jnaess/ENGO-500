@@ -74,7 +74,11 @@ def Software_Demo():
 # Loading page for Software Demo
 @app.route("/loading", methods=['POST', 'GET'])
 def loading():
-    return render_template("loading.html")
+    
+    
+    data = db.execute("SELECT * FROM simulations LIMIT 50")
+    
+    return render_template("loading.html", data=data)
 
 
 if __name__ == "__main__":
