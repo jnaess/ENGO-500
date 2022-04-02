@@ -16,6 +16,7 @@ from cs50 import SQL
 
 
 from classes import *
+from reports import reporter
 
 app = Flask(__name__)
 
@@ -68,6 +69,7 @@ def loading():
     
     data = db.execute("SELECT * FROM simulations LIMIT 50")
     
+    reporter()
     return render_template("loading.html", data=data)
 
 
