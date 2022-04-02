@@ -1,5 +1,11 @@
 import re
 import os
+import io
+
+
+
+from PIL import Image
+import base64
 
 from flask import Flask, redirect, render_template, request, session, jsonify
 from flask_session import Session
@@ -16,7 +22,7 @@ from sqlalchemy import create_engine
 
 from cs50 import SQL
 #from flask_sqlalchemy import SQLAlchemy
-
+import matplotlib.pyplot as plt
 
 from classes import *
 from reports import reporter
@@ -110,7 +116,19 @@ def loading():
 
 @app.route("/report")
 def report():
-    return render_template("report.html")
+    
+    data = io.BytesIO()
+    plt.plot([1, 2, 3, 4])
+    plt.ylabel('some numbers')
+    plt.savefig(data, format='png', bbox_inches="tight")
+    plt.close()
+    
+    #im = Image.open("static/Images/Evan.png")
+  
+    encoded_img_data = base64.b64encode(data.getvalue())
+
+    return render_template("report.html", img_data=encoded_img_data.decode('UTF-8'))
+
 
 if __name__ == "__main__":
     app.run()
