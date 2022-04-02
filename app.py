@@ -24,8 +24,8 @@ from cs50 import SQL
 #from flask_sqlalchemy import SQLAlchemy
 import matplotlib.pyplot as plt
 
-from classes import *
 from reports import reporter
+from manager import Manager
 
 app = Flask(__name__)
 
@@ -49,36 +49,9 @@ Session(app)
 @app.route('/')
 def index():
 
-    data = {'bottom_left_e' : [0],
-                   'bottom_left_n' : [0],
-                   'bottom_right_e' : [0],
-                   'bottom_right_n' : [0],
-                   'top_left_e' : [0],
-                   'top_left_n' : [0],
-                   'top_right_e' : [0],
-                   'top_right_n' : [0],
-                   'coord_system' : ["hiii"]}
+    from manager import Manager
 
-    df = pd.DataFrame.from_dict(data)
-
-    server = 'ec2-52-3-60-53.compute-1.amazonaws.com' 
-    database = 'd3kr6lkene46qr' 
-    username = 'mnonspcirnraqg' 
-    password = '7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626' 
-
-
-    engine = create_engine(f'postgresql+psycopg2://{username}:{password}@{server}/{database}')
-    con = engine.connect()
-    df.to_sql('simulations', con=con, if_exists='append', index=False)
-    con.close()
-    
-    #df1 = db.execute("SELECT * FROM Simulations")
-
-    #printer()
-
-    user = db.execute("SELECT * FROM simulations LIMIT 50")
-    
-    print(user)
+    manager = Manager()
     return render_template('index.html')
 
 # Research and Development page
