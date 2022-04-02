@@ -30,7 +30,24 @@ app.config[‘SQLALCHEMY_DATABASE_URI’] = postgres://mnonspcirnraqg:7919dd02f6
 # Main page
 @app.route('/')
 def index():
-    printer()
+
+    goal_file = "scripts/Output_Tracks.csv"
+
+    df = pd.read_csv(goal_file)
+
+    df.columns
+    std = [df['True_N_std'].to_list(),df['True_N_std'].to_list()]
+    tru_N = df['True_N_std'].to_list()
+    tru_E = df['True_E_std'].to_list()
+    rename_keys = ["Unnamed: 0", "Real_E", "Real_N", "Real_E_std", "Real_N_std"]
+
+    ED = ErrorDetector(df, tru_E, tru_N, rename_keys = rename_keys, true_std = std, is_static=False)
+
+    ED.generate_error_dataframe()
+    ED.drift_df.to_csv("test_analysis_drift.csv")
+    ED.jump_df.to_csv("test_analysis_jump.csv")
+    ED.errors_df.to_csv("test_analysis_errors.csv")
+    
     return render_template('index.html')
 
 # Research and Development page
