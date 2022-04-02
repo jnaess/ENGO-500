@@ -8,4 +8,5 @@ numpy
 tqdm
 shapely
 geopandas
-SQLAlchemy
+flask-sqlalchemy
+cs50
