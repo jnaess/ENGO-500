@@ -24,30 +24,11 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-# Setup database
-app.config[‘SQLALCHEMY_DATABASE_URI’] = postgres://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr
 
 # Main page
 @app.route('/')
 def index():
-
-    goal_file = "scripts/Output_Tracks.csv"
-
-    df = pd.read_csv(goal_file)
-
-    df.columns
-    std = [df['True_N_std'].to_list(),df['True_N_std'].to_list()]
-    tru_N = df['True_N_std'].to_list()
-    tru_E = df['True_E_std'].to_list()
-    rename_keys = ["Unnamed: 0", "Real_E", "Real_N", "Real_E_std", "Real_N_std"]
-
-    ED = ErrorDetector(df, tru_E, tru_N, rename_keys = rename_keys, true_std = std, is_static=False)
-
-    ED.generate_error_dataframe()
-    ED.drift_df.to_csv("test_analysis_drift.csv")
-    ED.jump_df.to_csv("test_analysis_jump.csv")
-    ED.errors_df.to_csv("test_analysis_errors.csv")
-    
+    printer()
     return render_template('index.html')
 
 # Research and Development page
