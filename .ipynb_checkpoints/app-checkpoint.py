@@ -20,14 +20,8 @@ from classes import *
 app = Flask(__name__)
 
 # Configure Database
-#app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr"
-
-#db = SQLAlchemy(app)
-
 db = SQL("postgresql://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr") 
 
-#db = SQL("postgres://tdordoxeldwmqu:8f5dd3c7322b6a83fa9279eb76cdc139979adcc7b3c03ace597bac1661d1e696@ec2-34-239-196-254.compute-1.amazonaws.com:5432/dal40v64r9dbnv")
-            
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -39,11 +33,7 @@ Session(app)
 def index():
     #printer()
     
-    #df1 = []
-    
-    #df1 = db.execute("SELECT * FROM Simulations")
     user = db.execute("SELECT * FROM simulations LIMIT 50")
-    #user = db.execute("SELECT * FROM users")
     
     print(user)
     return render_template('index.html')
