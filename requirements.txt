@@ -12,3 +12,5 @@ cs50
 psycopg2
 fpdf
 sqlalchemy
+pillow
+pybase64
