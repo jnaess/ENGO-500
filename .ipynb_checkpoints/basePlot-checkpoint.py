@@ -29,8 +29,9 @@ class BasePlot():
         Output:
         """
         fig, ax = plt.subplots()
-
-        fig.patch.set_facecolor('xkcd:mint green')
+        
+        # Colour outside axes
+        fig.patch.set_facecolor('xkcd:white')
 
         self.set_parameters(ax, x_label, y_label, title)
 
@@ -62,7 +63,8 @@ class BasePlot():
         
         fig, ax = plt.subplots(figsize = (8,8))
 
-        fig.patch.set_facecolor('xkcd:mint green')
+        # Colour outside axes
+        fig.patch.set_facecolor('xkcd:white')
 
         self.set_parameters(ax, x_label, y_label, title)
 
@@ -94,11 +96,19 @@ class BasePlot():
         """
         ax.set_aspect('equal')
         
+        # Adding labels
         ax.set_ylabel(y_label)
         ax.set_xlabel(x_label)
         ax.set_title(title)
-
-        ax.set_facecolor("yellow")
+        
+        # Colour within axes
+        ax.set_facecolor("white")
+        
+        # Axis colours
+        ax.spines['bottom'].set_color('black')
+        ax.spines['top'].set_color('black')
+        ax.spines['right'].set_color('black')
+        ax.spines['left'].set_color('black')
         
     def set_legend(self):
         """
@@ -109,6 +119,6 @@ class BasePlot():
         """
         legend = plt.legend(frameon = 1, loc = 1, bbox_to_anchor = (1.2, 1))
         frame = legend.get_frame()
-        frame.set_facecolor('purple')
+        frame.set_facecolor('white')
         frame.set_edgecolor('white')
         frame.set_linewidth(0)
