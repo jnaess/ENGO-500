@@ -17,7 +17,7 @@ class BasePlot():
         Output:
         """
 
-    def plot_fig(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", shapes = False, shape_colors = []):
+    def plot_fig(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title"):
         """
         Desc:
         Input:
@@ -36,11 +36,7 @@ class BasePlot():
 
         for i in range(len(x)):
             ax.plot(x[i],y[i], label = line_label[i])
-
-        if shapes:
-            for i in range(len(shapes)):
-                #, color = shape_colors[i],
-                shapes[i].plot(ax=ax, column = "title", legend=True)
+        
         
         plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
         
@@ -60,6 +56,10 @@ class BasePlot():
             shape_colors, ["#49e37c", ... , "#bd7b5e"]
         Output:
         """
+        if len(shapes) != len(shape_colors):
+            print("color and shape lists are not equal in length")
+            return
+        
         fig, ax = plt.subplots(figsize = (8,8))
 
         fig.patch.set_facecolor('xkcd:mint green')
@@ -69,22 +69,19 @@ class BasePlot():
         #this one to be appended to
         gdf = pd.concat( shapes, ignore_index=True)
         color_dict = {}
+        
+        #setup the color dictionary
         for i in range(len(shapes)):
             #map out the colors
-            color_dict[shapes[i]['title'][0]] = shape_colors[i]
+            color_dict[shapes[i]['title'].to_list()[0]] = shape_colors[i]
             
-            ##if i != 0:
-             #   #create one large dataframe
-             #   gdf.append(shapes[i])
                 
         #plot everything)    
         gdf.plot(ax=ax, 
                 column = "title", 
                 legend=True, 
                 cmap=colors.ListedColormap(list(color_dict.values())),
-                legend_kwds={'bbox_to_anchor': (1.2, 1)})
-        
-        plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
+                legend_kwds={'bbox_to_anchor': (1.23, 1)})
         
         plt.show()   
         
@@ -110,7 +107,7 @@ class BasePlot():
         Input:
         Output:
         """
-        legend = plt.legend(frameon = 1, loc = 1)
+        legend = plt.legend(frameon = 1, loc = 1, bbox_to_anchor = (1.2, 1))
         frame = legend.get_frame()
         frame.set_facecolor('purple')
         frame.set_edgecolor('white')
