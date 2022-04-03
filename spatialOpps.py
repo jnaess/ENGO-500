@@ -59,7 +59,7 @@ class SpatialOpps():
         #display(gdf_poly)
         #gdf_poly.plot()
         
-        return gdf_pt, gdf_line, gdf_poly
+        return gdf_pt[["geometry"]], gdf_line, gdf_poly
     
     def gdf_polygon(self, poly, color='#20873f'):
         """
@@ -87,4 +87,23 @@ class SpatialOpps():
         
         return gdf_poly
     
+    def add_title(self, gdf, title = "a"):
+        """
+        Desc:
+            adds a columns to the gdf dataframe for the title
+        Input:
+            gdf, GeopandasDataFrame
+            title, "string
+        Output
+            retunrs --> gdf
+        """
+        rows = len(list(gdf.index))
+        arr = []
+        
+        for i in range(rows):
+            arr.append(title)
+
+        gdf["title"] = arr
+        
+        return gdf
     

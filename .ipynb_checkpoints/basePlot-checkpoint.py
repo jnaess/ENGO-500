@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
+import matplotlib.colors as colors
 import numpy as np
+import pandas as pd
+import geopandas as gpd
+
 
 class BasePlot():
     """
@@ -13,7 +17,7 @@ class BasePlot():
         Output:
         """
 
-    def plot_fig(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", shapes = False, shape_colors = [], shape_labels = []):
+    def plot_fig(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", shapes = False, shape_colors = []):
         """
         Desc:
         Input:
@@ -35,14 +39,54 @@ class BasePlot():
 
         if shapes:
             for i in range(len(shapes)):
-                shapes[i].plot(ax=ax, color = shape_colors[i], column = shape_labels[i], legend=True)
+                #, color = shape_colors[i],
+                shapes[i].plot(ax=ax, column = "title", legend=True)
         
         plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
         
 
         self.set_legend()
         
-        plt.show()    
+        plt.show() 
+        
+    def plot_gdf(self, shapes = [], shape_colors = [], x_label="x_label", y_label="y_label", title="title"):
+        """
+        Desc:
+        Input:
+            x, [[x1s], ... ,[x2s]]
+            y, [[y1s], ... [y2s]]
+            line_label, ["line1", ... , "line 2"]
+            shapes, False or [GeoDataFrame, ... , GeoDataFrame]
+            shape_colors, ["#49e37c", ... , "#bd7b5e"]
+        Output:
+        """
+        fig, ax = plt.subplots(figsize = (8,8))
+
+        fig.patch.set_facecolor('xkcd:mint green')
+
+        self.set_parameters(ax, x_label, y_label, title)
+
+        #this one to be appended to
+        gdf = pd.concat( shapes, ignore_index=True)
+        color_dict = {}
+        for i in range(len(shapes)):
+            #map out the colors
+            color_dict[shapes[i]['title'][0]] = shape_colors[i]
+            
+            ##if i != 0:
+             #   #create one large dataframe
+             #   gdf.append(shapes[i])
+                
+        #plot everything)    
+        gdf.plot(ax=ax, 
+                column = "title", 
+                legend=True, 
+                cmap=colors.ListedColormap(list(color_dict.values())),
+                legend_kwds={'bbox_to_anchor': (1.2, 1)})
+        
+        plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
+        
+        plt.show()   
         
     def set_parameters(self, ax, x_label="x_label", y_label="y_label", title="title"):
         """

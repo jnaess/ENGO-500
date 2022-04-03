@@ -21,6 +21,7 @@ class Plotter(BasePlot):
         #---> self.plot_a()
         
         #zero pass plot
+        #---> self.plot_b()
         
         #one pass plot
         
@@ -49,9 +50,21 @@ class Plotter(BasePlot):
             self.Sim.gdf_pt
         Output:
         """
-        self.plot_fig(shapes = [self.Sim.single_pass],
-                      shape_colors = ['#915ebd'],
-                      shape_labels = ["Single Pass"],
+        self.plot_gdf(shapes = [self.Sim.zero_pass],
+                      shape_colors = ['red'],
+                      x_label = "Easting", 
+                      y_label = "Northing", 
+                      title = "Zero Pass")
+        
+    def plot_c(self):
+        """
+        Desc:
+        Input:
+            self.Sim.gdf_pt
+        Output:
+        """
+        self.plot_gdf(shapes = [self.Sim.single_pass, self.Sim.zero_pass],
+                      shape_colors = ['orange', '#915ebd'],
                       x_label = "Easting", 
                       y_label = "Northing", 
                       title = "True Track")
