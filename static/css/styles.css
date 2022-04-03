@@ -33,6 +33,19 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
+
+
+.table tr.white-bg{
+  background: white;
+}
+
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+}
+
 .col-md-2per{ 
     width: 2%; 
 }
@@ -139,6 +152,7 @@ nav a:hover::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top:auto; 
 }
 
 .foot-1 {

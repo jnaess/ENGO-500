@@ -1,12 +1,179 @@
 {% extends "layout.html" %}
 
-{% block content %}
-
-<div class = "row">
-    <div class = "col">
-        <img id="picture" src="data:image/png;base64, {{ img_data }}">
+{% block content %}   
+    <!-- Heading -->
+    <br>
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h4 class="text-left"><u>Simulation Report</u></h4>
+        </div>
+        <div class = "col"></div>
+    <hr/>
+  </div>
+    
+    <!-- First Page --> 
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Area Coverage Summary</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data2 }}">
+            <br>
+            <h6>The graphic aobve shows the generate field coverage, comparing cases of under (zero pass), ideal (single pass), and over (double pass) coverage.</h6>
+        </div>
+        <div class = "col"></div>
+  </div>
+    
+    <br>
+    
+      <!-- Table -->
+        <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+                <h5>Pass Summary Table</h5>
+              <thead>
+                <tr class="white-bg">
+                  <th>Pass Type</th>
+                    <th>Area ( m<sup>2</sup> )</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="white-bg">
+                  <td>Zero Pass</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+                <tr class="white-bg">
+                  <td>Single Pass</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+                <tr class="white-bg">
+                  <td>Double Pass</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+              <h6>This table provides a summary of the pass area coverage</h6>
+          </div>
+        </div>
+    <br>
+    
+        <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Pass Summary</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Pass summary graphic shown above</h6>
+        </div>
+        <div class = "col"></div>
     </div>
-</div>
+
+    
+    
+    <!-- Second Page -->
+   <div class="pagebreak"></div>
+    
+        <div class="row">           
+          <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+            <h5>Position Drifts</h5>
+                <thead>
+                <tr class="white-bg">
+                  <th></th>
+                    <th>&sigma; (m)</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                    <td>Easting</td>
+                    <td>0</td>
+                   </tr>
+                   <tr class="white-bg">
+                    <td>Northing</td>
+                    <td>0</td>
+                   </tr>
+                </tbody>
+              </table>
+                  <h6>This table shows the standard normalized standard devation from the observed to true positions</h6>
+              </div>
+            </div>
+        </div>
+    
+      <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Detected Track Jumps</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Detected position jump throughout entire epoch</h6>
+        </div>
+        <div class = "col"></div>
+    </div>
+    
+    
+ 
+    <div class="row">           
+          <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+            <h5>Position Drifts</h5>
+                <thead>
+                <tr class="white-bg">
+                  <th>Quantifiable</th>
+                    <th>Easting (m)</th>
+                    <th>Northing (m)</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                    <td>Mean Pass-to-Pass Error</td>
+                    <td>0</td>
+                     <td>0</td>
+                   </tr>
+                   <tr class="white-bg">
+                    <td>Error Range</td>
+                    <td>0</td>
+                     <td>0</td>
+                   </tr>
+                   <tr class="white-bg">
+                    <td>Pass-to-Pass Variance</td>
+                    <td>0</td>
+                     <td>0</td>
+                   </tr>
+                   <tr class="white-bg">
+                    <td>Pass-to-Pass Sample Standard Deviation</td>
+                    <td>0</td>
+                     <td>0</td>
+                   </tr>
+                </tbody>
+              </table>
+                  <h6>This table shows summarizes the pass-to-pass analytics</h6>
+              </div>
+            </div>
+        </div>
+    
+       <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Pass-to-Pass Accuracy</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Relative pass-to-pass accuracy over 15 minute epochs</h6>
+        </div>
+        <div class = "col"></div>
+    </div>
+    
+    
+
+    
+
+
+    
     
     
             
