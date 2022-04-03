@@ -3,6 +3,8 @@ import matplotlib.colors as colors
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+import base64
+import io
 
 
 class BasePlot():
