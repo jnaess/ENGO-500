@@ -23,7 +23,12 @@ class Manager(DatabaseManager, Plotter):
                  jump_occurance_probability = 5,
                  drift_variability = Coord(0,0, std = [.01, .01]),
                  easting_jump_const = .2,
-                 northing_jump_const = .2):
+                 northing_jump_const = .2,
+                 tractor_speed = 1, 
+                 epoch_frequency = 1, 
+                 rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"], 
+                 is_static = True, 
+                 true_std = [.1,.1]):
         """
         Desc:
         Input:
@@ -32,6 +37,7 @@ class Manager(DatabaseManager, Plotter):
         DatabaseManager.__init__(self)
         Plotter.__init__(self)
         
+        #simulator stuff
         self.use_drift = use_drift
         self.use_jump = use_jump
         self.easting_drift_const = easting_drift_const
@@ -41,6 +47,13 @@ class Manager(DatabaseManager, Plotter):
         self.drift_variability = drift_variability
         self.easting_jump_const = easting_jump_const
         self.northing_jump_const = northing_jump_const
+        
+        #error detector parameters
+        self.tractor_speed = tractor_speed
+        self.epoch_frequency = epoch_frequency 
+        self.rename_keys = rename_keys
+        self.is_static = is_static
+        self.true_std = true_std
         
         self.retrieve_sim_data()
         self.initialize_simulator()
@@ -79,8 +92,8 @@ class Manager(DatabaseManager, Plotter):
         sim_id = 2
 
         #coordinates
-        #self.field = [[0,0],[0,10],[10,10],[10,0]]
-        self.field = [[0,0],[0,100],[100,100],[100,0]]
+        self.field = [[0,0],[0,10],[10,10],[10,0]]
+        #self.field = [[0,0],[0,100],[100,100],[100,0]]
 
         #generates simulation tracks
         self.Sim = Simulator(vertices = self.field, 
@@ -114,10 +127,14 @@ class Manager(DatabaseManager, Plotter):
         std = [self.df_sim['true_e_std'].to_list(),self.df_sim['true_n_std'].to_list()]
         tru_N = self.df_sim['true_n'].to_list()
         tru_E = self.df_sim['true_e'].to_list()
-        rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"]
 
         #run error detector simulation
-        self.ED = ErrorDetector(self.df_sim, tru_E, tru_N, rename_keys = rename_keys, true_std = std, is_static=False)
+        self.ED = ErrorDetector(self.df_sim, 
+                                tru_E, 
+                                tru_N, 
+                                rename_keys = self.rename_keys, 
+                                true_std = std, 
+                                is_static=self.is_static)
 
         #store error detector values as a dataframe
         self.ED.generate_error_dataframe()

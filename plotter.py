@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from basePlot import BasePlot
+import base64
+import io
 
 class Plotter(BasePlot):
     """
@@ -34,7 +36,20 @@ class Plotter(BasePlot):
         
         
         
+    def convert_to_png(self):
+        """
+        Desc:
+        Input
+        Output:
+        """
+        data = io.BytesIO()
+        plt.savefig(data, format='png', bbox_inches="tight")
+        plt.close()
         
+        encoded_img_data = base64.b64encode(data.getvalue())
+        
+        return encoded_img_data.decode('UTF-8')
+    
     def plot_a(self):
         """
         Desc:
@@ -51,6 +66,9 @@ class Plotter(BasePlot):
                       y_label = "Northing", 
                       title = "True Track")
         
+        return self.convert_to_png()
+                
+        
     def plot_b(self):
         """
         Desc:
@@ -64,6 +82,8 @@ class Plotter(BasePlot):
                       y_label = "Northing", 
                       title = "Zero Pass")
         
+        return self.convert_to_png()
+        
     def plot_c(self):
         """
         Desc:
@@ -76,6 +96,8 @@ class Plotter(BasePlot):
                       x_label = "Easting", 
                       y_label = "Northing", 
                       title = "Single Pass")
+        
+        return self.convert_to_png()
 
         
     def plot_d(self):
@@ -90,6 +112,8 @@ class Plotter(BasePlot):
                       x_label = "Easting", 
                       y_label = "Northing", 
                       title = "Double Pass")
+        
+        return self.convert_to_png()
 
     def plot_e(self):
         """
@@ -111,6 +135,8 @@ class Plotter(BasePlot):
                       x_label = "Easting", 
                       y_label = "Northing", 
                       title = "Track Summary")
+        
+        return self.convert_to_png()
 
         
     #----------- JE below here-----------

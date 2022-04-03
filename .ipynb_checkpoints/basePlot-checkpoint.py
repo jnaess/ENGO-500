@@ -3,6 +3,8 @@ import matplotlib.colors as colors
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+import base64
+import io
 
 
 class BasePlot():
@@ -47,7 +49,7 @@ class BasePlot():
         
         self.set_legend()
         
-        plt.show() 
+        #plt.show() 
         
     def plot_gdf(self, shapes = [], shape_colors = [], x_label="x_label", y_label="y_label", title="title"):
         """
@@ -92,7 +94,7 @@ class BasePlot():
         #plt.xlim(0, 12)
         #plt.ylim(0, 12)
         
-        plt.show()   
+        #plt.show()   
         
     def set_parameters(self, ax, x_label="x_label", y_label="y_label", title="title"):
         """
