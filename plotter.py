@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from basePlot import BasePlot
+import base64
+import io
 
 class Plotter(BasePlot):
     """
@@ -41,7 +43,7 @@ class Plotter(BasePlot):
         Output:
         """
         data = io.BytesIO()
-        plt.savefig(data, format='png')
+        plt.savefig(data, format='png', bbox_inches="tight")
         plt.close()
         
         encoded_img_data = base64.b64encode(data.getvalue())

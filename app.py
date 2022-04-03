@@ -24,6 +24,7 @@ import matplotlib.pyplot as plt
 
 from reports import reporter
 from manager import Manager
+from point import Coord
 
 app = Flask(__name__)
 
@@ -129,10 +130,17 @@ def report():
     plt.close()
     encoded_img_data2 = base64.b64encode(data.getvalue())
     
+
+
+    manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
+                      jump_occurance_probability = 500,
+                      easting_jump_const = 0,
+                      northing_jump_const = .2)
+    test = manager.plot_a()
     #im = Image.open("static/Images/Evan.png")
     
 
-    return render_template("report.html", img_data=img, img_data2=encoded_img_data2.decode('UTF-8'))
+    return render_template("report.html", img_data=test, img_data2=encoded_img_data2.decode('UTF-8'))
 
 
 if __name__ == "__main__":
