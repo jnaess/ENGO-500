@@ -24,8 +24,21 @@ class Simulator(SpatialOpps, PassGenerator):
     Contains and manages the simulation of our data
     """
 
-    def __init__(self, vertices, inProj = 4326, outProj = 3857, to_out = False, interval = 1, tractor_width = 1.5, use_drift = False, use_jump=False, easting_drift_const = .01,
-                northing_drift_const = .01):
+    def __init__(self, vertices, 
+                 inProj = 4326, 
+                 outProj = 3857, 
+                 to_out = False, 
+                 interval = 1, 
+                 tractor_width = 1.5, 
+                 use_drift = False, 
+                 use_jump=False, 
+                 easting_drift_const = .01,
+                 northing_drift_const = .01,
+                 mean_jump = Coord(0,0,std = [.05, .05]),
+                 jump_occurance_probability = 5,
+                 drift_variability = Coord(0,0, std = [.01, .01]),
+                 easting_jump_const = .2,
+                 northing_jump_const = .2):
         """
         Desc:
         Input:
@@ -44,8 +57,18 @@ class Simulator(SpatialOpps, PassGenerator):
         
         self.read_in_vertices(vertices)
         
-        PassGenerator.__init__(self, vertices = self.vertices, tractor_width = tractor_width, interval = interval, es = ErrorSimulator(use_drift, use_jump, easting_drift_const = easting_drift_const,
-                northing_drift_const = northing_drift_const))
+        PassGenerator.__init__(self, vertices = self.vertices, 
+                               tractor_width = tractor_width, 
+                               interval = interval, 
+                               es = ErrorSimulator(drift_on = use_drift, 
+                                                     jump_on = use_jump, 
+                                                     easting_drift_const = easting_drift_const,
+                                                     northing_drift_const = northing_drift_const,
+                                                     mean_jump = mean_jump,
+                                                     jump_occurance_probability = jump_occurance_probability,
+                                                     drift_variability = drift_variability,
+                                                  easting_jump_const = easting_jump_const,
+                                                  northing_jump_const = northing_jump_const))
         
         self.analyze()
 

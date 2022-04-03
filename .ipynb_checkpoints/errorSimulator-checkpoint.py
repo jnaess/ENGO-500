@@ -4,6 +4,7 @@ import math as m
 from matplotlib import collections  as mc
 plt.style.use('seaborn-whitegrid')
 import pylab as pl
+from random import randint
 
 from polygon import polygon
 from point import Coord
@@ -16,9 +17,16 @@ class ErrorSimulator(ErrorDocumentor):
     Simulates the error which is incorporated in pathFollower
     """
     
-    def __init__(self, drift_on = False, jump_on = False, 
+    def __init__(self, 
+                 drift_on = False, 
+                 jump_on = False, 
                  easting_drift_const = .01,
-                northing_drift_const = .01):
+                 northing_drift_const = .01,
+                 mean_jump = Coord(0,0,std = [.05, .05]),
+                 jump_occurance_probability = 5,
+                 drift_variability = Coord(0,0, std = [.01, .01]),
+                 easting_jump_const = .2,
+                 northing_jump_const = .2):
         """
         Desc:
         Input:
@@ -44,13 +52,28 @@ class ErrorSimulator(ErrorDocumentor):
         self.easting_drift_const = easting_drift_const #average drift per meter
         self.northing_drift_const = northing_drift_const #average drift per meter
         
+        self.easting_jump_const = easting_jump_const #average jump
+        self.northing_jump_const = northing_jump_const #average jump
+        
         self.total_error = Coord(0,0)
         self.errors = []
         self.drift_errors = []
         self.jump_errors = []
         
-        self.pg = PositionGenerator()
-
+        #jump occurance pobability per epoch
+        self.jump_occurance_probability = jump_occurance_probability #[1-10000]
+        #jump variability [T/F, T/F] --> True for variablity, False for only the input jump error number
+        
+        self.mean_jump = mean_jump
+        self.drift_variability = drift_variability
+        #jump magnitude [E, N]
+        
+        #for drift    
+        self.pg = PositionGenerator(self.drift_variability)
+        
+        #for jump
+        self.pg_jump = PositionGenerator(self.mean_jump)
+        
     def update_PG(self, pg):
         """
         Desc:
@@ -121,6 +144,7 @@ class ErrorSimulator(ErrorDocumentor):
             self.drift_n --> current northing drift error
         """
         if self.drift_on:
+            
             #generate new statistical random error
             self.pg.generate_one()
 
@@ -145,21 +169,33 @@ class ErrorSimulator(ErrorDocumentor):
         Input:
             interval, float --> the distance that the error is being multiplied by (calculated to be 1m --> then scaled by interval distance) **maybe?? for jupm error...**
             pg, PositionGenerator() for the drift error in error per meter travelled by the tractor
+            #jump occurance pobability
+            #jump variability [T/F, T/F] --> True for variablity, False for only the input jump error number
+            #jump magnitude [E, N]
         Output:
             self.jump_e --> current easting drift error
             self.jump_n --> current northing drift error
         """
         if self.jump_on:
-            #set to zero because probability is not get included
-            self.jump_e = 0
-            self.jump_n = 0
-            
-            if abs(self.jump_e) > 0 or abs(self.jump_n) > 0:
+            if randint(1,10000) <= self.jump_occurance_probability:
+                #then a jump will occur
                 self.jump_happened = True
+                
+                self.pg_jump.generate_one()
+                
+                #generate drift error
+                self.jump_e = self.easting_jump_const + self.pg_jump.unique_pnt.E()
+                self.jump_n = self.northing_jump_const + self.pg_jump.unique_pnt.N()
+                            
             else:
+                #then the error for this is zero
                 self.jump_happened = False
+                #generate jump error
+                self.jump_e = 0
+                self.jump_n = 0
         else:
             #then the error for this is zero
+            self.jump_happened = False
             #generate jump error
             self.jump_e = 0
             self.jump_n = 0

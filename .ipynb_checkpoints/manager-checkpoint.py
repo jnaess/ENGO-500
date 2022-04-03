@@ -7,13 +7,23 @@ from simulator import Simulator
 from errorDetector import ErrorDetector
 from databaseManager import DatabaseManager
 from plotter import Plotter
+from point import Coord
 
 class Manager(DatabaseManager, Plotter):
     """
     Contains all simulation and error detection software to execute the primary processes in one centralized location
     """
     
-    def __init__(self):
+    def __init__(self, 
+                 use_drift = True, 
+                 use_jump = True, 
+                 easting_drift_const = .01,
+                 northing_drift_const = .01,
+                 mean_jump = Coord(0,0,std = [.05, .05]),
+                 jump_occurance_probability = 5,
+                 drift_variability = Coord(0,0, std = [.01, .01]),
+                 easting_jump_const = .2,
+                 northing_jump_const = .2):
         """
         Desc:
         Input:
@@ -21,6 +31,16 @@ class Manager(DatabaseManager, Plotter):
         """
         DatabaseManager.__init__(self)
         Plotter.__init__(self)
+        
+        self.use_drift = use_drift
+        self.use_jump = use_jump
+        self.easting_drift_const = easting_drift_const
+        self.northing_drift_const = northing_drift_const
+        self.mean_jump = mean_jump
+        self.jump_occurance_probability = jump_occurance_probability
+        self.drift_variability = drift_variability
+        self.easting_jump_const = easting_jump_const
+        self.northing_jump_const = northing_jump_const
         
         self.retrieve_sim_data()
         self.initialize_simulator()
@@ -60,9 +80,19 @@ class Manager(DatabaseManager, Plotter):
 
         #coordinates
         self.field = [[0,0],[0,10],[10,10],[10,0]]
+        #self.field = [[0,0],[0,100],[100,100],[100,0]]
 
         #generates simulation tracks
-        self.Sim = Simulator(self.field, use_drift=True, easting_drift_const = .01, northing_drift_const = .01)
+        self.Sim = Simulator(vertices = self.field, 
+                             use_drift = self.use_drift,
+                                use_jump = self.use_jump,
+                                easting_drift_const = self.easting_drift_const,
+                                northing_drift_const = self.northing_drift_const,
+                                mean_jump = self.mean_jump,
+                                jump_occurance_probability = self.jump_occurance_probability,
+                                drift_variability = self.drift_variability,
+                            easting_jump_const = self.easting_jump_const,
+        northing_jump_const = self.northing_jump_const)
 
         #generates dataframe of values
         self.Sim.generate_output_tracks()
