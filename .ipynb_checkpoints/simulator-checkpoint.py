@@ -100,10 +100,13 @@ class Simulator(SpatialOpps, PassGenerator):
         self.outer_gdf = self.gdf_polygon(self.outer)
         
         #zero_pass
-        self.zero_pass = gpd.overlay(self.T_gdf_poly, self.R_gdf_poly, how='difference')
+        self.temp = gpd.overlay(self.T_gdf_poly, self.R_gdf_poly, how='difference')
+        self.zero_pass = gpd.overlay(self.inner_gdf, self.temp, how='intersection') #only take real that is inside inner
 
         #single pass
-        self.single_pass = gpd.overlay(self.T_gdf_poly, self.R_gdf_poly, how="intersection")
+        self.temp2 = gpd.overlay(self.inner_gdf, self.R_gdf_poly, how="intersection") #only take what was inside inner
+        self.single_pass = gpd.overlay(self.R_gdf_poly, self.temp2, how="intersection") #not covered by real pass either
         
-        #double pass
-        
+        #double pass --> this does NOT account for passes overlapping eachother
+        self.temp3 = gpd.overlay(self.R_gdf_poly, self.inner_gdf, how="difference") #only take what was outside inner
+        self.double_pass = gpd.overlay(self.temp3, self.T_gdf_poly, how='difference')  #only take waht was not already going to be passed by true path

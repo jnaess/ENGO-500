@@ -6,8 +6,9 @@ import numpy as np
 from simulator import Simulator
 from errorDetector import ErrorDetector
 from databaseManager import DatabaseManager
+from plotter import Plotter
 
-class Manager(DatabaseManager):
+class Manager(DatabaseManager, Plotter):
     """
     Contains all simulation and error detection software to execute the primary processes in one centralized location
     """
@@ -19,11 +20,12 @@ class Manager(DatabaseManager):
         Output
         """
         DatabaseManager.__init__(self)
+        Plotter.__init__(self)
         
         self.retrieve_sim_data()
         self.initialize_simulator()
         self.initialize_error_detector()
-        self.push_data()
+        #self.push_data()
     
     def retrieve_sim_data(self, sim_id = -1):
         """
