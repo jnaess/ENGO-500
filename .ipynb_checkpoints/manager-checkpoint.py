@@ -79,8 +79,8 @@ class Manager(DatabaseManager, Plotter):
         sim_id = 2
 
         #coordinates
-        self.field = [[0,0],[0,10],[10,10],[10,0]]
-        #self.field = [[0,0],[0,100],[100,100],[100,0]]
+        #self.field = [[0,0],[0,10],[10,10],[10,0]]
+        self.field = [[0,0],[0,100],[100,100],[100,0]]
 
         #generates simulation tracks
         self.Sim = Simulator(vertices = self.field, 
