@@ -31,7 +31,7 @@ class BasePlot():
         fig, ax = plt.subplots()
         
         # Colour outside axes
-        fig.patch.set_facecolor('xkcd:white')
+        fig.patch.set_facecolor('xkcd:light grey')
 
         self.set_parameters(ax, x_label, y_label, title)
 
@@ -41,7 +41,10 @@ class BasePlot():
         
         plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
         
-
+        # Set plot limits
+        #plt.xlim(0, 12)
+        #plt.ylim(0, 12)
+        
         self.set_legend()
         
         plt.show() 
@@ -64,7 +67,7 @@ class BasePlot():
         fig, ax = plt.subplots(figsize = (8,8))
 
         # Colour outside axes
-        fig.patch.set_facecolor('xkcd:white')
+        fig.patch.set_facecolor('xkcd:light grey')
 
         self.set_parameters(ax, x_label, y_label, title)
 
@@ -84,6 +87,10 @@ class BasePlot():
                 legend=True, 
                 cmap=colors.ListedColormap(list(color_dict.values())),
                 legend_kwds={'bbox_to_anchor': (1.23, 1)})
+        
+        # Set limits
+        #plt.xlim(0, 12)
+        #plt.ylim(0, 12)
         
         plt.show()   
         
