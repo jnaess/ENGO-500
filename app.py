@@ -84,6 +84,30 @@ def loading():
     #reporter()
     return render_template("loading.html", data=data)
 
+
+# Rout to run the simulator
+@app.route("/simulator", methods=['POST', 'GET'])
+def simulator():
+    
+    manager = Manager(mean_jump = Coord(0,0, std = [.0, .0]),
+                  jump_occurance_probability = 500,
+                  easting_jump_const = 0.1,
+                  northing_jump_const = 0.1)
+
+    manager.df_sim
+
+    manager.ED.drift_df
+    manager.ED.jump_df
+    manager.ED.errors_df
+    
+    # Track comparison
+    manager.plot_a()
+    
+    return render_template("simulator.html")
+
+
+
+
 @app.route("/report")
 def report():
 
@@ -95,19 +119,20 @@ def report():
     plt.savefig(data, format='png', bbox_inches="tight")
     plt.close()
     encoded_img_data = base64.b64encode(data.getvalue())
+    img = encoded_img_data.decode('UTF-8')
     
     # Plot 2
     data = io.BytesIO()
     plt.plot([1, 2, 3, 4])
     plt.ylabel('some more numbers')
-    plt.savefig(data, format='png', bbox_inches="tight")
+    plt.savefig(data, format='png')
     plt.close()
     encoded_img_data2 = base64.b64encode(data.getvalue())
     
     #im = Image.open("static/Images/Evan.png")
     
 
-    return render_template("report.html", img_data=encoded_img_data.decode('UTF-8'), img_data2=encoded_img_data2.decode('UTF-8'))
+    return render_template("report.html", img_data=img, img_data2=encoded_img_data2.decode('UTF-8'))
 
 
 if __name__ == "__main__":
