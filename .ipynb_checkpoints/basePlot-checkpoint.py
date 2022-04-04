@@ -53,7 +53,39 @@ class BasePlot():
         self.set_legend(anchor)
         
         plt.show() 
+    
+    def plot_pts(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", aspect = True, anchor = 1.2, alpha = 1, linewidth = 1, color = False):
+        """
+        Desc:
+        Input:
+            x, [[x1s], ... ,[x2s]]
+            y, [[y1s], ... [y2s]]
+            line_label, ["line1", ... , "line 2"]
+            shapes, False or [GeoDataFrame, ... , GeoDataFrame]
+            shape_colors, ["#49e37c", ... , "#bd7b5e"]
+        Output:
+        """
+        fig, ax = plt.subplots()
         
+        # Colour outside axes
+        fig.patch.set_facecolor('xkcd:light grey')
+
+        self.set_parameters(ax, x_label, y_label, title, aspect = aspect)
+
+        for i in range(len(x)):
+            if not color:
+                ax.scatter(x[i],y[i], label = line_label[i], alpha = alpha)     
+                ax.plot(x[i],np.zeros(len(x[i])))
+        
+        plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0)
+        
+        # Set plot limits
+        #plt.xlim(0, 12)
+        #plt.ylim(0, 12)
+        
+        self.set_legend(anchor)
+        
+        plt.show() 
         
     def plot_gdf(self, shapes = [], shape_colors = [], x_label="x_label", y_label="y_label", title="title", aspect = True):
         """
