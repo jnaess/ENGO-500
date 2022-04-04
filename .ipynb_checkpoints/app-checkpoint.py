@@ -120,10 +120,6 @@ def report():
     plt.close()
     encoded_img_data2 = base64.b64encode(data.getvalue())
     
-<<<<<<< HEAD
-   
-        
-=======
 
 
     manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
@@ -131,7 +127,6 @@ def report():
                       easting_jump_const = 0,
                       northing_jump_const = .2)
     test = manager.plot_a()
->>>>>>> 87bf652537b0e17a1c27347805cb935fc9a4a0a3
     #im = Image.open("static/Images/Evan.png")
     
 
