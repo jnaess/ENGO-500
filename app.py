@@ -126,8 +126,6 @@ def report():
                       easting_jump_const = 0,
                       northing_jump_const = .2)
     test = manager.plot_a()
-
-    #im = Image.open("static/Images/Evan.png")
     
 
     return render_template("report.html", img_data=test, img_data2=encoded_img_data2.decode('UTF-8'))
