@@ -26,6 +26,8 @@ from reports import reporter
 from manager import Manager
 from point import Coord
 
+import time
+
 app = Flask(__name__)
 
 # Configure Database
@@ -91,20 +93,6 @@ def loading():
 @app.route("/simulator", methods=['POST', 'GET'])
 def simulator():
     
-    manager = Manager(mean_jump = Coord(0,0, std = [.0, .0]),
-                  jump_occurance_probability = 500,
-                  easting_jump_const = 0.1,
-                  northing_jump_const = 0.1)
-
-    manager.df_sim
-
-    manager.ED.drift_df
-    manager.ED.jump_df
-    manager.ED.errors_df
-    
-    # Track comparison
-    manager.plot_a()
-    
     return render_template("simulator.html")
 
 
@@ -132,6 +120,10 @@ def report():
     plt.close()
     encoded_img_data2 = base64.b64encode(data.getvalue())
     
+<<<<<<< HEAD
+   
+        
+=======
 
 
     manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
@@ -139,6 +131,7 @@ def report():
                       easting_jump_const = 0,
                       northing_jump_const = .2)
     test = manager.plot_a()
+>>>>>>> 87bf652537b0e17a1c27347805cb935fc9a4a0a3
     #im = Image.open("static/Images/Evan.png")
     
 
