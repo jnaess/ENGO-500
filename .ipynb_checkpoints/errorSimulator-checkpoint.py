@@ -104,7 +104,7 @@ class ErrorSimulator(ErrorDocumentor):
             self.jump_n = 0
 
             #record total epoch error
-            self.errors.append(Coord(self.drift_e+self.jump_e,self.drift_n+self.jump_n))
+            self.errors.append(Coord(self.drift_e+self.jump_e,self.drift_n+self.jump_n, std = [.1,.1]))
 
             self.total_error.e = self.total_error.E()+self.drift_e+self.jump_e
             self.total_error.n = self.total_error.N()+self.drift_n+self.jump_n

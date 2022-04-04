@@ -33,12 +33,13 @@ class ErrorFlagger():
             self.track_jump T/F
         """
         #flag for jump
-        if self.prev.in_error_ellipse(self.curr, 3):
+        if self.prev.in_error_ellipse(self.curr, 3) or (self.prev.in_error_ellipse(self.tester_point, 3) and not self.is_static):
             #not a track jump
             self.track_jump = False
         else:
             #flag for potential track jump
             self.track_jump = True
+        #self.prev.plot_ellipse_pnt()
             
     def flag_blunder(self):
         """

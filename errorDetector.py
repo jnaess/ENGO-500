@@ -71,5 +71,6 @@ class ErrorDetector(Opps, ErrorDetectionInitializer, ErrorCompiler):
                     self.first = False
 
                 
-
+                #if self.i == 6:
+                #    return
 

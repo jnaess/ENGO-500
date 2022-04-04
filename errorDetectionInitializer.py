@@ -37,6 +37,7 @@ class ErrorDetectionInitializer(ErrorDetectionComputations):
         self.rename_keys = rename_keys
         self.test_values = ["epoch", "easting", "northing", "east_sig", "north_sig"]
         
+        print(f"is_static --> {self.is_static}")
         #generate the correct dataframe that we will use
         self.clean_data()
     

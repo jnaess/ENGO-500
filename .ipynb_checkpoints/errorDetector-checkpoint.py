@@ -52,18 +52,12 @@ class ErrorDetector(Opps, ErrorDetectionInitializer, ErrorCompiler):
         Input:
         Output:
         """
-        
         self.first = True
 
         with tqdm(total=self.rows, file=sys.stdout, smoothing=.1) as pbar:
             for index, row in self.data.iterrows():  
                 self.i = index
                 
-                #print(row)
-                #rate = pbar.format_dict["rate"]
-                #remaining = (pbar.total - pbar.n) / rate if rate and pbar.total else 0  # Seconds*
-                
-                #~{int(remaining)} Seconds Remaining | 
                 pbar.set_description(f'Epochs Processed: %d' % (1 + self.i), refresh=True)
                 pbar.update(1)
                 
@@ -72,14 +66,11 @@ class ErrorDetector(Opps, ErrorDetectionInitializer, ErrorCompiler):
                 #updated for this epochs values
                 self.update_epoch()
                 
-               # if self.i > 2: 
-               #     return
-                
                 if self.first:
                     #skip the first row
                     self.first = False
 
-                    #return
                 
-
+                #if self.i == 6:
+                #    return
 
