@@ -71,7 +71,12 @@
           var feature = layer.toGeoJSON();
           var coords = makePopupContent(feature);
           layer.bindPopup(coords);
-            console.log(coords)
+            console.log(coords);
+            console.log("hiiii");
+            
+            var latlng = new L.latLng(-75.149231,39.949753);
+            var point = L.Projection.Mercator.project(latlng);
+            console.log(point);
         }
 
         map.on('pm:create', function(e) {
@@ -81,8 +86,8 @@
             setPupup(e.layer);
           });
         });
-        
-        var myGeoJSON = {"type": "FeatureCollection", "features": [{"id": "0", "type": "Feature", "properties": {"Lat": 40.058841, "Lon": -75.042164}, "geometry": {"type": "Point", "coordinates": [-75.042164, 40.058841]}}, {"id": "1", "type": "Feature", "properties": {"Lat": 40.202162, "Lon": -74.924594}, "geometry": {"type": "Point", "coordinates": [-74.924594, 40.202162]}}]}
+   //     4447186.161277053, y: -12955384.44757732
+        var myGeoJSON = {"type": "FeatureCollection", "features": [{"id": "0", "type": "Feature", "properties": {"Lat": 4447186.161277053, "Lon": -12955384.44757732}, "geometry": {"type": "Point", "coordinates": [-12955384.44757732, 4447186.161277053]}}, {"id": "1", "type": "Feature", "properties": {"Lat": 40.202162, "Lon": -74.924594}, "geometry": {"type": "Point", "coordinates": [-74.924594, 40.202162]}}]}
         
         L.geoJSON(myGeoJSON).addTo(map)
     </script>
