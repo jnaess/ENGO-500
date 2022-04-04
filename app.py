@@ -62,7 +62,7 @@ def R_D():
 # Software Demo page
 @app.route("/Software_Demo", methods=['POST', 'GET'])
 def Software_Demo():
-
+    
     df = pd.DataFrame({#'zip':[19152,19047],
                    'Lat':[40.058841,40.202162],
                    'Lon':[-75.042164,-74.924594]})
@@ -75,6 +75,8 @@ def Software_Demo():
     geoJSON = json.loads(geoJSON)
 
     return render_template("Software_Demo.html", geoJSON = geoJSON)
+
+
 
 
 # Loading page for Software Demo
@@ -99,8 +101,15 @@ def simulator():
 
 
 
-@app.route("/report")
+@app.route("/report",  methods=['POST', 'GET'])
 def report():    
+    
+    corner_1 = request.form.get("corner-1")
+    corner_2 = request.form.get("corner-2")
+    corner_3 = request.form.get("corner-3")
+    corner_4 = request.form.get("corner-4")
+    
+
     
     
     # Plot 1
@@ -128,7 +137,27 @@ def report():
     #test = manager.plot_a()
     test = encoded_img_data.decode('UTF-8')
     
-    return render_template("report.html", img_data=test, img_data2=encoded_img_data2.decode('UTF-8'))
+    
+    # Hold Feild dimensions
+    corners=[corner_1, corner_2, corner_3, corner_4]
+    
+    # Cost summary params
+    seed = 0.016 # cost per m
+    fert = 0.015 # cost per m
+    herb = 0.012 # cost per m
+    crop = 0.246 # profit per m
+    net = 0.203 # net profit per m
+    cost_params = [seed, fert, herb, crop, net]
+    # Field area
+    tot_area = 10
+    
+    # Maximum profit 
+    tot_prof = net * tot_area
+    
+    # Cost of overlap
+    
+    
+    return render_template("report.html", cost_params=cost_params,  img_data=test, img_data2=encoded_img_data2.decode('UTF-8'))
 
 
 # Route to run the simulator
