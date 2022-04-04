@@ -6,7 +6,7 @@ import math as m
 
 class GeomTools(Opps):
     """
-    Contains functions to ain in geometry functions"""
+    Contains functions to aid in geometry functions"""
     
     def __init__(self):
         """

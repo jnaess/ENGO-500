@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>About</h1>
+    <div class="row">
+    <div class ="col"></div>
+    <div class ="col-8">
+        <h6 class="text-center">The table below shows a break of classes used in the software suite</h6>
+    </div>
+    <div class ="col"></div>
+</div>
+    
+     <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+                <h5>Pass Summary Table</h5>
+              <thead>
+                <tr class="white-bg">
+                  <th>Class Name</th>
+                    <th>Description</th>
+                  <th>Inherits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="white-bg">
+                  <td>Simulator</td>
+                  <td>Containes and manages simulation data</td>
+                  <td>SpatialOpps, PassGenerator</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorDetector</td>
+                  <td>Detects errors from static and dynamic datasets</td>
+                  <td>Opps, ErrorDetectionInitializer, ErrorCompiler</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorDetectionInitializer</td>
+                  <td>Initializing and incrementing errors</td>
+                  <td>ErrorDetectionComputations</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorCompiler</td>
+                  <td>Assembles completed error calculations into anlysis data</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>SpatialOpps</td>
+                  <td>Computes spatial operations</td>
+                  <td>ShapeInitializer</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ShapeInitializer</td>
+                  <td>Assembles completed error calculations into anlysis data</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>PassGenerator</td>
+                  <td>Generates all start and end points of the paths, then uses PathFollower to generate center points and direction vectors of each segment</td>
+                  <td>PathGenerator, TrackRecorder</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>PathGenerator</td>
+                  <td>Generates the path based on given polygon. Inherits the polygon functionality to build upon and reuse functions</td>
+                  <td>Polygon</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorDetectionComputations</td>
+                  <td>Error flagging, recording and incrementing for dynamic and static data</td>
+                  <td>ErrorRecorder</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>TrackRecorder</td>
+                  <td>Records and outputs the simulated paths's track. Sister to passGenerator</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorRecorder</td>
+                  <td>Adds functionality to record errors</td>
+                  <td>ErrorFlagger</td>
+                </tr>               
+                  <tr class="white-bg">
+                  <td>Polygon</td>
+                  <td>Sets up a polygon and maintains rules to ensure functionality</td>
+                  <td>GeomTools</td>
+                </tr>                
+                  <tr class="white-bg">
+                  <td>GeomTools</td>
+                  <td>Contains functions to aid in geometry functions</td>
+                  <td>Opps</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>ErrorFlagger</td>
+                  <td>Flags errors in desired order as jumps or drifts</td>
+                  <td>N/A</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>Manager</td>
+                  <td>Contains all simulation and error detection software to execute the primary processes in one centralized location</td>
+                  <td>DatabaseManager, Plotter</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>Plotter</td>
+                  <td>Generates plots ofr reports, sister to manager</td>
+                  <td>BasePlots</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>DatabaseManager</td>
+                  <td>Sets up login for database</td>
+                  <td>QueryManager</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>QueryManager</td>
+                  <td>Manages database query functions</td>
+                  <td>N/A</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>BasePlot</td>
+                  <td>Contains plotter parameters and plot generation funcitons</td>
+                  <td>N/A</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>Ellipse</td>
+                  <td>Contains error ellipse dimensions, plotting  and other functions </td>
+                  <td>Coord</td>
+                </tr>
+                  
+                <tr class="white-bg">
+                  <td>Coord</td>
+                  <td>Class contains all parameters to convert between coordinates and store coordiant values</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>Vector</td>
+                  <td>Sets up a vector with a start  point and end point</td>
+                  <td>Coord</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorDocumentor</td>
+                  <td>Inherits ErrorRecorder functionality and adds ability to record errors, jump and drift</td>
+                  <td>ErrorOutputter</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>Reporter</td>
+                  <td>Perfroms plotting and data transfers for reporting on website</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>PositionGenerator</td>
+                  <td>Generates position based on std of N/E</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorOutputter</td>
+                  <td>Generates error dataframe and keys for completed error lists</td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>PathFollower</td>
+                  <td>Follows a desired path in increments and incorporates simulation errors</td>
+                  <td>Vector</td>
+                </tr>
+                <tr class="white-bg">
+                  <td>ErrorSimulator</td>
+                  <td>Simulates error incorporated into pathFollower</td>
+                  <td>ErrorDocumentor</td>
+                </tr>
+                  
+              </tbody>
+            </table>
+              <h6>This table provides a summary of the pass area coverage</h6>
+          </div>
+        </div>
+    <br>
+    
+</div>
+{% endblock %}

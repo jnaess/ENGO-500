@@ -7,9 +7,9 @@ matplotlib
 numpy
 tqdm
 shapely
-geopandas
 cs50
 psycopg2
 sqlalchemy
 pybase64
 pygeos
+geopandas

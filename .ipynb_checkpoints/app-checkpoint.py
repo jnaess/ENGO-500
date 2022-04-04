@@ -89,7 +89,7 @@ def loading():
     return render_template("loading.html", data=data)
 
 
-# Rout to run the simulator
+# Route to run the simulator
 @app.route("/simulator", methods=['POST', 'GET'])
 def simulator():
     
@@ -125,12 +125,17 @@ def report():
                       jump_occurance_probability = 500,
                       easting_jump_const = 0,
                       northing_jump_const = .2)
-    test = manager.plot_a()
-
-    #im = Image.open("static/Images/Evan.png")
-    
-
+    #test = manager.plot_a()
+    test = encoded_img_data.decode('UTF-8')
     return render_template("report.html", img_data=test, img_data2=encoded_img_data2.decode('UTF-8'))
+
+
+# Route to run the simulator
+@app.route("/classes")
+def classes():
+    
+    
+    return render_template("classes.html")
 
 
 if __name__ == "__main__":

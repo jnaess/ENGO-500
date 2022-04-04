@@ -12,6 +12,19 @@
     <hr/>
   </div>
     
+    <!-- Cost Results -->
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Cost Summary</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data2 }}">
+            <br>
+            <h6>The graphic aobve shows the generate field coverage, comparing cases of under (zero pass), ideal (single pass), and over (double pass) coverage.</h6>
+        </div>
+        <div class = "col"></div>
+    </div>
+
+
     <!-- First Page --> 
     <div class="row">
         <div class = "col"></div>
@@ -152,7 +165,7 @@
                    </tr>
                 </tbody>
               </table>
-                  <h6>This table shows summarizes the pass-to-pass analytics</h6>
+                  <h6>This table shows a summary the pass-to-pass analytics</h6>
               </div>
             </div>
         </div>
@@ -167,8 +180,65 @@
         </div>
         <div class = "col"></div>
     </div>
+<hr/>
     
+
+
+
+    <!-- Heading -->
+    <br>
+    <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h4 class="text-left"><u>Error Detection Report</u></h4>
+        </div>
+        <div class = "col"></div>
+    <hr/>
+  </div>
     
+
+      <div class="row">
+        <div class = "col"></div>
+        <div class ="col-8">
+            <h5>Drift Comparision Figure</h5>
+            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <br>
+            <h6>Estimated Error vs Total Error</h6>
+        </div>
+        <div class = "col"></div>
+    </div>
+    
+
+
+    <div class="row">           
+          <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+            <h5>Drift Error Summary</h5>
+                <thead>
+                <tr class="white-bg">
+                  <th>Direction</th>
+                    <th>Easting (m)</th>
+                    <th>Northing (m)</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                    <td>Total Drift</td>
+                    <td>0</td>
+                     <td>0</td>
+                   </tr>
+                   <tr class="white-bg">
+                    <td>Average per Epoch</td>
+                    <td>0</td>
+                     <td>0</td>
+                   </tr>
+                </tbody>
+              </table>
+                  <h6>This table shows summarizes the pass-to-pass analytics</h6>
+              </div>
+            </div>
+        </div>
 
     
 
