@@ -47,6 +47,12 @@ class ErrorDetectorAnalyzer():
         #"Simulated vs. Detected Individual Easting Drifts"
         self.sim_v_ED_idv_northing_drift_plot = self.plot_j()
         
+        #"Simulated vs. Detected Individual Difference Easting Drifts"
+        self.sim_v_ED_diff_easting_drift_plot = self.plot_s()
+        
+        #"Simulated vs. Detected Individual Difference Easting Drifts"
+        self.sim_v_ED_diff_northing_drift_plot = self.plot_t()
+        
     def generate_jump_analysis(self):
         """
         Desc:
@@ -65,6 +71,12 @@ class ErrorDetectorAnalyzer():
         #"Simulated vs. Detected Individual Easting Drifts"
         self.sim_v_ED_idv_northing_jump_plot = self.plot_n()
         
+        #"Simulated vs. Detected Individual Easting Drifts"
+        self.sim_v_ED_idv_easting_jump_plot = self.plot_u()
+        
+        #"Simulated vs. Detected Individual Easting Drifts"
+        self.sim_v_ED_idv_northing_jump_plot = self.plot_v()
+        
     def generate_overall_analysis(self):
         """
         Desc:
@@ -82,3 +94,9 @@ class ErrorDetectorAnalyzer():
         
         #"Simulated vs. Detected Individual Easting Drifts"
         self.sim_v_ED_idv_northing_all_plot = self.plot_r()
+        
+        #"Simulated vs. Detected Individual Easting Drifts"
+        self.sim_v_ED_idv_easting_all_plot = self.plot_w()
+        
+        #"Simulated vs. Detected Individual Easting Drifts"
+        self.sim_v_ED_idv_northing_all_plot = self.plot_x()
