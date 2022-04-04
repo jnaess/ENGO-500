@@ -163,3 +163,229 @@ class Plotter(BasePlot):
                       x_label = "Easting", 
                       y_label = "Northing", 
                       title = "Track Jump Summary")
+        
+    def plot_g(self):
+        """
+        Desc:
+            #cumulative dift comparison easting
+            #true drift versus detected drift
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.drift_cumulative_e.to_list(),
+                           self.df_ED.drift_cumulative_e.to_list()], 
+                      line_label = ["Simulated \nCumulative \nEasting Drift", 
+                                    "Detected \nCumulative \nEasting Drift"],
+                      x_label = "Epoch", 
+                      y_label = "Cumulative Drift (m)", 
+                      title = "Simulated vs. Detected Cumulating Easting Drift",
+                     aspect = False,
+                     anchor = 1.25)
+        
+        return self.convert_to_png()
+    
+    def plot_h(self):
+        """
+        Desc:
+            #cumulative dift comparison northing
+            #true drift versus detected drift
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.drift_cumulative_n.to_list(),
+                           self.df_ED.drift_cumulative_n.to_list()], 
+                      line_label = ["Simulated \nCumulative \nNorthing Drift", 
+                                    "Detected \nCumulative \nNorthing Drift"],
+                      x_label = "Epoch", 
+                      y_label = "Cumulative Drift (m)", 
+                      title = "Simulated vs. Detected Cumulating Northing Drift",
+                     aspect = False,
+                     anchor = 1.25)
+        
+        return self.convert_to_png()
+    
+    def plot_i(self):
+        """
+        Desc:
+            #individual dift comparison easting
+            #true drift versus detected drift
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.drift_individual_e.to_list(),
+                           self.df_ED.drift_individual_e.to_list()], 
+                      line_label = ["Simulated \nIndividual \nEasting Drifts", 
+                                    "Detected \nIndividual \nEasting Drifts"],
+                      x_label = "Epoch", 
+                      y_label = "Drift (m)", 
+                      title = "Simulated vs. Detected Individual Easting Drifts",
+                     aspect = False,
+                     anchor = 1.25,
+                        alpha = .8)
+        
+        return self.convert_to_png()
+    
+    def plot_j(self):
+        """
+        Desc:
+            #individual dift comparison easting
+            #true drift versus detected drift
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.drift_individual_n.to_list(),
+                           self.df_ED.drift_individual_n.to_list()], 
+                      line_label = ["Simulated \nIndividual \nNorthing Drifts", 
+                                    "Detected \nIndividual \nNorthing Drifts"],
+                      x_label = "Epoch", 
+                      y_label = "Drift (m)", 
+                      title = "Simulated vs. Detected Individual Northing Drifts",
+                     aspect = False,
+                     anchor = 1.25,
+                        alpha = .8)
+        
+        return self.convert_to_png()
+    
+    def plot_k(self):
+        """
+        Desc:
+            #cumulative dift comparison easting
+            #true drift versus detected drift
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.jump_cumulative_e.to_list(),
+                           self.df_ED.jump_cumulative_e.to_list()], 
+                      line_label = ["Simulated \nCumulative \nEasting Jumps", 
+                                    "Detected \nCumulative \nEasting Jumps"],
+                      x_label = "Epoch", 
+                      y_label = "Cumulative Jump (m)", 
+                      title = "Simulated vs. Detected Cumulating Easting Jumps",
+                     aspect = False,
+                     anchor = 1.3)
+        
+        return self.convert_to_png()
+    
+    def plot_l(self):
+        """
+        Desc:
+            #cumulative jump comparison northing
+            #true jump versus detected drift
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.jump_cumulative_n.to_list(),
+                           self.df_ED.jump_cumulative_n.to_list()], 
+                      line_label = ["Simulated \nCumulative \nNorthing Jumps", 
+                                    "Detected \nCumulative \nNorthing Jumps"],
+                      x_label = "Epoch", 
+                      y_label = "Cumulative Jump (m)", 
+                      title = "Simulated vs. Detected Cumulating Northing Jumps",
+                     aspect = False,
+                     anchor = 1.3)
+        
+        return self.convert_to_png()
+    
+    def plot_m(self):
+        """
+        Desc:
+            #individual jump comparison easting
+            #true jump versus detected jumps
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.jump_individual_e.to_list(),
+                           self.df_ED.jump_individual_e.to_list()], 
+                      line_label = ["Simulated \nIndividual \nEasting Jumps", 
+                                    "Detected \nIndividual \nEasting Jumps"],
+                      x_label = "Epoch", 
+                      y_label = "Jumps (m)",
+                      title = "Simulated vs. Detected Individual Easting Jumps",
+                     aspect = False,
+                     anchor = 1.3,
+                        alpha = .8)
+        
+        return self.convert_to_png()
+    
+    def plot_n(self):
+        """
+        Desc:
+            #individualjump comparison easting
+            #true drift versus detected jump
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.jump_individual_n.to_list(),
+                           self.df_ED.jump_individual_n.to_list()], 
+                      line_label = ["Simulated \nIndividual \nNorthing Jumps", 
+                                    "Detected \nIndividual \nNorthing Jumps"],
+                      x_label = "Epoch", 
+                      y_label = "Jumps (m)", 
+                      title = "Simulated vs. Detected Individual Northing Jumps",
+                     aspect = False,
+                     anchor = 1.3,
+                        alpha = .8)
+        
+        return self.convert_to_png()
+    
+    def plot_m(self):
+        """
+        Desc:
+            #individual jump comparison easting
+            #true jump versus detected jumps
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.jump_individual_e.to_list(),
+                           self.df_ED.jump_individual_e.to_list()], 
+                      line_label = ["Simulated \nIndividual \nEasting Jumps", 
+                                    "Detected \nIndividual \nEasting Jumps"],
+                      x_label = "Epoch", 
+                      y_label = "Jumps (m)",
+                      title = "Simulated vs. Detected Individual Easting Jumps",
+                     aspect = False,
+                     anchor = 1.3,
+                        alpha = .8)
+        
+        return self.convert_to_png()
+    
+    def plot_n(self):
+        """
+        Desc:
+            #individualjump comparison easting
+            #true drift versus detected jump
+        Input:
+        Output:
+        """
+        self.plot_fig(x = [self.df_sim.index.to_list(),
+                           self.df_ED.index.to_list()],
+                      y = [self.df_sim.jump_individual_n.to_list(),
+                           self.df_ED.jump_individual_n.to_list()], 
+                      line_label = ["Simulated \nIndividual \nNorthing Jumps", 
+                                    "Detected \nIndividual \nNorthing Jumps"],
+                      x_label = "Epoch", 
+                      y_label = "Jumps (m)", 
+                      title = "Simulated vs. Detected Individual Northing Jumps",
+                     aspect = False,
+                     anchor = 1.3,
+                        alpha = .8)
+        
+        return self.convert_to_png()

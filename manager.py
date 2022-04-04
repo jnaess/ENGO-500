@@ -6,10 +6,10 @@ import numpy as np
 from simulator import Simulator
 from errorDetector import ErrorDetector
 from databaseManager import DatabaseManager
-from plotter import Plotter
+from analyzer import Analyzer
 from point import Coord
 
-class Manager(DatabaseManager, Plotter):
+class Manager(DatabaseManager, Analyzer):
     """
     Contains all simulation and error detection software to execute the primary processes in one centralized location
     """
@@ -35,7 +35,7 @@ class Manager(DatabaseManager, Plotter):
         Output
         """
         DatabaseManager.__init__(self)
-        Plotter.__init__(self)
+        Analyzer.__init__(self)
         
         #simulator stuff
         self.use_drift = use_drift
@@ -144,6 +144,8 @@ class Manager(DatabaseManager, Plotter):
         self.df_err_jump = self.ED.jump_df
         self.df_err_drift = self.ED.drift_df
         self.df_err_errors = self.ED.errors_df
+        
+        self.df_ED = pd.concat([self.ED.jump_df,self.ED.drift_df, self.ED.errors_df], axis=1)
         
     def push_data(self):
         """
