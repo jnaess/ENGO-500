@@ -137,6 +137,8 @@ class ErrorDetectionComputations(ErrorRecorder):
         self.error_change = Coord(self.curr_vector_to_true.E() - self.prev_vector_to_true.E(),
                                      self.curr_vector_to_true.N() - self.prev_vector_to_true.N()) #Coord()    
         
+        self.tester_point = Ellipse(self.prev.E() + self.error_change.E(), self.prev.N() + self.error_change.N())
+        
     def compute_errors(self):
         """
         Desc:

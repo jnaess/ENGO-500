@@ -109,10 +109,10 @@ class ErrorDocumentor(ErrorOutputter):
             self.error_status.append(False)
         
         #add errors (doesn't matter if they're zero)
-        self.error_individual[0].append(self.jump_individual[0][-1] + self.drift_individual[-1][-1]) #easting
+        self.error_individual[0].append(self.jump_individual[0][-1] + self.drift_individual[0][-1]) #easting
         self.error_individual[1].append(self.jump_individual[1][-1] + self.drift_individual[-1][-1])  #northing
         
-        self.error_cumulative[0].append(self.jump_cumulative[0][-1] + self.drift_cumulative[-1][-1]) #easting
+        self.error_cumulative[0].append(self.jump_cumulative[0][-1] + self.drift_cumulative[0][-1]) #easting
         self.error_cumulative[1].append(self.jump_cumulative[1][-1] + self.drift_cumulative[-1][-1])  #northing
         
         self.error_absolute_cumulative[0].append(self.jump_absolute_cumulative[0][-1] + self.drift_absolute_cumulative[0][-1]) #easting

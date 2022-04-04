@@ -17,17 +17,17 @@ class Manager(DatabaseManager, Plotter):
     def __init__(self, 
                  use_drift = True, 
                  use_jump = True, 
-                 easting_drift_const = .01,
-                 northing_drift_const = .01,
+                 easting_drift_const = .001,
+                 northing_drift_const = .001,
                  mean_jump = Coord(0,0,std = [.05, .05]),
                  jump_occurance_probability = 5,
-                 drift_variability = Coord(0,0, std = [.01, .01]),
+                 drift_variability = Coord(0,0, std = [.0001, .0001]),
                  easting_jump_const = .2,
                  northing_jump_const = .2,
                  tractor_speed = 1, 
                  epoch_frequency = 1, 
                  rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"], 
-                 is_static = True, 
+                 is_static = False, 
                  true_std = [.1,.1]):
         """
         Desc:
@@ -93,8 +93,9 @@ class Manager(DatabaseManager, Plotter):
 
         #coordinates
         self.field = [[0,0],[0,10],[10,10],[10,0]]
+        #self.field = [[0,0],[0,12],[10,12],[10,0]]
         #self.field = [[0,0],[0,100],[100,100],[100,0]]
-
+        #self.field = [[0,0],[-10,10],[0,20],[10,10]]
         #generates simulation tracks
         self.Sim = Simulator(vertices = self.field, 
                              use_drift = self.use_drift,
