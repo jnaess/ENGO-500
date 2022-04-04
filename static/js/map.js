@@ -1,4 +1,3 @@
-
 // Initialize the map
 //var this_map = L.map('map').setView([50.64146,-113.64648], 13);
 var map = L.map('map').setView([40.202162,-74.924594], 13);
