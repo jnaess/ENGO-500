@@ -12,5 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/eprosser88/cl19riul2003215pcc5nlw7
 	attribution: '©  <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="https://www.openstreetmap.org/about/">OpenStreeMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a </strong> © <a href="https://www.maxar.com/">Maxar'
 }).addTo(map);
 
+map.invalidateSize();
+
 // Add scale
 L.control.scale().addTo(map);
