@@ -109,7 +109,7 @@ def report():
                                  easting_drift_const = .01,
                                  northing_drift_const = .01,
                                  mean_jump = Coord(0,0,std = [.05, .05]),
-                                 jump_occurance_probability = 5,
+                                 jump_occurance_probability = 500,
                                  drift_variability = Coord(0,0, std = [.001, .001]),
                                  easting_jump_const = .2,
                                  northing_jump_const = .2,
@@ -150,6 +150,7 @@ def report():
     # Peramters derived from over/underlap; true profit
     derived_params = [tot_prof * 0.60]
     
+    
     # Area Coverage params; zero pass area, single pass area, double pass area
     area_params = [manager.zero_pass_area, 
                    manager.single_pass_area, 
@@ -175,6 +176,23 @@ def report():
                   manager.sim_v_ED_cum_northing_drift_plot, 
                  manager.sim_v_ED_cum_easting_jump_plot]
     
+    # Simulator Cumulative df; #jumps, #drift, #errors, #cumjumpsE, #cumdriftE, #cumerrorsE,  #cumjumpsN, #cumdriftN, #cumerrorsN, 
+    sim_df = manager.sim_detected + manager.sim_cum_count_e + manager.sim_cum_count_n
+    
+    # ED df; #jumps, #drift, #errors, #cumjumps, #cumdrift, #cumerrors, 
+    ED_df = manager.ed_detected + manager.ed_cum_count_e + manager.ed_cum_count_n
+    
+    #Percent for ED; accjumps, accdrifts, accerrors, jumpsE, driftE, errorE, driftsN, jumpsN, errorN
+    per_ED_df = manager.ed_detection_accuracy + manager.ed_cumulative_accuracy_e + manager.ed_cumulative_accuracy_n
+    
+    # Pass-to-Pass; simp2pE, simp2pN, EDp2pE, EDp2pN, ED%E, ED%N
+    p2p = [manager.pass_to_pass_sim_e, 
+           manager.pass_to_pass_sim_n, 
+           manager.pass_to_pass_ed_e, 
+           manager.pass_to_pass_ed_n, 
+           manager.ed_pass_to_pass_accuracy[0], 
+           manager.ed_pass_to_pass_accuracy[1]]
+    
     return render_template("report.html", 
                            field_params=field_params, 
                            cost_params=cost_params, 
@@ -182,7 +200,11 @@ def report():
                            derived_params =derived_params, 
                            area_params=area_params, 
                            error_plts=error_plts, 
-                           img_data2=test)
+                           img_data2=test, 
+                           sim_df=sim_df, 
+                           ED_df=ED_df, 
+                           per_ED_df=per_ED_df,
+                           p2p=p2p)
 
 
 # Route to run the simulator

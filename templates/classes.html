@@ -2,175 +2,327 @@
 
 {% block content %}
 <div class="container">
-    <h1>About</h1>
-    <div class="row">
-    <div class ="col"></div>
-    <div class ="col-8">
-        <h6 class="text-center">The table below shows a break of classes used in the software suite</h6>
-    </div>
-    <div class ="col"></div>
-</div>
+    <h5>Class Documentation</h5>
+    <hr>
     
-     <div class = "col-md-6 p-3 mx-auto">
-          <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <h5>Pass Summary Table</h5>
-              <thead>
-                <tr class="white-bg">
-                  <th>Class Name</th>
-                    <th>Description</th>
-                  <th>Inherits</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="white-bg">
-                  <td>Simulator</td>
-                  <td>Containes and manages simulation data</td>
-                  <td>SpatialOpps, PassGenerator</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorDetector</td>
-                  <td>Detects errors from static and dynamic datasets</td>
-                  <td>Opps, ErrorDetectionInitializer, ErrorCompiler</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorDetectionInitializer</td>
-                  <td>Initializing and incrementing errors</td>
-                  <td>ErrorDetectionComputations</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorCompiler</td>
-                  <td>Assembles completed error calculations into anlysis data</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>SpatialOpps</td>
-                  <td>Computes spatial operations</td>
-                  <td>ShapeInitializer</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ShapeInitializer</td>
-                  <td>Assembles completed error calculations into anlysis data</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>PassGenerator</td>
-                  <td>Generates all start and end points of the paths, then uses PathFollower to generate center points and direction vectors of each segment</td>
-                  <td>PathGenerator, TrackRecorder</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>PathGenerator</td>
-                  <td>Generates the path based on given polygon. Inherits the polygon functionality to build upon and reuse functions</td>
-                  <td>Polygon</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorDetectionComputations</td>
-                  <td>Error flagging, recording and incrementing for dynamic and static data</td>
-                  <td>ErrorRecorder</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>TrackRecorder</td>
-                  <td>Records and outputs the simulated paths's track. Sister to passGenerator</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorRecorder</td>
-                  <td>Adds functionality to record errors</td>
-                  <td>ErrorFlagger</td>
-                </tr>               
-                  <tr class="white-bg">
-                  <td>Polygon</td>
-                  <td>Sets up a polygon and maintains rules to ensure functionality</td>
-                  <td>GeomTools</td>
-                </tr>                
-                  <tr class="white-bg">
-                  <td>GeomTools</td>
-                  <td>Contains functions to aid in geometry functions</td>
-                  <td>Opps</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>ErrorFlagger</td>
-                  <td>Flags errors in desired order as jumps or drifts</td>
-                  <td>N/A</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>Manager</td>
-                  <td>Contains all simulation and error detection software to execute the primary processes in one centralized location</td>
-                  <td>DatabaseManager, Plotter</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>Plotter</td>
-                  <td>Generates plots ofr reports, sister to manager</td>
-                  <td>BasePlots</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>DatabaseManager</td>
-                  <td>Sets up login for database</td>
-                  <td>QueryManager</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>QueryManager</td>
-                  <td>Manages database query functions</td>
-                  <td>N/A</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>BasePlot</td>
-                  <td>Contains plotter parameters and plot generation funcitons</td>
-                  <td>N/A</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>Ellipse</td>
-                  <td>Contains error ellipse dimensions, plotting  and other functions </td>
-                  <td>Coord</td>
-                </tr>
-                  
-                <tr class="white-bg">
-                  <td>Coord</td>
-                  <td>Class contains all parameters to convert between coordinates and store coordiant values</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>Vector</td>
-                  <td>Sets up a vector with a start  point and end point</td>
-                  <td>Coord</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorDocumentor</td>
-                  <td>Inherits ErrorRecorder functionality and adds ability to record errors, jump and drift</td>
-                  <td>ErrorOutputter</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>Reporter</td>
-                  <td>Perfroms plotting and data transfers for reporting on website</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>PositionGenerator</td>
-                  <td>Generates position based on std of N/E</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorOutputter</td>
-                  <td>Generates error dataframe and keys for completed error lists</td>
-                  <td>N/A</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>PathFollower</td>
-                  <td>Follows a desired path in increments and incorporates simulation errors</td>
-                  <td>Vector</td>
-                </tr>
-                <tr class="white-bg">
-                  <td>ErrorSimulator</td>
-                  <td>Simulates error incorporated into pathFollower</td>
-                  <td>ErrorDocumentor</td>
-                </tr>
-                  
-              </tbody>
-            </table>
-              <h6>This table provides a summary of the pass area coverage</h6>
-          </div>
+<div class="row">
+    <div class = "col-md-6 p-3 mx-auto">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Simulator
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Containes and manages simulation data<br>Inherits: SpatialOpps, PassGenerator</div>
         </div>
-    <br>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            ErrorDetector
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Detects errors from static and dynamic datasets<br>Inherits: Opps, ErrorDetectionInitializer, ErrorCompiler</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Opps
+          </button>
+        </h2>
+
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Contains vector operations for dataframe manipulation and analysis<br></div>
+        </div>
+      </div>
+            
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            ErrorDetectionInitializer
+          </button>
+        </h2>
+
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Initializing and incrementing errors<br>Inherits: ErrorDetectionComputations</div>
+        </div>
+      </div>
+            
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+            ErrorCompiler
+          </button>
+        </h2>
+
+        <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description:Assembles completed error calculations into anlysis data</div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            SpatialOpps
+          </button>
+        </h2>
+
+        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description:Computes spatial operations<br>Inherits: ShapeInitializer</div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            ShapeInitializer
+          </button>
+        </h2>
+
+        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Helps cleanly initialize the simulator's shapes.</div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+            PassGenerator
+          </button>
+        </h2>
+
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Generates all start and end points of the paths, then uses PathFollower to generate center points and direction vectors of each segment<br>Inherits: PathGenerator, TrackRecorder</div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+            PathGenerator
+          </button>
+        </h2>
+
+        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Generates the path based on given polygon. Inherits the polygon functionality to build upon and reuse functions<br>Inherits: Polygon</div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+            ErrorDetectionComputations
+          </button>
+        </h2>
+
+        <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Error flagging, recording and incrementing for dynamic and static data<br>Inherits: ErrorRecorder</div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+            TrackRecorder
+          </button>
+        </h2>
+
+        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Records and outputs the simulated paths's track. Sister to passGenerator<br></div>
+        </div>
+      </div>
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingEleven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+            ErrorRecorder
+          </button>
+        </h2>
+
+        <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Adds functionality to record errors<br>Inherits: ErrorFlagger</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwelve">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+            Polygon
+          </button>
+        </h2>
+        <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Sets up a polygon and maintains rules to ensure functionality<br>Inherits:GeomTools</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThirteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseThirteen">
+            GeomTools
+          </button>
+        </h2>
+        <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Contains functions to aid in geometry functions<br>Inherits: Opps</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFourteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false" aria-controls="flush-collapseFourteen">
+            ErrorFlagger
+          </button>
+        </h2>
+        <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Flags errors in desired order as jumps or drifts<br></div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading15">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapse15">
+            Manager
+          </button>
+        </h2>
+        <div id="flush-collapse15" class="accordion-collapse collapse" aria-labelledby="flush-heading15" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Contains all simulation and error detection software to execute the primary processes in one centralized location<br>Inherits: DatabaseManager, Plotter</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading16">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapse16">
+            Plotter
+          </button>
+        </h2>
+        <div id="flush-collapse16" class="accordion-collapse collapse" aria-labelledby="flush-heading16" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Generates plots ofr reports, sister to manager<br>Inherits: BasePlots</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading17">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse17" aria-expanded="false" aria-controls="flush-collapse17">
+            DatabaseManager
+          </button>
+        </h2>
+        <div id="flush-collapse17" class="accordion-collapse collapse" aria-labelledby="flush-heading17" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Sets up login for database<br>QueryManager</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading18">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse18" aria-expanded="false" aria-controls="flush-collapse18">
+            QueryManager
+          </button>
+        </h2>
+        <div id="flush-collapse19" class="accordion-collapse collapse" aria-labelledby="flush-heading19" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Manages database query functions</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading20">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse20" aria-expanded="false" aria-controls="flush-collapse20">
+            BasePlot
+          </button>
+        </h2>
+        <div id="flush-collapse20" class="accordion-collapse collapse" aria-labelledby="flush-heading20" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Contains plotter parameters and plot generation funcitons</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading21">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false" aria-controls="flush-collapse21">
+            Ellipse
+          </button>
+        </h2>
+        <div id="flush-collapse21" class="accordion-collapse collapse" aria-labelledby="flush-heading21" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Contains error ellipse dimensions, plotting  and other functions<br>Inherits: Coord</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading22">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse22" aria-expanded="false" aria-controls="flush-collapse22">
+            Coord
+          </button>
+        </h2>
+        <div id="flush-collapse23" class="accordion-collapse collapse" aria-labelledby="flush-heading23" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Class contains all parameters to convert between coordinates and store coordiant values</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading24">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse24" aria-expanded="false" aria-controls="flush-collapse24">
+            Vector
+          </button>
+        </h2>
+        <div id="flush-collapse24" class="accordion-collapse collapse" aria-labelledby="flush-heading24" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Sets up a vector with a start  point and end point<br>Inherits: Coord</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading25">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse25" aria-expanded="false" aria-controls="flush-collapse25">
+            ErrorDocumentor
+          </button>
+        </h2>
+        <div id="flush-collapse25" class="accordion-collapse collapse" aria-labelledby="flush-heading25" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Inherits ErrorRecorder functionality and adds ability to record errors, jump and drift<br>Inherits: ErrorOutputter</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading26">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse26" aria-expanded="false" aria-controls="flush-collapse26">
+            PositionGenerator
+          </button>
+        </h2>
+        <div id="flush-collapse26" class="accordion-collapse collapse" aria-labelledby="flush-heading26" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description:Generates position based on std of N/E</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading27">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse28" aria-expanded="false" aria-controls="flush-collapse28">
+            ErrorOutPutter
+          </button>
+        </h2>
+        <div id="flush-collapse28" class="accordion-collapse collapse" aria-labelledby="flush-heading28" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Generates error dataframe and keys for completed error lists</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading29">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse29" aria-expanded="false" aria-controls="flush-collapse29">
+            PathFollower
+          </button>
+        </h2>
+        <div id="flush-collapse29" class="accordion-collapse collapse" aria-labelledby="flush-heading29" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Description: Follows a desired path in increments and incorporates simulation errors<br>Inherits: Vector</div>
+        </div>
+      </div>
+
+            <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading30">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse30" aria-expanded="false" aria-controls="flush-collapse30">
+            ErrorSimulator
+          </button>
+        </h2>
+        <div id="flush-collapse30" class="accordion-collapse collapse" aria-labelledby="flush-heading30" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"></div>Description: Simulates error incorporated into pathFollower<br>Inherits: ErrorDocumentor
+        </div>
+      </div>
+    </div>
+    </div>
+
+            
+        
     
 </div>
 {% endblock %}

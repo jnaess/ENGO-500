@@ -21,8 +21,6 @@
     <hr/>
 <div class="row">
     <div class = "col-sm-4 offset-sm-4 text-center">
-    <h4>Enter Simulation Parameters:</h4>
-        <h6>Total Area must be less than 64000 m<sup>2</sup></h6>
       <form action="{{ url_for('report') }}" method="post">
         <div class = "form-group">
                 <input type="text" class="form-control" name="length" placeholder="Field Length (m). Must be less than 800m">
@@ -43,7 +41,7 @@
             <table class="table table-bordered table-striped bg">
              <thead>
                 <tr class="white-bg">
-                    <th>Additional Simulation Parameter</th>
+                    <th>Additional Simulation Parameters</th>
                     <th>Value</th>
                 </tr>
               </thead>

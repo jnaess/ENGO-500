@@ -49,8 +49,8 @@ class ErrorDetectorAnalyzer():
         self.ed_jump_cum_n = self.df_ED.jump_cumulative_n.to_list()[-1]
         self.ed_jump_cum_e = self.df_ED.jump_cumulative_e.to_list()[-1]
         
-        self.pass_to_pass_ed_n = self.ed_err_cum_n/(self.df_ed.index.to_list()[-1]+1)*15*60
-        self.pass_to_pass_ed_e = self.ed_err_cum_e/(self.df_ed.index.to_list()[-1]+1)*15*60
+        self.pass_to_pass_ed_n = self.ed_err_cum_n/(self.df_ED.index.to_list()[-1]+1)*15*60
+        self.pass_to_pass_ed_e = self.ed_err_cum_e/(self.df_ED.index.to_list()[-1]+1)*15*60
         
     def generate_drift_analysis(self):
         """

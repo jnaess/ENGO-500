@@ -52,7 +52,7 @@ class BasePlot():
         
         self.set_legend(anchor)
         
-        plt.show() 
+        #plt.show() 
     
     def plot_pts(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", aspect = True, anchor = 1.2, alpha = 1, linewidth = 1, color = False):
         """
