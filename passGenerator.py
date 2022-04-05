@@ -21,7 +21,7 @@ class PassGenerator(PathGenerator, TrackRecorder):
     then uses PathFollower to generate center points and direction vectors of each segment
     """
     
-    def __init__(self, interval = 1, vertices = [Coord(0,0), Coord(10,0), Coord(10,10), Coord(0,10)], tractor_width = 1.5, es = ErrorSimulator()):
+    def __init__(self, interval = 2.2, vertices = [Coord(0,0), Coord(10,0), Coord(10,10), Coord(0,10)], tractor_width = 1.5, es = ErrorSimulator()):
         """
         Desc:
         Input:
