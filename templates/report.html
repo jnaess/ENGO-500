@@ -1,5 +1,11 @@
-<meta http-equiv="refresh" content="1"/>
-
+<script>
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+</script>
 {% extends "layout.html" %}
 
 {% block content %}   
