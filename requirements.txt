@@ -12,5 +12,4 @@ psycopg2
 sqlalchemy
 pybase64
 pygeos
-json
 geopandas
