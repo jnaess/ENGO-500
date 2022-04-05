@@ -73,8 +73,8 @@ class SpatialOpps(ShapeInitializer):
                 '#24bf53' --> light green
         Output:
         """
-        lat = poly.e
-        lon = poly.n
+        lon = poly.e
+        lat = poly.n
 
         gdf = gpd.GeoDataFrame()
         gdf['lat'] = lat

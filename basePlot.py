@@ -116,6 +116,7 @@ class BasePlot():
         #setup the color dictionary
         for i in range(len(shapes)):
             #map out the colors
+            #print(shapes[i])
             color_dict[shapes[i]['title'].to_list()[0]] = shape_colors[i]
             
                 
