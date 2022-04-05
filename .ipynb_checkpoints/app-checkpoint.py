@@ -107,6 +107,7 @@ def report():
     width = float(request.form.get("width"))
     length = float(request.form.get("length"))
     swath = float(request.form.get("swath"))
+  
     width = 800
     lenght = 800
     swath = 5
@@ -162,13 +163,26 @@ def report():
     zero = 10
     single = 40
     double = 15
+    
     # Area Coverage params; zero pass area, single pass area, double pass area
     area_params = [zero, single, double]
     
     # Error plots; detected track jumps, pass-to-pass accuracy, drift comaprison, 
     error_plts = [test, test, test]
     
-    return render_template("report.html", field_params=field_params, cost_params=cost_params, area_plts=area_plts, derived_params =derived_params, area_params=area_params, error_plts=error_plts, img_data2=encoded_img_data2.decode('UTF-8'))
+    # Simulator Cumulative df; #jumps, #drift, #errors, #cumjumpsE, #cumdriftE, #cumerrorsE,  #cumjumpsN, #cumdriftN, #cumerrorsN, 
+    sim_df = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    # ED df; #jumps, #drift, #errors, #cumjumps, #cumdrift, #cumerrors, 
+    ED_df = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+    
+    #Percent for ED; accjumps, accdrifts, accerrors, jumpsE, driftE, errorE, driftsN, jumpsN, errorN
+    per_ED_df = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+    
+    # Pass-to-Pass; simp2pE, simp2pN, EDp2pE, EDp2pN, ED%E, ED%N
+    p2p = [1, 2, 3, 4, 5, 6]
+    
+    return render_template("report.html", field_params=field_params, cost_params=cost_params, area_plts=area_plts, derived_params =derived_params, area_params=area_params, error_plts=error_plts, img_data2=encoded_img_data2.decode('UTF-8'), sim_df=sim_df, ED_df=ED_df, per_ED_df=per_ED_df, p2p=p2p)
 
 
 # Route to run the simulator
