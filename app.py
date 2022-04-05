@@ -104,10 +104,13 @@ def simulator():
 @app.route("/report",  methods=['POST', 'GET'])
 def report():    
     
-    #width = float(request.form.get("width"))
-    #height = float(request.form.get("height"))
-    width = 10
-    height = 1
+    width = float(request.form.get("width"))
+    length = float(request.form.get("length"))
+    swath = float(request.form.get("swath"))
+    if w
+    width = 800
+    lenght = 800
+    swath = 5
     
     # Plot 1
     data = io.BytesIO()
@@ -144,9 +147,9 @@ def report():
     cost_params = [seed, fert, herb, crop, net]
     
     # Field area
-    tot_area = width * height
+    tot_area = width * length
     
-    field_params = [width, height, tot_area]
+    field_params = [width, length, tot_area, swath]
     
     # Maximum profit 
     tot_prof = net * tot_area
@@ -166,7 +169,7 @@ def report():
     # Error plots; detected track jumps, pass-to-pass accuracy, drift comaprison, 
     error_plts = [test, test, test]
     
-    return render_template("report.html", field_params=field_params, cost_params=cost_params,  area_plts=area_plts, error_plts=error_plts, derived_params =derived_params, area_params=area_params, img_data2=encoded_img_data2.decode('UTF-8'))
+    return render_template("report.html", field_params=field_params, cost_params=cost_params, area_plts=area_plts, derived_params =derived_params, area_params=area_params, error_plts=error_plts, img_data2=encoded_img_data2.decode('UTF-8'))
 
 
 # Route to run the simulator
