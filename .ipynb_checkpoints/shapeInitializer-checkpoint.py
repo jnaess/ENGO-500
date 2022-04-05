@@ -85,6 +85,7 @@ class ShapeInitializer():
         #double pass --> this does NOT account for passes overlapping eachother
         self.temp3 = gpd.overlay(self.R_gdf_poly, self.inner_gdf, how="difference") #only take what was outside inner
         self.double_pass = gpd.overlay(self.temp3, self.T_gdf_poly, how='difference')  #only take waht was not already going to be passed by true path
+        self.double_pass = gpd.overlay(self.outer_gdf, self.double_pass, how="intersection")
         self.double_pass = self.add_title(self.double_pass, "Double Pass")
         
     def init_fields(self):
