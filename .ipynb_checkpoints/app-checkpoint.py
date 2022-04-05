@@ -150,7 +150,7 @@ def report():
                       round(.203*manager.zero_pass_area,2)]
     
     double_pass_loss = [round(.01637*manager.double_pass_area,2),
-                        round(.026984**manager.double_pass_area,2),
+                        round(.026984*manager.double_pass_area,2),
                         0]
                       
     # Area coverage figures; all, zero pass, single pass, double pass

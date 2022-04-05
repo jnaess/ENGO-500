@@ -87,9 +87,9 @@ def report():
     swath = float(request.form.get("swath"))
     
     #render error or default max width
-    if width * length > 640001:
-        width = 800
-        length = 800
+    if width * length > 160001:
+        width = 400
+        length = 400
 
     manager = Manager(field = [[0,0],[0,length],[width,length],[width,0]],
                                 use_drift = True, 
@@ -150,7 +150,7 @@ def report():
                       round(.203*manager.zero_pass_area,2)]
     
     double_pass_loss = [round(.01637*manager.double_pass_area,2),
-                        round(.026984**manager.double_pass_area,2),
+                        round(.026984*manager.double_pass_area,2),
                         0]
                       
     # Area coverage figures; all, zero pass, single pass, double pass

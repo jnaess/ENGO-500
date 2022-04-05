@@ -24,9 +24,10 @@
     <div class = "col-sm-4 offset-sm-4 text-center">
       <form action="{{ url_for('report') }}" method="post">
         <div class = "form-group">
-                <input type="text" class="form-control" name="length" placeholder="Field Length (m): Must be less than 800m"><br>
-                <input type="text" class="form-control" name="width" placeholder="Field Width (m): Must be less than 800m"><br>
-                <input type="text" class="form-control" name="swath" placeholder="Pass Width (m)">
+            <h6>Field Area must be less than 160,000 meters squared <br> (ie. 400x400 or 40 acres)</h6><br>
+                <input type="text" class="form-control" name="length" placeholder="Field Length (m): Reccomended less than 400m"><br>
+                <input type="text" class="form-control" name="width" placeholder="Field Width (m): Reccomended be less than 400m"><br>
+                <input type="text" class="form-control" name="swath" placeholder="Pass Width (m): Reccomended 5m">
         </div>
           <br>
           <button type="submit" class="btn btn-danger">Simulate</button>
@@ -65,7 +66,7 @@
                    </tr>
                     <tr class="white-bg">
                     <td>Jump Occurance Probabality</td>
-                    <td>0.02%</td>
+                    <td>0.02 %</td>
                    </tr>
                     <tr class="white-bg">
                     <td>Easting Jump Magnitude</td>
