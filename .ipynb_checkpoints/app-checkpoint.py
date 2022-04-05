@@ -127,10 +127,10 @@ def report():
     encoded_img_data2 = base64.b64encode(data.getvalue())
 
 
-   # manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
-                 #     jump_occurance_probability = 500,
-                  #    easting_jump_const = 0,
-                   #   northing_jump_const = .2)
+    manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
+                   jump_occurance_probability = 500,
+                     easting_jump_const = 0,
+                     northing_jump_const = .2)
     #test = manager.plot_a()
     test = encoded_img_data.decode('UTF-8')
 
@@ -165,8 +165,6 @@ def report():
     
     # Error plots; detected track jumps, pass-to-pass accuracy, drift comaprison, 
     error_plts = [test, test, test]
-    
-    time.sleep(15)
     
     return render_template("report.html", field_params=field_params, cost_params=cost_params,  area_plts=area_plts, error_plts=error_plts, derived_params =derived_params, area_params=area_params, img_data2=encoded_img_data2.decode('UTF-8'))
 
