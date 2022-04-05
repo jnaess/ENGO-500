@@ -204,7 +204,9 @@ def report():
                            sim_df=sim_df, 
                            ED_df=ED_df, 
                            per_ED_df=per_ED_df,
-                           p2p=p2p)
+                           p2p=p2p,
+                          zero_pass_loss = zero_pass_loss,
+                          double_pass_loss = double_pass_loss)
 
 
 # Route to run the simulator
