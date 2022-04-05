@@ -12,7 +12,7 @@
     <div class ="col"></div>
     <div class ="col-8">
         <h6 class="text-center">Provided here is a demo of the software. Select your field dimensions and submit. The selected area will be sent for processing and a analytics report will be displayed.</h6>
-        <h6><strong>Note</strong>: The report may take up to 30 seconds to publish. You will be automatically redirected.</h6>
+       <!-- <h6><strong>Note</strong>: The report may take up to 30 seconds to publish. You will be automatically redirected.</h6>-->
     </div>
     <div class = "col"></div>
   </div>
@@ -21,25 +21,74 @@
     <hr/>
 <div class="row">
     <div class = "col-sm-4 offset-sm-4 text-center">
-    <h4> Enter Field Dimensions:</h4>
+    <h4>Enter Simulation Parameters:</h4>
       <form action="{{ url_for('report') }}" method="post">
         <div class = "form-group">
-                <input type="text" class="form-control" name="height" placeholder="height in meters">
-                <br>
-                <input type="text" class="form-control" name="width" placeholder="width in meters">
+                <input type="text" class="form-control" name="length" placeholder="Field Length (m)">
+                <input type="text" class="form-control" name="width" placeholder="Field Width (m)">
+                <input type="text" class="form-control" name="swath" placeholder="Pass Width (m)">
         </div>
           <br>
-          <button type="submit" class="btn btn-danger">Submit</button>
+          <button type="submit" class="btn btn-danger">Simulate</button>
           <br>
       </form>
-         
     </div>
-    <br>
-    <br>
-    <hr/>
-
+    
 </div>
- 
+    <hr>
+<div class = "row text-center">
+        <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+             <thead>
+                <tr class="white-bg">
+                    <th>Additional Simulation Parameter</th>
+                    <th>Value</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                    <td>Position Drifts</td>
+                    <td>True</td>
+                   </tr>
+                    <tr class="white-bg">
+                        <td>Position Jumps</td>
+                       <td>True</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Easting Drift (m)</td>
+                    <td>0.001</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Northing Drift (m)</td>
+                    <td>0.001</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Jump Occurance Probabality</td>
+                    <td>5</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Easting Jump magnitude (m)</td>
+                    <td>0.2</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Northing Jump magnitude (m)</td>
+                    <td>0.2</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Tractor Speed</td>
+                    <td>1</td>
+                   </tr>
+                    <tr class="white-bg">
+                    <td>Epoch Frequnecy</td>
+                    <td>1</td>
+                   </tr>
+                </tbody>
+              </table>
+            </div>
+       </div>
+</div>
+    
            
 {% endblock %}
            

@@ -16,6 +16,7 @@
  <!-- Field params -->
 <div class = "row text-center">
     <h5>Operations Summary</h5>
+    <hr>
      <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
             <table class="table table-bordered table-striped bg">
@@ -23,7 +24,8 @@
              <thead>
                 <tr class="white-bg">
                   <th>Width (m)</th>
-                  <th>Heigth (m)</th>
+                  <th>Length (m)</th>
+                  <th>Swath Width (m)</th>
                   <th>Area (m<sup>2</sup>)</th>
                   <th>Price of Canola ($/m<sup>2</sup>)</th>
                   <th>Potential Revenue ($)</th>
@@ -33,6 +35,7 @@
                   <tr class="white-bg">
                     <td>{{ field_params[0] }}</td>
                     <td>{{ field_params[1] }}</td>
+                    <td>{{ field_params[3] }}
                     <td>{{ field_params[2] }}</td>
                     <td>{{ cost_params[3] }}</td>
                     <td>{{ (field_params[2] * cost_params[3])|round(2) }}</td>

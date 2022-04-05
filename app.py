@@ -104,10 +104,10 @@ def simulator():
 @app.route("/report",  methods=['POST', 'GET'])
 def report():    
     
-    #width = float(request.form.get("width"))
-    #height = float(request.form.get("height"))
-    width = 10
-    height = 1
+    width = float(request.form.get("width"))
+    length = float(request.form.get("length"))
+    swath = float(request.form.get("swath"))
+    
     
     # Plot 1
     data = io.BytesIO()
@@ -144,9 +144,9 @@ def report():
     cost_params = [seed, fert, herb, crop, net]
     
     # Field area
-    tot_area = width * height
+    tot_area = width * length
     
-    field_params = [width, height, tot_area]
+    field_params = [width, length, tot_area, swath]
     
     # Maximum profit 
     tot_prof = net * tot_area
