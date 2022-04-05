@@ -89,16 +89,26 @@
                 <caption>Profit Summary</caption>
              <thead>
                 <tr class="white-bg">
-                  <th>Maximum Profit</th>
-                  <th>True Profit</th>
-                  <th>Profit Loss</th>
+                  <th>Process</th>
+                  <th>Zero Pass</th>
+                  <th>Double Pass</th>
                 </tr>
               </thead>
                 <tbody>
                   <tr class="white-bg">
-                    <td>${{ (field_params[2] * cost_params[4])|round(2) }}</td>
-                    <td>${{ (derived_params[0])|round(2) }}</td>
-                    <td>{{ (((field_params[2] * cost_params[4]) - derived_params[0]) / (field_params[2] * cost_params[4])) * 100|round(3) }}%</td>
+                      <td>Seeding</td>
+                      <td>{{ zero_pass_loss[0] }}</td>
+                      <td>{{ double_pass_loss[0] }}</td>
+                   </tr>
+                    <tr class="white-bg">
+                      <td>Spraying</td>
+                      <td>{{ zero_pass_loss[1] }}</td>
+                      <td>{{ double_pass_loss[1] }}</td>
+                   </tr>
+                    <tr class="white-bg">
+                      <td>Spraying</td>
+                      <td>{{ zero_pass_loss[2] }}</td>
+                      <td>{{ double_pass_loss[2] }}</td>
                    </tr>
                 </tbody>
               </table>
