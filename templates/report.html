@@ -3,24 +3,59 @@
 {% block content %}   
     <!-- Heading -->
     <br>
-    <div class="row">
+    <div class="row text-center">
         <div class = "col"></div>
         <div class ="col-8">
             <h4 class="text-left"><u>Simulation Report</u></h4>
         </div>
         <div class = "col"></div>
-    <hr/>
+    <hr>
   </div>
+<br>
+
+ <!-- Field params -->
+<div class = "row text-center">
+    <h5>Operations Summary</h5>
+     <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+                <caption>Field Summary</caption>
+             <thead>
+                <tr class="white-bg">
+                  <th>Width (m)</th>
+                  <th>Heigth (m)</th>
+                  <th>Area (m<sup>2</sup>)</th>
+                  <th>Price of Canola ($/m<sup>2</sup>)</th>
+                  <th>Potential Revenue ($)</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                    <td>{{ field_params[0] }}</td>
+                    <td>{{ field_params[1] }}</td>
+                    <td>{{ field_params[2] }}</td>
+                    <td>{{ cost_params[3] }}</td>
+                    <td>{{ (field_params[2] * cost_params[3])|round(2) }}</td>
+                </tr>
+                </tbody>
+              </table>
+         </div>
+    </div>
+</div>
+    <br>
+ <!-- Field params -->
+ 
     
     <!-- Cost Results -->
-    <div class="row">
-        <div class = "col"></div>
-        <div class ="col-8">
-            <h5>Cost Summary</h5>
+<div class = "row text-center">
+        <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+                <caption>Cost Summary</caption>
              <thead>
                 <tr class="white-bg">
                   <th>Material</th>
-                    <th>Average Costs for Canola Operations ($/m<sup>2</sup> )</th>
+                    <th>Average Cost ($/m<sup>2</sup>)</th>
                 </tr>
               </thead>
                 <tbody>
@@ -37,79 +72,128 @@
                     <td>{{ cost_params[2] }}</td>
                    </tr>
                 </tbody>
+              </table>
+            </div>
+       </div>
+</div>
+<br>
+<!-- Cost Results End-->
             
-            <br>
-            <h6>Average canola price: $0.203/m<sup>2</sup></h6>
-        </div>
-        <div class = "col"></div>
-    </div>
-
-
-    <!-- First Page --> 
-    <div class="row">
-        <div class = "col"></div>
-        <div class ="col-8">
-            <h5>Area Coverage Summary</h5>
-            <img id="picture" src="data:image/png;base64, {{ img_data2 }}">
-            <br>
-            <h6>The graphic aobve shows the generate field coverage, comparing cases of under (zero pass), ideal (single pass), and over (double pass) coverage.</h6>
-        </div>
-        <div class = "col"></div>
-  </div>
-    
-    <br>
-    
-      <!-- Table -->
+<!-- Profit Results -->
+<div class = "row text-center">
         <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
             <table class="table table-bordered table-striped bg">
-                <h5>Pass Summary Table</h5>
+                <caption>Profit Summary</caption>
+             <thead>
+                <tr class="white-bg">
+                  <th>Maximum Profit</th>
+                  <th>True Profit</th>
+                  <th>Profit Lost</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                    <td>${{ (field_params[2] * cost_params[4])|round(2) }}</td>
+                    <td>${{ (derived_params[0])|round(2) }}</td>
+                    <td>{{ (((field_params[2] * cost_params[4]) - derived_params[0]) / (field_params[2] * cost_params[4])) * 100|round(3) }}%</td>
+                   </tr>
+                </tbody>
+              </table>
+            </div>
+    </div>
+</div>
+<br>
+ <!-- Profit Results Enc -->
+
+<hr>
+
+
+<!-- Coverage Summary -->
+<div class="row text-center">
+    <h5>Area Coverage</h5>
+    <hr>
+    <br>
+    <figure class="figure">
+        <img id="picture" src="data:image/png;base64, {{ area_plts[0] }}">
+         <figcaption class="figure-caption">Simulated field coverage, comparing cases of under, ideal, and over coverage.</figcaption>
+    </figure>
+</div>
+ <br>
+    
+    <div class="row text-center">
+        <h5>Zero Pass</h5>
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[1] }}">
+             <figcaption class="figure-caption">Zero Pass coverage</figcaption>
+        </figure>
+    </div>
+     <br>
+    <div class="row text-center">
+        <h5>Single Pass</h5>
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[2] }}">
+             <figcaption class="figure-caption">Single Pass coverage</figcaption>
+        </figure>
+    </div>
+     <br>
+    <div class="row text-center">
+        <h5>Double Pass</h5>
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[3] }}">
+             <figcaption class="figure-caption">Double Pass coverage</figcaption>
+        </figure>
+    </div>
+     <br>
+          
+
+<div class="row text-center">
+        <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table table-bordered table-striped bg">
+                <caption>Pass Summary Table</caption>
               <thead>
                 <tr class="white-bg">
-                  <th>Pass Type</th>
-                    <th>Area ( m<sup>2</sup> )</th>
-                  <th>Description</th>
+                  <th>Coverage Type</th>
+                    <th>Area (m<sup>2</sup>)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="white-bg">
                   <td>Zero Pass</td>
-                  <td>0</td>
-                  <td></td>
+                  <td>{{ area_params[0] }}</td>
                 </tr>
                 <tr class="white-bg">
                   <td>Single Pass</td>
-                  <td>0</td>
-                  <td></td>
+                  <td>{{ area_params[1] }}</td>
                 </tr>
                 <tr class="white-bg">
                   <td>Double Pass</td>
-                  <td>0</td>
-                  <td></td>
+                  <td>{{ area_params[2] }}</td>
                 </tr>
               </tbody>
             </table>
-              <h6>This table provides a summary of the pass area coverage</h6>
           </div>
         </div>
-    <br>
-    
-        <div class="row">
-        <div class = "col"></div>
-        <div class ="col-8">
-            <h5>Pass Summary</h5>
-            <img id="picture" src="data:image/png;base64, {{ img_data }}">
-            <br>
-            <h6>Pass summary graphic shown above</h6>
-        </div>
-        <div class = "col"></div>
-    </div>
+</div>
+<!-- Coverage Summary End -->
 
+<hr>
     
-    
-    <!-- Second Page -->
-   <div class="pagebreak"></div>
-    
+<!-- Error Detecion Summary -->  
+<div class="row text-center">
+    <h5>Error Detection</h5>
+    <hr>
+    <br>
+    <figure class="figure">
+        <img id="picture" src="data:image/png;base64, {{ area_plts[0] }}">
+         <figcaption class="figure-caption">Simulated field coverage, comparing cases of under, ideal, and over coverage.</figcaption>
+    </figure>
+</div>
+ <br>
         <div class="row">           
           <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
@@ -141,7 +225,7 @@
         <div class = "col"></div>
         <div class ="col-8">
             <h5>Detected Track Jumps</h5>
-            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <img id="picture" src="data:image/png;base64, {{ error_plts[0] }}">
             <br>
             <h6>Detected position jump throughout entire epoch</h6>
         </div>
@@ -194,13 +278,13 @@
         <div class = "col"></div>
         <div class ="col-8">
             <h5>Pass-to-Pass Accuracy</h5>
-            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <img id="picture" src="data:image/png;base64, {{ error_plts[1] }}">
             <br>
             <h6>Relative pass-to-pass accuracy over 15 minute epochs</h6>
         </div>
         <div class = "col"></div>
     </div>
-<hr/>
+<hr>
     
 
 
@@ -213,7 +297,7 @@
             <h4 class="text-left"><u>Error Detection Report</u></h4>
         </div>
         <div class = "col"></div>
-    <hr/>
+    <hr>
   </div>
     
 
@@ -221,7 +305,7 @@
         <div class = "col"></div>
         <div class ="col-8">
             <h5>Drift Comparision Figure</h5>
-            <img id="picture" src="data:image/png;base64, {{ img_data }}">
+            <img id="picture" src="data:image/png;base64, {{ error_plts[2] }}">
             <br>
             <h6>Estimated Error vs Total Error</h6>
         </div>

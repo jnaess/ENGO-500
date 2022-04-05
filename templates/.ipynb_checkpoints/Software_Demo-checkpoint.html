@@ -11,33 +11,33 @@
       <div class="row">
     <div class ="col"></div>
     <div class ="col-8">
-        <h6 class="text-center">Provided here is a demo of the software. Select an area using the tools on the left side of the map. The selected area will be sent for processing and produce a analytics report found <a href="#button">here</a>.</h6>
+        <h6 class="text-center">Provided here is a demo of the software. Select your field dimensions and submit. The selected area will be sent for processing and a analytics report will be displayed.</h6>
+        <h6><strong>Note</strong>: The report may take up to 30 seconds to publish. You will be automatically redirected.</h6>
     </div>
     <div class = "col"></div>
   </div>
     
     
     <hr/>
-    <h4> Enter Coordinates:</h4>
-    <form action="{{ url_for('report') }}" method="post">
+<div class="row">
+    <div class = "col-sm-4 offset-sm-4 text-center">
+    <h4> Enter Field Dimensions:</h4>
+      <form action="{{ url_for('report') }}" method="post">
         <div class = "form-group">
-            <div class = "col"></div>
-            <div class="col-4 center">
-                <input type="text" class="form-control" name="corner-1">
+                <input type="text" class="form-control" name="height" placeholder="height in meters">
                 <br>
-                <input type="text" class="form-control" name="corner-2">
-                <br>
-                <input type="text" class="form-control" name="corner-3">
-                <br>
-                <input type="text" class="form-control" name="corner-4">
-            </div>
-            <div class = "col"></div>
+                <input type="text" class="form-control" name="width" placeholder="width in meters">
         </div>
-        <button type="submit" class="btn btn-danger">Submit</button>
-    </form>
+          <br>
+          <button type="submit" class="btn btn-danger">Submit</button>
+          <br>
+      </form>
+         
+    </div>
     <br>
     <br>
-    
+    <hr/>
+
 </div>
  
            

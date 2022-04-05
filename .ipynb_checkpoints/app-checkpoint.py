@@ -104,13 +104,10 @@ def simulator():
 @app.route("/report",  methods=['POST', 'GET'])
 def report():    
     
-    corner_1 = request.form.get("corner-1")
-    corner_2 = request.form.get("corner-2")
-    corner_3 = request.form.get("corner-3")
-    corner_4 = request.form.get("corner-4")
-    
-
-    
+    #width = float(request.form.get("width"))
+    #height = float(request.form.get("height"))
+    width = 10
+    height = 1
     
     # Plot 1
     data = io.BytesIO()
@@ -130,16 +127,13 @@ def report():
     encoded_img_data2 = base64.b64encode(data.getvalue())
 
 
-    manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
-                      jump_occurance_probability = 500,
-                      easting_jump_const = 0,
-                      northing_jump_const = .2)
+   # manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
+                 #     jump_occurance_probability = 500,
+                  #    easting_jump_const = 0,
+                   #   northing_jump_const = .2)
     #test = manager.plot_a()
     test = encoded_img_data.decode('UTF-8')
-    
-    
-    # Hold Feild dimensions
-    corners=[corner_1, corner_2, corner_3, corner_4]
+
     
     # Cost summary params
     seed = 0.016 # cost per m
@@ -148,16 +142,31 @@ def report():
     crop = 0.246 # profit per m
     net = 0.203 # net profit per m
     cost_params = [seed, fert, herb, crop, net]
+    
     # Field area
-    tot_area = 10
+    tot_area = width * height
+    
+    field_params = [width, height, tot_area]
     
     # Maximum profit 
     tot_prof = net * tot_area
     
-    # Cost of overlap
+    # Peramters derived from over/underlap; true profit
+    derived_params = [tot_prof * 0.60]
     
+    # Area coverage figures; all, zero pass, single pass, double pass
+    area_plts = [test, test, test, test]
     
-    return render_template("report.html", cost_params=cost_params,  img_data=test, img_data2=encoded_img_data2.decode('UTF-8'))
+    zero = 10
+    single = 40
+    double = 15
+    # Area Coverage params; zero pass area, single pass area, double pass area
+    area_params = [zero, single, double]
+    
+    # Error plots; detected track jumps, pass-to-pass accuracy, drift comaprison, 
+    error_plts = [test, test, test]
+    
+    return render_template("report.html", field_params=field_params, cost_params=cost_params,  area_plts=area_plts, error_plts=error_plts, derived_params =derived_params, area_params=area_params, img_data2=encoded_img_data2.decode('UTF-8'))
 
 
 # Route to run the simulator
