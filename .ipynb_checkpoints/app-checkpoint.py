@@ -52,19 +52,7 @@ def R_D():
 # Software Demo page
 @app.route("/Software_Demo", methods=['POST', 'GET'])
 def Software_Demo():
-    
-    df = pd.DataFrame({#'zip':[19152,19047],
-                   'Lat':[40.058841,40.202162],
-                   'Lon':[-75.042164,-74.924594]})
-
-    geometry = [Point(xy) for xy in zip(df.Lon, df.Lat)]
-
-    gdf = GeoDataFrame(df, geometry=geometry)
-
-    geoJSON = gdf.to_json()
-    geoJSON = json.loads(geoJSON)
-
-    return render_template("Software_Demo.html", geoJSON = geoJSON)
+    return render_template("Software_Demo.html")
 
 
 
@@ -106,18 +94,18 @@ def report():
     manager = Manager(field = [[0,0],[0,length],[width,length],[width,0]],
                                 use_drift = True, 
                                  use_jump = True, 
-                                 easting_drift_const = .01,
-                                 northing_drift_const = .01,
-                                 mean_jump = Coord(0,0,std = [.05, .05]),
-                                 jump_occurance_probability = 500,
-                                 drift_variability = Coord(0,0, std = [.001, .001]),
-                                 easting_jump_const = .2,
-                                 northing_jump_const = .2,
+                                 easting_drift_const = .0002, #.01,
+                                 northing_drift_const = .0002, #.01,
+                                 mean_jump = Coord(0,0,std = [.005, .005]),
+                                 jump_occurance_probability = 50,
+                                 drift_variability = Coord(0,0, std = [.00001, .00001]),
+                                 easting_jump_const = .18,
+                                 northing_jump_const = .12,
                                  tractor_speed = 1, 
                                  epoch_frequency = 1, 
                                  rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"], 
                                  is_static = False, 
-                                 true_std = [.1,.1],
+                                 true_std = [.09,.04],
                                 tractor_width = swath)
     
     data = io.BytesIO()
@@ -166,7 +154,7 @@ def report():
                         0]
                       
     # Area coverage figures; all, zero pass, single pass, double pass
-    area_plts = [manager.clean_track_plot, 
+    area_plts = [manager.track_summary_plot, # manager.clean_track_plot
                  manager.zero_pass_plot, 
                  manager.single_pass_plot, 
                  manager.double_pass_plot]
