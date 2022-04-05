@@ -15,6 +15,7 @@ class Manager(DatabaseManager, Analyzer):
     """
     
     def __init__(self, 
+                 field = [[0,0],[0,10],[10,10],[10,0]],
                  use_drift = True, 
                  use_jump = True, 
                  easting_drift_const = .001,
@@ -28,7 +29,8 @@ class Manager(DatabaseManager, Analyzer):
                  epoch_frequency = 1, 
                  rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"], 
                  is_static = False, 
-                 true_std = [.1,.1]):
+                 true_std = [.1,.1],
+                tractor_width = 1.5):
         """
         Desc:
         Input:
@@ -38,6 +40,7 @@ class Manager(DatabaseManager, Analyzer):
         Analyzer.__init__(self)
         
         #simulator stuff
+        self.field = field
         self.use_drift = use_drift
         self.use_jump = use_jump
         self.easting_drift_const = easting_drift_const
@@ -47,6 +50,7 @@ class Manager(DatabaseManager, Analyzer):
         self.drift_variability = drift_variability
         self.easting_jump_const = easting_jump_const
         self.northing_jump_const = northing_jump_const
+        self.tractor_width = tractor_width
         
         #error detector parameters
         self.tractor_speed = tractor_speed
@@ -94,7 +98,7 @@ class Manager(DatabaseManager, Analyzer):
         #coordinates
         #self.field = [[0,0],[0,10],[10,10],[10,0]]
         #self.field = [[0,0],[0,12],[10,12],[10,0]]
-        self.field = [[0,0],[0,100],[100,100],[100,0]]
+        #self.field = [[0,0],[0,100],[100,100],[100,0]]
         #self.field = [[0,0],[-10,10],[0,20],[10,10]]
         #generates simulation tracks
         self.Sim = Simulator(vertices = self.field, 
@@ -106,7 +110,8 @@ class Manager(DatabaseManager, Analyzer):
                                 jump_occurance_probability = self.jump_occurance_probability,
                                 drift_variability = self.drift_variability,
                             easting_jump_const = self.easting_jump_const,
-        northing_jump_const = self.northing_jump_const)
+        northing_jump_const = self.northing_jump_const,
+                            tractor_width = self.tractor_width)
 
         #generates dataframe of values
         self.Sim.generate_output_tracks()
