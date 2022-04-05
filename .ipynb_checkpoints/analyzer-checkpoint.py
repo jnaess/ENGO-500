@@ -91,7 +91,9 @@ class Analyzer(Plotter, ErrorDetectorAnalyzer, SimulationAnalyzer):
             self.ed_cumulative_accuracy_e.append(round(self.ed_jump_cum_e/self.sim_jump_cum_e*100, 2))
             self.ed_cumulative_accuracy_n.append(round(self.ed_jump_cum_n/self.sim_jump_cum_n*100, 2))
             
+        self.ed_detection_accuracy.append(round(self.ed_drifts/self.sim_drifts*100, 2))
         self.ed_detection_accuracy.append(round(self.ed_errors/self.sim_errors*100, 2))    
+        
         self.ed_cumulative_accuracy_e.append(round(self.ed_drift_cum_e/self.sim_drift_cum_e*100, 2))
         self.ed_cumulative_accuracy_e.append(round(self.ed_err_cum_e/self.sim_err_cum_e*100, 2))
         

@@ -87,9 +87,9 @@ def report():
     swath = float(request.form.get("swath"))
     
     #render error or default max width
-    if width * length > 640001:
-        width = 800
-        length = 800
+    if width * length > 160001:
+        width = 400
+        length = 400
 
     manager = Manager(field = [[0,0],[0,length],[width,length],[width,0]],
                                 use_drift = True, 
