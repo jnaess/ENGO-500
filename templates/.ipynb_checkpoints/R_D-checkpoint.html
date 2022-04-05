@@ -10,7 +10,7 @@
     <hr/>
     
     <div class="row">
-    <div class ="col"></div>
+        <div class ="col"></div>
     <div class ="col-8">
         <h6 class="text-center">The software package found here consists of a track simulation and error detector. The simulator creates broadacre passes over a selected area, with positioning errors included. The error detector will then assess the simulated paths for position biases or jumps, and document accordingly.<br><br>
 
@@ -20,21 +20,30 @@ Simulating errors to evaluate the error detection softwares is important to test
 The reports below explain the fundamental methodologies behind the software package.
             </h6>
         </div>
-        <div class="col"></div>
+        <div class ="col"></div>
     </div>
     
     <hr/>
     <div class = "row">
         <div class="col">
             <br>
-            <h5>The Crop Operations report below outlines the cost estimate projections used in the simulaiton.</h5>
+            <h4>Crop Operations Report</h4>
         <object data="{{ url_for('static', filename = 'PDF/Crop Operations Report.pdf') }}" type="application/pdf" style="min-height:100vh;width:100%"></object>
         </div>
         
         <div class = "col">
             <br>
-            <h5>The Position Error report below provides insight on drift and position jump erros within static GNSS datasets.</h5>
+            <h4>Position Error Report</h4>
             <object data="{{ url_for('static', filename = 'PDF/Position Error Report.pdf') }}" type="application/pdf" style="min-height:100vh;width:100%"></object>
+    </div>
+    <div class = "row">
+        <div class="col"></div>
+        <div class="col-7">
+            <br>
+            <h4>Error Detection Evaluation Report</h4> 
+        <object data="{{ url_for('static', filename = 'PDF/Error Detection Evaluation Report.pdf') }}" type="application/pdf" style="min-height:100vh;width:100%"></object>
+        </div>
+        <div class="col"></div>
     </div>
     </div>
 

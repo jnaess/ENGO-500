@@ -16,6 +16,10 @@ body{
     background-color:  #e9edee;
     }
 
+        .tab1 {
+            tab-size: 4;
+        }
+
 #title{
     text-align: center;
 }
