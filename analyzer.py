@@ -67,19 +67,34 @@ class Analyzer(Plotter, ErrorDetectorAnalyzer, SimulationAnalyzer):
                                round(self.ed_drift_cum_n,4),
                               round(self.ed_err_cum_n,4)]
         
-        self.ed_detection_accuracy = [round(self.ed_jumps/self.sim_jumps*100, 2),
-                                      round(self.ed_drifts/self.sim_drifts*100, 2),
-                                      round(self.ed_errors/self.sim_errors*100, 2)]
+        #self.ed_detection_accuracy = [round(self.ed_jumps/self.sim_jumps*100, 2),round(self.ed_drifts/self.sim_drifts*100, 2),round(self.ed_errors/self.sim_errors*100, 2)]
+        self.a_1()
         
-        self.ed_cumulative_accuracy_e = [round(self.ed_jump_cum_e/self.sim_jump_cum_e*100, 2),
-                                         round(self.ed_drift_cum_e/self.sim_drift_cum_e*100, 2),
-                                         round(self.ed_err_cum_e/self.sim_err_cum_e*100, 2)]
+        #self.ed_cumulative_accuracy_e = [round(self.ed_jump_cum_e/self.sim_jump_cum_e*100, 2),round(self.ed_drift_cum_e/self.sim_drift_cum_e*100, 2),round(self.ed_err_cum_e/self.sim_err_cum_e*100, 2)]
         
-        self.ed_cumulative_accuracy_n = [round(self.ed_jump_cum_n/self.sim_jump_cum_n*100, 2),
-                                         round(self.ed_drift_cum_n/self.sim_drift_cum_n*100, 2),
-                                         round(self.ed_err_cum_n/self.sim_err_cum_n*100, 2)]
+        #self.ed_cumulative_accuracy_n = [round(self.ed_jump_cum_n/self.sim_jump_cum_n*100, 2),round(self.ed_drift_cum_n/self.sim_drift_cum_n*100, 2),round(self.ed_err_cum_n/self.sim_err_cum_n*100, 2)]
         
         # easting northing
-        self.ed_pass_to_pass_accuracy = [round(self.pass_to_pass_ed_e/self.pass_to_pass_sim_e*100, 2),
-                                         round(self.pass_to_pass_ed_n/self.pass_to_pass_sim_n*100, 2)]
+        self.ed_pass_to_pass_accuracy = [round(self.pass_to_pass_ed_e/self.pass_to_pass_sim_e*100, 2),round(self.pass_to_pass_ed_n/self.pass_to_pass_sim_n*100, 2)]
+                                         
+    def a_1(self):
+        self.ed_detection_accuracy = []
+        self.ed_cumulative_accuracy_e = []
+        self.ed_cumulative_accuracy_n = []
+        
+        if self.sim_jumps == 0:
+            self.ed_detection_accuracy.append(100)
+            self.ed_cumulative_accuracy_e.append(100)
+            self.ed_cumulative_accuracy_n.append(100)
+        else:
+            self.ed_detection_accuracy.append(round(self.ed_jumps/self.sim_jumps*100, 2))
+            self.ed_cumulative_accuracy_e.append(round(self.ed_jump_cum_e/self.sim_jump_cum_e*100, 2))
+            self.ed_cumulative_accuracy_n.append(round(self.ed_jump_cum_n/self.sim_jump_cum_n*100, 2))
+            
+        self.ed_detection_accuracy.append(round(self.ed_errors/self.sim_errors*100, 2))    
+        self.ed_cumulative_accuracy_e.append(round(self.ed_drift_cum_e/self.sim_drift_cum_e*100, 2))
+        self.ed_cumulative_accuracy_e.append(round(self.ed_err_cum_e/self.sim_err_cum_e*100, 2))
+        
+        self.ed_cumulative_accuracy_n.append(round(self.ed_drift_cum_n/self.sim_drift_cum_n*100, 2))
+        self.ed_cumulative_accuracy_n.append(round(self.ed_err_cum_n/self.sim_err_cum_n*100, 2))
                                          
