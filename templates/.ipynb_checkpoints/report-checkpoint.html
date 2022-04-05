@@ -13,163 +13,50 @@
   </div>
 <br>
 
- <!-- Field params -->
-<div class = "row text-center">
-    <h5>Operations Summary</h5>
-     <div class = "col-md-6 p-3 mx-auto">
-          <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <caption>Field Summary</caption>
-             <thead>
-                <tr class="white-bg">
-                  <th>Width (m)</th>
-                  <th>Length (m)</th>
-                  <th>Swath Width (m)</th>
-                  <th>Area (m<sup>2</sup>)</th>
-                  <th>Price of Canola ($/m<sup>2</sup>)</th>
-                  <th>Potential Revenue ($)</th>
-                </tr>
-              </thead>
-                <tbody>
-                  <tr class="white-bg">
-                    <td>{{ field_params[0] }}</td>
-                    <td>{{ field_params[1] }}</td>
-                    <td>{{ field_params[3] }}
-                    <td>{{ field_params[2] }}</td>
-                    <td>{{ cost_params[3] }}</td>
-                    <td>{{ (field_params[2] * cost_params[3])|round(2) }}</td>
-                </tr>
-                </tbody>
-              </table>
-         </div>
-    </div>
-</div>
-    <br>
- <!-- Field params -->
- 
-    
-    <!-- Cost Results -->
-<div class = "row text-center">
-        <div class = "col-md-6 p-3 mx-auto">
-          <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <caption>Cost Summary</caption>
-             <thead>
-                <tr class="white-bg">
-                  <th>Material</th>
-                    <th>Average Cost ($/m<sup>2</sup>)</th>
-                </tr>
-              </thead>
-                <tbody>
-                  <tr class="white-bg">
-                    <td>Seed</td>
-                    <td>{{ cost_params[0] }}</td>
-                   </tr>
-                   <tr class="white-bg">
-                    <td>Nitrogen Fertilizer</td>
-                    <td>{{ cost_params[1] }}</td>
-                   </tr>
-                   <tr class="white-bg">
-                    <td>Herbicide</td>
-                    <td>{{ cost_params[2] }}</td>
-                   </tr>
-                </tbody>
-              </table>
-            </div>
-       </div>
-</div>
-<br>
-<!-- Cost Results End-->
-            
-<!-- Profit Results -->
-<div class = "row text-center">
-        <div class = "col-md-6 p-3 mx-auto">
-          <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <caption>Profit Summary</caption>
-             <thead>
-                <tr class="white-bg">
-                  <th>Process</th>
-                  <th>Zero Pass</th>
-                  <th>Double Pass</th>
-                </tr>
-              </thead>
-                <tbody>
-                  <tr class="white-bg">
-                      <td>Seeding</td>
-                      <td>{{ zero_pass_loss[0] }}</td>
-                      <td>{{ double_pass_loss[0] }}</td>
-                   </tr>
-                    <tr class="white-bg">
-                      <td>Spraying</td>
-                      <td>{{ zero_pass_loss[1] }}</td>
-                      <td>{{ double_pass_loss[1] }}</td>
-                   </tr>
-                    <tr class="white-bg">
-                      <td>Spraying</td>
-                      <td>{{ zero_pass_loss[2] }}</td>
-                      <td>{{ double_pass_loss[2] }}</td>
-                   </tr>
-                </tbody>
-              </table>
-            </div>
-    </div>
-</div>
-<br>
- <!-- Profit Results End -->
-
-<hr>
 
 
 <!-- Coverage Summary -->
     <div class="row text-center">
-        <h5>Field Coverage Summary</h5>
-</div>
-<div class="row">
-    <div class="col">
-        <h6>Zero Pass</h6>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ area_plts[1] }}">
-             <figcaption class="figure-caption">Zero Pass coverage</figcaption>
-        </figure>
-    </div>
-     <br>
-    <div class="col">
-        <h6>Single Pass</h6>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ area_plts[2] }}">
-             <figcaption class="figure-caption">Single Pass coverage</figcaption>
-        </figure>
-    </div>
-     <br>
-    <div class="col">
-        <h6>Double Pass</h6>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ area_plts[3] }}">
-             <figcaption class="figure-caption">Double Pass coverage</figcaption>
-        </figure>
-    </div>
-</div>
-     <br>
-<div class="row text-center">
+        <div class="row text-center">
     <h5>Area Coverage</h5>
     <br>
     <figure class="figure">
-        <img id="picture" src="data:image/png;base64, {{ area_plts[0] }}">
-         <figcaption class="figure-caption">Simulated field coverage, comparing cases of under, ideal, and over coverage.</figcaption>
+        <img id="picture" src="data:image/png;base64, {{ area_plts[0] }}" style="width:40%;height=40%">
     </figure>
 </div>
  <br>
+</div>
+<div class="row">
+    <div class="col">
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[1] }}" style="width:90%;height=90%">
+        </figure>
+    </div>
+     <br>
+    <div class="col">
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[2] }}"style="width:90%;height=90%">
+        </figure>
+    </div>
+     <br>
+    <div class="col">
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[3] }}"style="width:90%;height=90%">
+        </figure>
+    </div>
+</div>
+     <br>
+
           
 
 <div class="row text-center">
         <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <caption>Pass Summary Table</caption>
+            <table class="table caption-top table-bordered table-striped bg">
+                <caption>Table 1: Pass Summary</caption>
               <thead>
                 <tr class="white-bg">
                   <th>Coverage Type</th>
@@ -206,8 +93,8 @@
 <div class="row text-center">
         <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <caption>Detected Error Summary</caption>
+            <table class="table caption-top table-bordered table-striped bg">
+                <caption>Table 2: Detected Error Summary</caption>
               <thead>
                 <tr class="white-bg">
                   <th></th>
@@ -223,47 +110,47 @@
                     <td>{{ sim_df[1] }}</td>
                     <td>{{ sim_df[2] }}</td>
                 </tr>
-                <tr class="white-bg">
-                  <td>Simulator Cumulative Easting Error</td>
-                  <td>{{ sim_df[3] }}</td>
-                    <td>{{ sim_df[4] }}</td>
-                    <td>{{ sim_df[5] }}</td>
-                </tr>
                   <tr class="white-bg">
-                  <td>Simulator Cumulative Northing Error</td>
-                  <td>{{ sim_df[6] }}</td>
-                    <td>{{ sim_df[7] }}</td>
-                    <td>{{ sim_df[8] }}</td>
-                </tr>
-                <tr class="white-bg">
                     <td>Error Detector</td>
                     <td>{{ ED_df[0] }}</td>
                     <td>{{ ED_df[1] }}</td>
                     <td>{{ ED_df[2] }}</td>
                 </tr>
                   <tr class="white-bg">
-                  <td>Error Detector Cumulative Easting Error</td>
-                  <td>{{ ED_df[3] }}</td>
-                    <td>{{ ED_df[4] }}</td>
-                    <td>{{ ED_df[5] }}</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>Error Detector Cumulative Northing Error</td>
-                  <td>{{ ED_df[6] }}</td>
-                    <td>{{ ED_df[7] }}</td>
-                    <td>{{ ED_df[8] }}</td>
-                </tr>
-                  <tr class="white-bg">
-                  <td>Error Detector Identification Accuaracy</td>
+                  <td>Error Detector Identification Accuracy</td>
                   <td>{{ per_ED_df[0] }}%</td>
                     <td>{{ per_ED_df[1] }}%</td>
                     <td>{{ per_ED_df[2] }}%</td>
                 </tr>
+                <tr class="white-bg">
+                  <td>Simulator Cumulative Easting Error</td>
+                  <td>{{ sim_df[3] }} m</td>
+                    <td>{{ sim_df[4] }} m</td>
+                    <td>{{ sim_df[5] }} m</td>
+                </tr>
                   <tr class="white-bg">
+                  <td>Error Detector Cumulative Easting Error</td>
+                  <td>{{ ED_df[3] }} m</td>
+                    <td>{{ ED_df[4] }} m</td>
+                    <td>{{ ED_df[5] }} m</td>
+                </tr>
+                   <tr class="white-bg">
                   <td>Error Detector Cumulative Easting Error</td>
                   <td>{{ per_ED_df[3] }}%</td>
                     <td>{{ per_ED_df[4] }}%</td>
                       <td>{{ per_ED_df[5] }}%</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>Simulator Cumulative Northing Error</td>
+                  <td>{{ sim_df[6] }} m</td>
+                    <td>{{ sim_df[7] }} m</td>
+                    <td>{{ sim_df[8] }} m</td>
+                </tr>
+                  <tr class="white-bg">
+                  <td>Error Detector Cumulative Northing Error</td>
+                  <td>{{ ED_df[6] }} m</td>
+                    <td>{{ ED_df[7] }} m</td>
+                    <td>{{ ED_df[8] }} m</td>
                 </tr>
                   <tr class="white-bg">
                   <td>Error Detector Cumulative Northing Error</td>
@@ -280,25 +167,25 @@
     <div class="row text-center">
         <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-                <caption>Pass-to-Pass Accuracy</caption>
+            <table class="table caption-top table-bordered table-striped bg">
+                <caption>Table 3: Pass-to-Pass Accuracy</caption>
               <thead>
                 <tr class="white-bg">
                     <th>Pass-to-Pass Detection</th>
-                    <th>Easting (m)</th>
-                    <th>Northing (m)</th>
+                    <th>Easting</th>
+                    <th>Northing</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="white-bg">
                   <td>Simulator</td>
-                  <td>{{ p2p[0] }}</td>
-                    <td>{{ p2p[1] }}</td>
+                  <td>{{ p2p[0] }} m</td>
+                    <td>{{ p2p[1] }} m</td>
                 </tr>
                   <tr class="white-bg">
                   <td>Error Detector</td>
-                  <td>{{ p2p[2] }}</td>
-                    <td>{{ p2p[3] }}</td>
+                  <td>{{ p2p[2] }} m</td>
+                    <td>{{ p2p[3] }} m</td>
                 </tr>
                   <tr class="white-bg">
                   <td>Error Detector Percent Accuracy</td>
@@ -310,196 +197,95 @@
           </div>
         </div>
 </div>
-
-    
-    <div class="row text-center">
-        <h5>Detected Track Jumps</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ error_plts[0] }}">
-             <figcaption class="figure-caption">Detected Track Jumps</figcaption>
-        </figure>
-    </div>
- <br>
-    
-    
-   
-<div class="row text-center">
-        <h5>Drift Comparsion</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ error_plts[2] }}">
-             <figcaption class="figure-caption">Drift Comparison</figcaption>
-        </figure>
-    </div>
-    
-     <br>
-    
-    <div class="row text-center">
-        <h5>Pass-to-Pass Accuracy</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ error_plts[1] }}">
-             <figcaption class="figure-caption">Pass-to-Pass Accuracy</figcaption>
-        </figure>
-    </div>
-    
-
-    
-        <div class="row">           
-          <div class = "col-md-6 p-3 mx-auto">
+    <hr>
+    <!-- Field params -->
+<div class = "row text-center">
+    <h5>Operations Summary</h5>
+     <div class = "col-md-6 p-3 mx-auto">
           <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-            <h5>Position Drifts</h5>
-                <thead>
+            <table class="table caption-top table-bordered table-striped bg">
+                <caption>Table 4: Field Summary</caption>
+             <thead>
                 <tr class="white-bg">
-                  <th></th>
-                    <th>&sigma; (m)</th>
+                  <th>Width (m)</th>
+                  <th>Length (m)</th>
+                  <th>Swath Width (m)</th>
+                  <th>Area (m<sup>2</sup>)</th>
                 </tr>
               </thead>
                 <tbody>
                   <tr class="white-bg">
-                    <td>Easting</td>
-                    <td>0</td>
+                    <td>{{ field_params[0] }}</td>
+                    <td>{{ field_params[1] }}</td>
+                    <td>{{ field_params[3] }}
+                    <td>{{ field_params[2] }}</td>
+                </tr>
+                </tbody>
+              </table>
+         </div>
+    </div>
+</div>
+    <br>
+ <!-- Field params -->
+    
+
+<!-- Cost Results End-->
+
+    
+<!-- Profit Results -->
+<div class = "row text-center">
+        <div class = "col-md-6 p-3 mx-auto">
+          <div class="table-responsive-md">
+            <table class="table caption-top table-bordered table-striped bg">
+                <caption>Table 5: Loss Summary</caption>
+             <thead>
+                <tr class="white-bg">
+                  <th>Process</th>
+                  <th>Zero Pass</th>
+                  <th>Double Pass</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr class="white-bg">
+                      <td>Seeding</td>
+                      <td>${{ zero_pass_loss[0] }}</td>
+                      <td>${{ double_pass_loss[0] }}</td>
                    </tr>
-                   <tr class="white-bg">
-                    <td>Northing</td>
-                    <td>0</td>
+                    <tr class="white-bg">
+                      <td>Spraying</td>
+                      <td>${{ zero_pass_loss[1] }}</td>
+                      <td>${{ double_pass_loss[1] }}</td>
+                   </tr>
+                    <tr class="white-bg">
+                      <td>Harvesting</td>
+                      <td>${{ zero_pass_loss[2] }}</td>
+                      <td>${{ double_pass_loss[2] }}</td>
                    </tr>
                 </tbody>
               </table>
-                  <h6>This table shows the standard normalized standard devation from the observed to true positions</h6>
-              </div>
             </div>
-        </div>
-    
-    <br>
-    <figure class="figure">
-        <img id="picture" src="data:image/png;base64, {{ error_plts[0] }}">
-         <figcaption class="figure-caption">Detected Track Jumps</figcaption>
-    </figure>
-</div>
-    
-    <div class="row text-center">
-        <h5>Simulated vs. Detected Cu</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ error_plts[1] }}">
-             <figcaption class="figure-caption">Pass-to-Pass Accuracy</figcaption>
-        </figure>
     </div>
+</div>
+<br>
+ <!-- Profit Results End -->
+
+
     
+
+    
+
+    
+
+    
+
+ 
+    
+     
+
+
+
     
  
-    <div class="row">           
-          <div class = "col-md-6 p-3 mx-auto">
-          <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-            <h5>Position Drifts</h5>
-                <thead>
-                <tr class="white-bg">
-                  <th>Quantifiable</th>
-                    <th>Easting (m)</th>
-                    <th>Northing (m)</th>
-                </tr>
-              </thead>
-                <tbody>
-                  <tr class="white-bg">
-                    <td>Mean Pass-to-Pass Error</td>
-                    <td>0</td>
-                     <td>0</td>
-                   </tr>
-                   <tr class="white-bg">
-                    <td>Error Range</td>
-                    <td>0</td>
-                     <td>0</td>
-                   </tr>
-                   <tr class="white-bg">
-                    <td>Pass-to-Pass Variance</td>
-                    <td>0</td>
-                     <td>0</td>
-                   </tr>
-                   <tr class="white-bg">
-                    <td>Pass-to-Pass Sample Standard Deviation</td>
-                    <td>0</td>
-                     <td>0</td>
-                   </tr>
-                </tbody>
-              </table>
-                  <h6>This table shows a summary the pass-to-pass analytics</h6>
-              </div>
-            </div>
-        </div>
-    
-       <div class="row">
-        <div class = "col"></div>
-        <div class ="col-8">
-            <h5>Pass-to-Pass Accuracy</h5>
-            <img id="picture" src="data:image/png;base64, {{ error_plts[1] }}">
-            <br>
-            <h6>Relative pass-to-pass accuracy over 15 minute epochs</h6>
-        </div>
-        <div class = "col"></div>
-    </div>
-<hr>
-    
-    
-
-      <div class="row">
-        <div class = "col"></div>
-        <div class ="col-8">
-            <h5>Drift Comparision Figure</h5>
-            <img id="picture" src="data:image/png;base64, {{ error_plts[2] }}">
-            <br>
-            <h6>Estimated Error vs Total Error</h6>
-        </div>
-        <div class = "col"></div>
-    </div>
-    
-    
-    <div class="row">
-        <div class = "col"></div>
-        <div class ="col-8">
-            <h5>Simulated vs. Detected Cumulative Easting Drift</h5>
-            <img id="picture" src="data:image/png;base64, {{ error_plts[2] }}">
-            <br>
-            <h6></h6>
-        </div>
-        <div class = "col"></div>
-    </div>
-    
-
-
-    <div class="row">           
-          <div class = "col-md-6 p-3 mx-auto">
-          <div class="table-responsive-md">
-            <table class="table table-bordered table-striped bg">
-            <h5>Drift Error Summary</h5>
-                <thead>
-                <tr class="white-bg">
-                  <th>Direction</th>
-                    <th>Easting (m)</th>
-                    <th>Northing (m)</th>
-                </tr>
-              </thead>
-                <tbody>
-                  <tr class="white-bg">
-                    <td>Total Drift</td>
-                    <td>0</td>
-                     <td>0</td>
-                   </tr>
-                   <tr class="white-bg">
-                    <td>Average per Epoch</td>
-                    <td>0</td>
-                     <td>0</td>
-                   </tr>
-                </tbody>
-              </table>
-                  <h6>This table shows summarizes the pass-to-pass analytics</h6>
-              </div>
-            </div>
-        </div>
-
     
 
 
