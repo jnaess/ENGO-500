@@ -97,7 +97,7 @@ def report():
                                  easting_drift_const = .0002, #.01,
                                  northing_drift_const = .0002, #.01,
                                  mean_jump = Coord(0,0,std = [.005, .005]),
-                                 jump_occurance_probability = 50,
+                                 jump_occurance_probability = 16,#50
                                  drift_variability = Coord(0,0, std = [.00001, .00001]),
                                  easting_jump_const = .18,
                                  northing_jump_const = .12,
