@@ -74,6 +74,7 @@ class ShapeInitializer():
         #self.temp2 = gpd.overlay(self.inner_gdf, self.R_gdf_poly, how="intersection") #only take what was inside inner
         #self.single_pass = gpd.overlay(self.R_gdf_poly, self.temp2, how="intersection") #not covered by real pass either
         self.single_pass = gpd.overlay(self.R_gdf_poly, self.T_gdf_poly, how="intersection") #any overlap of true and real path
+        self.single_pass = gpd.overlay(self.outer_gdf, self.single_pass, how="intersection")
         self.single_pass = self.add_title(self.single_pass, "Single Pass")
         
     def init_double_pass(self):
