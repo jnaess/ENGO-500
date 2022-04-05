@@ -26,11 +26,17 @@ body{
     width: 100%;
 }
 
-h1, h2, h3 {
+h1{
     text-align: center;
     font-weight: bold;
     padding: 0.5%;
     text-decoration: underline;
+}
+
+h2, h3{
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5%;
 }
 
 
