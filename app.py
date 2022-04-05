@@ -29,17 +29,7 @@ from point import Coord
 import time
 
 app = Flask(__name__)
-
-# Configure Database
-#db = SQL("postgresql://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr") 
-
-#db = SQLAlchemy(app)
-
-#db = SQL("postgresql://mnonspcirnraqg:7919dd02f614cb83509e2889ec281800889dec45fb24c57db99d632e678f5626@ec2-52-3-60-53.compute-1.amazonaws.com:5432/d3kr6lkene46qr") 
-
-#db = SQL("postgres://tdordoxeldwmqu:8f5dd3c7322b6a83fa9279eb76cdc139979adcc7b3c03ace597bac1661d1e696@ec2-34-239-196-254.compute-1.amazonaws.com:5432/dal40v64r9dbnv")
-         
-
+      
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -107,33 +97,36 @@ def report():
     width = float(request.form.get("width"))
     length = float(request.form.get("length"))
     swath = float(request.form.get("swath"))
-    if w
-    width = 800
-    lenght = 800
-    swath = 5
     
-    # Plot 1
+    #render error or default max width
+    if width * length > 640001:
+        width = 800
+        length = 800
+
+    manager = Manager(field = [[0,0],[0,length],[width,length],[width,0]],
+                                use_drift = True, 
+                                 use_jump = True, 
+                                 easting_drift_const = .01,
+                                 northing_drift_const = .01,
+                                 mean_jump = Coord(0,0,std = [.05, .05]),
+                                 jump_occurance_probability = 5,
+                                 drift_variability = Coord(0,0, std = [.001, .001]),
+                                 easting_jump_const = .2,
+                                 northing_jump_const = .2,
+                                 tractor_speed = 1, 
+                                 epoch_frequency = 1, 
+                                 rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"], 
+                                 is_static = False, 
+                                 true_std = [.1,.1],
+                                tractor_width = swath)
+    
     data = io.BytesIO()
     plt.plot([1, 2, 3, 4])
     plt.ylabel('some numbers')
     plt.savefig(data, format='png', bbox_inches="tight")
     plt.close()
     encoded_img_data = base64.b64encode(data.getvalue())
-    img = encoded_img_data.decode('UTF-8')
     
-    # Plot 2
-    data = io.BytesIO()
-    plt.plot([1, 2, 3, 4])
-    plt.ylabel('some more numbers')
-    plt.savefig(data, format='png')
-    plt.close()
-    encoded_img_data2 = base64.b64encode(data.getvalue())
-
-
-    manager = Manager(mean_jump = Coord(0,0, std = [0, 0]),
-                   jump_occurance_probability = 500,
-                     easting_jump_const = 0,
-                     northing_jump_const = .2)
     #test = manager.plot_a()
     test = encoded_img_data.decode('UTF-8')
 
@@ -157,19 +150,39 @@ def report():
     # Peramters derived from over/underlap; true profit
     derived_params = [tot_prof * 0.60]
     
-    # Area coverage figures; all, zero pass, single pass, double pass
-    area_plts = [test, test, test, test]
-    
-    zero = 10
-    single = 40
-    double = 15
     # Area Coverage params; zero pass area, single pass area, double pass area
-    area_params = [zero, single, double]
+    area_params = [manager.zero_pass_area, 
+                   manager.single_pass_area, 
+                   manager.double_pass_area]
+    
+    #losses; seed, fertilizer, harvest
+    zero_pass_loss = [.203*manager.zero_pass_area,
+                      .1258*manager.zero_pass_area,
+                      .203*manager.zero_pass_area]
+    
+    double_pass_loss = [.01637*manager.double_pass_area,
+                        .026984**manager.double_pass_area,
+                        0]
+                      
+    # Area coverage figures; all, zero pass, single pass, double pass
+    area_plts = [manager.clean_track_plot, 
+                 manager.zero_pass_plot, 
+                 manager.single_pass_plot, 
+                 manager.double_pass_plot]
     
     # Error plots; detected track jumps, pass-to-pass accuracy, drift comaprison, 
-    error_plts = [test, test, test]
+    error_plts = [manager.sim_v_ED_cum_easting_drift_plot, 
+                  manager.sim_v_ED_cum_northing_drift_plot, 
+                 manager.sim_v_ED_cum_easting_jump_plot]
     
-    return render_template("report.html", field_params=field_params, cost_params=cost_params, area_plts=area_plts, derived_params =derived_params, area_params=area_params, error_plts=error_plts, img_data2=encoded_img_data2.decode('UTF-8'))
+    return render_template("report.html", 
+                           field_params=field_params, 
+                           cost_params=cost_params, 
+                           area_plts=area_plts, 
+                           derived_params =derived_params, 
+                           area_params=area_params, 
+                           error_plts=error_plts, 
+                           img_data2=test)
 
 
 # Route to run the simulator

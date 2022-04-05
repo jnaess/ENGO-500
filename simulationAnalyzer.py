@@ -31,6 +31,28 @@ class SimulationAnalyzer():
         
         self.track_summary_analysis()
         
+        self.general_sim_analysis()
+        
+    def general_sim_analysis(self):
+        """
+        Desc:
+        Input:
+        Output:
+        """
+        self.sim_jumps = sum(self.df_sim.jump_status.to_list())
+        self.sim_drifts = sum(self.df_sim.drift_status.to_list())
+        self.sim_errors = sum(self.df_sim.error_status.to_list())
+        
+        
+        self.sim_err_cum_n = self.df_sim.error_cumulative_n.to_list()[-1]
+        self.sim_err_cum_e = self.df_sim.error_cumulative_e.to_list()[-1]
+        self.sim_drift_cum_n = self.df_sim.drift_cumulative_n.to_list()[-1]
+        self.sim_drift_cum_e = self.df_sim.drift_cumulative_e.to_list()[-1]
+        self.sim_jump_cum_n = self.df_sim.jump_cumulative_n.to_list()[-1]
+        self.sim_jump_cum_e = self.df_sim.jump_cumulative_e.to_list()[-1]
+        
+        self.pass_to_pass_sim_n = self.sim_err_cum_n/(self.df_sim.index.to_list()[-1]+1)*15*60
+        self.pass_to_pass_sim_e = self.sim_err_cum_e/(self.df_sim.index.to_list()[-1]+1)*15*60
         
     def zero_pass_analysis(self):
         """
@@ -68,7 +90,7 @@ class SimulationAnalyzer():
         
         self.double_pass_area = sum(self.Sim.double_pass.area)
         
-    def double_pass_analysis(self):
+    def track_summary_analysis(self):
         """
         Desc:
         Input:

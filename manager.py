@@ -62,6 +62,7 @@ class Manager(DatabaseManager, Analyzer):
         self.retrieve_sim_data()
         self.initialize_simulator()
         self.initialize_error_detector()
+        self.generate_analytics()
         #self.push_data()
     
     def retrieve_sim_data(self, sim_id = -1):

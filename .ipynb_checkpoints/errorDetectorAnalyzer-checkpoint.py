@@ -29,6 +29,29 @@ class ErrorDetectorAnalyzer():
         
         self.generate_overall_analysis()
         
+        self.general_ED_analysis()
+        
+    def general_ED_analysis(self):
+        """
+        Desc:
+        Input:
+        Output:
+        """
+        self.ed_jumps = sum(self.df_ED.jump_status.to_list())
+        self.ed_drifts = sum(self.df_ED.drift_status.to_list())
+        self.ed_errors = sum(self.df_ED.error_status.to_list())
+        
+        
+        self.ed_err_cum_n = self.df_ED.error_cumulative_n.to_list()[-1]
+        self.ed_err_cum_e = self.df_ED.error_cumulative_e.to_list()[-1]
+        self.ed_drift_cum_n = self.df_ED.drift_cumulative_n.to_list()[-1]
+        self.ed_drift_cum_e = self.df_ED.drift_cumulative_e.to_list()[-1]
+        self.ed_jump_cum_n = self.df_ED.jump_cumulative_n.to_list()[-1]
+        self.ed_jump_cum_e = self.df_ED.jump_cumulative_e.to_list()[-1]
+        
+        self.pass_to_pass_ed_n = self.ed_err_cum_n/(self.df_ed.index.to_list()[-1]+1)*15*60
+        self.pass_to_pass_ed_e = self.ed_err_cum_e/(self.df_ed.index.to_list()[-1]+1)*15*60
+        
     def generate_drift_analysis(self):
         """
         Desc:

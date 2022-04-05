@@ -85,7 +85,7 @@ class BasePlot():
         
         self.set_legend(anchor)
         
-        plt.show() 
+        #plt.show() 
         
     def plot_gdf(self, shapes = [], shape_colors = [], x_label="x_label", y_label="y_label", title="title", aspect = True):
         """
@@ -130,7 +130,7 @@ class BasePlot():
         #plt.xlim(0, 12)
         #plt.ylim(0, 12)
         
-        plt.show()   
+        #plt.show()   
         
     def set_parameters(self, ax, x_label="x_label", y_label="y_label", title="title", aspect = True):
         """
