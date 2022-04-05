@@ -166,7 +166,7 @@ def report():
                         0]
                       
     # Area coverage figures; all, zero pass, single pass, double pass
-    area_plts = [manager.clean_track_plot, 
+    area_plts = [manager.track_summary_plot, # manager.clean_track_plot
                  manager.zero_pass_plot, 
                  manager.single_pass_plot, 
                  manager.double_pass_plot]
