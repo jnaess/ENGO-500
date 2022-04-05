@@ -122,6 +122,38 @@
 
 
 <!-- Coverage Summary -->
+    <div class="row text-center">
+        <h5>Field Coverage Summary</h5>
+</div>
+<div class="row">
+    <div class="col">
+        <h6>Zero Pass</h6>
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[1] }}">
+             <figcaption class="figure-caption">Zero Pass coverage</figcaption>
+        </figure>
+    </div>
+     <br>
+    <div class="col">
+        <h6>Single Pass</h6>
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[2] }}">
+             <figcaption class="figure-caption">Single Pass coverage</figcaption>
+        </figure>
+    </div>
+     <br>
+    <div class="col">
+        <h6>Double Pass</h6>
+        <br>
+        <figure class="figure">
+            <img id="picture" src="data:image/png;base64, {{ area_plts[3] }}">
+             <figcaption class="figure-caption">Double Pass coverage</figcaption>
+        </figure>
+    </div>
+</div>
+     <br>
 <div class="row text-center">
     <h5>Area Coverage</h5>
     <br>
@@ -131,34 +163,6 @@
     </figure>
 </div>
  <br>
-    
-    <div class="row text-center">
-        <h5>Zero Pass</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ area_plts[1] }}">
-             <figcaption class="figure-caption">Zero Pass coverage</figcaption>
-        </figure>
-    </div>
-     <br>
-    <div class="row text-center">
-        <h5>Single Pass</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ area_plts[2] }}">
-             <figcaption class="figure-caption">Single Pass coverage</figcaption>
-        </figure>
-    </div>
-     <br>
-    <div class="row text-center">
-        <h5>Double Pass</h5>
-        <br>
-        <figure class="figure">
-            <img id="picture" src="data:image/png;base64, {{ area_plts[3] }}">
-             <figcaption class="figure-caption">Double Pass coverage</figcaption>
-        </figure>
-    </div>
-     <br>
           
 
 <div class="row text-center">
@@ -219,6 +223,12 @@
                     <td>{{ sim_df[1] }}</td>
                     <td>{{ sim_df[2] }}</td>
                 </tr>
+                  <tr class="white-bg">
+                    <td>Error Detector</td>
+                    <td>{{ ED_df[0] }}</td>
+                    <td>{{ ED_df[1] }}</td>
+                    <td>{{ ED_df[2] }}</td>
+                </tr>
                 <tr class="white-bg">
                   <td>Simulator Cumulative Easting Error</td>
                   <td>{{ sim_df[3] }}</td>
@@ -231,12 +241,7 @@
                     <td>{{ sim_df[7] }}</td>
                     <td>{{ sim_df[8] }}</td>
                 </tr>
-                <tr class="white-bg">
-                    <td>Error Detector</td>
-                    <td>{{ ED_df[0] }}</td>
-                    <td>{{ ED_df[1] }}</td>
-                    <td>{{ ED_df[2] }}</td>
-                </tr>
+                
                   <tr class="white-bg">
                   <td>Error Detector Cumulative Easting Error</td>
                   <td>{{ ED_df[3] }}</td>
@@ -250,7 +255,7 @@
                     <td>{{ ED_df[8] }}</td>
                 </tr>
                   <tr class="white-bg">
-                  <td>Error Detector Identification Accuaracy</td>
+                  <td>Error Detector Identification Accuracy</td>
                   <td>{{ per_ED_df[0] }}%</td>
                     <td>{{ per_ED_df[1] }}%</td>
                     <td>{{ per_ED_df[2] }}%</td>
