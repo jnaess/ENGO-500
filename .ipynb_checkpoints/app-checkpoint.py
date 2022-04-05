@@ -94,11 +94,11 @@ def report():
     manager = Manager(field = [[0,0],[0,length],[width,length],[width,0]],
                                 use_drift = True, 
                                  use_jump = True, 
-                                 easting_drift_const = .0002, #.01,
-                                 northing_drift_const = .0002, #.01,
+                                 easting_drift_const = .00004333,#.0002, #.01,
+                                 northing_drift_const = .00004333,#.0002, #.01,
                                  mean_jump = Coord(0,0,std = [.005, .005]),
-                                 jump_occurance_probability = 16,#50
-                                 drift_variability = Coord(0,0, std = [.00001, .00001]),
+                                 jump_occurance_probability = 2,#16,#50
+                                 drift_variability = Coord(0,0, std = [.000001, .000001]),
                                  easting_jump_const = .18,
                                  northing_jump_const = .12,
                                  tractor_speed = 1, 
