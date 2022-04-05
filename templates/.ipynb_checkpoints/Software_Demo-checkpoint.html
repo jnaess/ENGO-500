@@ -22,10 +22,11 @@
 <div class="row">
     <div class = "col-sm-4 offset-sm-4 text-center">
     <h4>Enter Simulation Parameters:</h4>
+        <h6>Total Area must be less than 64000 m<sup>2</sup></h6>
       <form action="{{ url_for('report') }}" method="post">
         <div class = "form-group">
-                <input type="text" class="form-control" name="length" placeholder="Field Length (m)">
-                <input type="text" class="form-control" name="width" placeholder="Field Width (m)">
+                <input type="text" class="form-control" name="length" placeholder="Field Length (m). Must be less than 800m">
+                <input type="text" class="form-control" name="width" placeholder="Field Width (m). Must be less than 800m">
                 <input type="text" class="form-control" name="swath" placeholder="Pass Width (m)">
         </div>
           <br>
@@ -80,7 +81,7 @@
                     <td>1</td>
                    </tr>
                     <tr class="white-bg">
-                    <td>Epoch Frequnecy</td>
+                    <td>Epoch Frequency</td>
                     <td>1</td>
                    </tr>
                 </tbody>
