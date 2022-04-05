@@ -27,6 +27,8 @@ class PathGenerator(polygon):
         """
         polygon.__init__(self, vertices)
         
+        self.multiplier = 3
+        
         self.tractor_width = tractor_width
         
         self.setup_outer_poly()
@@ -164,15 +166,15 @@ class PathGenerator(polygon):
         self.dist_a = self.distance(self.vertices[self.low_left],self.vertices[self.low_right])
         self.vec_a = self.unit(self.vector(self.vertices[self.low_left], self.vertices[self.low_right]))
         
-        self.temp_a = Coord(self.vertices[self.low_left].E()+self.vec_a.E()*self.tractor_width,
-                           self.vertices[self.low_left].N()+self.vec_a.N()*self.tractor_width)
+        self.temp_a = Coord(self.vertices[self.low_left].E()+self.vec_a.E()*self.tractor_width*self.multiplier,
+                           self.vertices[self.low_left].N()+self.vec_a.N()*self.tractor_width*self.multiplier)
         
         #1 to 2
         self.dist_b = self.distance(self.vertices[self.low_left],self.vertices[self.top_left])
         self.vec_b = self.unit(self.vector(self.vertices[self.low_left],self.vertices[self.top_left]))
         
-        self.temp_b = Coord(self.temp_a.E()+self.vec_b.E()*self.tractor_width,
-                             self.temp_a.N()+self.vec_b.N()*self.tractor_width)
+        self.temp_b = Coord(self.temp_a.E()+self.vec_b.E()*self.tractor_width*self.multiplier,
+                             self.temp_a.N()+self.vec_b.N()*self.tractor_width*self.multiplier)
         
     def label_inner_polygon(self):
         """
@@ -191,14 +193,14 @@ class PathGenerator(polygon):
         """        
         self.a = Coord(self.temp_b.E(), self.temp_b.N())
         
-        self.b = Coord(self.temp_b.E()+self.vec_b.E()*(self.dist_b-2*self.tractor_width),
-                           self.temp_b.N()+self.vec_b.N()*(self.dist_b-2*self.tractor_width))
+        self.b = Coord(self.temp_b.E()+self.vec_b.E()*(self.dist_b-2*self.tractor_width*self.multiplier),
+                           self.temp_b.N()+self.vec_b.N()*(self.dist_b-2*self.tractor_width*self.multiplier))
         
-        self.c = Coord(self.b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
-                           self.b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
+        self.c = Coord(self.b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width*self.multiplier),
+                           self.b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width*self.multiplier))
         
-        self.d = Coord(self.temp_b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width),
-                           self.temp_b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width))
+        self.d = Coord(self.temp_b.E()+self.vec_a.E()*(self.dist_a-2*self.tractor_width*self.multiplier),
+                           self.temp_b.N()+self.vec_a.N()*(self.dist_a-2*self.tractor_width*self.multiplier))
         
         #must be entered clockwise
         self.inner = polygon(vertices = [self.a,self.b,self.c,self.d])
