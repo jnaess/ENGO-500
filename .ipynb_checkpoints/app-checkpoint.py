@@ -152,17 +152,17 @@ def report():
     
     
     # Area Coverage params; zero pass area, single pass area, double pass area
-    area_params = [manager.zero_pass_area, 
-                   manager.single_pass_area, 
-                   manager.double_pass_area]
+    area_params = [round(manager.zero_pass_area,3), 
+                   round(manager.single_pass_area,3), 
+                   round(manager.double_pass_area,3)]
     
     #losses; seed, fertilizer, harvest
-    zero_pass_loss = [.203*manager.zero_pass_area,
-                      .1258*manager.zero_pass_area,
-                      .203*manager.zero_pass_area]
+    zero_pass_loss = [round(.203*manager.zero_pass_area,2),
+                      round(.1258*manager.zero_pass_area,2),
+                      round(.203*manager.zero_pass_area,2)]
     
-    double_pass_loss = [.01637*manager.double_pass_area,
-                        .026984**manager.double_pass_area,
+    double_pass_loss = [round(.01637*manager.double_pass_area,2),
+                        round(.026984**manager.double_pass_area,2),
                         0]
                       
     # Area coverage figures; all, zero pass, single pass, double pass
@@ -186,10 +186,10 @@ def report():
     per_ED_df = manager.ed_detection_accuracy + manager.ed_cumulative_accuracy_e + manager.ed_cumulative_accuracy_n
     
     # Pass-to-Pass; simp2pE, simp2pN, EDp2pE, EDp2pN, ED%E, ED%N
-    p2p = [manager.pass_to_pass_sim_e, 
-           manager.pass_to_pass_sim_n, 
-           manager.pass_to_pass_ed_e, 
-           manager.pass_to_pass_ed_n, 
+    p2p = [round(manager.pass_to_pass_sim_e,4), 
+           round(manager.pass_to_pass_sim_n,4), 
+           round(manager.pass_to_pass_ed_e,4), 
+           round(manager.pass_to_pass_ed_n,4), 
            manager.ed_pass_to_pass_accuracy[0], 
            manager.ed_pass_to_pass_accuracy[1]]
     
