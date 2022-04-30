@@ -12,12 +12,13 @@ class BasePlot():
     Contains Plotter parameters and plot generation functions
     """
     
-    def __init__(self):
+    def __init__(self, display = False):
         """
         Desc:
         Input:
         Output:
         """
+        self.display = display
 
     def plot_fig(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", aspect = True, anchor = 1.2, alpha = 1, linewidth = 1, color = False):
         """
@@ -52,7 +53,8 @@ class BasePlot():
         
         self.set_legend(anchor)
         
-        #plt.show() 
+        if self.display:
+            plt.show() 
     
     def plot_pts(self, x= [], y = [], line_label = [], x_label="x_label", y_label="y_label", title="title", aspect = True, anchor = 1.2, alpha = 1, linewidth = 1, color = False):
         """
@@ -85,7 +87,8 @@ class BasePlot():
         
         self.set_legend(anchor)
         
-        #plt.show() 
+        if self.display:
+            plt.show() 
         
     def plot_gdf(self, shapes = [], shape_colors = [], x_label="x_label", y_label="y_label", title="title", aspect = True):
         """
@@ -131,7 +134,8 @@ class BasePlot():
         #plt.xlim(0, 12)
         #plt.ylim(0, 12)
         
-        #plt.show()   
+        if self.display:
+            plt.show()    
         
     def set_parameters(self, ax, x_label="x_label", y_label="y_label", title="title", aspect = True):
         """

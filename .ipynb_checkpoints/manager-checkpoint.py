@@ -30,14 +30,15 @@ class Manager(DatabaseManager, Analyzer):
                  rename_keys = ["epoch", "real_e", "real_n", "real_e_std", "real_n_std"], 
                  is_static = False, 
                  true_std = [.1,.1],
-                tractor_width = 1.5):
+                tractor_width = 1.5,
+                display = False):
         """
         Desc:
         Input:
         Output
         """
         DatabaseManager.__init__(self)
-        Analyzer.__init__(self)
+        Analyzer.__init__(self, display = display)
         
         #simulator stuff
         self.field = field

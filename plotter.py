@@ -11,13 +11,13 @@ class Plotter(BasePlot):
     Sister class to Manager
     """
     
-    def __init__(self):
+    def __init__(self, display = False):
         """
         Desc:
         Input:
         Output:
         """
-        BasePlot.__init__(self)
+        BasePlot.__init__(self, display = display)
         
         #attempted path versus real path plot
         #self.plot_a()
@@ -57,9 +57,9 @@ class Plotter(BasePlot):
         Input:
         Output:
         """
-        self.plot_fig(x = [self.df_sim.true_e.to_list(),
+        self.plot_fig(y = [self.df_sim.true_e.to_list(),
                            self.df_sim.real_e.to_list()],
-                      y = [self.df_sim.true_n.to_list(),
+                      x = [self.df_sim.true_n.to_list(),
                            self.df_sim.real_n.to_list()], 
                       line_label = ["True", "Real"],
                       x_label = "Easting", 

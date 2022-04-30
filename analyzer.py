@@ -12,13 +12,13 @@ class Analyzer(Plotter, ErrorDetectorAnalyzer, SimulationAnalyzer):
     Developes the analysis for auto reporting
     """
     
-    def __init__(self):
+    def __init__(self, display = False):
         """
         Desc:
         Input:
         Output:
         """
-        Plotter.__init__(self)
+        Plotter.__init__(self, display = display)
         ErrorDetectorAnalyzer.__init__(self)
         SimulationAnalyzer.__init__(self)
         
